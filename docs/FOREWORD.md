@@ -11,7 +11,7 @@ project on my own and I'm by no mean an operating system expert.
 
 This means there are surely many flaws in the very low-level aspects, especially
 in the microkernel, like the way hardware devices are handled and mapped in memory.
-If you find a flaw, feel free to [submit an issue](https://github.com/lapis-org/docs/issues/new).
+If you find a flaw, feel free to [submit an issue](https://github.com/lapis-org/docs/issues/new/choose).
 
 ### What is LapisOS?
 LapisOS is an operating system aiming to replace ancient systems like Windows,

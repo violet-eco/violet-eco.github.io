@@ -21,4 +21,4 @@ This is why this project is for now purely *theorical*.
 Help is very welcome but there's not many things to help with currently,
 as the system is still being designed. You can still help by suggesting
 improvements or fixing an error (whatever it is, a design problem or a simple typo)
-by [submitting an issue](https://github.com/lapis-org/docs/issues/new).
+by [submitting an issue](https://github.com/lapis-org/docs/issues/new/choose).
