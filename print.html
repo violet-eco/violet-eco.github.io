@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">2.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/roadmap.html"><strong aria-hidden="true">2.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">2.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">3.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">3.1.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">3.2.</strong> What are users?</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">2.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/roadmap.html"><strong aria-hidden="true">2.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">2.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">3.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">3.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">3.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">3.3.</strong> What are users?</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -245,9 +245,118 @@ only used in two cases:</p>
 concept of LapisOS. They are designed to be easily readable
 and understandable.</p>
 <ul>
+<li><a href="concepts/applications.html">What are applications?</a> - the way to run software on LapisOS</li>
 <li><a href="concepts/libraries.html">What are libraries?</a> - sharing identical behaviours between multiple applications</li>
 <li><a href="concepts/users.html">What are users?</a> - sharing a computer between multiple persons</li>
 </ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="what-are-applications"><a class="header" href="#what-are-applications">What are applications?</a></h1>
+<p><em>Applications</em> are the system's way to handle software.</p>
+<ul>
+<li><a href="concepts/applications.html#how-applications-work">How applications work</a></li>
+<li><a href="concepts/applications.html#installation-methods">Installation methods</a>
+<ul>
+<li><a href="concepts/applications.html#from-the-store">From the store</a></li>
+<li><a href="concepts/applications.html#sideloading">Sideloading</a></li>
+<li><a href="concepts/applications.html#volatile-applications">Volatile applications</a></li>
+</ul>
+</li>
+<li><a href="concepts/applications.html#commands">Commands</a></li>
+<li><a href="concepts/applications.html#system-applications">System applications</a></li>
+<li><a href="concepts/applications.html#services">Services</a></li>
+</ul>
+<h2 id="how-applications-work"><a class="header" href="#how-applications-work">How applications work</a></h2>
+<p>An application is a set of executable files and resources. They are
+only way to execute code, as direct binary programs are not supported.</p>
+<p>Any user can install applications, which will only be available from its
+account. Administrator users can install global applications, which are
+available to every user.</p>
+<h2 id="installation-methods"><a class="header" href="#installation-methods">Installation methods</a></h2>
+<p>Applications are installed through an <em>application package</em>. There
+are several installation methods:</p>
+<ul>
+<li>From the store</li>
+<li>Directly from the application's package</li>
+<li>As a volatile application</li>
+</ul>
+<h3 id="from-the-store"><a class="header" href="#from-the-store">From the store</a></h3>
+<p>Applications can be downloaded from LapisOS' official applications store.</p>
+<ul>
+<li>For closed-source applications, the store only provides pre-compiled programs</li>
+<li>For open-source applications, the store provides both pre-compiled programs as well
+as the source code</li>
+</ul>
+<p>For the later, user can choose either to build the program from source, using the
+appropriated build tools in order to optimize performances, or to simply use the
+pre-built programs (which is the option by default).</p>
+<h3 id="sideloading"><a class="header" href="#sideloading">Sideloading</a></h3>
+<p>Applications sideloading (installing an application directly from its <a href="concepts/">package (WIP)</a>)
+follows strict rules determined by the <em>sideloading mode</em>, which is either
+&quot;disabled&quot;, &quot;secure&quot; or &quot;unsecure&quot;.</p>
+<ul>
+<li><strong>Disable mode</strong> prevents all sideloading; it's not possible to install
+applications from their package in this mode. <a href="concepts/applications.html#volatile-applications">Volatile applications</a>
+can still be run, though.</li>
+<li><strong>Secure mode</strong> allows sideloading but will first make the system check
+if the application's <a href="concepts/">AID (WIP)</a> matches an existing application on the Store.
+If so, it compares the application's signature to the Store application's
+store. If they don't match, the application is considered malicious and
+won't be installed. Note that this mode only works while connected to 
+internet, as the system needs to check the Store to ensure the application
+is not malicious. If the computer is offline, sideloading will be
+disabled.</li>
+<li><strong>Unsecure mode</strong> allows sideloading without any checking, which is
+highly dangerous as it allows spoofing.</li>
+</ul>
+<p>The sideloading mode can be changed in the <a href="concepts/">Control Center (WIP)</a>.</p>
+<h3 id="volatile-applications"><a class="header" href="#volatile-applications">Volatile applications</a></h3>
+<p>Applications can be also be ran as <em>volatile applications</em>, which means
+they are not installed on the disk. There are three methods:</p>
+<ul>
+<li><em>Full-volatile</em>: the app's datas are removed when the application closes</li>
+<li><em>Session-scoped</em>: the app's datas are stored on disk until the system shuts down</li>
+<li><em>Local-persistent</em>: the app's datas are stored within a data file located in the same folder</li>
+<li><em>Persistent</em>: the app's datas are stored in a dedicated folder, also enabling common data between users</li>
+</ul>
+<p>By default, volatile applications are ran in <em>local-persistent</em> mode. In this mode,
+the system first checks if a file with the same name as application's package but with
+the <em>.vad (Volatile Application's Data)</em> exists. If so, it opens this file as the application's
+storage. Then, when the application wants to store some data, it is stored inside in this data file.</p>
+<p>Note that <em>.vad (Volatile Application's Data)</em> files are disguised <a href="concepts/">VSF (WIP)</a> files.</p>
+<p>Volatile applications running as persistent do not appear in the applications list
+and can only be managed through a specific option in the <a href="concepts/">Control Center (WIP)</a>.
+Their executable files are not stored anywhere and stay in the application's package,
+while only their data are stored on the disk. This allows to run the same application
+several times without losing any data and without worrying about a data file. This
+also allows to store a common data between users.</p>
+<p>Note that the store has an option for installing applications as volatile.</p>
+<h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
+<p>Applications can expose <a href="concepts/">shell commands (WIP)</a>. Multiple commands can be exposed
+without any risk of clashing as the name command name must be prefixed by the
+AID first.</p>
+<p>For instance, if an application with AID <code>developer.app</code> exposes an <code>get_time</code> command,
+the final usable command will be <code>developer.app.get_time</code>.</p>
+<p>This is quite long name but allows to prevent any clashing between commands. It's
+common for shell scripts to use imports at the beginning of the script to refer
+more easily to applications' commands.</p>
+<p>Note that, by default, shell prompts (not scripts) will allow to directly use
+commands such as <code>get_time</code> in the short form if no other application exposes a
+command with the same name.</p>
+<p>Commands work by launching the application with specific <a href="concepts/">execution context (WIP)</a>.</p>
+<h2 id="system-applications"><a class="header" href="#system-applications">System applications</a></h2>
+<p>Some [native applications (WIP)] are part of the system itself and are called
+<em>system applications</em>. They get a few specific features:</p>
+<ul>
+<li>Access to system-reserved features</li>
+<li>Ability to create <a href="concepts/">system services (WIP)</a></li>
+<li>They cannot be uninstalled</li>
+</ul>
+<p>System applications cannot be removed in <em>any way</em>, as some of them are critical
+for the system to function properly. Native applications which are not system
+applications can be removed, though.</p>
+<h2 id="services"><a class="header" href="#services">Services</a></h2>
+<p>Applications can provide <a href="concepts/">services (WIP)</a> by specifying them in their <a href="concepts/">manifest (WIP)</a>.
+The services will be run at startup with the usual application's permissions.</p>
+<p>There is exactly one process for each service per active user.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="what-are-libraries"><a class="header" href="#what-are-libraries">What are libraries?</a></h1>
 <p><em>Libraries</em> allow to share a program between multiple applications.</p>
 <h2 id="how-libraries-work"><a class="header" href="#how-libraries-work">How libraries work?</a></h2>
