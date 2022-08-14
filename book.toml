@@ -1,0 +1,17 @@
+[book]
+title = "LapisOS documentation"
+author = "Yue"
+description = "Documents for LapisOS"
+src = "docs"
+language = "en"
+
+[rust]
+edition = "2018"
+
+[build]
+build-dir = "book"
+create-missing = false
+
+[output.html]
+git-repository-url="https://github.com/lapis-org/docs"
+site-url="https://lapis-org.github.io/docs"
