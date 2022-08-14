@@ -1,6 +1,7 @@
 # mdBook summary
 
 - [Foreword](FOREWORD.md)
+- [Frequently-asked Questions](FAQ.md)
 - [Project](project/README.md)
 	- [Roadmap](project/roadmap.md)
 	- [Development](project/development.md)
