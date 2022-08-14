@@ -17,23 +17,13 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Cache Cargo dependencies
-        uses: actions/cache@v2.1.4
-        with:
-          path: /usr/share/rust
-          key: ${{ runner.OS }}-cargo-cache
-
-      - name: Get "broken-md-links" tool
-        run: cargo install broken-md-links
-
       - name: Get "mdBook" tool
-        run: cargo install mdbook
-
-      - name: Look for broken markdown links
-        run: broken-md-links ${GITHUB_WORKSPACE}/docs --recursive
+        run: |
+          mkdir bin
+          curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.21/mdbook-v0.4.21-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
 
       - name: Build the docs
-        run: mdbook build
+        run: bin/mdbook build
 
       - name: Deploy the docs
         uses: JamesIves/github-pages-deploy-action@4.1.0
