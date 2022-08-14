@@ -5,9 +5,9 @@
 - [Implementation](#implementation)
 	- [Phase 1: Unoptimized kernel](#phase-1-unoptimized-kernel)
 	- [Phase 2: Low-level implementation](#phase-2-low-level-implementation)
-	- [Phase 3: Applications & System optimization](#phase-3-applications-system-optimization)
+	- [Phase 3: Applications & System optimization](#phase-3-applications--system-optimization)
 	- [Phase 4: Completion](#phase-4-completion)
-- [Evolution, Optimization & Maintenance](#evolution-optimization-maintenance)
+- [Evolution, Optimization & Maintenance](#evolution-optimization--maintenance)
 
 ## Conception
 This first part is to write conception documents about how the system works, both at
