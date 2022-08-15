@@ -9,5 +9,7 @@
 	- [What are applications?](concepts/applications.md)
 	- [What are libraries?](concepts/libraries.md)
 	- [What are users?](concepts/users.md)
+- [Features](features/README.md)
+	- [Parental Control](features/parental-control.md)
 - [Technical](technical/README.md)
 	- [Overview](technical/overview.md)
