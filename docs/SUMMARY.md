@@ -11,5 +11,7 @@
 	- [What are users?](concepts/users.md)
 - [Features](features/README.md)
 	- [Parental Control](features/parental-control.md)
+- [User Experience](ux/README.md)
+	- [Notifications](ux/notifications.md)
 - [Technical](technical/README.md)
 	- [Overview](technical/overview.md)
