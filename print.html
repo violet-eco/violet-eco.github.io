@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> Frequently-asked Questions</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/roadmap.html"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="features/index.html"><strong aria-hidden="true">5.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="features/parental-control.html"><strong aria-hidden="true">5.1.</strong> Parental Control</a></li></ol></li><li class="chapter-item expanded "><a href="technical/index.html"><strong aria-hidden="true">6.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="technical/overview.html"><strong aria-hidden="true">6.1.</strong> Overview</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> Frequently-asked Questions</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/roadmap.html"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="features/index.html"><strong aria-hidden="true">5.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="features/parental-control.html"><strong aria-hidden="true">5.1.</strong> Parental Control</a></li></ol></li><li class="chapter-item expanded "><a href="ux/index.html"><strong aria-hidden="true">6.</strong> User Experience</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ux/notifications.html"><strong aria-hidden="true">6.1.</strong> Notifications</a></li></ol></li><li class="chapter-item expanded "><a href="technical/index.html"><strong aria-hidden="true">7.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="technical/overview.html"><strong aria-hidden="true">7.1.</strong> Overview</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -535,6 +535,77 @@ allowed by child users.</p>
 By default, installation is allowed but sends a notification to the parent user asking
 if the child user is allowed to install the requested application; while running volatile
 applications is simply disabled.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="user-experience"><a class="header" href="#user-experience">User Experience</a></h1>
+<p>This folder contains technical documents about user experience.</p>
+<ul>
+<li><a href="ux/index.html#notifications">Notifications</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="notifications"><a class="header" href="#notifications">Notifications</a></h1>
+<p><em>Notifications</em> are the way for both the applications and the system
+itself to indicate when an event happens which user should be notified of,
+or to indicate a persistent state.</p>
+<ul>
+<li><a href="ux/notifications.html#structure">Structure</a></li>
+<li><a href="ux/notifications.html#display-rules">Display rules</a>
+<ul>
+<li><a href="ux/notifications.html#cover-image">Cover image</a></li>
+<li><a href="ux/notifications.html#buttons">Buttons</a></li>
+</ul>
+</li>
+<li><a href="ux/notifications.html#persistent-notifications">Persistent notifications</a></li>
+<li><a href="ux/notifications.html#notification-types">Notification types</a>
+<ul>
+<li><a href="ux/notifications.html#free-notifications">Free Notifications</a></li>
+<li><a href="ux/notifications.html#multimedia-notifications">Multimedia Notifications</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="structure"><a class="header" href="#structure">Structure</a></h2>
+<p>A notification is made of:</p>
+<ul>
+<li>A title</li>
+<li>A description</li>
+</ul>
+<p>As well as optional fields:</p>
+<ul>
+<li>A description</li>
+<li>An icon (by default the icon of the <a href="ux/../concepts/applications.html">application</a>)</li>
+<li>A notification sound (by default selected by the system)</li>
+<li>A shaking effect</li>
+<li>A background color (by default chosen by the desktop environment)</li>
+<li>A set of <a href="ux/notifications.html#buttons">buttons</a></li>
+<li>A <a href="ux/notifications.html#cover-image">cover image</a></li>
+<li>A <a href="ux/notifications.html#persistent-notifications">persistent state</a></li>
+<li>A <a href="ux/notifications.html#notification-types">type-dependent</a> set of data</li>
+<li>A timeout</li>
+<li>A handler called when the notification is clicked</li>
+<li>A context menu when the notification is right-clicked</li>
+</ul>
+<h2 id="display-rules"><a class="header" href="#display-rules">Display rules</a></h2>
+<p>The way notifications are displayed depends on the <a href="ux/">desktop environment (WIP)</a>,
+therefore the requested shaking effect, background color, and so may not be respected
+by DE, although it's highly recommended for DE to follow these attributes.</p>
+<p>Also, there is no rule indicating how elements are visually arranged inside a notification.
+Some DE may for instance put the icon on the left, while some others on the right. Additional
+elements may also be displayed, such as a cross to close the notification or an arrow to hide
+it to the <a href="ux/">notifications center (WIP)</a>.</p>
+<h3 id="cover-image"><a class="header" href="#cover-image">Cover image</a></h3>
+<p>A notification can request to display a large image. Some desktop environments may decide
+to hide the application's icon in such case.</p>
+<h3 id="buttons"><a class="header" href="#buttons">Buttons</a></h3>
+<p>Notifications can have action buttons, which are then linked to the owner application's
+event system. Buttons are usually limited in size and colors.</p>
+<h2 id="persistent-notifications"><a class="header" href="#persistent-notifications">Persistent notifications</a></h2>
+<p>Persistent notifications don't disappear after a timeout. They can for instance be used to
+indicate a pending state like the activation of a battery-consuming element like a GPS.</p>
+<h2 id="notification-types"><a class="header" href="#notification-types">Notification types</a></h2>
+<p>There are several notification types, which their own required sets of data.</p>
+<h3 id="free-notifications"><a class="header" href="#free-notifications">Free Notifications</a></h3>
+<p>This is the default type of notifications, which no particular constraint.</p>
+<h3 id="multimedia-notifications"><a class="header" href="#multimedia-notifications">Multimedia Notifications</a></h3>
+<p>Multimedia notifications are used to indicate a <a href="ux/">multimedia playback (WIP)</a>. It must
+be composed of a cover image and six buttons (previous, rewind, play/pause, stop, fast-forward, next)
+whose appearance is decided by the <a href="ux/">desktop environment (WIP)</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="technical"><a class="header" href="#technical">Technical</a></h1>
 <p>This folder contains technical documents which essential
 describe low-level parts of LapisOS.</p>
