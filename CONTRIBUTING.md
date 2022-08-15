@@ -33,7 +33,7 @@ The `footer` is optional.
   │       │             │
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
-  │       └─⫸ Commit Scope: concepts|project
+  │       └─⫸ Commit Scope: concepts|features|project|technical
   │
   └─⫸ Commit Type: add|build|ci|fix|improve|typo
 ```
@@ -58,7 +58,9 @@ The scope should be the name of the subdirectory.
 The following is the list of supported scopes:
 
 - `concepts`
+- `features`
 - `project`
+- `technical`
 
 #### Summary
 
