@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> Frequently-asked Questions</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/roadmap.html"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> Frequently-asked Questions</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/roadmap.html"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -458,6 +458,83 @@ group, for instance. When a user is created, it can be put in a group. It then
 automatically inherits all of the group's privileges, in addition to its own ones.
 The administrator can add and remove users from groups with the control panel.</p>
 <p>When a user is in a group, the group's privileges cannot be revoked for this user.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="technical"><a class="header" href="#technical">Technical</a></h1>
+<p>This folder contains technical documents which essential
+describe low-level parts of LapisOS.</p>
+<p>A global overview of the system can be found in
+the <a href="technical/overview.html">overview document</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="overview"><a class="header" href="#overview">Overview</a></h1>
+<p>This document presents a global overview of LapisOS. It is
+only a simplified representation of the system, but allows
+to better understand its architecture and organization.</p>
+<p>The referenced documents are mostly technical overviews themselves, which
+is why links to their associated specification document are also provided
+(marked as <code>(specs)</code>)</p>
+<ul>
+<li><a href="technical/overview.html#program-executions">Program executions</a></li>
+<li><a href="technical/overview.html#permissions">Permissions</a></li>
+<li><a href="technical/overview.html#hardware-access">Hardware access</a></li>
+<li><a href="technical/overview.html#hardware-drivers">Hardware drivers</a></li>
+<li><a href="technical/overview.html#hardware-access-performances">Hardware access performances</a></li>
+<li><a href="technical/overview.html#filesystem-access">Filesystem access</a></li>
+<li><a href="technical/overview.html#user-interface">User interface</a></li>
+<li><a href="technical/overview.html#users-management">Users management</a></li>
+</ul>
+<h2 id="program-executions"><a class="header" href="#program-executions">Program executions</a></h2>
+<p>LapisOS doesn't allow to run standalone binaries. Every running code
+is either:</p>
+<ul>
+<li>Part of the system, as the <a href="technical/">kernel (specs, WIP)</a> itself or as a
+<a href="technical/">system service (WIP)</a> (<a href="technical/">specs (WIP)</a>).</li>
+<li>Part of an <a href="technical/../concepts/applications.html">application</a> (<a href="technical/">specs (WIP)</a>).</li>
+</ul>
+<p>System services are immutable and run for the entire system's lifespan,
+while applications can be opened and closed at anytime, and can also run
+as multiple instances in parallel.</p>
+<h2 id="permissions"><a class="header" href="#permissions">Permissions</a></h2>
+<p>While the system has every right of the system itself, applications are
+restricted and can do almost nothing by default.</p>
+<p>Capabilities can be granted through <a href="technical/">permissions (WIP)</a> (<a href="technical/">specs (WIP)</a>),
+which are designed to allow precise control on what an application can do or
+not, while requiring as few user interactions as possible.</p>
+<h2 id="hardware-access"><a class="header" href="#hardware-access">Hardware access</a></h2>
+<p>Hardware access is performed through two layers:</p>
+<ul>
+<li>First, the kernel <a href="technical/">detects and enumerates (specs, WIP)</a> hardware devices</li>
+<li>Then, hardware is accessed through the <a href="technical/">hardware service (specs, WIP)</a></li>
+</ul>
+<h2 id="hardware-drivers"><a class="header" href="#hardware-drivers">Hardware drivers</a></h2>
+<p>Unlike most operating systems, hardware drivers are simple applications with
+no specific integration in the kernel.</p>
+<p>Any application register itself as a <a href="technical/">driver (specs, WIP)</a> using the
+<a href="technical/">hardware service (specs, WIP)</a>.</p>
+<p>The relevant driver for each hardware device is selected using
+<a href="technical/">various criterias (specs)</a>.</p>
+<h2 id="hardware-access-performances"><a class="header" href="#hardware-access-performances">Hardware access performances</a></h2>
+<p>Hardware access is performed through <a href="technical/">syscalls (specs, WIP)</a> and
+<a href="technical/">signals (specs, WIP)</a>, which use CPU interruptions.</p>
+<p>The access process is often:</p>
+<ul>
+<li>A userland process notifies a <a href="technical/">system service (WIP)</a></li>
+<li>The system service contacts the [hardware service (specs, WIP)]</li>
+<li>The hardware service contacts the <a href="technical/">relevant (specs, WIP)</a> <a href="technical/">driver (specs, WIP)</a></li>
+<li>The driver performs the requested task by communicating with the hardware through the hardware service</li>
+<li>The action's result is then transmitted to the hardware service, which then transmits it to the system service, which in turns transmits it to the userland process</li>
+</ul>
+<h2 id="filesystem-access"><a class="header" href="#filesystem-access">Filesystem access</a></h2>
+<p>Accessing and managing filesystems and their contents is faster than common hardware
+operations thanks to <a href="technical/">direct storage access (WIP)</a>.</p>
+<p>The typical process involves communication with the <a href="technical/">filesystem service (WIP)</a>
+which <a href="technical/">communicates directly (WIP)</a> with storage files.</p>
+<p>For filesystems that <a href="technical/">aren't natively supported (WIP)</a>, a <a href="technical/">filesystem interface (WIP)</a>
+is involved to communicate with the <a href="technical/">storage driver service (WIP)</a>, which then communicates
+with the <a href="technical/">hardware service (WIP)</a>. This involves a higher latency, but is only limited to
+edge cases and remains in an acceptable range of performances.</p>
+<h2 id="user-interface"><a class="header" href="#user-interface">User interface</a></h2>
+<p>The user interface is entirely managed by <a href="technical/">desktop environment (WIP)</a>, which can be
+any <a href="technical/../concepts/applications.html">application</a> exposing the <a href="technical/">relevant service (specs, WIP)</a>.</p>
+<h2 id="users-management"><a class="header" href="#users-management">Users management</a></h2>
+<p>Each person using a computer can have its own <a href="technical/../concepts/users.html">user account</a>.</p>
 
                     </main>
 
