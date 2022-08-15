@@ -4,6 +4,18 @@ provide the highest security and safety to the average user, while
 remaining powerful enough to be fast, efficient and highly customizable
 for more advanced users.
 
+## Features
+- Extreme customization, up to the kernel itself
+- Data loss prevention with *crash saves*
+- Built-in [parental control](docs/features/parental-control.md)
+- ...
+
+## Documentation
+
+Design and specification documents can be found in the [`docs`](docs) directory.
+
+The documentation is also live at [`https://lapis-org.github.io/docs`](https://lapis-org.github.io/docs).
+
 ## What is LapisOS?
 LapisOS is an operating system aiming to replace ancient systems like Windows,
 Linux, MacOS. Well, this is an *ideal* goal but given how much Windows/Linux/MacOS
@@ -13,7 +25,9 @@ legacy compatibility with ancient architectures.
 
 ## License
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+<div align="center">
+	<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+</div>
 
 You are free to:
 - **Share** — copy and redistribute the material in any medium or format 
