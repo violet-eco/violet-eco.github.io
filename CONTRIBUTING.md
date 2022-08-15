@@ -33,7 +33,7 @@ The `footer` is optional.
   │       │             │
   │       │             └─⫸ Summary in present tense. Not capitalized. No period at the end.
   │       │
-  │       └─⫸ Commit Scope: concepts|features|project|technical
+  │       └─⫸ Commit Scope: concepts|features|project|technical|ux
   │
   └─⫸ Commit Type: add|build|ci|fix|improve|typo
 ```
@@ -61,6 +61,7 @@ The following is the list of supported scopes:
 - `features`
 - `project`
 - `technical`
+- `ux`
 
 #### Summary
 
