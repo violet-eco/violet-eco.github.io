@@ -15,3 +15,5 @@
 	- [Notifications](ux/notifications.md)
 - [Technical](technical/README.md)
 	- [Overview](technical/overview.md)
+- [Specifications](specs/README.md)
+	- [Applications and libraries](specs/applications-and-libraries.md)
