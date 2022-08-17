@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Roadmap - LapisOS documentation</title>
+        <title>Applications and libraries - LapisOS documentation</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Documents for LapisOS">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> Frequently-asked Questions</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/roadmap.html" class="active"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../features/index.html"><strong aria-hidden="true">5.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../features/parental-control.html"><strong aria-hidden="true">5.1.</strong> Parental Control</a></li></ol></li><li class="chapter-item expanded "><a href="../ux/index.html"><strong aria-hidden="true">6.</strong> User Experience</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ux/notifications.html"><strong aria-hidden="true">6.1.</strong> Notifications</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">7.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">7.1.</strong> Overview</a></li></ol></li><li class="chapter-item expanded "><a href="../specs/index.html"><strong aria-hidden="true">8.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specs/applications-and-libraries.html"><strong aria-hidden="true">8.1.</strong> Applications and libraries</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> Frequently-asked Questions</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/roadmap.html"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../features/index.html"><strong aria-hidden="true">5.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../features/parental-control.html"><strong aria-hidden="true">5.1.</strong> Parental Control</a></li></ol></li><li class="chapter-item expanded "><a href="../ux/index.html"><strong aria-hidden="true">6.</strong> User Experience</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ux/notifications.html"><strong aria-hidden="true">6.1.</strong> Notifications</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">7.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">7.1.</strong> Overview</a></li></ol></li><li class="chapter-item expanded "><a href="../specs/index.html"><strong aria-hidden="true">8.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specs/applications-and-libraries.html" class="active"><strong aria-hidden="true">8.1.</strong> Applications and libraries</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -137,75 +137,131 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="roadmap"><a class="header" href="#roadmap">Roadmap</a></h1>
+                        <h1 id="applications-and-libraries"><a class="header" href="#applications-and-libraries">Applications and Libraries</a></h1>
+<p>This document describes the structure, features and behaviours to both
+<a href="../concepts/applications.html">applications</a> and <a href="../concepts/libraries.html">libraries</a>.</p>
 <ul>
-<li><a href="#conception">Conception</a></li>
-<li><a href="#validation">Validation</a></li>
-<li><a href="#implementation">Implementation</a>
+<li><a href="#name-and-slug">Name and slug</a></li>
+<li><a href="#application-identifier">Application Identifier</a></li>
+<li><a href="#features">Features</a></li>
+<li><a href="#the-manifest">The manifest</a></li>
+</ul>
+<h2 id="name-and-slug"><a class="header" href="#name-and-slug">Name and slug</a></h2>
+<p>Each application has a name as well as a slug. The name can any valid UTF-8 string,
+while the slug must respect several rules:</p>
 <ul>
-<li><a href="#phase-1-unoptimized-kernel">Phase 1: Unoptimized kernel</a></li>
-<li><a href="#phase-2-low-level-implementation">Phase 2: Low-level implementation</a></li>
-<li><a href="#phase-3-applications--system-optimization">Phase 3: Applications &amp; System optimization</a></li>
-<li><a href="#phase-4-completion">Phase 4: Completion</a></li>
+<li>Only lowercase letters, underscores and digits</li>
+<li>Must not start by a digit</li>
+<li>Must not be the name of a native shell command</li>
+<li>Must not be the name of a native shell function</li>
+<li>Must not be the name of a shell type</li>
 </ul>
-</li>
-<li><a href="#evolution-optimization--maintenance">Evolution, Optimization &amp; Maintenance</a></li>
-</ul>
-<h2 id="conception"><a class="header" href="#conception">Conception</a></h2>
-<p>This first part is to write conception documents about how the system works, both at
-high-level (native applications, features etc.) and low-level (process management, kernel
-design etc.).</p>
-<p>This project is currently in this state.</p>
-<h2 id="validation"><a class="header" href="#validation">Validation</a></h2>
-<p>Once all conception documents are ready, they will be validated one by one,
-and frozen. Breaking changes after validation are still possible but should
-be avoided as much as possible.</p>
-<h2 id="implementation"><a class="header" href="#implementation">Implementation</a></h2>
-<p>Once all documents have been validated, the different pieces can be implemented.</p>
-<p>It may be happen that, during implementation, some validated documents get
-modifications in order to improve or fix some specific points. Each modification
-will need to be validated in order to preserve the stability of these documents.</p>
-<h3 id="phase-1-unoptimized-kernel"><a class="header" href="#phase-1-unoptimized-kernel">Phase 1: Unoptimized kernel</a></h3>
-<p>The first piece to be implemented will be the kernel. This is required as the
-kernel is needed in order to implement higher-level pieces like processes.</p>
-<h3 id="phase-2-low-level-implementation"><a class="header" href="#phase-2-low-level-implementation">Phase 2: Low-level implementation</a></h3>
-<p>Once the unoptimized kernel is ready, two implementations will start in parallel:</p>
-<ul>
-<li>Kernel optimization</li>
-<li>System development</li>
-</ul>
-<p>The system development will consist in building the following pieces successively:</p>
-<ul>
-<li>The BIOS/UEFI bootloader</li>
-<li>The process manager</li>
-</ul>
-<h3 id="phase-3-applications--system-optimization"><a class="header" href="#phase-3-applications--system-optimization">Phase 3: Applications &amp; System Optimization</a></h3>
-<p>The third phase consists in developing the native applications, which are
-meant to be used by the end user, as well as optimizing the system in
-parallel and improving its stability.</p>
-<p>Starting from this point, all conception documents are definitely validated,
-which means they cannot receive breaking changes anymore, only few points/features.</p>
-<p>This also coincides with the system's <strong>first alpha release</strong>, which will allow persons
-who are external to the project to test it and suggest improvements.</p>
-<h3 id="phase-4-completion"><a class="header" href="#phase-4-completion">Phase 4: Completion</a></h3>
-<p>The last phase's purpose is to ensure the system is in a fully usable state.</p>
-<p>The kernel and system will also need to be properly optimized, and once all
-these things are done a <strong>first beta release</strong> will be deployed.</p>
-<h2 id="evolution-optimization--maintenance"><a class="header" href="#evolution-optimization--maintenance">Evolution, Optimization &amp; Maintenance</a></h2>
-<p>The <em>Evolution, Optimization &amp; Maintenance</em> (EPM) part is pretty explicit: it's all
-about improving LapisOS' existing features, introducing new ones as needed, improving
-performances and stability, and fixing new bugs.</p>
-<p>This part will last forever, as for all operating systems.</p>
+<p>By default, the slug is auto-generated from the name, but it can also be customized.</p>
+<h2 id="application-identifier"><a class="header" href="#application-identifier">Application Identifier</a></h2>
+<p>From the slug is generated <em>Application's Identifier (AID)</em>, which is prefixed by the
+developer's identifier (DID) specified in the application's manifest (it must match the
+publisher's identifier on the store), and followed by two double points. The DID is submitted
+to the same rules as the application's slug.</p>
+<p>For instance, an application with a slug of <code>midori</code> made by a developer whose DID is
+<code>gulje</code> will get an AID of <code>midori::gulje</code>.</p>
+<p>The AID is unique across the store as well as in a single LapisOS installation. As malicious
+application may provide the DID and the slug of a legit application (which is called <em>AID spoofing</em>),
+sideloading is <a href="../concepts/applications.html#sideloading">verified by default</a>.</p>
+<p>As AID are text-based and can be quite long (up to 512 bytes), programs can instead use the
+<em>Application's Numeric IDentifier (ANID)</em>, which is 32-bit unique number randomly generated
+by the system to refer to this particular application. On two different systems, the ANID of
+a given application will likely be very different, and so cannot be guessed. It is provided
+by the system during the application's launch through its <a href="">execution context (WIP)</a>.</p>
+<p>System applications are registered under the reserved <code>sys</code> DID.</p>
+<h2 id="features"><a class="header" href="#features">Features</a></h2>
+<p>Applications as well as libraries can also declare <em>features</em>, which are opt-in parts of
+the program. They are described in <a href="">the manifest (WIP)</a> and can be enabled or disabled
+when installing a program.</p>
+<p>Each feature allows to embed additional assets and declare additional supported languages
+(e.g. language packs), and a specific build option is provided to the build tool to indicate
+at build time weither a feature selected or not.</p>
+<p>This allows to save space and build time when a specific feature isn't required, but should
+still be embedded in the program itself instead of making an additional application or
+library.</p>
+<p>When the manifest declares one or more feature(s), it must also specify a set of <em>default features</em>
+to enable, which are selected by default.</p>
+<h2 id="the-manifest"><a class="header" href="#the-manifest">The manifest</a></h2>
+<p>A <em>manifest</em> is a file describing the application or library. It is mandatory to build and
+distribute it. Its content differ for applications and libraries, but there are some
+common fields.</p>
+<pre><code class="language-yaml"># [REQ] Informations about the application
+infos:
+	# [REQ] Application's name, as shown when installing it
+	name: Cloud Notepad App
+	# [REQ] Application's slug, as stored on the disk in the /apps directory
+	slug: cloud-notepad-app
+	# [REQ] Application's description, as shown when installing it
+	description: A notepad application that allows syncing your files in the cloud
+	# [REQ] Application's version, following semantic versioning
+	version: 1.0.0
+	# [REQ] Application's author(s)
+	authors:
+		- name: Gulce
+		- email: guljeee@yandex.com
+	# [REQ] Application's icons
+	# [REQ] &quot;%{}&quot;: either 16, 32, 64, 128 or 256 pixels (icons must be square)
+	icons: assets/icons/app/%{}.png
+	# [REQ] Application's license
+	license: Apache-2.0
+
+# [REQ] Application package's content
+content:
+	# [REQ] Program
+	program:
+		# Packages can either contain source code only, pre-compiled programs only, or both
+		# &lt;for source packages&gt; [REQ]
+		source:
+			# [REQ] Build tool (must in the list of the toolchain's supported build tools)
+			toolchain: rust
+			# [REQ] Required build tool-related options
+			build: {}
+			# [OPT] Build tool-related options
+			options:
+				optimize: O3
+
+		# &lt;for precomp packages&gt; [REQ]
+		precomp: main.lpp
+
+	# [OPT] Assets
+	assets:
+		# Set of path to assets
+		- ./assets/
+
+# [REQ] Application's dependencies
+dependencies:
+	# [REQ] Required libraries
+	libraries:
+		sysver: ^1.0.0 # Any stable version
+
+	# [OPT] Required fonts
+	fonts:
+		fonts:open-sans: true # Any version
+
+# [OPT] Features
+features:
+	# Describe each feature, by name
+	testing:
+		# [OPT] Additional assets
+		assets: []
+
+		# [OPT] Feature's dependencies
+		dependencies: {}
+
+		# [OPT] Additional languages (e.g. language pack)
+		languages: []
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../project/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../specs/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a rel="next" href="../project/development.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
                     </nav>
@@ -213,11 +269,8 @@ performances and stability, and fixing new bugs.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../project/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../specs/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a rel="next" href="../project/development.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
