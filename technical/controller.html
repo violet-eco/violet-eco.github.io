@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Parental Control - LapisOS documentation</title>
+        <title>Controller - LapisOS documentation</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Documents for LapisOS">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> Frequently-asked Questions</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/roadmap.html"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../features/index.html"><strong aria-hidden="true">5.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../features/parental-control.html" class="active"><strong aria-hidden="true">5.1.</strong> Parental Control</a></li></ol></li><li class="chapter-item expanded "><a href="../ux/index.html"><strong aria-hidden="true">6.</strong> User Experience</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ux/notifications.html"><strong aria-hidden="true">6.1.</strong> Notifications</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">7.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">7.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/controller.html"><strong aria-hidden="true">7.2.</strong> Controller</a></li></ol></li><li class="chapter-item expanded "><a href="../specs/index.html"><strong aria-hidden="true">8.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specs/applications-and-libraries.html"><strong aria-hidden="true">8.1.</strong> Applications and libraries</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> Frequently-asked Questions</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/roadmap.html"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../features/index.html"><strong aria-hidden="true">5.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../features/parental-control.html"><strong aria-hidden="true">5.1.</strong> Parental Control</a></li></ol></li><li class="chapter-item expanded "><a href="../ux/index.html"><strong aria-hidden="true">6.</strong> User Experience</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ux/notifications.html"><strong aria-hidden="true">6.1.</strong> Notifications</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">7.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">7.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/controller.html" class="active"><strong aria-hidden="true">7.2.</strong> Controller</a></li></ol></li><li class="chapter-item expanded "><a href="../specs/index.html"><strong aria-hidden="true">8.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specs/applications-and-libraries.html"><strong aria-hidden="true">8.1.</strong> Applications and libraries</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -137,86 +137,48 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="parental-control"><a class="header" href="#parental-control">Parental Control</a></h1>
-<p><em>Parental control</em> allows to manage a child's access to
-a computer running LapisOS.</p>
+                        <h1 id="controller"><a class="header" href="#controller">Controller</a></h1>
+<p><em>Controller</em> is a system library that manages permissions of libraries.</p>
+<p>It is concretely represented by the <a href=""><code>sys::perm</code> (WIP)</a> service.</p>
 <ul>
-<li><a href="#how-it-works">How it works</a></li>
-<li><a href="#features">Features</a>
+<li><a href="#notion-of-scope">Notion of scope</a></li>
+<li><a href="#the-perm-system-library">The perm system library</a></li>
+<li><a href="#permission-extension">Permission extension</a></li>
+</ul>
+<h2 id="notion-of-scope"><a class="header" href="#notion-of-scope">Notion of scope</a></h2>
+<p>Permissions are split into several scopes:</p>
 <ul>
-<li><a href="#restrict-usage-hours">Restrict usage hours</a></li>
-<li><a href="#restrict-mature-contents">Restrict mature contents</a></li>
-<li><a href="#restrict-access-to-applications">Restrict access to applications</a></li>
-<li><a href="#restrict-access-to-websites">Restrict access to websites</a></li>
-<li><a href="#restrict-installation-of-applications">Restrict installation of applications</a></li>
+<li>The <em>application scope</em> contains the permissions a given process is borned from</li>
+<li>The <em>user scope</em> contains the permissions the user who launched the application has</li>
+<li>The <em>mode scope</em> contains the permissions the <em>execution mode</em> (either system or userland) has</li>
 </ul>
-</li>
-</ul>
-<h2 id="how-it-works"><a class="header" href="#how-it-works">How it works</a></h2>
-<p>Parental control works using (at least) two accounts: the parent's
-account, and the child's account, which is related to as a <em>child user</em>.
-Note that multiple child users can be managed using parental control.</p>
-<p>The parent account then gets access to an application called &quot;Parental Control&quot;,
-which allows access all parental control-related features for each child user.</p>
-<p>It is also possible to get important notifications by email, and even to install
-a smartphone application (iOS/Android) which brings the parental control application
-to phones, allowing to manage child users even when not at home.</p>
-<h2 id="features"><a class="header" href="#features">Features</a></h2>
-<h3 id="restrict-usage-hours"><a class="header" href="#restrict-usage-hours">Restrict usage hours</a></h3>
-<p>This feature allows to restrict usage of the computer by the child user during
-specific hours in the day. These hours can be set independently for each day of
-the week, allowing for instance to set specific hours in the week-end. It's also
-possible to set specific hours for some specific weeks or periods of times
-(e.g. for four specific days in a row), allowing for instance to set specific hours
-for vacations.</p>
-<p>Child user will not be able to log in outside of these hours. If they are logged in
-when the upper limit is reached (e.g. only 8AM to 9AM is allowed and the child user
-is still logged in as 9AM), a warning message will shown 15 minutes before reaching
-the time limit, 5 minutes before, and 1 minute before, allowing the child to save
-its data.</p>
-<p>When the final minute comes, a pop-up shows telling the session is going to be closed
-in 60 seconds, and a cooldown is shown in a closable pop-up balloon in the taskbar.
-An option is also shown to extend the session by up to fifteen-minutes, sending
-a notification to the parent's phone as well as an e-mail.</p>
-<p>The parent can then do nothing and the session will extend for a maximum of fifteen minutes,
-or reject it and the computer will shut down after 1 minute. Then another option shows to
-ask if the parent wants to permanently disable time extension.</p>
-<h3 id="restrict-mature-contents"><a class="header" href="#restrict-mature-contents">Restrict mature contents</a></h3>
-<p>The child user's birth date can be declared during setup, so its age (not its birth date)
-will be availeble to every application which asks for it (with a specific permission, which
-is by default automatically granted to all applications	which ask it).</p>
-<p>This allows, for instance, for web browsers to block websites that declare themselves as showing
-adult contents. Or even more precise protection, like a movies store not showing movies whom age
-limit is beyond the child user's age.</p>
-<h3 id="restrict-access-to-applications"><a class="header" href="#restrict-access-to-applications">Restrict access to applications</a></h3>
-<p>This feature restricts access to some applications, either using a
-whitelist (listing all the <em>allowed</em> applications) or using a blacklist
-(listing all the <em>forbidden</em> applications).</p>
-<p>It's possible to automatically white/black-list new applications.</p>
-<h3 id="restrict-access-to-websites"><a class="header" href="#restrict-access-to-websites">Restrict access to websites</a></h3>
-<p>This feature restricts access to some websites, either using a whitelist or
-blacklist. It's also possible to apply these restrictions only to compatible
-web browsers. Whitelist is strongly discouraged outside of web browsers-only
-usage, as it may prevent some applicatiosns to work properly.</p>
-<p>Whenever an application tries to access a forbidden website, the request will
-fail with a specific code indicating it's forbidden by parental control. Applications
-can still enforce this rule but this requires a specific permission that cannot be
-allowed by child users.</p>
-<p>These restrictions are enabled through the built-in firewall.</p>
-<h3 id="restrict-installation-of-applications"><a class="header" href="#restrict-installation-of-applications">Restrict installation of applications</a></h3>
-<p>This feature prevents child users from installing and running volatile applicaitons.
-By default, installation is allowed but sends a notification to the parent user asking
-if the child user is allowed to install the requested application; while running volatile
-applications is simply disabled.</p>
+<p>The mode scope restricts the user scope, which itself restricts the application scope.
+This means that, if the application scope specify a permission that is not covered by
+the user scope, it is not applyable to the process. This allows to prevent applications
+and users from getting too high permissions.</p>
+<p>The mode scope prevents applications from performing harmful tasks such as writing the
+system. Only system applications, which run in system mode instead of userland mode,
+gets an unrestricted mode scope.</p>
+<h2 id="the-perm-system-library"><a class="header" href="#the-perm-system-library">The perm system library</a></h2>
+<p>The <code>perm</code> system library is an interface for the controller which allows processes
+to check their own permissions, ensure they can make I/O requests before effectively
+making them, and extend their permissions.</p>
+<h2 id="permission-extension"><a class="header" href="#permission-extension">Permission extension</a></h2>
+<p>A process can, at any moment, send a <em>permission extension request</em> (PER) using
+the <code>perm</code> library. It allows to gain a new permission by showing an overlay the
+user can accept or decline. If the permission is accepted, the requested permission
+is added to the process' one - and sometimes the application's one.</p>
+<p>If the requested permission is out of its maximum scope (e.g. asking for write access to
+<code>/etc</code> while being ran as standard user), the request is automatically rejected.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../features/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../technical/overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../ux/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../specs/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -225,10 +187,10 @@ applications is simply disabled.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../features/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../technical/overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../ux/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../specs/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
