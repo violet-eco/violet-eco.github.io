@@ -16,5 +16,6 @@
 - [Technical](technical/README.md)
 	- [Overview](technical/overview.md)
 	- [Controller](technical/controller.md)
+	- [Developer Mode](technical/dev-mode.md)
 - [Specifications](specs/README.md)
 	- [Applications and libraries](specs/applications-and-libraries.md)
