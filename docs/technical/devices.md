@@ -21,7 +21,7 @@ something like `/dev/sst/m2p1`.
 
 ## Interacting with a device
 
-Device handler files are not simple files, they can only be used through the [`sys::hw` (WIP)] service.
+Device handler files are not simple files, they can only be used through the [`sys::hw` (WIP)]() service.
 
 Different actions may be happen depending on the device's type:
 
