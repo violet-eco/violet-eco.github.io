@@ -3,13 +3,14 @@
 *Parental control* allows to manage a child's access to
 a computer running LapisOS.
 
-- [How it works](#how-it-works)
-- [Features](#features)
-	- [Restrict usage hours](#restrict-usage-hours)
-	- [Restrict mature contents](#restrict-mature-contents)
-	- [Restrict access to applications](#restrict-access-to-applications)
-	- [Restrict access to websites](#restrict-access-to-websites)
-	- [Restrict installation of applications](#restrict-installation-of-applications)
+- [Parental Control](#parental-control)
+	- [How it works](#how-it-works)
+	- [Features](#features)
+		- [Restrict usage hours](#restrict-usage-hours)
+		- [Restrict mature contents](#restrict-mature-contents)
+		- [Restrict access to applications](#restrict-access-to-applications)
+		- [Restrict access to websites](#restrict-access-to-websites)
+		- [Restrict installation of applications](#restrict-installation-of-applications)
 
 ## How it works
 

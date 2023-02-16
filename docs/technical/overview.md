@@ -8,14 +8,15 @@ The referenced documents are mostly technical overviews themselves, which
 is why links to their associated specification document are also provided
 (marked as `(specs)`)
 
-- [Program executions](#program-executions)
-- [Permissions](#permissions)
-- [Hardware access](#hardware-access)
-- [Hardware drivers](#hardware-drivers)
-- [Hardware access performances](#hardware-access-performances)
-- [Filesystem access](#filesystem-access)
-- [User interface](#user-interface)
-- [Users management](#users-management)
+- [Overview](#overview)
+  - [Program executions](#program-executions)
+  - [Permissions](#permissions)
+  - [Hardware access](#hardware-access)
+  - [Hardware drivers](#hardware-drivers)
+  - [Hardware access performances](#hardware-access-performances)
+  - [Filesystem access](#filesystem-access)
+  - [User interface](#user-interface)
+  - [Users management](#users-management)
 
 ## Program executions
 

@@ -1,9 +1,10 @@
 # Devices
 
-- [Connecting a new device](#connecting-a-new-device)
-- [Interacting with a device](#interacting-with-a-device)
-- [Device handler files persistence](#device-handler-files-persistence)
-- [Custom device handler filename](#custom-device-handler-filename)
+- [Devices](#devices)
+  - [Connecting a new device](#connecting-a-new-device)
+  - [Interacting with a device](#interacting-with-a-device)
+  - [Device handler files persistence](#device-handler-files-persistence)
+  - [Custom device handler filename](#custom-device-handler-filename)
 
 ## Connecting a new device
 

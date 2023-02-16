@@ -3,10 +3,11 @@
 This document describes the structure, features and behaviours to both
 [applications](../concepts/applications.md) and [libraries](../concepts/libraries.md).
 
-- [Name and slug](#name-and-slug)
-- [Application Identifier](#application-identifier)
-- [Features](#features)
-- [The manifest](#the-manifest)
+- [Applications and Libraries](#applications-and-libraries)
+	- [Name and slug](#name-and-slug)
+	- [Application Identifier](#application-identifier)
+	- [Features](#features)
+	- [The manifest](#the-manifest)
 
 ## Name and slug
 

@@ -1,6 +1,7 @@
 # Development
 
-- [Languages](#languages)
+- [Development](#development)
+  - [Languages](#languages)
 
 ## Languages
 The project will be developed in C, with first-class support for this language.

@@ -1,10 +1,11 @@
 # What are users?
 
-- [The concept](#the-concept)
-- [Users type](#users-type)
-- [Dangers of an administrator account](#dangers-of-an-administrator-account)
-- [User Privileges Elevation (UPE)](#user-privileges-elevation-upe)
-- [Groups](#groups)
+- [What are users?](#what-are-users)
+  - [The concept](#the-concept)
+  - [Users type](#users-type)
+  - [Dangers of an administrator account](#dangers-of-an-administrator-account)
+  - [User Privileges Elevation (UPE)](#user-privileges-elevation-upe)
+  - [Groups](#groups)
 
 ## The concept
 

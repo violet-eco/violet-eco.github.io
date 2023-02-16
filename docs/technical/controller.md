@@ -4,9 +4,10 @@
 
 It is concretely represented by the [`sys::perm` (WIP)]() service.
 
-- [Notion of scope](#notion-of-scope)
-- [The perm system library](#the-perm-system-library)
-- [Permission extension](#permission-extension)
+- [Controller](#controller)
+  - [Notion of scope](#notion-of-scope)
+  - [The perm system library](#the-perm-system-library)
+  - [Permission extension](#permission-extension)
 
 ## Notion of scope
 

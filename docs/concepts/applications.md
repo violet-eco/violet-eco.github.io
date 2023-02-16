@@ -2,14 +2,15 @@
 
 *Applications* are the system's way to handle software.
 
-- [How applications work](#how-applications-work)
-- [Installation methods](#installation-methods)
-	- [From the store](#from-the-store)
-	- [Sideloading](#sideloading)
-	- [Volatile applications](#volatile-applications)
-- [Commands](#commands)
-- [System applications](#system-applications)
-- [Services](#services)
+- [What are applications?](#what-are-applications)
+	- [How applications work](#how-applications-work)
+	- [Installation methods](#installation-methods)
+		- [From the store](#from-the-store)
+		- [Sideloading](#sideloading)
+		- [Volatile applications](#volatile-applications)
+	- [Commands](#commands)
+	- [System applications](#system-applications)
+	- [Services](#services)
 
 ## How applications work
 

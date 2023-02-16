@@ -4,14 +4,15 @@
 itself to indicate when an event happens which user should be notified of,
 or to indicate a persistent state.
 
-- [Structure](#structure)
-- [Display rules](#display-rules)
-	- [Cover image](#cover-image)
-	- [Buttons](#buttons)
-- [Persistent notifications](#persistent-notifications)
-- [Notification types](#notification-types)
-	- [Free Notifications](#free-notifications)
-	- [Multimedia Notifications](#multimedia-notifications)
+- [Notifications](#notifications)
+	- [Structure](#structure)
+	- [Display rules](#display-rules)
+		- [Cover image](#cover-image)
+		- [Buttons](#buttons)
+	- [Persistent notifications](#persistent-notifications)
+	- [Notification types](#notification-types)
+		- [Free Notifications](#free-notifications)
+		- [Multimedia Notifications](#multimedia-notifications)
 
 ## Structure
 

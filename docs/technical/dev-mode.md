@@ -3,7 +3,9 @@
 The *developer mode* enables several features that are not available by default.
 Only administrator user get access to them when they are enabled.
 
-- [How to enable](#how-to-enable)
+- [Developer Mode](#developer-mode)
+  - [How to enable](#how-to-enable)
+  - [Application proxies](#application-proxies)
 
 ## How to enable
 
