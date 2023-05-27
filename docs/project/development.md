@@ -4,11 +4,13 @@
   - [Languages](#languages)
 
 ## Languages
-The project will be developed in C, with first-class support for this language.
 
-Usage of architecture-specific Assembly will be reduced as much as possible, being
-only used in two cases:
+The project will be developed in [Rust&reg;](https://www.rust-lang.org/),
+with first-class support for this language.
 
-- The desired behaviour cannot be reached without Assembly
-(e.g. direct register or stack manipulation)
-- Extremely performance-critical pieces
+The use of architecture-specific Assembly will be reduced
+as much as possible and will only be used in the following two cases:
+
+- Targeted behavior cannot be achieved without
+  Assembly (e.g. registers and stack manipulation)
+- Extremely performance-critical parts

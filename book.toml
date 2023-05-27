@@ -1,9 +1,10 @@
 [book]
 title = "LapisOS documentation"
-author = "Yue"
+author = "Gulce"
 description = "Documents for LapisOS"
 src = "docs"
 language = "en"
+theme = "rust"
 
 [rust]
 edition = "2018"

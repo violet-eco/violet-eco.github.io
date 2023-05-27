@@ -1,130 +1,116 @@
 # What are applications?
 
-*Applications* are the system's way to handle software.
+*Applications* are the way the operating system processes software.
 
 - [What are applications?](#what-are-applications)
-	- [How applications work](#how-applications-work)
-	- [Installation methods](#installation-methods)
-		- [From the store](#from-the-store)
-		- [Sideloading](#sideloading)
-		- [Volatile applications](#volatile-applications)
-	- [Commands](#commands)
-	- [System applications](#system-applications)
-	- [Services](#services)
+  - [How applications work?](#how-applications-work)
+  - [Installation Methods](#installation-methods)
+    - [From the store](#from-the-store)
+    - [Sideloading](#sideloading)
+    - [Volatile applications](#volatile-applications)
+  - [Commands](#commands)
+  - [System Applications](#system-applications)
+  - [Services](#services)
 
-## How applications work
+## How applications work?
 
-An application is a set of executable files and resources. They are
-only way to execute code, as direct binary programs are not supported.
+An application basically consists of executable files and resources.
+Because binary programs are not supported directly, **applications are the only way to run code**.
 
-Any user can install applications, which will only be available from its
-account. Administrator users can install global applications, which are
-available to every user.
+## Installation Methods
 
-## Installation methods
-
-Applications are installed through an *application package*. There
-are several installation methods:
+All applications are installed through *application packages*.
+There are several installation methods:
 
 - From the store
-- Directly from the application's package
+- Directly from the app's package
 - As a volatile application
 
 ### From the store
 
-Applications can be downloaded from LapisOS' official applications store.
+Applications can be downloaded and installed from the official store of LapisOS.
 
-- For closed-source applications, the store only provides pre-compiled programs
-- For open-source applications, the store provides both pre-compiled programs as well
-as the source code
+**For closed source applications**, the store only provides precompiled programs.
 
-For the later, user can choose either to build the program from source, using the
-appropriated build tools in order to optimize performances, or to simply use the
-pre-built programs (which is the option by default).
+**For open source applications**, the store provides both precompiled
+programs and support for compiling from source.
+
+Users can compile applications from source using the appropriate tools
+to compile, or simply use precompiled programs (default) and change
+the default option at any time.
 
 ### Sideloading
 
-Applications sideloading (installing an application directly from its [package (WIP)]())
-follows strict rules determined by the *sideloading mode*, which is either
-"disabled", "secure" or "unsecure".
+*Sideloading (installing an application directly from its package)* follows
+certain rules set by the sideloading mode, called "disable", "secure", "insecure".
 
-- **Disable mode** prevents all sideloading; it's not possible to install
-applications from their package in this mode. [Volatile applications](#volatile-applications)
-can still be run, though.
-- **Secure mode** allows sideloading but will first make the system check
-if the application's [AID (WIP)]() matches an existing application on the Store.
-If so, it compares the application's signature to the Store application's
-store. If they don't match, the application is considered malicious and
-won't be installed. Note that this mode only works while connected to 
-internet, as the system needs to check the Store to ensure the application
-is not malicious. If the computer is offline, sideloading will be
-disabled.
-- **Unsecure mode** allows sideloading without any checking, which is
-highly dangerous as it allows spoofing.
+- **Disable mode** blocks all sideloading, in this mode it is not possible to install apps via packages, but [volatile apps](#volatile-applications) can still be run.
+- **Safe mode** allows sideloading and makes the system check if the application's AID matches an appllication available in the Store. If it matches, it compares the signature of the application with the signature of the Store Application. If the signatures do not match, the application is considered *malicious* and will not be installed. Also note that this mod only works when the computer is connected to the internet, as the system needs to check the Store to see if the application is malicios. If the computer is offline, sideloading will be disabled.
+- **Insecure mode** allows sideloading without any checking, which is quite dangerous as it allows spoofing.
 
-The sideloading mode can be changed in the [Control Center (WIP)]().
+Sideloading mode can be changed in Control Center.
 
 ### Volatile applications
 
-Applications can be also be ran as *volatile applications*, which means
-they are not installed on the disk. There are three methods:
+Applications can also be run as *volatile applications*, which
+means they are not installed to disk:
 
-- *Full-volatile*: the app's datas are removed when the application closes
-- *Session-scoped*: the app's datas are stored on disk until the system shuts down
-- *Local-persistent*: the app's datas are stored within a data file located in the same folder
-- *Persistent*: the app's datas are stored in a dedicated folder, also enabling common data between users
+- **Full-volatile:** all data of the application is deleted after the application is closed
+- **Session-scoped:** the application's data is kept on disk until the system is shut down
+- **Local-persisent:** the application's data is stored in a data file with extension `*.vad` created in the same folder
+- **Persistent:** the application's data is stored in a dedicated folder
 
-By default, volatile applications are ran in *local-persistent* mode. In this mode,
-the system first checks if a file with the same name as application's package but with
-the *.vad (Volatile Application's Data)* exists. If so, it opens this file as the application's
-storage. Then, when the application wants to store some data, it is stored inside in this data file.
+By default, volatile applications run in *local-persistent* mode.
+In this mode, the system first searches for a file in the same
+folder with the same name as the application's package file,
+but with the extension `*.vad` *(Volatile Application Data)*.
+If the file is found, it opens it as the application's storage.
+Thus, when the application wants to store data, it is stored in the data file.
 
-Note that *.vad (Volatile Application's Data)* files are disguised [VSF (WIP)]() files.
+Note that `*.vad` *(Volatile Application Data)* files are disguised
+VSF (Virtual Storage File) files.
 
-Volatile applications running as persistent do not appear in the applications list
-and can only be managed through a specific option in the [Control Center (WIP)]().
-Their executable files are not stored anywhere and stay in the application's package,
-while only their data are stored on the disk. This allows to run the same application
-several times without losing any data and without worrying about a data file. This
-also allows to store a common data between users.
+*Persistently running apps* are not listed in the app list and can only be
+managed through an option in the Control Center. While its data is stored
+on disk, its executables are not stored anywhere, they just stay inside
+the package. This allows running the same application multiple times and
+not worrying about the data file. It also supports shared data storage between users.
 
 Note that the store has an option for installing applications as volatile.
 
 ## Commands
 
-Applications can expose [shell commands (WIP)](). Multiple commands can be exposed
-without any risk of clashing as the name command name must be prefixed by the
-AID first.
+Applications can provide shell commands. Since command names must prefixed
+by the AID, multiple commands can be provided without the danger of name conflicts.
 
-For instance, if an application with AID `developer.app` exposes an `get_time` command,
-the final usable command will be `developer.app.get_time`.
+For example, if an app with AID `developer.app` provides the command `get_time`, the last available command will be `developer.app.get_time`.
 
-This is quite long name but allows to prevent any clashing between commands. It's
-common for shell scripts to use imports at the beginning of the script to refer
-more easily to applications' commands.
+Although this is a rather long name, it avoids conflicts between
+the names of the commands. It is quite common for shell scripts to
+import commands at the beginning of the script to make it easier
+to access applications' commands.
 
-Note that, by default, shell prompts (not scripts) will allow to directly use
-commands such as `get_time` in the short form if no other application exposes a
-command with the same name.
+By default, shell prompts (not scripts) will allow use directly
+in the short form `get_time` if no other application provides
+a command with the same name.
 
-Commands work by launching the application with specific [execution context (WIP)]().
+Commands work by running the application through a specific *execution context*.
 
-## System applications
+## System Applications
 
-Some [native applications (WIP)] are part of the system itself and are called
-*system applications*. They get a few specific features:
+Some native applications are part of the system itself and
+are called *system applications*. These applications have some special privileges:
 
 - Access to system-reserved features
-- Ability to create [system services (WIP)]()
+- Permission to create *system service*
 - They cannot be uninstalled
 
-System applications cannot be removed in *any way*, as some of them are critical
-for the system to function properly. Native applications which are not system
-applications can be removed, though.
+System applications cannot be removed *by any means* as
+they are critical to the correct functioning of the system.
+Native applications which are not system applications can be removed, though.
 
 ## Services
-
-Applications can provide [services (WIP)]() by specifying them in their [manifest (WIP)]().
-The services will be run at startup with the usual application's permissions.
+Applications can create *services* by specifying them in their manifests.
+The services will run at startup with the application's permissions.
 
 There is exactly one process for each service per active user.

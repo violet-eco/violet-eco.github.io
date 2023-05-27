@@ -1,20 +1,22 @@
-# Frequently-asked Questions
+# Frequently Asked Questions
 
-- [Will this project replace Windows/MacOS/Linux/... one day?](will-this-project-replace-windowsmacoslinux-one-day)
-- [How can I help?](#how-can-i-help)
+- [Frequently Asked Questions](#frequently-asked-questions)
+  - [Will this project replace Windows/macOS/Linux/... one day?](#will-this-project-replace-windowsmacoslinux-one-day)
+  - [How can I help?](#how-can-i-help)
 
-## Will this project replace Windows/MacOS/Linux/... one day?
+## Will this project replace Windows/macOS/Linux/... one day?
 
-No. Absolutely not. Because, it's not viable for an operating system
-today to just get rid of all backward compatibility with existing software,
-simply because what users are interested in applications first, and **then**
-the system itself - it's secure, stable, performant, and so on.
+No, it's impossible. Because ignoring backward compatibility
+for legacy architectures and already existing software is
+simply not viable for an operating system. Users first
+look at applications in an operating system, **then** the system
+itself - for security, stability, performance, etc.
 
-Imagine someone introducing the perfect operating system, but with almost
-no application on it. Would you get rid of your Windows/MacOS/Linux/... system
-for this one? Surely not, at least not as your everyday system.
+Imagine that someone offers you a great operating system, but
+there are almost no applications in it. Would you still use
+this OS instead of Windows/macOS/Linux? Of course no!
 
-This is why this project is for now purely *theorical*.
+That's why this project is **purely theoretical**.
 
 ## How can I help?
 
