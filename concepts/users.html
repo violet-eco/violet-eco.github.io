@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> Frequently-asked Questions</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/roadmap.html"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html" class="active"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../features/index.html"><strong aria-hidden="true">5.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../features/parental-control.html"><strong aria-hidden="true">5.1.</strong> Parental Control</a></li></ol></li><li class="chapter-item expanded "><a href="../ux/index.html"><strong aria-hidden="true">6.</strong> User Experience</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ux/notifications.html"><strong aria-hidden="true">6.1.</strong> Notifications</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">7.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">7.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/controller.html"><strong aria-hidden="true">7.2.</strong> Controller</a></li><li class="chapter-item expanded "><a href="../technical/dev-mode.html"><strong aria-hidden="true">7.3.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="../technical/devices.html"><strong aria-hidden="true">7.4.</strong> Devices</a></li></ol></li><li class="chapter-item expanded "><a href="../specs/index.html"><strong aria-hidden="true">8.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specs/applications-and-libraries.html"><strong aria-hidden="true">8.1.</strong> Applications and libraries</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html" class="active"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,63 +150,55 @@
 </li>
 </ul>
 <h2 id="the-concept"><a class="header" href="#the-concept">The concept</a></h2>
-<p>Many computers are intended to be shared by multiple persons.
-In such case, it is useful to separate the data of each user
-and to prevent other users from accessing another's.</p>
-<p>By default, there is two user accounts: the System and the Administrator.
-They are called <em>virtual users</em> because it's not possible to log in
-these accounts. Other users are called <em>custom users</em>.</p>
-<p>Each custom user has a dedicated data directory called <em>homedir</em>, in
-<code>/home/[username]</code>, as well as a list of files and directories it
-can read and/or write. By default, each user gets access to:</p>
+<p>Most computers are intended to be shared among many people.
+In such a situation it is quite useful to separate each user's
+data from each other and restrict access to the other.</p>
+<p>By default, there are two user accounts: the <em>System</em> and the <em>Administrator</em>.
+They are called <em>virtual users</em> because it is not possible to log in these accounts.
+Other users are called <em>custom users</em>.</p>
+<p>Each custom user has a data folder called <em>home directory</em> designated as <code>/home/[username]</code>.
+Users can access the files and folders inside this folder and do whatever they want.
+By default, each user has access to:</p>
 <ul>
-<li>Its homedir in <code>/home/[username]</code></li>
-<li>The mounted periphericals in <code>/media</code></li>
-<li>Its temporary directory in <code>/tmp/[username]</code></li>
+<li>Its home directory in <code>/home/[username]</code></li>
+<li>The mounted units in <code>/media</code></li>
+<li>Its temporary directory in <code>tmp/[username]</code></li>
 </ul>
 <h2 id="users-type"><a class="header" href="#users-type">Users type</a></h2>
-<p>Each user is of a specific type:</p>
+<p>Each user is in one of these types:</p>
 <ul>
-<li><em>Phantom</em>: the user's datas are erased after the computer is turned off</li>
-<li><em>Standard</em>: nothing special</li>
-<li><em>Administrator</em>: can run programs directly as administrator</li>
-<li><em>Main administrator</em>: administrator that can manage storage encryption</li>
+<li><strong>Phantom:</strong> all data of the user is deleted after the computer is turned off</li>
+<li><strong>Standard:</strong> nothing special</li>
+<li><strong>Administrator:</strong> can run programs directly as administrator</li>
+<li><strong>Main administrator:</strong> administrator account that can manage storage encryption</li>
 </ul>
-<p>When a user wants to perform a task it does not have the privileges to,
-it can (by default) ask to run the task as <em>another user</em>. The other user's
-credentials are then required.</p>
-<p>It's not possible to ask to run a task as system or as administrator as these
-accounts are virtual and do not have passwords such, <strong>except</strong> if an administrator
+<p>When a user wants to perform a task for which he is not authorized,
+it may want to run the task as another user. The other user's login
+informations are required then.</p>
+<p>A task cannot be performed as system or administrator because these
+accounts are virtual and have no passwords, <strong>except</strong> if an administrator
 user tries to run a task as administrator.</p>
-<p>Note that there is always one and exactly one main administrator. The user account
-is created during the installation process, and can be transferred later on to
-another administrator account.</p>
+<p>Keep in mind that there is always only one and exactly one administrator.
+This account is created during the installation process and can later be transferred
+to another administrator account.</p>
 <h2 id="dangers-of-an-administrator-account"><a class="header" href="#dangers-of-an-administrator-account">Dangers of an administrator account</a></h2>
-<p>The problem with administrators account is that <strong>can do almost anything</strong>
-(except some very specific things like editing the system's files). They can
-change system settings, read and change other users' data, and even run background
-processes at startup. They also have all possible privileges as they can edit their
-own.</p>
-<p>This is why it's extremely discouraged to have two administrator users on the
-same computer, unless the two accounts are used by really trustworthy persons.
-As such, a large warning is shown if you try to create a new administrator user.</p>
+<p>The problem with the administrator account is that <strong>it can do anything</strong> (except
+some very specific things). They can change system settings, read and modify other users'
+data, and even run background processes on startup.
+They also have all possible permissions.</p>
+<p>Having two administrator accounts on one computer is <strong>definitely</strong> not
+recommended unless both accounts are used by trusted people. For this reason,
+a large warning is shown when you try to create a new administrator account.</p>
 <h2 id="user-privileges-elevation-upe"><a class="header" href="#user-privileges-elevation-upe">User Privileges Elevation (UPE)</a></h2>
-<p>Users can ask to perform a task with the privileges of another user, such
-as running a program as administrator. This uses the <em>User Privileges Elevation</em>
-(UPE) system.</p>
-<p>In such case, the program is still run as the current user, but with the
-privileges of both the running user and the user specified to the UPE.</p>
-<p>Running a program with UPE requires to know either the other account's
-password, or to have an <em>authorization</em> from this user. For instance, admin.
-users have an <em>authorization</em> to use Administrator account, without providing
-any password, although a human confirmation is required.</p>
-<p>Each request, successful or not, is logged in the log file at <code>/etc/logs/auc</code>.</p>
+<p>Users can request permission to run a task as another user, such as running as administrator.</p>
+<p>In such a case, the program is still run as the same user, but with the same user's
+privileges and the user's privileges specified to the UPE.</p>
+<p>To run a program with UPE, either knowing the user's password or <em>authorization</em>
+from this user is required. For example, administrator accounts are <em>authorized</em>
+to use the Administrator account without specifying a password.</p>
+<p>Successful or not, every request is logged in the log file at <code>/etc/logs/auc</code>.</p>
 <h2 id="groups"><a class="header" href="#groups">Groups</a></h2>
-<p><em>Groups</em> are a set of privileges defined by the administrator. Access some folders
-or application's permissions (e.g. microphone access) can be restricted to a specific
-group, for instance. When a user is created, it can be put in a group. It then
-automatically inherits all of the group's privileges, in addition to its own ones.
-The administrator can add and remove users from groups with the control panel.</p>
+<p>Groups are a set of privileges defined by the administrator. Access some folders or application's permissions (e.g. microphone access) can be restricted to a specific group, for instance. When a user is created, it can be put in a group. It then automatically inherits all of the group's privileges, in addition to its own ones. The administrator can add and remove users from groups with the control panel.</p>
 <p>When a user is in a group, the group's privileges cannot be revoked for this user.</p>
 
                     </main>
@@ -216,9 +208,6 @@ The administrator can add and remove users from groups with the control panel.</
                             <a rel="prev" href="../concepts/libraries.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../features/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
                         <div style="clear: both"></div>
                     </nav>
                 </div>
@@ -227,9 +216,6 @@ The administrator can add and remove users from groups with the control panel.</
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                     <a rel="prev" href="../concepts/libraries.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a rel="next" href="../features/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 

@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html" class="active"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> Frequently-asked Questions</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/roadmap.html"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="features/index.html"><strong aria-hidden="true">5.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="features/parental-control.html"><strong aria-hidden="true">5.1.</strong> Parental Control</a></li></ol></li><li class="chapter-item expanded "><a href="ux/index.html"><strong aria-hidden="true">6.</strong> User Experience</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ux/notifications.html"><strong aria-hidden="true">6.1.</strong> Notifications</a></li></ol></li><li class="chapter-item expanded "><a href="technical/index.html"><strong aria-hidden="true">7.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="technical/overview.html"><strong aria-hidden="true">7.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="technical/controller.html"><strong aria-hidden="true">7.2.</strong> Controller</a></li><li class="chapter-item expanded "><a href="technical/dev-mode.html"><strong aria-hidden="true">7.3.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="technical/devices.html"><strong aria-hidden="true">7.4.</strong> Devices</a></li></ol></li><li class="chapter-item expanded "><a href="specs/index.html"><strong aria-hidden="true">8.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specs/applications-and-libraries.html"><strong aria-hidden="true">8.1.</strong> Applications and libraries</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html" class="active"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -138,32 +138,44 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="foreword"><a class="header" href="#foreword">Foreword</a></h1>
+<ul>
+<li><a href="#foreword">Foreword</a>
+<ul>
+<li><a href="#welcome">Welcome!</a>
+<ul>
+<li><a href="#what-is-lapisos">What is LapisOS?</a></li>
+<li><a href="#whats-the-projects-structure">What's the project's structure?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 <h2 id="welcome"><a class="header" href="#welcome">Welcome!</a></h2>
-<p>Welcome to LapisOS' documentation! This book will show you how the
-system is designed, how it works, and all the little things it can offer
-to the end user as well as the features available for application developers.</p>
-<p><strong>Before reading this documentation, please note that</strong> I'm developing this
-project on my own and I'm by no mean an operating system expert.</p>
-<p>This means there are surely many flaws in the very low-level aspects, especially
-in the microkernel, like the way hardware devices are handled and mapped in memory.
-If you find a flaw, feel free to <a href="https://github.com/lapis-org/docs/issues/new/choose">submit an issue</a>.</p>
+<p>Welcome to the documentation of LapisOS!
+These documents will show you how the system is designed,
+how it works and what it can offer the end user.</p>
+<p><strong>Before reading these documents, consider that</strong>
+I'm developing this project on my own and am not an expert.</p>
+<p>This means that there may be mistakes in low-level documents.
+If you find a mistake, feel free to <a href="https://github.com/lapis-org/docs/issues/new/choose">submit an issue</a>.</p>
 <h3 id="what-is-lapisos"><a class="header" href="#what-is-lapisos">What is LapisOS?</a></h3>
-<p>LapisOS is an operating system aiming to replace ancient systems like Windows,
-Linux, MacOS. Well, this is an <em>ideal</em> goal but given how much Windows/Linux/MacOS
-and other systems are deeply installed in today's computers, LapisOS is more of
-a theorical operating system that shows what we could get if we hadn't to maintain
-legacy compatibility with ancient architectures.</p>
+<p>LapisOS is an operating system that aims to replace
+legacy systems such as macOS, Linux, and Windows.
+Of course, we know how Windows/macOS/Linux are
+installed on today's devices. Therefore, LapisOS
+is a theoretical operating system that shows how
+an operating system that does not provide backward
+compatibility with older architectures will look like.</p>
 <h3 id="whats-the-projects-structure"><a class="header" href="#whats-the-projects-structure">What's the project's structure?</a></h3>
-<p>The project is composed of three distinct parts: the kernel, the system
-and the desktop environment.</p>
-<p>The first one is the part that allows the software to access the hardware,
-like writing files to the disk. It's a microkernel, meaning it's easier to
-maintain and has a reduced attack surface for potential security issues
-than a monolithic kernel like Linux.</p>
-<p>The system is the higher-level component that deals with everything that is
-not directly related to hardware or graphical interface. For instance, applications,
-user accounts and permissions are all managed by the system.</p>
-<p>The desktop environment, finally, is the part the user sees when launching LapisOS.</p>
+<p>The project consists of three different parts:
+<em>the kernel</em>, <em>the system</em> and <em>the desktop environment</em>.</p>
+<p><strong>The kernel</strong> basically allows software to access hardware.
+It is a microkernel, so unlike a monolithic kernel
+like Linux, potential security issues are greatly reduced.</p>
+<p><strong>The system</strong> contains everything not directly related
+to hardware or graphical interface. Examples of this
+are applications, user accounts, and permission management.</p>
+<p><strong>The desktop environment</strong> is what the user sees from the launch of LapisOS.</p>
 
                     </main>
 
