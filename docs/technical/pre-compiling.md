@@ -6,7 +6,7 @@ with a specific architecture (x86, ARM, ...).
 
 To prevent this and to make native programs more stable and
 secure, Violet applications are distributed as *Violet Pre-compiled Programs*
-(VPP) using a special very low-level language called **Rosa**.
+(VPP) using a special very low-level language called [**Rosa**](https://github.com/violet-eco/rosa).
 
 - [Pre-compiling](#pre-compiling)
   - [How it works?](#how-it-works)
@@ -14,7 +14,7 @@ secure, Violet applications are distributed as *Violet Pre-compiled Programs*
 
 ## How it works?
 
-**Rosa** is very similar to WebAssembly: compressed very low-level
+[**Rosa**](https://github.com/violet-eco/rosa) is very similar to WebAssembly: compressed very low-level
 source files that are built ahead of time on the machine that will
 run it. This enables several advantages:
 
