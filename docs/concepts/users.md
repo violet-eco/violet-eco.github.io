@@ -23,7 +23,7 @@ By default, each user has access to:
 
 - Its home directory in `/home/[username]`
 - The mounted units in `/media`
-- Its temporary directory in `tmp/[username]`
+- Its temporary directory in `/tmp/[username]`
 
 ## Users type
 
