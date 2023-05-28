@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Developer Mode - Violet documentation</title>
+        <title>Integrity - Violet documentation</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Documents for Violet">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/dev-mode.html" class="active"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="../technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="../technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="../technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="../technical/integrity.html" class="active"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="../technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="../technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -137,42 +137,47 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="developer-mode"><a class="header" href="#developer-mode">Developer Mode</a></h1>
-<p>The developer mode enables several features that are not
-available by default. Only administrator user get access to
-them when they are enabled.</p>
+                        <h1 id="integrity"><a class="header" href="#integrity">Integrity</a></h1>
 <ul>
-<li><a href="#developer-mode">Developer Mode</a>
+<li><a href="#integrity">Integrity</a>
 <ul>
-<li><a href="#how-to-enable">How to enable?</a></li>
-<li><a href="#application-proxies">Application proxies</a></li>
+<li><a href="#system-immutability">System immutability</a></li>
+<li><a href="#hashes">Hashes</a></li>
+<li><a href="#checking-hashes">Checking hashes</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="how-to-enable"><a class="header" href="#how-to-enable">How to enable?</a></h2>
-<p>Developer mode can be enabled either by typing the following command
-in the terminal:</p>
-<pre><code class="language-sh">vio central --enable dev-mode
-</code></pre>
-<p>Or, while holding the <code>Ctrl</code> <code>Alt</code> and <code>Maj</code> key, type <code>DEV</code>.</p>
-<h2 id="application-proxies"><a class="header" href="#application-proxies">Application proxies</a></h2>
-<p>Application proxies collect all calls made by the application to the system.
-It is useful for applications debugging.</p>
-<p>When a proxy is set up for an application, all system calls sent to this application
-will be transferred to the proxy, which will be able to do whatever it wants with it.
-It's possible for the proxy to never answer the signal, to change its content before actually sending it to the system, etc.</p>
-<p>Basic usage of an application proxy is as a &quot;listener&quot;: it only listens to
-specific signals and logs them, without cancelling them and/or modifying them.
-This is useful to check all filesystem access requested by an application, in real time.</p>
+<h2 id="system-immutability"><a class="header" href="#system-immutability">System immutability</a></h2>
+<p>The <code>/sys</code> folder is immutable, which means that even the
+main administrator cannot change this folder. <strong>The only process</strong>
+this folder changes is the repair process or update run by the system itself.</p>
+<h2 id="hashes"><a class="header" href="#hashes">Hashes</a></h2>
+<p>When written to critical files in <code>/sys</code> or <code>/sys/etc</code>,
+their hashes are calculated using the <code>SHA-256</code> algorithm and stored in
+the system's <em>hash registry</em> (the <code>/etc/sys/hashes</code> file).</p>
+<h2 id="checking-hashes"><a class="header" href="#checking-hashes">Checking hashes</a></h2>
+<p>When these files are initially read, their contents are calculated
+and compared with the hash registry. If the hashes don't match,
+the file is considered as <em>corrupted</em>. The consequences depend on the location
+of the file:</p>
+<ul>
+<li><strong>System</strong> (<code>/sys</code>): the system will check its backup integrity and then restore itself from the backup</li>
+<li><strong>System backup</strong> (<code>/sys/backup</code>): the system will check its backup integrity and then restore itself from the backup</li>
+<li><strong>System + system backup</strong>: the system won't boot and indicate it must be reinstalled (documents won't be lost if they aren't corrupted) It's possible to force the boot process, but a large warning will indicate it may cause crashes or even introduce security issues</li>
+<li><strong>Hash registry</strong> (<code>/etc/sys/hashes</code>): same as <em>system + system backup</em></li>
+<li><strong>Registry</strong> (<code>/etc/sys/registry</code>): same as <em>system + system backup</em></li>
+<li><strong>Crash save:</strong> the crash saves won't be restored (can be forced)</li>
+<li><strong>Sandbox:</strong> system will refuse to start the sandbox (can be forced)</li>
+</ul>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../technical/overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../technical/dev-mode.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../technical/integrity.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../technical/multi-platform.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -181,10 +186,10 @@ This is useful to check all filesystem access requested by an application, in re
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../technical/overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../technical/dev-mode.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../technical/integrity.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../technical/multi-platform.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

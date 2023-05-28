@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -503,6 +503,77 @@ It's possible for the proxy to never answer the signal, to change its content be
 <p>Basic usage of an application proxy is as a &quot;listener&quot;: it only listens to
 specific signals and logs them, without cancelling them and/or modifying them.
 This is useful to check all filesystem access requested by an application, in real time.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="integrity"><a class="header" href="#integrity">Integrity</a></h1>
+<ul>
+<li><a href="technical/integrity.html#integrity">Integrity</a>
+<ul>
+<li><a href="technical/integrity.html#system-immutability">System immutability</a></li>
+<li><a href="technical/integrity.html#hashes">Hashes</a></li>
+<li><a href="technical/integrity.html#checking-hashes">Checking hashes</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="system-immutability"><a class="header" href="#system-immutability">System immutability</a></h2>
+<p>The <code>/sys</code> folder is immutable, which means that even the
+main administrator cannot change this folder. <strong>The only process</strong>
+this folder changes is the repair process or update run by the system itself.</p>
+<h2 id="hashes"><a class="header" href="#hashes">Hashes</a></h2>
+<p>When written to critical files in <code>/sys</code> or <code>/sys/etc</code>,
+their hashes are calculated using the <code>SHA-256</code> algorithm and stored in
+the system's <em>hash registry</em> (the <code>/etc/sys/hashes</code> file).</p>
+<h2 id="checking-hashes"><a class="header" href="#checking-hashes">Checking hashes</a></h2>
+<p>When these files are initially read, their contents are calculated
+and compared with the hash registry. If the hashes don't match,
+the file is considered as <em>corrupted</em>. The consequences depend on the location
+of the file:</p>
+<ul>
+<li><strong>System</strong> (<code>/sys</code>): the system will check its backup integrity and then restore itself from the backup</li>
+<li><strong>System backup</strong> (<code>/sys/backup</code>): the system will check its backup integrity and then restore itself from the backup</li>
+<li><strong>System + system backup</strong>: the system won't boot and indicate it must be reinstalled (documents won't be lost if they aren't corrupted) It's possible to force the boot process, but a large warning will indicate it may cause crashes or even introduce security issues</li>
+<li><strong>Hash registry</strong> (<code>/etc/sys/hashes</code>): same as <em>system + system backup</em></li>
+<li><strong>Registry</strong> (<code>/etc/sys/registry</code>): same as <em>system + system backup</em></li>
+<li><strong>Crash save:</strong> the crash saves won't be restored (can be forced)</li>
+<li><strong>Sandbox:</strong> system will refuse to start the sandbox (can be forced)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="multi-platform-management"><a class="header" href="#multi-platform-management">Multi-platform management</a></h1>
+<p>Violet ecosystem programs can be run on Linux, Windows,
+or macOS systems using a wrapper called the <em>Violet Calls Wrapper</em>.
+It can be downloaded from Violet's website.</p>
+<p>When installed on a system, it serves to run Violet applications natively,
+although the permission management does not work perfectly and some features
+cannot be implemented (e.g. no desktop, no access to native Violet applications -
+only native libraries etc.)</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="pre-compiling"><a class="header" href="#pre-compiling">Pre-compiling</a></h1>
+<p>In traditional systems, programs are distributed as
+binary and are only availeble for one specific platform (Windows, Linux, macOS, ...)
+with a specific architecture (x86, ARM, ...).</p>
+<p>To prevent this and to make native programs more stable and
+secure, Violet applications are distributed as <em>Violet Pre-compiled Programs</em>
+(VPP) using a special very low-level language called <strong>Rosa</strong>.</p>
+<ul>
+<li><a href="technical/pre-compiling.html#pre-compiling">Pre-compiling</a>
+<ul>
+<li><a href="technical/pre-compiling.html#how-it-works">How it works?</a></li>
+<li><a href="technical/pre-compiling.html#compatibility">Compatibility</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="how-it-works"><a class="header" href="#how-it-works">How it works?</a></h2>
+<p><strong>Rosa</strong> is very similar to WebAssembly: compressed very low-level
+source files that are built ahead of time on the machine that will
+run it. This enables several advantages:</p>
+<ul>
+<li>Programs are multi-platform and multi-architecture</li>
+<li>Programs run faster thanks to being optimized for the specific machine they will run on</li>
+<li>Programs are still very fast to compile</li>
+<li>Source code is protected for closed-source applications as Rosa is made of basic instructions</li>
+</ul>
+<h2 id="compatibility"><a class="header" href="#compatibility">Compatibility</a></h2>
+<p>Rosa can also run on non-Violet operating systems using a lightweight
+wrapper available on Violet's website.</p>
+<p><strong>NOTE:</strong> Although Rosa is multi-platform, Violet apps use Violet's
+ultra-beautiful features that are <em>not</em> natively supported on other platforms.
+To run such applications, you must install the <a href="technical/multi-platform.html">full wrapper</a> available on the website.</p>
 
                     </main>
 

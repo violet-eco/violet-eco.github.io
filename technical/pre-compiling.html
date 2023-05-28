@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Developer Mode - Violet documentation</title>
+        <title>Pre-compiling - Violet documentation</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Documents for Violet">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/dev-mode.html" class="active"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="../technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="../technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="../technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="../technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="../technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="../technical/pre-compiling.html" class="active"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -137,43 +137,44 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="developer-mode"><a class="header" href="#developer-mode">Developer Mode</a></h1>
-<p>The developer mode enables several features that are not
-available by default. Only administrator user get access to
-them when they are enabled.</p>
+                        <h1 id="pre-compiling"><a class="header" href="#pre-compiling">Pre-compiling</a></h1>
+<p>In traditional systems, programs are distributed as
+binary and are only availeble for one specific platform (Windows, Linux, macOS, ...)
+with a specific architecture (x86, ARM, ...).</p>
+<p>To prevent this and to make native programs more stable and
+secure, Violet applications are distributed as <em>Violet Pre-compiled Programs</em>
+(VPP) using a special very low-level language called <strong>Rosa</strong>.</p>
 <ul>
-<li><a href="#developer-mode">Developer Mode</a>
+<li><a href="#pre-compiling">Pre-compiling</a>
 <ul>
-<li><a href="#how-to-enable">How to enable?</a></li>
-<li><a href="#application-proxies">Application proxies</a></li>
+<li><a href="#how-it-works">How it works?</a></li>
+<li><a href="#compatibility">Compatibility</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="how-to-enable"><a class="header" href="#how-to-enable">How to enable?</a></h2>
-<p>Developer mode can be enabled either by typing the following command
-in the terminal:</p>
-<pre><code class="language-sh">vio central --enable dev-mode
-</code></pre>
-<p>Or, while holding the <code>Ctrl</code> <code>Alt</code> and <code>Maj</code> key, type <code>DEV</code>.</p>
-<h2 id="application-proxies"><a class="header" href="#application-proxies">Application proxies</a></h2>
-<p>Application proxies collect all calls made by the application to the system.
-It is useful for applications debugging.</p>
-<p>When a proxy is set up for an application, all system calls sent to this application
-will be transferred to the proxy, which will be able to do whatever it wants with it.
-It's possible for the proxy to never answer the signal, to change its content before actually sending it to the system, etc.</p>
-<p>Basic usage of an application proxy is as a &quot;listener&quot;: it only listens to
-specific signals and logs them, without cancelling them and/or modifying them.
-This is useful to check all filesystem access requested by an application, in real time.</p>
+<h2 id="how-it-works"><a class="header" href="#how-it-works">How it works?</a></h2>
+<p><strong>Rosa</strong> is very similar to WebAssembly: compressed very low-level
+source files that are built ahead of time on the machine that will
+run it. This enables several advantages:</p>
+<ul>
+<li>Programs are multi-platform and multi-architecture</li>
+<li>Programs run faster thanks to being optimized for the specific machine they will run on</li>
+<li>Programs are still very fast to compile</li>
+<li>Source code is protected for closed-source applications as Rosa is made of basic instructions</li>
+</ul>
+<h2 id="compatibility"><a class="header" href="#compatibility">Compatibility</a></h2>
+<p>Rosa can also run on non-Violet operating systems using a lightweight
+wrapper available on Violet's website.</p>
+<p><strong>NOTE:</strong> Although Rosa is multi-platform, Violet apps use Violet's
+ultra-beautiful features that are <em>not</em> natively supported on other platforms.
+To run such applications, you must install the <a href="multi-platform.html">full wrapper</a> available on the website.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../technical/overview.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../technical/multi-platform.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a rel="next" href="../technical/integrity.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
                     </nav>
@@ -181,11 +182,8 @@ This is useful to check all filesystem access requested by an application, in re
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../technical/overview.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../technical/multi-platform.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a rel="next" href="../technical/integrity.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
