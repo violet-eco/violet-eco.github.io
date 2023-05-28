@@ -16,3 +16,4 @@
   - [Multi-platform management](technical/multi-platform.md)
   - [Pre-compiling](technical/pre-compiling.md)
   - [I/O manager](technical/iona.md)
+  - [Devices](technical/devices.md)
