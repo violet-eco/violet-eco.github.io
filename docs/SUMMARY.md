@@ -12,3 +12,4 @@
   - [Overview](technical/overview.md)
   - [Developer Mode](technical/dev-mode.md)
   - [Integrity](technical/integrity.md)
+  - [Multi-platform management](technical/multi-platform.md)
