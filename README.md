@@ -1,21 +1,19 @@
-# LapisOS
-LapisOS is an experimental general-purpose operating system aiming to
-provide the highest security and safety to the average user, while
-remaining powerful enough to be fast, efficient and highly customizable
-for more advanced users.
+# Violet
+Violet is a modern experimental operating system that
+aims to provide the highest security to its users.
 
 ## Features
-- Extreme customization, up to the kernel itself
+- Extreme customization
 - ...
 
 ## Documentation
 
 Design and specification documents can be found in the [`docs`](docs) directory.
 
-The documentation is also live at [`https://lapis-org.github.io/docs`](https://lapis-org.github.io/docs).
+The documentation is also live at [`https://violet-eco.github.io/docs`](https://violet-eco.github.io/docs).
 
-## What is LapisOS?
-LapisOS is an operating system that aims to replace
+## What is Violet?
+Violet is an operating system that aims to replace
 legacy systems such as macOS, Linux, and Windows.
 Of course, he knows how Windows/macOS/Linux are
 installed on today's devices. Therefore, LapisOS

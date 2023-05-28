@@ -28,7 +28,7 @@ There are several installation methods:
 
 ### From the store
 
-Applications can be downloaded and installed from the official store of LapisOS.
+Applications can be downloaded and installed from the official store of Violet.
 
 **For closed source applications**, the store only provides precompiled programs.
 

@@ -23,4 +23,4 @@ That's why this project is **purely theoretical**.
 Help is very welcome but there's not many things to help with currently,
 as the system is still being designed. You can still help by suggesting
 improvements or fixing an error (whatever it is, a design problem or a simple typo)
-by [submitting an issue](https://github.com/lapis-org/docs/issues/new/choose).
+by [submitting an issue](https://github.com/violet-eco/docs/issues/new/choose).
