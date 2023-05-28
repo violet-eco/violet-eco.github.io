@@ -10,3 +10,4 @@
   - [What are users?](concepts/users.md)
 - [Technical](technical/README.md)
   - [Overview](technical/overview.md)
+  - [Developer Mode](technical/dev-mode.md)
