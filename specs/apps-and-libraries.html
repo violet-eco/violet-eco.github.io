@@ -163,8 +163,8 @@ to both <a href="../concepts/applications.html">applications</a> and
 <p>By default, the slug is auto-generated from the name, but it can also be customized.</p>
 <h2 id="application-identifier"><a class="header" href="#application-identifier">Application identifier</a></h2>
 <p>The <em>Application identifier</em> (AID) is created using the slug and the developer's identifier (DID).</p>
-<p>For example, an application with slug of <code>sex</code> made by a developer
-whose DID is <code>gulje</code> will get an AID of <code>gulje::sex</code>.</p>
+<p>For example, an application with slug of <code>app</code> made by a developer
+whose DID is <code>gulje</code> will get an AID of <code>gulje::app</code>.</p>
 <p>The AID is unique across the store as well as in a single Violet installation.
 As malicious application may provide the DID and the slug of a legit application
 (<em>AID spoofing</em>), sideloading is verified by default.</p>
@@ -182,9 +182,9 @@ application or library.</p>
 a set of default features to enable.</p>
 <h2 id="manifest"><a class="header" href="#manifest">Manifest</a></h2>
 <pre><code class="language-toml">[infos]
-name = &quot;&quot; # [REQ]
-slug = &quot;cloud-notepad-app&quot; # [REQ]
-description = &quot;&quot; # [REQ]
+name = &quot;Beautiful App&quot; # [REQ]
+slug = &quot;beautiful-app&quot; # [REQ]
+description = &quot;The most beautiful app on the Violet Store&quot; # [REQ]
 version = &quot;1.0.0&quot; # [REQ]
 authors = [ # [REQ]
   &quot;Gülce &lt;guljeee@yandex.com&gt;&quot;,
