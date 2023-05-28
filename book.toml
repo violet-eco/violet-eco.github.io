@@ -1,7 +1,7 @@
 [book]
-title = "LapisOS documentation"
+title = "Violet documentation"
 author = "Gulce"
-description = "Documents for LapisOS"
+description = "Documents for Violet"
 src = "docs"
 language = "en"
 theme = "rust"
@@ -13,5 +13,5 @@ edition = "2018"
 build-dir = "book"
 
 [output.html]
-git-repository-url="https://github.com/lapis-org/docs"
-site-url="https://lapis-org.github.io/docs"
+git-repository-url="https://github.com/violet-eco/docs"
+site-url="https://violet-eco.github.io/docs"
