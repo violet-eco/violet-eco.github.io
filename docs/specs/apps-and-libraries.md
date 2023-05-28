@@ -25,8 +25,8 @@ By default, the slug is auto-generated from the name, but it can also be customi
 
 The *Application identifier* (AID) is created using the slug and the developer's identifier (DID).
 
-For example, an application with slug of `sex` made by a developer
-whose DID is `gulje` will get an AID of `gulje::sex`.
+For example, an application with slug of `app` made by a developer
+whose DID is `gulje` will get an AID of `gulje::app`.
 
 The AID is unique across the store as well as in a single Violet installation.
 As malicious application may provide the DID and the slug of a legit application
@@ -53,9 +53,9 @@ a set of default features to enable.
 ## Manifest
 ```toml
 [infos]
-name = "" # [REQ]
-slug = "cloud-notepad-app" # [REQ]
-description = "" # [REQ]
+name = "Beautiful App" # [REQ]
+slug = "beautiful-app" # [REQ]
+description = "The most beautiful app on the Violet Store" # [REQ]
 version = "1.0.0" # [REQ]
 authors = [ # [REQ]
   "Gülce <guljeee@yandex.com>",
