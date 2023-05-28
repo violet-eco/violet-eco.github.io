@@ -11,3 +11,4 @@
 - [Technical](technical/README.md)
   - [Overview](technical/overview.md)
   - [Developer Mode](technical/dev-mode.md)
+  - [Integrity](technical/integrity.md)
