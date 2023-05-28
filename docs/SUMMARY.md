@@ -13,3 +13,4 @@
   - [Developer Mode](technical/dev-mode.md)
   - [Integrity](technical/integrity.md)
   - [Multi-platform management](technical/multi-platform.md)
+  - [Pre-compiling](technical/pre-compiling.md)
