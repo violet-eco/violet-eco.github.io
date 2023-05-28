@@ -4,6 +4,7 @@
 - [FAQ](FAQ.md)
 - [Project](project/README.md)
   - [Development](project/development.md)
+  - [Hardware requirements](project/hardware-requirements.md)
 - [Concepts](concepts/README.md)
   - [What are applications?](concepts/applications.md)
   - [What are libraries?](concepts/libraries.md)
