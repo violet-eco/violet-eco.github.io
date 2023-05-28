@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li><li class="chapter-item expanded "><a href="project/hardware-requirements.html"><strong aria-hidden="true">3.2.</strong> Hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li><li class="chapter-item expanded "><a href="technical/iona.html"><strong aria-hidden="true">5.6.</strong> I/O manager</a></li><li class="chapter-item expanded "><a href="technical/devices.html"><strong aria-hidden="true">5.7.</strong> Devices</a></li></ol></li><li class="chapter-item expanded "><a href="specs/index.html"><strong aria-hidden="true">6.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specs/apps-and-libraries.html"><strong aria-hidden="true">6.1.</strong> Applications and libraries</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li><li class="chapter-item expanded "><a href="project/hardware-requirements.html"><strong aria-hidden="true">3.2.</strong> Hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li><li class="chapter-item expanded "><a href="technical/iona.html"><strong aria-hidden="true">5.6.</strong> I/O manager</a></li><li class="chapter-item expanded "><a href="technical/devices.html"><strong aria-hidden="true">5.7.</strong> Devices</a></li><li class="chapter-item expanded "><a href="technical/processes.html"><strong aria-hidden="true">5.8.</strong> Processes</a></li><li class="chapter-item expanded "><a href="technical/services.html"><strong aria-hidden="true">5.9.</strong> Services</a></li></ol></li><li class="chapter-item expanded "><a href="specs/index.html"><strong aria-hidden="true">6.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specs/apps-and-libraries.html"><strong aria-hidden="true">6.1.</strong> Applications and libraries</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -652,6 +652,63 @@ In this way, compatibility with applications that rely on the old DHF is not bro
 deleted at any time, but this can be quite dangerous as some applications rely on it.</p>
 <p>Also, custom DHF names must always be longer than 4 characters, to avoid
 confusion with automatically-generated DHFs.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="processes"><a class="header" href="#processes">Processes</a></h1>
+<p>Violet's processes are implemented quite similarly to
+Linux's processes, with a few new features. There are
+several types of processes:</p>
+<ul>
+<li><strong>System processes</strong>, which are created by the system</li>
+<li><strong>Application processes</strong>, which aplications run in</li>
+<li><strong>Worker processes</strong>, in which applications' workers run</li>
+</ul>
+<p>System processes are called <em>low-level processes</em>, while
+application and worker processes are called <em>userspace processes</em>.</p>
+<ul>
+<li><a href="technical/processes.html#processes">Processes</a>
+<ul>
+<li><a href="technical/processes.html#child-processes">Child processes</a></li>
+<li><a href="technical/processes.html#threading">Threading</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="child-processes"><a class="header" href="#child-processes">Child processes</a></h2>
+<p>A process can create <em>child processes</em>. The child process will
+roughly be a 1:1 copy of the parent process, but with its
+own unique PID.</p>
+<p>To avoid copying the whole memory, copy-on-write is used. This
+means that the pages are identical and don't require any allocation
+until they are modified.</p>
+<p>Child processes automatically inherit their parent's permissions.</p>
+<p>When a process exits, all its child processes are immediately killed.</p>
+<h2 id="threading"><a class="header" href="#threading">Threading</a></h2>
+<p>A process can create <em>threads</em>, which are still part of the process.
+Threads allow to run multiple part of a process concurrently.</p>
+<p>All threads share the same address space and memory.</p>
+<p>To avoid copying the whole memory, copy-on-write is used. This
+means that the pages are identical and don't require any allocation
+until they are modified.</p>
+<p>The stack is local to each thread.</p>
+<p>Thread works as a hierarchy, when a thread exits, all its children
+are immediately killed.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="services-1"><a class="header" href="#services-1">Services</a></h1>
+<p>A <em>service</em> is a process that launches at startup and
+may receive IPC messages from any process.</p>
+<ul>
+<li><a href="technical/services.html#services">Services</a>
+<ul>
+<li><a href="technical/services.html#system-services">System services</a></li>
+<li><a href="technical/services.html#application-services">Application services</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="system-services"><a class="header" href="#system-services">System services</a></h2>
+<p>System services are native applications.
+They have system privileges and can do whatever they want.
+Their purpose is to perform specific actions without engaging the kernel.</p>
+<p>Every system service is a system application that exposes the service.</p>
+<h2 id="application-services"><a class="header" href="#application-services">Application services</a></h2>
+<p>Application services, also called <em>userspace services</em>, are provided
+by <a href="technical/../concepts/applications.html#services">applications themselves</a>.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="specifications"><a class="header" href="#specifications">Specifications</a></h1>
 <p>This folder contains specification documents, which
 purpose is to describe fully a specific concept or feature.

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Integrity - Violet documentation</title>
+        <title>Processes - Violet documentation</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Documents for Violet">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li><li class="chapter-item expanded "><a href="../project/hardware-requirements.html"><strong aria-hidden="true">3.2.</strong> Hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="../technical/integrity.html" class="active"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="../technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="../technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li><li class="chapter-item expanded "><a href="../technical/iona.html"><strong aria-hidden="true">5.6.</strong> I/O manager</a></li><li class="chapter-item expanded "><a href="../technical/devices.html"><strong aria-hidden="true">5.7.</strong> Devices</a></li><li class="chapter-item expanded "><a href="../technical/processes.html"><strong aria-hidden="true">5.8.</strong> Processes</a></li><li class="chapter-item expanded "><a href="../technical/services.html"><strong aria-hidden="true">5.9.</strong> Services</a></li></ol></li><li class="chapter-item expanded "><a href="../specs/index.html"><strong aria-hidden="true">6.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specs/apps-and-libraries.html"><strong aria-hidden="true">6.1.</strong> Applications and libraries</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li><li class="chapter-item expanded "><a href="../project/hardware-requirements.html"><strong aria-hidden="true">3.2.</strong> Hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="../technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="../technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="../technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li><li class="chapter-item expanded "><a href="../technical/iona.html"><strong aria-hidden="true">5.6.</strong> I/O manager</a></li><li class="chapter-item expanded "><a href="../technical/devices.html"><strong aria-hidden="true">5.7.</strong> Devices</a></li><li class="chapter-item expanded "><a href="../technical/processes.html" class="active"><strong aria-hidden="true">5.8.</strong> Processes</a></li><li class="chapter-item expanded "><a href="../technical/services.html"><strong aria-hidden="true">5.9.</strong> Services</a></li></ol></li><li class="chapter-item expanded "><a href="../specs/index.html"><strong aria-hidden="true">6.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specs/apps-and-libraries.html"><strong aria-hidden="true">6.1.</strong> Applications and libraries</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -137,47 +137,53 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="integrity"><a class="header" href="#integrity">Integrity</a></h1>
+                        <h1 id="processes"><a class="header" href="#processes">Processes</a></h1>
+<p>Violet's processes are implemented quite similarly to
+Linux's processes, with a few new features. There are
+several types of processes:</p>
 <ul>
-<li><a href="#integrity">Integrity</a>
+<li><strong>System processes</strong>, which are created by the system</li>
+<li><strong>Application processes</strong>, which aplications run in</li>
+<li><strong>Worker processes</strong>, in which applications' workers run</li>
+</ul>
+<p>System processes are called <em>low-level processes</em>, while
+application and worker processes are called <em>userspace processes</em>.</p>
 <ul>
-<li><a href="#system-immutability">System immutability</a></li>
-<li><a href="#hashes">Hashes</a></li>
-<li><a href="#checking-hashes">Checking hashes</a></li>
+<li><a href="#processes">Processes</a>
+<ul>
+<li><a href="#child-processes">Child processes</a></li>
+<li><a href="#threading">Threading</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="system-immutability"><a class="header" href="#system-immutability">System immutability</a></h2>
-<p>The <code>/sys</code> folder is immutable, which means that even the
-main administrator cannot change this folder. <strong>The only process</strong>
-this folder changes is the repair process or update run by the system itself.</p>
-<h2 id="hashes"><a class="header" href="#hashes">Hashes</a></h2>
-<p>When written to critical files in <code>/sys</code> or <code>/sys/etc</code>,
-their hashes are calculated using the <code>SHA-256</code> algorithm and stored in
-the system's <em>hash registry</em> (the <code>/etc/sys/hashes</code> file).</p>
-<h2 id="checking-hashes"><a class="header" href="#checking-hashes">Checking hashes</a></h2>
-<p>When these files are initially read, their contents are calculated
-and compared with the hash registry. If the hashes don't match,
-the file is considered as <em>corrupted</em>. The consequences depend on the location
-of the file:</p>
-<ul>
-<li><strong>System</strong> (<code>/sys</code>): the system will check its backup integrity and then restore itself from the backup</li>
-<li><strong>System backup</strong> (<code>/sys/backup</code>): the system will check its backup integrity and then restore itself from the backup</li>
-<li><strong>System + system backup</strong>: the system won't boot and indicate it must be reinstalled (documents won't be lost if they aren't corrupted) It's possible to force the boot process, but a large warning will indicate it may cause crashes or even introduce security issues</li>
-<li><strong>Hash registry</strong> (<code>/etc/sys/hashes</code>): same as <em>system + system backup</em></li>
-<li><strong>Registry</strong> (<code>/etc/sys/registry</code>): same as <em>system + system backup</em></li>
-<li><strong>Crash save:</strong> the crash saves won't be restored (can be forced)</li>
-<li><strong>Sandbox:</strong> system will refuse to start the sandbox (can be forced)</li>
-</ul>
+<h2 id="child-processes"><a class="header" href="#child-processes">Child processes</a></h2>
+<p>A process can create <em>child processes</em>. The child process will
+roughly be a 1:1 copy of the parent process, but with its
+own unique PID.</p>
+<p>To avoid copying the whole memory, copy-on-write is used. This
+means that the pages are identical and don't require any allocation
+until they are modified.</p>
+<p>Child processes automatically inherit their parent's permissions.</p>
+<p>When a process exits, all its child processes are immediately killed.</p>
+<h2 id="threading"><a class="header" href="#threading">Threading</a></h2>
+<p>A process can create <em>threads</em>, which are still part of the process.
+Threads allow to run multiple part of a process concurrently.</p>
+<p>All threads share the same address space and memory.</p>
+<p>To avoid copying the whole memory, copy-on-write is used. This
+means that the pages are identical and don't require any allocation
+until they are modified.</p>
+<p>The stack is local to each thread.</p>
+<p>Thread works as a hierarchy, when a thread exits, all its children
+are immediately killed.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../technical/dev-mode.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../technical/devices.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
-                            <a rel="next" href="../technical/multi-platform.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="../technical/services.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
@@ -186,10 +192,10 @@ of the file:</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../technical/dev-mode.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../technical/devices.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
-                    <a rel="next" href="../technical/multi-platform.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="../technical/services.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
