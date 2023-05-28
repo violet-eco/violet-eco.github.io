@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Overview - Violet documentation</title>
+        <title>Devices - Violet documentation</title>
         <!-- Custom HTML head -->
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Documents for Violet">
@@ -75,7 +75,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li><li class="chapter-item expanded "><a href="../project/hardware-requirements.html"><strong aria-hidden="true">3.2.</strong> Hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html" class="active"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="../technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="../technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="../technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li><li class="chapter-item expanded "><a href="../technical/iona.html"><strong aria-hidden="true">5.6.</strong> I/O manager</a></li><li class="chapter-item expanded "><a href="../technical/devices.html"><strong aria-hidden="true">5.7.</strong> Devices</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li><li class="chapter-item expanded "><a href="../project/hardware-requirements.html"><strong aria-hidden="true">3.2.</strong> Hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="../technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="../technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="../technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li><li class="chapter-item expanded "><a href="../technical/iona.html"><strong aria-hidden="true">5.6.</strong> I/O manager</a></li><li class="chapter-item expanded "><a href="../technical/devices.html" class="active"><strong aria-hidden="true">5.7.</strong> Devices</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -137,79 +137,57 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="technical"><a class="header" href="#technical">Technical</a></h1>
-<p>This document provides an overview of Violet.</p>
+                        <h1 id="devices"><a class="header" href="#devices">Devices</a></h1>
 <ul>
-<li><a href="#technical">Technical</a>
+<li><a href="#devices">Devices</a>
 <ul>
-<li><a href="#program-executions">Program executions</a></li>
-<li><a href="#permissions">Permissions</a></li>
-<li><a href="#hardware-access">Hardware access</a></li>
-<li><a href="#hardware-drivers">Hardware drivers</a>
-<ul>
-<li><a href="#hardware-access-performances">Hardware access performances</a></li>
-</ul>
-</li>
-<li><a href="#filesystem-access">Filesystem access</a></li>
-<li><a href="#user-interface">User interface</a></li>
+<li><a href="#connecting-a-new-device">Connecting a new device</a></li>
+<li><a href="#interacting-with-a-device">Interacting with a device</a></li>
+<li><a href="#device-handler-files-persistance">Device handler files persistance</a></li>
+<li><a href="#custom-dhf-name">Custom DHF name</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="program-executions"><a class="header" href="#program-executions">Program executions</a></h2>
-<p>Violet does not allow to run standalone binaries.
-Every running code is either:</p>
+<h2 id="connecting-a-new-device"><a class="header" href="#connecting-a-new-device">Connecting a new device</a></h2>
+<p>When a new device is connected to the computer, a new
+device handler file (DHF) is created in the <code>/dev</code> directory.</p>
+<p>Depending on the type, they can be put in different folders under the <code>/dev</code> folder.</p>
+<p>The filename is random and unique, in the format <code>[a-z][0-9][a-z][0-9]</code> (lowercase, digit, then lowercase again, and finally another digit).</p>
+<p>For example, when a hard drive is connected to the computer,
+DHF will be something like <code>/dev/sst/b0b4</code>.</p>
+<h2 id="interacting-with-a-device"><a class="header" href="#interacting-with-a-device">Interacting with a device</a></h2>
+<p>DHFs can only be used through the <code>sys::hw</code> service.</p>
+<p>Different actions may be happen depending on the device's type:</p>
 <ul>
-<li>Part of the system, as the kernel itself or as a system service</li>
-<li>Part of an <a href="/docs/concepts/users.html">application</a></li>
+<li><strong>Camera devices:</strong> when an application asks to capture a photo/video, the device will be suggested to take the images from</li>
+<li><strong>Microphones:</strong> when an application asks to capture sound, the device will be suggested to capture the sound from</li>
+<li><strong>Sound output devices:</strong> the device will be available for playback</li>
+<li><strong>Network adapters:</strong> the device will be available to make network requests on</li>
+<li><strong>Other supported wireless devices:</strong> depends on the type (Bluetooth adapter, ...)</li>
+<li><strong>Basic/persistent storage devices:</strong> when possible, the device will be automatically mounted in <code>/mnt</code> and visible in the files explorer</li>
 </ul>
-<h2 id="permissions"><a class="header" href="#permissions">Permissions</a></h2>
-<p>The system has all possible privileges over the system itself.
-Applications, on the other hand, have almost no privileges by default.</p>
-<p>These privileges can be provided through <em>permissions</em> designed
-to control which application can do what.</p>
-<h2 id="hardware-access"><a class="header" href="#hardware-access">Hardware access</a></h2>
-<p>Accessing the hardware happens in a two-layered way:</p>
-<ul>
-<li>First, the kernel <em>detects</em> the hardware and <em>enumerates</em> it</li>
-<li>Then this hardware will be available through the <em>hardware service</em></li>
-</ul>
-<h2 id="hardware-drivers"><a class="header" href="#hardware-drivers">Hardware drivers</a></h2>
-<p>Unlike most other operating systems,hardware drivers are
-simple applications with no special integration in the kernel.</p>
-<p>An application's manifest can mark itself as a driver using the <em>hardware service</em>.</p>
-<p>The appropriate driver for each hardware is selected by using <em>certain criteria</em>.</p>
-<h3 id="hardware-access-performances"><a class="header" href="#hardware-access-performances">Hardware access performances</a></h3>
-<p>Hardware accesses are provided via <em>syscall</em> and <em>signals</em> using CPU interrupts.</p>
-<p>The access process usually works like this:</p>
-<ul>
-<li>A userspace process notifies a <em>system service</em></li>
-<li>The system service contacts the corresponding hardware service</li>
-<li>The hardware service contacts the relevant driver</li>
-<li>The hardware driver performs the requested operation through the <em>hardware service</em></li>
-<li>Next, the result of the operation is transmitted to the hardware service, then to the system service, and finally to the userspace process</li>
-</ul>
-<h2 id="filesystem-access"><a class="header" href="#filesystem-access">Filesystem access</a></h2>
-<p>This process is generally faster than other hardware operations
-thanks to <em>direct storage access</em>.</p>
-<p>A typical operation involves a communication with the <em>filesystem service</em>,
-which <em>directly communicates</em> with the storage files.</p>
-<p>For filesystems that are not natively supported, a <em>filesystem interface</em>
-is available to contact the <em>storage driver service</em>. Although this process
-has more latency, it is only referenced in edge cases and still remains
-within an acceptable performance range.</p>
-<h2 id="user-interface"><a class="header" href="#user-interface">User interface</a></h2>
-<p>The entire user interface is managed by desktop environments,
-which are the services provided by the applications.</p>
+<p>For uncategorized devices (in <code>/dev/etc</code>), a popup is shown to the user, to indicate
+the connected device is not recognized.</p>
+<h2 id="device-handler-files-persistance"><a class="header" href="#device-handler-files-persistance">Device handler files persistance</a></h2>
+<p>When a device is disconnected, its DHF is not removed. Instad, if a process tries to
+interact with the DHF, the <code>sys::hw</code> service will indicate the device is currently not connected.</p>
+<p>When the device is connected again, it is associated to the same DHF again. This allows
+applications to persist the device's location and use it later on.</p>
+<h2 id="custom-dhf-name"><a class="header" href="#custom-dhf-name">Custom DHF name</a></h2>
+<p>It is possible to give custom names to DHFs. In such a case, a new DHF file is created and
+linked to the original DHF file while keeping the original DHF file in the folder.
+In this way, compatibility with applications that rely on the old DHF is not broken.</p>
+<p>Both DHFs show exactly the same device, with no difference. Custom DHF can be
+deleted at any time, but this can be quite dangerous as some applications rely on it.</p>
+<p>Also, custom DHF names must always be longer than 4 characters, to avoid
+confusion with automatically-generated DHFs.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../technical/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../technical/iona.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
-                            </a>
-                            <a rel="next" href="../technical/dev-mode.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
                             </a>
                         <div style="clear: both"></div>
                     </nav>
@@ -217,11 +195,8 @@ which are the services provided by the applications.</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../technical/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../technical/iona.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
-                    </a>
-                    <a rel="next" href="../technical/dev-mode.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
