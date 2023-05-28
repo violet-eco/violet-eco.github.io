@@ -18,5 +18,6 @@
   - [I/O manager](technical/iona.md)
   - [Devices](technical/devices.md)
   - [Processes](technical/processes.md)
+  - [Services](technical/services.md)
 - [Specifications](specs/README.md)
   - [Applications and libraries](specs/apps-and-libraries.md)
