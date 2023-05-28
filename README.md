@@ -16,7 +16,7 @@ The documentation is also live at [`https://violet-eco.github.io/docs`](https://
 Violet is an operating system that aims to replace
 legacy systems such as macOS, Linux, and Windows.
 Of course, he knows how Windows/macOS/Linux are
-installed on today's devices. Therefore, LapisOS
+installed on today's devices. Therefore, Violet
 is a theoretical operating system that shows how
 an operating system that does not provide backward
 compatibility with older architectures will look like.
