@@ -1,5 +1,4 @@
 # Developer Mode
-
 The developer mode enables several features that are not
 available by default. Only administrator user get access to
 them when they are enabled.
@@ -17,7 +16,6 @@ vio central --enable dev-mode
 Or, while holding the `Ctrl` `Alt` and `Maj` key, type `DEV`.
 
 ## Application proxies
-
 Application proxies collect all calls made by the application to the system.
 It is useful for applications debugging.
 

@@ -1,5 +1,4 @@
 # Devices
-
 - [Devices](#devices)
   - [Connecting a new device](#connecting-a-new-device)
   - [Interacting with a device](#interacting-with-a-device)
@@ -7,7 +6,6 @@
   - [Custom DHF name](#custom-dhf-name)
 
 ## Connecting a new device
-
 When a new device is connected to the computer, a new
 device handler file (DHF) is created in the `/dev` directory.
 
@@ -19,7 +17,6 @@ For example, when a hard drive is connected to the computer,
 DHF will be something like `/dev/sst/b0b4`.
 
 ## Interacting with a device
-
 DHFs can only be used through the `sys::hw` service.
 
 Different actions may be happen depending on the device's type:
@@ -34,7 +31,6 @@ For uncategorized devices (in `/dev/etc`), a popup is shown to the user, to indi
 the connected device is not recognized.
 
 ## Device handler files persistance
-
 When a device is disconnected, its DHF is not removed. Instad, if a process tries to
 interact with the DHF, the `sys::hw` service will indicate the device is currently not connected.
 
@@ -42,7 +38,6 @@ When the device is connected again, it is associated to the same DHF again. This
 applications to persist the device's location and use it later on.
 
 ## Custom DHF name
-
 It is possible to give custom names to DHFs. In such a case, a new DHF file is created and
 linked to the original DHF file while keeping the original DHF file in the folder.
 In this way, compatibility with applications that rely on the old DHF is not broken.

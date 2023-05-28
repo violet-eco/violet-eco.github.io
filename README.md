@@ -7,7 +7,6 @@ aims to provide the highest security to its users.
 - ...
 
 ## Documentation
-
 Design and specification documents can be found in the [`docs`](docs) directory.
 
 The documentation is also live at [`https://violet-eco.github.io/docs`](https://violet-eco.github.io/docs).

@@ -1,24 +1,20 @@
 # Integrity
-
 - [Integrity](#integrity)
   - [System immutability](#system-immutability)
   - [Hashes](#hashes)
   - [Checking hashes](#checking-hashes)
 
 ## System immutability
-
 The `/sys` folder is immutable, which means that even the
 main administrator cannot change this folder. **The only process**
 this folder changes is the repair process or update run by the system itself.
 
 ## Hashes
-
 When written to critical files in `/sys` or `/sys/etc`,
 their hashes are calculated using the `SHA-256` algorithm and stored in
 the system's *hash registry* (the `/etc/sys/hashes` file).
 
 ## Checking hashes
-
 When these files are initially read, their contents are calculated
 and compared with the hash registry. If the hashes don't match,
 the file is considered as *corrupted*. The consequences depend on the location

@@ -1,10 +1,8 @@
 # Development
-
 - [Development](#development)
   - [Languages](#languages)
 
 ## Languages
-
 The project will be developed in [Rust&reg;](https://www.rust-lang.org/),
 with first-class support for this language.
 

@@ -1,5 +1,4 @@
 # Technical
-
 This document provides an overview of Violet.
 
 - [Technical](#technical)
@@ -12,14 +11,12 @@ This document provides an overview of Violet.
   - [User interface](#user-interface)
 
 ## Program executions
-
 Violet does not allow to run standalone binaries.
 Every running code is either:
 - Part of the system, as the kernel itself or as a system service
 - Part of an [application](/docs/concepts/users.md)
 
 ## Permissions
-
 The system has all possible privileges over the system itself.
 Applications, on the other hand, have almost no privileges by default.
 
@@ -43,7 +40,6 @@ An application's manifest can mark itself as a driver using the *hardware servic
 The appropriate driver for each hardware is selected by using *certain criteria*.
 
 ### Hardware access performances
-
 Hardware accesses are provided via *syscall* and *signals* using CPU interrupts.
 
 The access process usually works like this:
@@ -55,7 +51,6 @@ The access process usually works like this:
 - Next, the result of the operation is transmitted to the hardware service, then to the system service, and finally to the userspace process
 
 ## Filesystem access
-
 This process is generally faster than other hardware operations
 thanks to *direct storage access*.
 
@@ -68,6 +63,5 @@ has more latency, it is only referenced in edge cases and still remains
 within an acceptable performance range.
 
 ## User interface
-
 The entire user interface is managed by desktop environments,
 which are the services provided by the applications.

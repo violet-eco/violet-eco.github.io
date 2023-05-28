@@ -1,5 +1,4 @@
 # What are applications?
-
 *Applications* are the way the operating system processes software.
 
 - [What are applications?](#what-are-applications)
@@ -51,7 +50,6 @@ certain rules set by the sideloading mode, called "disable", "secure", "insecure
 Sideloading mode can be changed in Control Center.
 
 ### Volatile applications
-
 Applications can also be run as *volatile applications*, which
 means they are not installed to disk:
 
@@ -79,7 +77,6 @@ not worrying about the data file. It also supports shared data storage between u
 Note that the store has an option for installing applications as volatile.
 
 ## Commands
-
 Applications can provide shell commands. Since command names must prefixed
 by the AID (dots instead of two colons), multiple commands can be provided without the danger of name conflicts.
 
@@ -97,7 +94,6 @@ a command with the same name.
 Commands work by running the application through a specific *execution context*.
 
 ## System Applications
-
 Some native applications are part of the system itself and
 are called *system applications*. These applications have some special privileges:
 

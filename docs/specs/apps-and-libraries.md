@@ -1,5 +1,4 @@
 # Applications and libraries
-
 This document describes the structure, features and behaviours
 to both [applications](../concepts/applications.md) and
 [libraries](../concepts/libraries.md).
@@ -11,7 +10,6 @@ to both [applications](../concepts/applications.md) and
   - [Manifest](#manifest)
 
 ## Name and slug
-
 Each application has a name as well as a slug. The name can any valid UTF-8 string, while the slug must respect several rules:
 - Only lowercase letters, underscores and digits
 - Must not start by a digit
@@ -22,7 +20,6 @@ Each application has a name as well as a slug. The name can any valid UTF-8 stri
 By default, the slug is auto-generated from the name, but it can also be customized.
 
 ## Application identifier
-
 The *Application identifier* (AID) is created using the slug and the developer's identifier (DID).
 
 For example, an application with slug of `app` made by a developer
@@ -35,7 +32,6 @@ As malicious application may provide the DID and the slug of a legit application
 System applications are registered under the reserved `sys` DID.
 
 ## Features
-
 Applications and libraries can define features that are optional parts in the application.
 They are described in the manifest and can be enabled or disabled when installing
 a program.
