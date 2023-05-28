@@ -17,3 +17,5 @@
   - [Pre-compiling](technical/pre-compiling.md)
   - [I/O manager](technical/iona.md)
   - [Devices](technical/devices.md)
+- [Specifications](specs/README.md)
+  - [Applications and libraries](specs/apps-and-libraries.md)

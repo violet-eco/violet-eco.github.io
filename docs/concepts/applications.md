@@ -81,9 +81,9 @@ Note that the store has an option for installing applications as volatile.
 ## Commands
 
 Applications can provide shell commands. Since command names must prefixed
-by the AID, multiple commands can be provided without the danger of name conflicts.
+by the AID (dots instead of two colons), multiple commands can be provided without the danger of name conflicts.
 
-For example, if an app with AID `developer.app` provides the command `get_time`, the last available command will be `developer.app.get_time`.
+For example, if an app with AID `developer::app` provides the command `get_time`, the last available command will be `developer.app.get_time`.
 
 Although this is a rather long name, it avoids conflicts between
 the names of the commands. It is quite common for shell scripts to
