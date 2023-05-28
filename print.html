@@ -76,7 +76,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li><li class="chapter-item expanded "><a href="project/hardware-requirements.html"><strong aria-hidden="true">3.2.</strong> Hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li><li class="chapter-item expanded "><a href="technical/iona.html"><strong aria-hidden="true">5.6.</strong> I/O manager</a></li><li class="chapter-item expanded "><a href="technical/devices.html"><strong aria-hidden="true">5.7.</strong> Devices</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="project/development.html"><strong aria-hidden="true">3.1.</strong> Development</a></li><li class="chapter-item expanded "><a href="project/hardware-requirements.html"><strong aria-hidden="true">3.2.</strong> Hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="technical/index.html"><strong aria-hidden="true">5.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="technical/overview.html"><strong aria-hidden="true">5.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="technical/dev-mode.html"><strong aria-hidden="true">5.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="technical/integrity.html"><strong aria-hidden="true">5.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="technical/multi-platform.html"><strong aria-hidden="true">5.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="technical/pre-compiling.html"><strong aria-hidden="true">5.5.</strong> Pre-compiling</a></li><li class="chapter-item expanded "><a href="technical/iona.html"><strong aria-hidden="true">5.6.</strong> I/O manager</a></li><li class="chapter-item expanded "><a href="technical/devices.html"><strong aria-hidden="true">5.7.</strong> Devices</a></li></ol></li><li class="chapter-item expanded "><a href="specs/index.html"><strong aria-hidden="true">6.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="specs/apps-and-libraries.html"><strong aria-hidden="true">6.1.</strong> Applications and libraries</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -313,8 +313,8 @@ not worrying about the data file. It also supports shared data storage between u
 <p>Note that the store has an option for installing applications as volatile.</p>
 <h2 id="commands"><a class="header" href="#commands">Commands</a></h2>
 <p>Applications can provide shell commands. Since command names must prefixed
-by the AID, multiple commands can be provided without the danger of name conflicts.</p>
-<p>For example, if an app with AID <code>developer.app</code> provides the command <code>get_time</code>, the last available command will be <code>developer.app.get_time</code>.</p>
+by the AID (dots instead of two colons), multiple commands can be provided without the danger of name conflicts.</p>
+<p>For example, if an app with AID <code>developer::app</code> provides the command <code>get_time</code>, the last available command will be <code>developer.app.get_time</code>.</p>
 <p>Although this is a rather long name, it avoids conflicts between
 the names of the commands. It is quite common for shell scripts to
 import commands at the beginning of the script to make it easier
@@ -652,6 +652,90 @@ In this way, compatibility with applications that rely on the old DHF is not bro
 deleted at any time, but this can be quite dangerous as some applications rely on it.</p>
 <p>Also, custom DHF names must always be longer than 4 characters, to avoid
 confusion with automatically-generated DHFs.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="specifications"><a class="header" href="#specifications">Specifications</a></h1>
+<p>This folder contains specification documents, which
+purpose is to describe fully a specific concept or feature.
+For more informations about low-level concepts these
+documents refer to, you can check <a href="specs/../technical/README.html">technical documents</a> first.</p>
+<ul>
+<li><a href="specs/apps-and-libraries.html">Applications and libraries</a> - document describing common things between applications and libraries</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="applications-and-libraries"><a class="header" href="#applications-and-libraries">Applications and libraries</a></h1>
+<p>This document describes the structure, features and behaviours
+to both <a href="specs/../concepts/applications.html">applications</a> and
+<a href="specs/../concepts/libraries.html">libraries</a>.</p>
+<ul>
+<li><a href="specs/apps-and-libraries.html#applications-and-libraries">Applications and libraries</a>
+<ul>
+<li><a href="specs/apps-and-libraries.html#name-and-slug">Name and slug</a></li>
+<li><a href="specs/apps-and-libraries.html#application-identifier">Application identifier</a></li>
+<li><a href="specs/apps-and-libraries.html#features">Features</a></li>
+<li><a href="specs/apps-and-libraries.html#manifest">Manifest</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="name-and-slug"><a class="header" href="#name-and-slug">Name and slug</a></h2>
+<p>Each application has a name as well as a slug. The name can any valid UTF-8 string, while the slug must respect several rules:</p>
+<ul>
+<li>Only lowercase letters, underscores and digits</li>
+<li>Must not start by a digit</li>
+<li>Must not be the name of a native shell command</li>
+<li>Must not be the name of a native shell function</li>
+<li>Must not be the name of a shell type</li>
+</ul>
+<p>By default, the slug is auto-generated from the name, but it can also be customized.</p>
+<h2 id="application-identifier"><a class="header" href="#application-identifier">Application identifier</a></h2>
+<p>The <em>Application identifier</em> (AID) is created using the slug and the developer's identifier (DID).</p>
+<p>For example, an application with slug of <code>sex</code> made by a developer
+whose DID is <code>gulje</code> will get an AID of <code>gulje::sex</code>.</p>
+<p>The AID is unique across the store as well as in a single Violet installation.
+As malicious application may provide the DID and the slug of a legit application
+(<em>AID spoofing</em>), sideloading is verified by default.</p>
+<p>System applications are registered under the reserved <code>sys</code> DID.</p>
+<h2 id="features"><a class="header" href="#features">Features</a></h2>
+<p>Applications and libraries can define features that are optional parts in the application.
+They are described in the manifest and can be enabled or disabled when installing
+a program.</p>
+<p>Each feature allows to embed additional assets and declare additional supported
+languages and a specific build option.</p>
+<p>This allows to save space and build time when a specific feature isn't required,
+but should still embedded in the program itself instead of making an additional
+application or library.</p>
+<p>When the manifest declares one or more feature(s), it must also specify
+a set of default features to enable.</p>
+<h2 id="manifest"><a class="header" href="#manifest">Manifest</a></h2>
+<pre><code class="language-toml">[infos]
+name = &quot;&quot; # [REQ]
+slug = &quot;cloud-notepad-app&quot; # [REQ]
+description = &quot;&quot; # [REQ]
+version = &quot;1.0.0&quot; # [REQ]
+authors = [ # [REQ]
+  &quot;Gülce &lt;guljeee@yandex.com&gt;&quot;,
+  &quot;Tuhana &lt;hi@tuhana.me&gt; (https://tuhana.me)&quot;
+]
+icons = &quot;assets/icons/app/%{}.png&quot; # [REQ]
+license = &quot;Apache-2.0&quot; # [OPT] SPDX License Identifier
+
+[content] # [OPT]
+assets = [&quot;./assets&quot;]
+
+[content.program] # [REQ]
+precomp = &quot;main.vpp&quot; # &lt;for precomp packages&gt; [REQ]
+
+# Packages can either contain source code only, pre-compiled programs only, or both
+[content.program.source] # &lt;for source packages&gt; [REQ]
+toolchain = &quot;rust&quot; # [REQ]
+build = {} # [REQ]
+options = { optimize = &quot;O3&quot; } # [OPT]
+
+[dependencies.libraries] # [REQ]
+sysver = &quot;^1.0.0&quot;
+
+[features.testing] # [OPT]
+assets = [] # [OPT]
+dependencies = {} # [OPT]
+languages = [] # [OPT]
+</code></pre>
 
                     </main>
 
