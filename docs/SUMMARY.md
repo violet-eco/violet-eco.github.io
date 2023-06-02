@@ -22,3 +22,4 @@
 - [Specifications](specs/README.md)
   - [Applications and libraries](specs/apps-and-libraries.md)
   - [Applications](specs/applications.md)
+  - [Filesystem](specs/filesystem.md)
