@@ -26,3 +26,5 @@
   - [Kernel](specs/kernel/README.md)
     - [Kernel-process Communication](specs/kernel/kpc.md)
     - [System calls](specs/kernel/syscalls.md)
+- [Applications](applications/README.md)
+  - [Dahlia](applications/dahlia.md)
