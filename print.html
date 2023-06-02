@@ -528,7 +528,7 @@ main administrator cannot change this folder. <strong>The only process</strong>
 this folder changes is the repair process or update run by the system itself.</p>
 <h2 id="hashes"><a class="header" href="#hashes">Hashes</a></h2>
 <p>When written to critical files in <code>/sys</code> or <code>/sys/etc</code>,
-their hashes are calculated using the <code>SHA-256</code> algorithm and stored in
+their hashes are calculated using the <a href="https://github.com/BLAKE3-team/BLAKE3"><code>BLAKE3</code></a> algorithm and stored in
 the system's <em>hash registry</em> (the <code>/etc/sys/hashes</code> file).</p>
 <h2 id="checking-hashes"><a class="header" href="#checking-hashes">Checking hashes</a></h2>
 <p>When these files are initially read, their contents are calculated
