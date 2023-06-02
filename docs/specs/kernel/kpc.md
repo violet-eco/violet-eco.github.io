@@ -3,5 +3,5 @@
 describes how a process can communicate with the kernel.
 
 There are two types of KPC:
-- [System calls (work in progress)](#)
+- [System calls](syscalls.md)
 - [Signals (work in progress)](#)

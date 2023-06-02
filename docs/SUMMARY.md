@@ -25,3 +25,4 @@
   - [Filesystem](specs/filesystem.md)
   - [Kernel](specs/kernel/README.md)
     - [Kernel-process Communication](specs/kernel/kpc.md)
+    - [System calls](specs/kernel/syscalls.md)
