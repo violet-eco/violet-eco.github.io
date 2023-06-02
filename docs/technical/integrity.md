@@ -11,7 +11,7 @@ this folder changes is the repair process or update run by the system itself.
 
 ## Hashes
 When written to critical files in `/sys` or `/sys/etc`,
-their hashes are calculated using the `SHA-256` algorithm and stored in
+their hashes are calculated using the [`BLAKE3`](https://github.com/BLAKE3-team/BLAKE3) algorithm and stored in
 the system's *hash registry* (the `/etc/sys/hashes` file).
 
 ## Checking hashes
