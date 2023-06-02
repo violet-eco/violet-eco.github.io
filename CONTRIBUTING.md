@@ -1,10 +1,10 @@
-# Contributing to LapisOS
+# Contributing to Violet Docs
 
-We would love for you to contribute to LapisOS and help make it even better than it is today!
+We would love for you to contribute to Violet Docs and help make it even better than it is today!
 
 ## Code of Conduct
 
-Help us keep LapisOS open and inclusive.
+Help us keep Violet open and inclusive.
 Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Commit Message Format
