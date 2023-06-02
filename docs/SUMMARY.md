@@ -23,3 +23,4 @@
   - [Applications and libraries](specs/apps-and-libraries.md)
   - [Applications](specs/applications.md)
   - [Filesystem](specs/filesystem.md)
+  - [Kernel](specs/kernel/README.md)
