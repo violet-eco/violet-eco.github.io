@@ -8,3 +8,4 @@ such as file system, permission management to services.
 may be made to related documents.**
 
 ## Documents
+- [Kernel-process communication](kpc.md) - how the processes communicate with kernel
