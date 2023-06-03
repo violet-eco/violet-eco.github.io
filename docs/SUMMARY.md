@@ -25,6 +25,7 @@
   - [Applications and libraries](specs/apps-and-libraries.md)
   - [Applications](specs/applications.md)
   - [Filesystem](specs/filesystem.md)
+  - [Permissions](specs/permissions.md)
   - [Kernel](specs/kernel/README.md)
     - [Kernel-process Communication](specs/kernel/kpc.md)
     - [System calls](specs/kernel/syscalls.md)
