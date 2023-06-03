@@ -31,5 +31,6 @@
     - [Signals](specs/kernel/signals.md)
   - [System services](specs/services/README.md)
     - [sys::fs](specs/services/fs.md)
+    - [sys::hw](specs/services/hw.md)
 - [Applications](applications/README.md)
   - [Dahlia](applications/dahlia.md)
