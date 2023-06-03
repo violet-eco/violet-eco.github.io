@@ -156,7 +156,7 @@ device handler file (DHF) is created in the <code>/dev</code> directory.</p>
 <p>For example, when a hard drive is connected to the computer,
 DHF will be something like <code>/dev/sst/b0b4</code>.</p>
 <h2 id="interacting-with-a-device"><a class="header" href="#interacting-with-a-device">Interacting with a device</a></h2>
-<p>DHFs can only be used through the <code>sys::hw</code> service.</p>
+<p>DHFs can only be used through the <a href="../specs/services/hw.html"><code>sys::hw</code></a> service.</p>
 <p>Different actions may be happen depending on the device's type:</p>
 <ul>
 <li><strong>Camera devices:</strong> when an application asks to capture a photo/video, the device will be suggested to take the images from</li>
@@ -170,7 +170,7 @@ DHF will be something like <code>/dev/sst/b0b4</code>.</p>
 the connected device is not recognized.</p>
 <h2 id="device-handler-files-persistance"><a class="header" href="#device-handler-files-persistance">Device handler files persistance</a></h2>
 <p>When a device is disconnected, its DHF is not removed. Instad, if a process tries to
-interact with the DHF, the <code>sys::hw</code> service will indicate the device is currently not connected.</p>
+interact with the DHF, the <a href="../specs/services/hw.html"><code>sys::hw</code></a> service will indicate the device is currently not connected.</p>
 <p>When the device is connected again, it is associated to the same DHF again. This allows
 applications to persist the device's location and use it later on.</p>
 <h2 id="custom-dhf-name"><a class="header" href="#custom-dhf-name">Custom DHF name</a></h2>

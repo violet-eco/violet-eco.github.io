@@ -140,7 +140,7 @@
                         <h1 id="io-nano-manager"><a class="header" href="#io-nano-manager">I/O Nano-manager</a></h1>
 <p>The <em>Input/Output Nano-manager</em>, known as <em>Iona</em>, is the
 part of the system that handles the input/output requests of processes.</p>
-<p>Concretely, it is represented by the <code>sys::hw</code> service.</p>
+<p>Concretely, it is represented by the <a href="../specs/services/hw.html"><code>sys::hw</code></a> service.</p>
 <ul>
 <li><a href="#io-nano-manager">I/O Nano-manager</a>
 <ul>
@@ -155,7 +155,8 @@ part of the system that handles the input/output requests of processes.</p>
 <h2 id="hardware-access"><a class="header" href="#hardware-access">Hardware access</a></h2>
 <p>When a process tries to access hardware, that request goes to Iona,
 which will either allow or deny it.</p>
-<p>System services such as <code>sys::fs</code> or <code>sys::net</code> use Iona to
+<p>System services such as <a href="../specs/services/fs.html"><code>sys::fs</code></a>
+or <a href="../specs/services/net.html"><code>sys::net</code></a> use Iona to
 deal with the related hardware devices.</p>
 <h3 id="requests-priority"><a class="header" href="#requests-priority">Requests priority</a></h3>
 <p>The requests of the processes are treated according to their
