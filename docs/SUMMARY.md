@@ -34,5 +34,6 @@
     - [sys::hw](specs/services/hw.md)
     - [sys::perm](specs/services/perm.md)
     - [sys::net](specs/services/net.md)
+    - [sys::crypto](specs/services/crypto.md)
 - [Applications](applications/README.md)
   - [Dahlia](applications/dahlia.md)
