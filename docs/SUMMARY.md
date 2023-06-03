@@ -9,6 +9,8 @@
   - [What are applications?](concepts/applications.md)
   - [What are libraries?](concepts/libraries.md)
   - [What are users?](concepts/users.md)
+- [Features](features/README.md)
+  - [Crash saves](features/crashsave.md)
 - [Technical](technical/README.md)
   - [Overview](technical/overview.md)
   - [Developer Mode](technical/dev-mode.md)
