@@ -6,7 +6,7 @@ System services are run by the system itself under the `sys` [DID](../apps-and-l
 # List of system services
 - PID 10: [`sys::fs`](./fs.md): filesystem management service
 - PID 11: [`sys::hw`](./hw.md): hardware communication service
-- PID 12: [`sys::perm` (WIP)](): permissions management service
+- PID 12: [`sys::perm`](./perm.md): permissions management service
 - PID 13: [`sys::net` (WIP)](): network communication service
 - PID 14: [`sys::crypto` (WIP)](): cryptography service
 - PID 15: [`sys::crashsave` (WIP)](): crash save management service
