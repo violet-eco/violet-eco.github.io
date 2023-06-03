@@ -2,7 +2,6 @@
 *Crash saves* prevent most data loss caused
 by a crash.
 
-
 A signal is sent to all running applications
 at a periodic time interval that can be changed from the registry (1 minute by default).
 This signal can be answered in 3 different ways:

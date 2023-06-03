@@ -10,3 +10,4 @@ might be made to related documents.**
 ## Documents
 - [Kernel-process communication](./kpc.md) - how the processes communicate with kernel
 - [System calls](./syscalls.md) - how to communicate with kernel through CPU interruptions
+- [Signals](./signals.md) - how kernel communicates with processes

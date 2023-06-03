@@ -1,7 +1,7 @@
 # System calls
 
 System calls (syscalls) are a type of [KPC](./kpc.md).
-They allow a process to ask the kernel to perform
+They allow a process to ask Sakura to perform
 a task.
 
 - [System calls](#system-calls)
@@ -9,7 +9,7 @@ a task.
   - [List of syscalls](#list-of-syscalls)
 
 ## Overview
-Syscalls are performed using CPU interruptions to notify the kernel.
+Syscalls are performed using CPU interruptions to notify Sakura.
 
 System calls always return two numbers: a 8-bit errcode and
 8 bytes return value. If the errcode is not null, then an
