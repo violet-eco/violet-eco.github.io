@@ -36,5 +36,6 @@
     - [sys::net](specs/services/net.md)
     - [sys::crypto](specs/services/crypto.md)
     - [sys::crashsave](specs/services/crashsave.md)
+    - [sys::flow](specs/services/flow.md)
 - [Applications](applications/README.md)
   - [Dahlia](applications/dahlia.md)
