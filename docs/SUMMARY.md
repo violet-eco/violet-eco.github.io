@@ -27,6 +27,7 @@
   - [Filesystem](specs/filesystem.md)
   - [Permissions](specs/permissions.md)
   - [Kernel](specs/kernel/README.md)
+    - [Hardware](specs/kernel/hardware.md)
     - [Kernel-process Communication](specs/kernel/kpc.md)
     - [System calls](specs/kernel/syscalls.md)
     - [Signals](specs/kernel/signals.md)
