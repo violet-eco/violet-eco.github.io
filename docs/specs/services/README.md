@@ -12,6 +12,6 @@ System services are run by the system itself under the `sys` [DID](../apps-and-l
 - PID 15: [`sys::crashsave`](./crashsave.md): crash save management service
 - PID 16: [`sys::flow`](./flow.md): flow management service
 - PID 17: [`sys::i18n`](./i18n.md): translation service
-- PID 18: [`sys::ui` (WIP)](): user interface service
-- PID 19: [`sys::app` (WIP)](): application management service
-- PID 20: [`sys::process` (WIP)](): process management service
+- PID 18: [`sys::ui`](./ui.md): user interface service
+- PID 19: [`sys::app`](./app.md): application management service
+- PID 20: [`sys::process`](./process.md): process management service

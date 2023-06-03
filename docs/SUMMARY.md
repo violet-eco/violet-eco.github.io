@@ -38,5 +38,8 @@
     - [sys::crashsave](specs/services/crashsave.md)
     - [sys::flow](specs/services/flow.md)
     - [sys::i18n](specs/services/i18n.md)
+    - [sys::ui](specs/services/ui.md)
+    - [sys::app](specs/services/app.md)
+    - [sys::process](specs/services/process.md)
 - [Applications](applications/README.md)
   - [Dahlia](applications/dahlia.md)
