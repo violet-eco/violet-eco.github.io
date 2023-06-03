@@ -30,5 +30,6 @@
     - [System calls](specs/kernel/syscalls.md)
     - [Signals](specs/kernel/signals.md)
   - [System services](specs/services/README.md)
+    - [sys::fs](specs/services/fs.md)
 - [Applications](applications/README.md)
   - [Dahlia](applications/dahlia.md)
