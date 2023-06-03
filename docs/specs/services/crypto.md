@@ -1,5 +1,5 @@
 # `sys::crypto`
-The `sys::crypto` service is responsible for filesystem operations.
+The `sys::crypto` service is responsible for cryptography methods.
 
 - [`sys::crypto`](#syscrypto)
   - [Behaviour](#behaviour)

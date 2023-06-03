@@ -9,7 +9,7 @@ System services are run by the system itself under the `sys` [DID](../apps-and-l
 - PID 12: [`sys::perm`](./perm.md): permissions management service
 - PID 13: [`sys::net`](./net.md): network communication service
 - PID 14: [`sys::crypto`](./crypto.md): cryptography service
-- PID 15: [`sys::crashsave` (WIP)](): crash save management service
+- PID 15: [`sys::crashsave`](./crashsave.md): crash save management service
 - PID 16: [`sys::flow` (WIP)](): flow management service
 - PID 17: [`sys::i18n` (WIP)](): translation service
 - PID 18: [`sys::ui` (WIP)](): user interface service
