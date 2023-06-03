@@ -17,7 +17,7 @@ For example, when a hard drive is connected to the computer,
 DHF will be something like `/dev/sst/b0b4`.
 
 ## Interacting with a device
-DHFs can only be used through the `sys::hw` service.
+DHFs can only be used through the [`sys::hw`](../specs/services/hw.md) service.
 
 Different actions may be happen depending on the device's type:
 - **Camera devices:** when an application asks to capture a photo/video, the device will be suggested to take the images from
@@ -32,7 +32,7 @@ the connected device is not recognized.
 
 ## Device handler files persistance
 When a device is disconnected, its DHF is not removed. Instad, if a process tries to
-interact with the DHF, the `sys::hw` service will indicate the device is currently not connected.
+interact with the DHF, the [`sys::hw`](../specs/services/hw.md) service will indicate the device is currently not connected.
 
 When the device is connected again, it is associated to the same DHF again. This allows
 applications to persist the device's location and use it later on.

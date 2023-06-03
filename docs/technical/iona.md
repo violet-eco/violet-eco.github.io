@@ -2,7 +2,7 @@
 The *Input/Output Nano-manager*, known as *Iona*, is the
 part of the system that handles the input/output requests of processes.
 
-Concretely, it is represented by the `sys::hw` service.
+Concretely, it is represented by the [`sys::hw`](../specs/services/hw.md) service.
 
 - [I/O Nano-manager](#io-nano-manager)
   - [Hardware access](#hardware-access)
@@ -12,7 +12,8 @@ Concretely, it is represented by the `sys::hw` service.
 When a process tries to access hardware, that request goes to Iona,
 which will either allow or deny it.
 
-System services such as `sys::fs` or `sys::net` use Iona to
+System services such as [`sys::fs`](../specs/services/fs.md)
+or [`sys::net`](../specs/services/net.md) use Iona to
 deal with the related hardware devices.
 
 ### Requests priority
