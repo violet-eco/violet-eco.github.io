@@ -6,7 +6,6 @@
   - [Kernel device identifier](#kernel-device-identifier)
   - [Raw device descriptor](#raw-device-descriptor)
 
-
 ## Hardware detection
 Devices are detected during the boot process and then periodically after startup
 This allows to hotplug some additional devices afterwards.

@@ -11,6 +11,7 @@
   - [What are users?](concepts/users.md)
 - [Features](features/README.md)
   - [Crash saves](features/crashsave.md)
+  - [Privacy and security](features/privacy-and-security.md)
 - [Technical](technical/README.md)
   - [Overview](technical/overview.md)
   - [Developer Mode](technical/dev-mode.md)
@@ -45,3 +46,4 @@
     - [sys::process](specs/services/process.md)
 - [Applications](applications/README.md)
   - [Dahlia](applications/dahlia.md)
+  - [Lotus](applications/lotus.md)

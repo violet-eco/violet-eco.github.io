@@ -5,6 +5,7 @@ them when they are enabled.
 
 - [Developer Mode](#developer-mode)
   - [How to enable?](#how-to-enable)
+  - [Kernel Module Development](#kernel-module-development)
   - [Application proxies](#application-proxies)
 
 ## How to enable?
@@ -14,6 +15,15 @@ in the terminal:
 vio central --enable dev-mode
 ```
 Or, while holding the `Ctrl` `Alt` and `Maj` key, type `DEV`.
+
+## Kernel Module Development
+Kernel module development is a powerful capability offered by Violet's Developer
+Mode that allows developers to extend the functionality of the operating system at
+the kernel level. Kernel modules are pieces of code that can be dynamically loaded
+and unloaded into the running kernel.
+
+Kernel modules have direct access to various services and resources provided by Sakura,
+such as memory management, process scheduling, IPC.
 
 ## Application proxies
 Application proxies collect all calls made by the application to the system.
