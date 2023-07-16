@@ -1,6 +1,7 @@
 # Frequently Asked Questions
 - [Frequently Asked Questions](#frequently-asked-questions)
   - [Will this project replace Windows/macOS/Linux/... one day?](#will-this-project-replace-windowsmacoslinux-one-day)
+  - [Can I use Violet on older hardware?](#can-i-use-violet-on-older-hardware)
   - [How can I help?](#how-can-i-help)
 
 ## Will this project replace Windows/macOS/Linux/... one day?
@@ -15,6 +16,11 @@ there are almost no applications in it. Would you still use
 this OS instead of Windows/macOS/Linux? Of course no!
 
 That's why this project is **purely theoretical**.
+
+## Can I use Violet on older hardware?
+Violet's system requirements may vary, but it is optimized for modern
+hardware configurations. Running Violet on older hardware may result in
+reduced performance or compatibility issues.
 
 ## How can I help?
 Help is very welcome but there's not many things to help with currently,
