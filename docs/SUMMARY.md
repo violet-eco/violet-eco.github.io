@@ -46,4 +46,5 @@
     - [sys::process](specs/services/process.md)
 - [Applications](applications/README.md)
   - [Dahlia](applications/dahlia.md)
+  - [Fern](applications/fern.md)
   - [Lotus](applications/lotus.md)

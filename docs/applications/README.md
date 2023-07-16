@@ -9,6 +9,7 @@ the installation process.
   - [Suites](#suites)
 
 ## Basics
+- [Fern](./fern.md): Text-based desktop environment of Violet
 - [Lotus](./lotus.md): The default desktop environment of Violet
 
 ## Suites
