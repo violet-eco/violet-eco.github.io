@@ -1,43 +1,38 @@
 # Processes
-Violet's processes are implemented quite similarly to
-Linux's processes, with a few new features. There are
-several types of processes:
+Violet's processes are designed with similarities to Linux processes while introducing
+some additional features. There are different types of processes in Violet:
 
-- **System processes**, which are created by the system
-- **Application processes**, which aplications run in
-- **Worker processes**, in which applications' workers run
-
-System processes are called *low-level processes*, while
-application and worker processes are called *userspace processes*.
+- **System Processes:** These processes are created by the system itself and are known as low-level processes.
+- **Application Processes:** These processes are created by applications and run within the Violet environment.
+- **Worker Processes:** Worker processes are created by applications to handle specific tasks or operations.
 
 - [Processes](#processes)
   - [Child processes](#child-processes)
   - [Threading](#threading)
 
 ## Child processes
-A process can create *child processes*. The child process will
-roughly be a 1:1 copy of the parent process, but with its
-own unique PID.
+In Violet, a process has the ability to create child processes. When a child process is
+created, it is essentially a 1:1 copy of the parent process, but with its own unique
+process ID (PID). To optimize memory usage, copy-on-write (COW) is employed. This means
+that the child process initially shares the same memory pages as the parent process, and
+memory allocation only occurs when modifications are made.
 
-To avoid copying the whole memory, copy-on-write is used. This
-means that the pages are identical and don't require any allocation
-until they are modified.
+Child processes inherit the permissions of their parent process. If the parent process
+has certain privileges or permissions, they are passed down to the child process.
 
-Child processes automatically inherit their parent's permissions.
-
-When a process exits, all its child processes are immediately killed.
+When a process exits, all of its child processes are immediately terminated as well.
 
 ## Threading
-A process can create *threads*, which are still part of the process.
-Threads allow to run multiple part of a process concurrently.
+Violet supports multithreading, allowing processes to create multiple threads that can
+run concurrently within the same address space. Threads enable parallel execution of
+different parts of a process, enhancing performance and responsiveness.
 
-All threads share the same address space and memory.
+All threads within a process share the same address space and memory, which means they
+can access and modify the same data. Similar to processes, copy-on-write is employed to
+optimize memory usage. Memory pages are shared among threads until modifications are made.
 
-To avoid copying the whole memory, copy-on-write is used. This
-means that the pages are identical and don't require any allocation
-until they are modified.
+Each thread has its own stack, which provides a local execution context for
+thread-specific operations.
 
-The stack is local to each thread.
-
-Thread works as a hierarchy, when a thread exits, all its children
-are immediately killed.
+Threads form a hierarchy within a process, where a parent thread can create child
+threads. When a thread exits, all of its child threads are immediately terminated.
