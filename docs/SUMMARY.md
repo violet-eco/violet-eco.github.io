@@ -50,3 +50,4 @@
   - [Grass](applications/grass.md)
   - [Lotus](applications/lotus.md)
   - [Settings](applications/settings.md)
+  - [Violet Store](applications/store.md)

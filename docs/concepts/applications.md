@@ -1,5 +1,6 @@
 # What are applications?
-*Applications* are the way the operating system processes software.
+*Applications* are the primary way to run software in Violet. They are responsible for
+executing code and providing functionality to the users.
 
 - [What are applications?](#what-are-applications)
   - [How applications work?](#how-applications-work)
@@ -12,88 +13,81 @@
   - [Services](#services)
 
 ## How applications work?
-
-An application basically consists of executable files and resources.
-Because binary programs are not supported directly, **applications are the only way to run code**.
+An application consists of executable files and associated resources. In Violet, binary
+programs are not directly supported, so applications serve as the intermediary layer to
+run code. When an application is launched, it is loaded into memory and its code is
+executed by the system.
 
 ## Installation Methods
 
-All applications are installed through *application packages*.
-There are several installation methods:
-
-- From the store
-- Directly from the app's package
-- As a volatile application
+Applications in Violet are installed through application packages. There are several installation methods available:
 
 ### From the store
-
-Applications can be downloaded and installed from the official store of Violet.
-
-**For closed source applications**, the store only provides precompiled programs.
-
-**For open source applications**, the store provides both precompiled
-programs and support for compiling from source.
-
-Users can compile applications from source using the appropriate tools
-to compile, or simply use precompiled programs (default) and change
-the default option at any time.
+Applications can be downloaded and installed from the official Violet store. The store
+provides a centralized platform for users to discover and install applications. For
+closed-source applications, the store offers precompiled programs. For open-source
+applications, the store supports both precompiled programs and source code compilation.
 
 ### Sideloading
+Sideloading refers to the installation of an application directly from its package without going through the official store. Violet offers different sideloading modes:
 
-*Sideloading (installing an application directly from its package)* follows
-certain rules set by the sideloading mode, called "disable", "secure", "insecure".
+- **Disable mode:** Sideloading is completely blocked, and applications can only be installed from the store. Volatile applications can still be run.
+- **Safe mode:** Sideloading is allowed, but the system performs security checks. It verifies if the application's AID (Application ID) matches an application available in the store. It also compares the signature of the application with the signature of the store application. If the AID or the signatures do not match, the application is considered malicious and will not be installed. Note that this mode requires an internet connection to check against the store.
+- **Insecure mode:** Sideloading is allowed without any security checks. This mode is considered less secure, as it allows for potential spoofing or installation of untrusted applications.
 
-- **Disable mode** blocks all sideloading, in this mode it is not possible to install apps via packages, but [volatile apps](#volatile-applications) can still be run.
-- **Safe mode** allows sideloading and makes the system check if the application's AID matches an appllication available in the Store. If it matches, it compares the signature of the application with the signature of the Store Application. If the signatures do not match, the application is considered *malicious* and will not be installed. Also note that this mod only works when the computer is connected to the internet, as the system needs to check the Store to see if the application is malicios. If the computer is offline, sideloading will be disabled.
-- **Insecure mode** allows sideloading without any checking, which is quite dangerous as it allows spoofing.
+Users can switch between sideloading modes in the Settings, depending on their desired
+level of security and control over application installation.
 
-Sideloading mode can be changed in Control Center.
+**Note:** By default, sideloading is disabled in Violet for security reasons. Users can
+enable sideloading in the system settings, but it is recommended to exercise caution and
+only install applications from trusted sources.
 
 ### Volatile applications
-Applications can also be run as *volatile applications*, which
-means they are not installed to disk:
+*Volatile applications* offer an alternative way to run applications without installing
+them to disk permanently. Violet provides different modes for running volatile
+applications:
 
-- **Full-volatile:** all data of the application is deleted after the application is closed
-- **Session-scoped:** the application's data is kept on disk until the system is shut down
-- **Local-persisent:** the application's data is stored in a data file with extension `*.vad` created in the same folder
-- **Persistent:** the application's data is stored in a dedicated folder
+- **Full-volatile:** All data associated with the application is deleted once the application is closed.
+- **Session-scoped:** The application's data is kept on disk until the system is shut down.
+- **Local-persistent:** The application's data is stored in a data file with the extension `*.vad`` (Volatile Application Data) created in the same folder as the application package.
+- **Persistent:** The application's data is stored in a dedicated folder, allowing for persistent storage across multiple sessions.
 
-By default, volatile applications run in *local-persistent* mode.
-In this mode, the system first searches for a file in the same
-folder with the same name as the application's package file,
-but with the extension `*.vad` *(Volatile Application Data)*.
-If the file is found, it opens it as the application's storage.
-Thus, when the application wants to store data, it is stored in the data file.
+By default, volatile applications run in local-persistent mode. In this mode, the system
+searches for a file with the same name as the application's package file but with the
+`*.vad` extension. If the file is found, it serves as the application's storage, and any
+data the application wants to store is written to this file.
 
-Note that `*.vad` *(Volatile Application Data)* files are disguised
-VSF (Virtual Storage File) files.
+Persistently running volatile applications are not listed in the application list and can
+only be managed through an option in the Settings. While their data is stored on
+disk, their executables are not stored separately but reside within the application
+package. This allows running the same application multiple times without worrying about
+data conflicts. Additionally, it supports shared data storage between users.
 
-*Persistently running apps* are not listed in the app list and can only be
-managed through an option in the Control Center. While its data is stored
-on disk, its executables are not stored anywhere, they just stay inside
-the package. This allows running the same application multiple times and
-not worrying about the data file. It also supports shared data storage between users.
-
-Note that the store has an option for installing applications as volatile.
+Violet Store provides an option to install applications as volatile.
 
 ## Commands
-Applications can provide shell commands. Since command names must prefixed
-by the AID (dots instead of two colons), multiple commands can be provided without the danger of name conflicts.
+Applications in Violet can provide shell commands, allowing users to interact with the
+application's functionality from the command line. To prevent conflicts between command
+names, application commands are prefixed with the AID (Application ID) using dots instead
+of two colons. This approach ensures unique command names for each application and avoids
+naming conflicts.
 
-For example, if an app with AID `developer::app` provides the command `get_time`, the last available command will be `developer.app.get_time`.
+For example, if an application with the AID `developer::app` provides the command
+`get_time`, the full command name would be `developer.app.get_time`. However, in shell
+prompts (not scripts), if no other application provides a command with the same name, the
+short form `get_time` can be used directly.
 
-Although this is a rather long name, it avoids conflicts between
-the names of the commands. It is quite common for shell scripts to
-import commands at the beginning of the script to make it easier
-to access applications' commands.
-
-By default, shell prompts (not scripts) will allow use directly
-in the short form `get_time` if no other application provides
-a command with the same name.
-
-Commands work by running the application through a specific *execution context*.
+Commands in Violet work by executing the application within a specific execution context.
 
 ## System Applications
+Some applications are part of the system itself and are known as system applications.
+These applications have special privileges and access to system-reserved features. System
+applications also have the ability to create system services, which are processes that
+run at startup with system permissions.
+
+System applications **CANNOT BE UNINSTALLED** as they are critical to the proper functioning
+of the system. Non-system native applications, however, can be uninstalled if desired.
+
 Some native applications are part of the system itself and
 are called *system applications*. These applications have some special privileges:
 
