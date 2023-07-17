@@ -15,7 +15,7 @@ components and configurations. The only exceptions to this immutability rule are
 repair process and system updates initiated by the operating system itself.
 
 ## Hashes
-To ensure the integrity of critical files within the `/sys`` and `/sys/etc` directories,
+To ensure the integrity of critical files within the `/sys` and `/sys/etc` directories,
 Violet employs the [`BLAKE3`](https://github.com/BLAKE3-team/BLAKE3) hashing algorithm.
 When these files are written or updated, their contents are hashed, and the resulting
 hash values are stored in the system's hash registry, located at `/etc/sys/hashes`.
