@@ -1,29 +1,44 @@
 # Integrity
+Integrity is a crucial aspect of Violet, ensuring the stability, security
+and reliability of the system.
+
 - [Integrity](#integrity)
   - [System immutability](#system-immutability)
   - [Hashes](#hashes)
   - [Checking hashes](#checking-hashes)
 
 ## System immutability
-The `/sys` folder is immutable, which means that even the
-main administrator cannot change this folder. **The only process**
-this folder changes is the repair process or update run by the system itself.
+The `/sys` folder in Violet is designed as immutable, meaning that
+it cannot be modified by any user or process, including the main administrator.
+This strict immutability ensures the integrity and consistency of system-level
+components and configurations. The only exceptions to this immutability rule are the
+repair process and system updates initiated by the operating system itself.
 
 ## Hashes
-When written to critical files in `/sys` or `/sys/etc`,
-their hashes are calculated using the [`BLAKE3`](https://github.com/BLAKE3-team/BLAKE3) algorithm and stored in
-the system's *hash registry* (the `/etc/sys/hashes` file).
+To ensure the integrity of critical files within the `/sys`` and `/sys/etc` directories,
+Violet employs the [`BLAKE3`](https://github.com/BLAKE3-team/BLAKE3) hashing algorithm.
+When these files are written or updated, their contents are hashed, and the resulting
+hash values are stored in the system's hash registry, located at `/etc/sys/hashes`.
 
 ## Checking hashes
-When these files are initially read, their contents are calculated
-and compared with the hash registry. If the hashes don't match,
-the file is considered as *corrupted*. The consequences depend on the location
-of the file:
+During the boot process or when critical files are accessed, Violet performs integrity
+checks by recalculating the hashes of the files and comparing them with the values stored
+in the hash registry. If the calculated hashes do not match the stored values, it
+indicates that the file has been tampered with or corrupted.
 
-- **System** (`/sys`): the system will check its backup integrity and then restore itself from the backup
-- **System backup** (`/sys/backup`): the system will check its backup integrity and then restore itself from the backup
-- **System + system backup**: the system won't boot and indicate it must be reinstalled (documents won't be lost if they aren't corrupted) It's possible to force the boot process, but a large warning will indicate it may cause crashes or even introduce security issues
-- **Hash registry** (`/etc/sys/hashes`): same as *system + system backup*
-- **Registry** (`/etc/sys/registry`): same as *system + system backup*
-- **Crash save:** the crash saves won't be restored (can be forced)
-- **Sandbox:** system will refuse to start the sandbox (can be forced)
+1. System (`/sys`) or System Backup (`/sys/backup`):
+   - If a hash mismatch is detected in a system file, Violet initiates a check of the system backup's integrity.
+   - If the backup is intact, the system will restore itself from the backup.
+   - If the backup is also corrupted, the system will refuse to boot and prompt for reinstallation.
+   - Users' personal documents and data will remain unaffected unless they have been specifically corrupted.
+2. Hash Registry (`/etc/sys/hashes`) or Registry (`/etc/sys/registry`):
+   - Similar to the system files, a hash mismatch in the hash registry or system registry triggers a check of the system backup's integrity.
+   - If the backup is valid, the system will restore itself from the backup, preserving the integrity of the hash registry and registry files.
+3. Crash Save:
+   - In the case of crash saves, if a hash mismatch is detected, the corresponding crash save file will not be restored.
+   - This precautionary measure ensures that potentially corrupted crash saves do not compromise the stability or security of the system.
+   - In exceptional cases, users may choose to force the restoration of crash saves, but they are warned about the potential risks and instability it may introduce.
+4. Sandbox:
+    - If a hash mismatch occurs in a sandbox file, the system will refuse to start the sandbox.
+    - This safeguard prevents potential security breaches that could arise from compromised or tampered sandbox environments.
+    - As with crash saves, there is an option to force the startup of the sandbox, but it is accompanied by a warning highlighting the associated risks.

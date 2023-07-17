@@ -17,6 +17,9 @@ I'm developing this project on my own and am not an expert.
 This means that there may be mistakes in low-level documents.
 If you find a mistake, feel free to [submit an issue](https://github.com/lapis-org/docs/issues/new/choose).
 
+Thank you for joining me on this exciting adventure with Violet.
+Let's unlock the full potential of your digital world.
+
 ### What is Violet?
 Violet is an operating system that aims to replace
 legacy systems such as macOS, Linux, and Windows.
