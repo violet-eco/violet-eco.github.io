@@ -14,6 +14,7 @@
   - [Crash saves](features/crashsave.md)
   - [Privacy and security](features/privacy-and-security.md)
   - [Mood Detection](features/mood-detection.md)
+  - [Power and Heat Management](features/power-and-heat.md)
 - [Technical](technical/README.md)
   - [Overview](technical/overview.md)
   - [Developer Mode](technical/dev-mode.md)
