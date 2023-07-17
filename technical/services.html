@@ -138,8 +138,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="services"><a class="header" href="#services">Services</a></h1>
-<p>A <em>service</em> is a process that launches at startup and
-may receive IPC messages from any process.</p>
+<p>In Violet, a <em>service</em> is a process that launches at startup and performs specific tasks or provides functionality to the system or applications. Services can be categorized into two types: <em>system services</em> and <em>application services</em>.</p>
 <ul>
 <li><a href="#services">Services</a>
 <ul>
@@ -149,13 +148,34 @@ may receive IPC messages from any process.</p>
 </li>
 </ul>
 <h2 id="system-services"><a class="header" href="#system-services">System services</a></h2>
-<p>System services are native applications.
-They have system privileges and can do whatever they want.
-Their purpose is to perform specific actions without engaging the kernel.</p>
-<p>Every system service is a system application that exposes the service.</p>
+<p>System services are native applications that are an integral part of the Violet operating
+system. These services have system privileges, allowing them to perform various tasks and
+interact with the system at a deep level. They are responsible for managing critical
+system functionalities and providing essential services to other processes.</p>
+<p>They are designed to handle specific actions and functions without directly engaging the
+kernel. They have the necessary permissions and access to system resources to perform
+their tasks effectively. These services are typically launched at system startup and run
+in the background, ensuring the smooth operation of the operating system.</p>
+<p>Check <a href="../specs/services/README.html">this document</a> for further details.</p>
 <h2 id="application-services"><a class="header" href="#application-services">Application services</a></h2>
-<p>Application services, also called <em>userspace services</em>, are provided
-by <a href="../concepts/applications.html#services">applications themselves</a>.</p>
+<p>Application services, also known as <em>userspace services</em>, are services provided by
+applications themselves. These services extend the functionality of applications and
+allow them to provide specific features or interact with other parts of the system.
+Application services are typically created and managed by application developers and are
+specific to their respective applications.</p>
+<p>Application services can be accessed and utilized by other applications or system
+components through well-defined APIs or communication mechanisms. These services enable
+inter-application communication, data sharing, and collaboration, making it possible to
+build complex and integrated software ecosystems on top of Violet.</p>
+<p>Examples of application services include:</p>
+<ul>
+<li>A messaging application providing a service for sending and receiving messages.</li>
+<li>A media player application offering a service for playing audio and video files.</li>
+<li>A document editor providing a service for creating and editing documents.</li>
+</ul>
+<p>By leveraging application services, developers can build rich and interconnected
+applications that leverage the capabilities of Violet and provide seamless user
+experiences.</p>
 
                     </main>
 

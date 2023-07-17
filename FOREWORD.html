@@ -137,47 +137,76 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="foreword"><a class="header" href="#foreword">Foreword</a></h1>
-<ul>
-<li><a href="#foreword">Foreword</a>
-<ul>
+                        <ul>
 <li><a href="#welcome">Welcome!</a>
 <ul>
-<li><a href="#what-is-violet">What is Violet?</a></li>
-<li><a href="#whats-the-projects-structure">What's the project's structure?</a></li>
+<li><a href="#what-is-violet">What is Violet?</a>
+<ul>
+<li><a href="#key-features">Key Features</a></li>
+<li><a href="#my-big-dreams-and-goals">My Big Dreams and Goals</a></li>
+<li><a href="#components">Components</a>
+<ul>
+<li><a href="#kernel-sakura">Kernel (Sakura)</a></li>
+<li><a href="#system">System</a></li>
+<li><a href="#desktop-environment">Desktop Environment</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="welcome"><a class="header" href="#welcome">Welcome!</a></h2>
-<p>Welcome to the documentation of Violet!
-These documents will show you how the system is designed,
-how it works and what it can offer the end user.</p>
-<p><strong>Before reading these documents, consider that</strong>
-I'm developing this project on my own and am not an expert.</p>
-<p>This means that there may be mistakes in low-level documents.
-If you find a mistake, feel free to <a href="https://github.com/lapis-org/docs/issues/new/choose">submit an issue</a>.</p>
+</li>
+</ul>
+<h1 id="welcome"><a class="header" href="#welcome">Welcome!</a></h1>
+<p>Welcome to the documentation of Violet! These documents serve as a comprehensive guide to
+understand the inner workings of Violet, its features and its potential. Whether you are
+a developer, an enthusiast or simply curious about Violet, this documentation will
+provide valuable insights into the project.</p>
+<p>Now, let's get real for a moment. Violet is a project by a single person (me truly), so
+while I've poured my heart and soul into it, there may be a few quirks or hiccups along
+the way. If you spot any bugs, glitches or have ideas for improvement, please don't hold
+back—your feedback is invaluable!</p>
 <p>Thank you for joining me on this exciting adventure with Violet.
 Let's unlock the full potential of your digital world.</p>
-<h3 id="what-is-violet"><a class="header" href="#what-is-violet">What is Violet?</a></h3>
-<p>Violet is an operating system that aims to replace
-legacy systems such as macOS, Linux, and Windows.
-Of course, we know how Windows/macOS/Linux are
-installed on today's devices. Therefore, Violet
-is a theoretical operating system that shows how
-an operating system that does not provide backward
-compatibility with older architectures will look like.</p>
-<h3 id="whats-the-projects-structure"><a class="header" href="#whats-the-projects-structure">What's the project's structure?</a></h3>
-<p>The project consists of three different parts:
-<em>the kernel</em>, <em>the system</em> and <em>the desktop environment</em>.</p>
-<p><strong>The kernel</strong> basically allows software to access hardware.
-It is a microkernel, so unlike a monolithic kernel
-like Linux, potential security issues are greatly reduced.</p>
-<p><strong>The system</strong> contains everything not directly related
-to hardware or graphical interface. Examples of this
-are applications, user accounts, and permission management.</p>
-<p><strong>The desktop environment</strong> is what the user sees from the launch of Violet.</p>
+<h2 id="what-is-violet"><a class="header" href="#what-is-violet">What is Violet?</a></h2>
+<p>Violet is not just another run-of-the-mill operating system. It's a revolutionary
+platform that's set to redefine the way we interact with technology.</p>
+<p>Imagine an operating system that combines the best features of macOS, Linux and
+Windows, while pushing the boundaries of performance, security and customization.
+That's exactly what Violet aims to achieve.</p>
+<h3 id="key-features"><a class="header" href="#key-features">Key Features</a></h3>
+<ol>
+<li><strong>Advanced Privacy and Security:</strong> Violet takes your privacy and security seriously. With built-in encryption, secure boot verification and comprehensive permission management, you have full control over your data. Refer to <a href="./features/privacy-and-security.html">this document</a> for further details.</li>
+<li><strong>AI-Powered Personal Assistance:</strong> Meet your new digital companion!</li>
+<li><strong>Cloud Integration:</strong> Harness the power of the cloud with seamless integration into Violet. Access your files, sync data across devices, and collaborate with ease, all while ensuring the highest level of data protection.</li>
+<li><strong>Immutable System:</strong> Violet adopts the concept of immutability, ensuring that critical system files and configurations remain unchanged. This provides a stable and secure foundation for the operating system.</li>
+</ol>
+<h3 id="my-big-dreams-and-goals"><a class="header" href="#my-big-dreams-and-goals">My Big Dreams and Goals</a></h3>
+<ol>
+<li><strong>Accessibility to ALL:</strong> I strive to make Violet accessible to everyone, regardless of their abilities or limitations. I'm committed to implementing inclusive design practices and providing a range of accessibility features to ensure that Violet is usable by all. Refer to <a href="./applications/lotus.html#accessibility-features">this document</a> for further details.</li>
+</ol>
+<h3 id="components"><a class="header" href="#components">Components</a></h3>
+<p>Violet's architecture is designed with modularity, performance and flexibility in mind. It consists of several key components that work together harmoniously to create an efficient operating system.</p>
+<h4 id="kernel-sakura"><a class="header" href="#kernel-sakura">Kernel (Sakura)</a></h4>
+<blockquote>
+<p>Refer to <a href="./specs/kernel/README.html">this document</a>.</p>
+</blockquote>
+<p>At the heart of Violet lies the microkernel named <em>Sakura</em>. The kernel provides the foundation for all system applications and facilitates communication between the hardware and software layers. It ensures the efficient utilization of system resources, enforces security measures, manages processes and memory.</p>
+<h4 id="system"><a class="header" href="#system">System</a></h4>
+<p>The system encompasses all the essential system-level functionalities and services that
+enable the smooth operation of Violet. This includes the management of user accounts,
+permissions, file systems, networking, security, and system configurations. The system
+component acts as the intermediary between the kernel and the user-facing applications,
+ensuring proper coordination and execution of system-level tasks.</p>
+<h4 id="desktop-environment"><a class="header" href="#desktop-environment">Desktop Environment</a></h4>
+<blockquote>
+<p>Refer to <a href="./applications/lotus.html">this document</a>.</p>
+</blockquote>
+<p>The desktop environment in Violet, known as <em>Lotus</em>, provides the user interface for
+interacting with the operating system and its applications. It encompasses the graphical
+elements, window management, application launchers, taskbars, and other visual components
+that make up the user experience. Lotus offers a modern, intuitive, and customizable
+interface, allowing users to personalize their desktop, switch between applications, and
+access system features efficiently.</p>
 
                     </main>
 
