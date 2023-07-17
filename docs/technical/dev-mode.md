@@ -11,10 +11,17 @@ them when they are enabled.
 ## How to enable?
 Developer mode can be enabled either by typing the following command
 in the terminal:
+
+Developer Mode can be enabled in two ways:
+1. Open the terminal and type following command:
 ```sh
 vio central --enable dev-mode
 ```
-Or, while holding the `Ctrl` `Alt` and `Maj` key, type `DEV`.
+1. Alternatively, while holding the `Ctrl` `Alt` and `Shift` keys, type `DEV`.
+
+Once Developer Mode is enabled, additional features and options become accessible, providing developers with greater control and flexibility over the system.
+
+
 
 ## Kernel Module Development
 Kernel module development is a powerful capability offered by Violet's Developer

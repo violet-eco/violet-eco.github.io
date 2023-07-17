@@ -1,23 +1,29 @@
 # Crash saves
-*Crash saves* prevent most data loss caused
-by a crash.
+Crash saves are a crucial feature in Violet that helps prevent data loss caused by system
+crashes or unexpected terminations.
 
-A signal is sent to all running applications
-at a periodic time interval that can be changed from the registry (1 minute by default).
-This signal can be answered in 3 different ways:
-1. Applications respond with all the necessary information they need
-to return to the current state they are in.
-1. They can also give a specific reply stating that they will not provide crash save data during the current collect. The signal is sent to the application after a certain time.
-2. Another response method is a message stating that they will not give any crash saves during this running instance. This time, the signal is not sent to the application's instance again.
+## Signal and Response Mechanism
+Violet sends a periodic signal to all running applications at a configurable time
+interval, with a default interval of 1 minute. This signal prompts the applications to
+respond with the necessary information to return to their current state.
 
-If the application does not respond, the signal is aborted but
-the next signal continues to be sent.
+Applications have three response options to the crash save signal:
+1. **Provide Crash Save Data:** Applications can respond by providing all the relevant information needed to restore their state. This includes preserving user data, application settings, active session details, and any other critical data required for a complete recovery.
+   
+2. **Decline Current Collect:** Applications may choose to decline providing crash save data during the current signal collection. The signal will be sent to the application again after a certain time.
+   
+3. **Refuse Crash Saves:** Applications can send a message indicating that they will not provide any crash saves during the current running instance. In this case, the signal will not be sent to the application's instance again, as the application explicitly opts out of participating in crash save data collection.
 
-The integrity of crash saves is checked by
-[Eden](../technical/integrity.md) [(GitHub)](https://github.com/violet-eco/eden), integrity checker of Violet, as they are vulnerable to use for malicious purposes.
+If an application does not respond to the crash save signal, the signal is aborted for
+that particular application. However, the subsequent signals will continue to be sent to
+other running applications.
 
-When the crash save is collected, it is
-stored in `/home/[user]/appdata/[appname]/crashsaves/[timestamp]_[pid].csf`.
+## Integrity and Security
+To ensure the trustworthiness and authenticity of crash save data, Violet incorporates an
+integrity checker called [Eden](../technical/integrity.md) ([GitHub](https://github.com(violet-eco/eden))). Eden validates the integrity of crash saves to
+prevent any potential tampering or unauthorized access to user data.
 
-All [native applications](../concepts/applications.md#system-applications)
-support crash saves.
+## Storage and Accessibility
+When crash saves are collected, they are stored in a dedicated directory: `/home/[user]
+appdata/[appname]/crashsaves/[timestamp]_[pid].csf`. 
+It's important to note that crash saves are supported by all native applications in Violet.
