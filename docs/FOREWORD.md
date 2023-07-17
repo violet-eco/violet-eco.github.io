@@ -1,44 +1,65 @@
-# Foreword
+- [Welcome!](#welcome)
+  - [What is Violet?](#what-is-violet)
+    - [Key Features](#key-features)
+    - [My Big Dreams and Goals](#my-big-dreams-and-goals)
+    - [Components](#components)
+      - [Kernel (Sakura)](#kernel-sakura)
+      - [System](#system)
+      - [Desktop Environment](#desktop-environment)
 
-- [Foreword](#foreword)
-  - [Welcome!](#welcome)
-    - [What is Violet?](#what-is-violet)
-    - [What's the project's structure?](#whats-the-projects-structure)
+# Welcome!
 
-## Welcome!
+Welcome to the documentation of Violet! These documents serve as a comprehensive guide to
+understand the inner workings of Violet, its features and its potential. Whether you are
+a developer, an enthusiast or simply curious about Violet, this documentation will
+provide valuable insights into the project.
 
-Welcome to the documentation of Violet!
-These documents will show you how the system is designed,
-how it works and what it can offer the end user.
-
-**Before reading these documents, consider that**
-I'm developing this project on my own and am not an expert.
-
-This means that there may be mistakes in low-level documents.
-If you find a mistake, feel free to [submit an issue](https://github.com/lapis-org/docs/issues/new/choose).
+Now, let's get real for a moment. Violet is a project by a single person (me truly), so
+while I've poured my heart and soul into it, there may be a few quirks or hiccups along
+the way. If you spot any bugs, glitches or have ideas for improvement, please don't hold
+back—your feedback is invaluable!
 
 Thank you for joining me on this exciting adventure with Violet.
 Let's unlock the full potential of your digital world.
 
-### What is Violet?
-Violet is an operating system that aims to replace
-legacy systems such as macOS, Linux, and Windows.
-Of course, we know how Windows/macOS/Linux are
-installed on today's devices. Therefore, Violet
-is a theoretical operating system that shows how
-an operating system that does not provide backward
-compatibility with older architectures will look like.
+## What is Violet?
+Violet is not just another run-of-the-mill operating system. It's a revolutionary
+platform that's set to redefine the way we interact with technology.
 
-### What's the project's structure?
-The project consists of three different parts:
-*the kernel*, *the system* and *the desktop environment*.
+Imagine an operating system that combines the best features of macOS, Linux and
+Windows, while pushing the boundaries of performance, security and customization.
+That's exactly what Violet aims to achieve.
 
-**The kernel** basically allows software to access hardware.
-It is a microkernel, so unlike a monolithic kernel
-like Linux, potential security issues are greatly reduced.
+### Key Features
+1. **Advanced Privacy and Security:** Violet takes your privacy and security seriously. With built-in encryption, secure boot verification and comprehensive permission management, you have full control over your data. Refer to [this document](./features/privacy-and-security.md) for further details.
+2. **AI-Powered Personal Assistance:** Meet your new digital companion!
+3. **Cloud Integration:** Harness the power of the cloud with seamless integration into Violet. Access your files, sync data across devices, and collaborate with ease, all while ensuring the highest level of data protection.
+4. **Immutable System:** Violet adopts the concept of immutability, ensuring that critical system files and configurations remain unchanged. This provides a stable and secure foundation for the operating system.
 
-**The system** contains everything not directly related
-to hardware or graphical interface. Examples of this
-are applications, user accounts, and permission management.
+### My Big Dreams and Goals
+1. **Accessibility to ALL:** I strive to make Violet accessible to everyone, regardless of their abilities or limitations. I'm committed to implementing inclusive design practices and providing a range of accessibility features to ensure that Violet is usable by all. Refer to [this document](./applications/lotus.md#accessibility-features) for further details.
 
-**The desktop environment** is what the user sees from the launch of Violet.
+### Components
+Violet's architecture is designed with modularity, performance and flexibility in mind. It consists of several key components that work together harmoniously to create an efficient operating system.
+
+#### Kernel (Sakura)
+> Refer to [this document](./specs/kernel/README.md).
+
+At the heart of Violet lies the microkernel named *Sakura*. The kernel provides the foundation for all system applications and facilitates communication between the hardware and software layers. It ensures the efficient utilization of system resources, enforces security measures, manages processes and memory.
+
+#### System
+The system encompasses all the essential system-level functionalities and services that
+enable the smooth operation of Violet. This includes the management of user accounts,
+permissions, file systems, networking, security, and system configurations. The system
+component acts as the intermediary between the kernel and the user-facing applications,
+ensuring proper coordination and execution of system-level tasks.
+
+#### Desktop Environment
+> Refer to [this document](./applications/lotus.md).
+
+The desktop environment in Violet, known as *Lotus*, provides the user interface for
+interacting with the operating system and its applications. It encompasses the graphical
+elements, window management, application launchers, taskbars, and other visual components
+that make up the user experience. Lotus offers a modern, intuitive, and customizable
+interface, allowing users to personalize their desktop, switch between applications, and
+access system features efficiently.
