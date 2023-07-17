@@ -47,4 +47,6 @@
 - [Applications](applications/README.md)
   - [Dahlia](applications/dahlia.md)
   - [Fern](applications/fern.md)
+  - [Grass](applications/grass.md)
   - [Lotus](applications/lotus.md)
+  - [Settings](applications/settings.md)
