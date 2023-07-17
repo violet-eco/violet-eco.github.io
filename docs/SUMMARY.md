@@ -3,6 +3,7 @@
 - [Foreword](FOREWORD.md)
 - [FAQ](FAQ.md)
 - [Project](project/README.md)
+  - [Roadmap](project/roadmap.md)
   - [Development](project/development.md)
   - [Hardware requirements](project/hardware-requirements.md)
 - [Concepts](concepts/README.md)
