@@ -88,4 +88,4 @@ Violet is designed to take advantage of the hardware capabilities of modern devi
 system leverages hardware acceleration, when available, to offload computationally
 intensive tasks related to mood detection.
 
-> For further details, refer to [power and heat management document](#).
+> For further details, refer to [power and heat management document](./power-and-heat.md).

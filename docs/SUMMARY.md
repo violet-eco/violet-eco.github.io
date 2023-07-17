@@ -15,6 +15,7 @@
   - [Privacy and security](features/privacy-and-security.md)
   - [Mood Detection](features/mood-detection.md)
   - [Power and Heat Management](features/power-and-heat.md)
+  - [Smart Home Integration](features/smart-home.md)
 - [Technical](technical/README.md)
   - [Overview](technical/overview.md)
   - [Developer Mode](technical/dev-mode.md)
