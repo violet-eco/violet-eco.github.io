@@ -1,33 +1,49 @@
 # Pre-compiling
-
-In traditional systems, programs are distributed as
-binary and are only availeble for one specific platform (Windows, Linux, macOS, ...)
-with a specific architecture (x86, ARM, ...).
-
-To prevent this and to make native programs more stable and
-secure, Violet applications are distributed as *Violet Pre-compiled Programs*
-(VPP) using a special very low-level language called [**Rosa**](https://github.com/violet-eco/rosa).
+Traditionally, software programs are distributed as binaries specific to a particular
+platform, such as Windows, Linux, macOS, and to a particular architecture, such as x86 or
+ARM. This can lead to limited availability and compatibility for users on different
+systems.
 
 - [Pre-compiling](#pre-compiling)
-  - [How it works?](#how-it-works)
-  - [Compatibility](#compatibility)
+  - [How Does Pre-Compilation Work?](#how-does-pre-compilation-work)
+    - [Multi-Platform and Multi-Compatibility](#multi-platform-and-multi-compatibility)
+    - [Optimized Apps](#optimized-apps)
+    - [Efficient Build Process](#efficient-build-process)
+  - [Compatibility With non-Violet Operating Systems](#compatibility-with-non-violet-operating-systems)
 
-## How it works?
+To meet chis challenge and provide a more stable and secure environment for native programs, Violet offers a approach. In this approach, Violet applications are distributed as Violet Pre-compiled Programs (VPP) using a special low-level language called Rosa
 
-[**Rosa**](https://github.com/violet-eco/rosa) is very similar to WebAssembly: compressed very low-level
-source files that are built ahead of time on the machine that will
-run it. This enables several advantages:
+## How Does Pre-Compilation Work?
+Rosa represents the foundation of Violet's pre-compilation process. It involves compressing very low-level source files already created on the machine where the application will run.
 
-- Programs are multi-platform and multi-architecture
-- Programs run faster thanks to being optimized for the specific machine they will run on
-- Programs are still very fast to compile
-- Source code is protected for closed-source applications as Rosa is made of basic instructions
+### Multi-Platform and Multi-Compatibility
+With pre-compilation, Violet apps naturally become multiplatform and can run smoothly on
+different operating systems including Windows, Linux, macOS and more.
 
-## Compatibility
+### Optimized Apps
+Precompiled Violet apps are specifically optimized for the target machine they will run
+on. This optimization allows programs to take full advantage of the system's
+capabilities, resulting in improved performance and efficiency. By adapting the
+application to the target architecture, Violet enables users to get the best possible
+performance on their machines.
 
-Rosa can also run on non-Violet operating systems using a lightweight
-wrapper available on Violet's website.
+### Efficient Build Process
+Despite advanced optimizations applied during pre-compile, Violet maintains an efficient
+build process. VPP files can be compiled quickly, allowing users to install and run
+applications without significant delays or long wait times.
 
-**NOTE:** Although Rosa is multi-platform, Violet apps use Violet's
-ultra-beautiful features that are *not* natively supported on other platforms.
-To run such applications, you must install the [full wrapper](multi-platform.md) available on the website.
+## Compatibility With non-Violet Operating Systems
+Being a multiplatform technology, Rosa can also be run on non-Violet operating systems
+using a lightweight wrapper provided by Violet. Available for download from Violet's
+website, this wrapper allows users to run Violet apps on their preferred platforms, even
+if those platforms are not natively supported by Violet.
+
+While Rosa itself is multiplatform, it's important to note that Violet apps take
+advantage of the unique and ultra-beautiful features of the Violet ecosystem. As a
+result, running these applications on non-Violet operating systems requires installing
+the full package provided by Violet. This allows users to fully experience the rich
+capabilities and seamless integration that the Violet platform has to offer.
+
+Note: As Violet continues to evolve, updates and improvements may be made available
+during the pre-build process and in the Rosa language. Stay connected with the Violet
+community and visit the official website for the latest developments and updates.
