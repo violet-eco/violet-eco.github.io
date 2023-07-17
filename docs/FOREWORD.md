@@ -33,7 +33,7 @@ That's exactly what Violet aims to achieve.
 ### Key Features
 1. **Advanced Privacy and Security:** Violet takes your privacy and security seriously. With built-in encryption, secure boot verification and comprehensive permission management, you have full control over your data. Refer to [this document](./features/privacy-and-security.md) for further details.
 2. **AI-Powered Personal Assistance:** Meet your new digital companion!
-3. **Cloud Integration:** Harness the power of the cloud with seamless integration into Violet. Access your files, sync data across devices, and collaborate with ease, all while ensuring the highest level of data protection.
+3. **Cloud Integration:** Harness the power of the cloud with seamless integration into Violet. Access your files, sync data across devices and collaborate with ease, all while ensuring the highest level of data protection.
 4. **Immutable System:** Violet adopts the concept of immutability, ensuring that critical system files and configurations remain unchanged. This provides a stable and secure foundation for the operating system.
 
 ### My Big Dreams and Goals
@@ -50,7 +50,7 @@ At the heart of Violet lies the microkernel named *Sakura*. The kernel provides 
 #### System
 The system encompasses all the essential system-level functionalities and services that
 enable the smooth operation of Violet. This includes the management of user accounts,
-permissions, file systems, networking, security, and system configurations. The system
+permissions, file systems, networking, security and system configurations. The system
 component acts as the intermediary between the kernel and the user-facing applications,
 ensuring proper coordination and execution of system-level tasks.
 
@@ -59,7 +59,7 @@ ensuring proper coordination and execution of system-level tasks.
 
 The desktop environment in Violet, known as *Lotus*, provides the user interface for
 interacting with the operating system and its applications. It encompasses the graphical
-elements, window management, application launchers, taskbars, and other visual components
-that make up the user experience. Lotus offers a modern, intuitive, and customizable
+elements, window management, application launchers, taskbars and other visual components
+that make up the user experience. Lotus offers a modern, intuitive and customizable
 interface, allowing users to personalize their desktop, switch between applications, and
 access system features efficiently.
