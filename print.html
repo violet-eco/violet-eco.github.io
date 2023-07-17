@@ -159,6 +159,8 @@ how it works and what it can offer the end user.</p>
 I'm developing this project on my own and am not an expert.</p>
 <p>This means that there may be mistakes in low-level documents.
 If you find a mistake, feel free to <a href="https://github.com/lapis-org/docs/issues/new/choose">submit an issue</a>.</p>
+<p>Thank you for joining me on this exciting adventure with Violet.
+Let's unlock the full potential of your digital world.</p>
 <h3 id="what-is-violet"><a class="header" href="#what-is-violet">What is Violet?</a></h3>
 <p>Violet is an operating system that aims to replace
 legacy systems such as macOS, Linux, and Windows.
@@ -769,50 +771,54 @@ in Violet:</p>
 </li>
 </ul>
 <h2 id="program-executions"><a class="header" href="#program-executions">Program executions</a></h2>
-<p>Violet does not allow to run standalone binaries.
-Every running code is either:</p>
+<p>Violet does not allow standalone binaries to be executed directly. Instead, all code
+execution occurs within the context of the system or an application.</p>
 <ul>
-<li>Part of the system, as the kernel itself or as a system service</li>
-<li>Part of an <a href="technical//docs/concepts/users.html">application</a></li>
+<li><strong>System Code:</strong> This includes the kernel itself and system services.</li>
+<li><strong>Applications:</strong> These are user-installed applications that run within the Violet environment.</li>
 </ul>
 <h2 id="permissions"><a class="header" href="#permissions">Permissions</a></h2>
-<p>The system has all possible privileges over the system itself.
-Applications, on the other hand, have almost no privileges by default.</p>
-<p>These privileges can be provided through <em>permissions</em> designed
-to control which application can do what.</p>
+<p>Violet follows a strict permission model to control the capabilities of applications. By
+default, applications have limited privileges and require explicit permissions to perform
+certain actions.</p>
+<p>Permissions are designed to regulate what actions an application can take within the
+system. Applications must request and be granted the necessary permissions to access
+resources or perform specific operations.</p>
 <h2 id="hardware-access"><a class="header" href="#hardware-access">Hardware access</a></h2>
-<p>Accessing the hardware happens in a two-layered way:</p>
+<p>Hardware access in Violet occurs through a two-layered approach:</p>
 <ul>
-<li>First, the kernel <em>detects</em> the hardware and <em>enumerates</em> it</li>
-<li>Then this hardware will be available through the <em>hardware service</em></li>
+<li><strong>Kernel Detection:</strong> The kernel detects and enumerates the connected hardware devices.</li>
+<li><strong>Hardware Service:</strong> The hardware service acts as an intermediary layer between the system and hardware devices, providing access and management capabilities.</li>
 </ul>
 <h2 id="hardware-drivers"><a class="header" href="#hardware-drivers">Hardware drivers</a></h2>
-<p>Unlike most other operating systems,hardware drivers are
-simple applications with no special integration in the kernel.</p>
-<p>An application's manifest can mark itself as a driver using the <em>hardware service</em>.</p>
-<p>The appropriate driver for each hardware is selected by using <em>certain criteria</em>.</p>
+<p>Unlike many other operating systems, hardware drivers in Violet are implemented as simple
+applications rather than tightly integrated components of the kernel. Applications can
+declare themselves as drivers by utilizing the hardware service.</p>
+<p>When an application requests hardware access, the system selects the appropriate driver
+based on certain criteria. The hardware service facilitates communication between the
+system, hardware services, and drivers to perform the requested operations.</p>
 <h3 id="hardware-access-performances"><a class="header" href="#hardware-access-performances">Hardware access performances</a></h3>
+<p>Hardware accesses are performed through syscalls and signals using CPU interrupts. The
+process typically follows these steps:</p>
 <p>Hardware accesses are provided via <em>syscall</em> and <em>signals</em> using CPU interrupts.</p>
 <p>The access process usually works like this:</p>
-<ul>
-<li>A userspace process notifies a <em>system service</em></li>
-<li>The system service contacts the corresponding hardware service</li>
-<li>The hardware service contacts the relevant driver</li>
-<li>The hardware driver performs the requested operation through the <em>hardware service</em></li>
-<li>Next, the result of the operation is transmitted to the hardware service, then to the system service, and finally to the userspace process</li>
-</ul>
+<ol>
+<li>A userspace process sends a notification to a system service.</li>
+<li>The system service communicates with the corresponding hardware service.</li>
+<li>The hardware service contacts the relevant driver associated with the requested hardware.</li>
+<li>The driver interacts with the hardware through the hardware service.</li>
+<li>The result of the operation is transmitted back through the hardware service, system service, and ultimately to the userspace process.</li>
+</ol>
 <h2 id="filesystem-access"><a class="header" href="#filesystem-access">Filesystem access</a></h2>
-<p>This process is generally faster than other hardware operations
-thanks to <em>direct storage access</em>.</p>
-<p>A typical operation involves a communication with the <em>filesystem service</em>,
-which <em>directly communicates</em> with the storage files.</p>
-<p>For filesystems that are not natively supported, a <em>filesystem interface</em>
-is available to contact the <em>storage driver service</em>. Although this process
-has more latency, it is only referenced in edge cases and still remains
-within an acceptable performance range.</p>
+<p>Filesystem access in Violet is generally fast, thanks to direct storage access. The
+filesystem service handles most operations by directly communicating with the storage
+files.</p>
+<p>For filesystems that are not natively supported, a filesystem interface is available to
+communicate with the storage driver service. Although this process introduces some
+additional latency, it remains within an acceptable performance range and is only used in
+specific edge cases.</p>
 <h2 id="user-interface"><a class="header" href="#user-interface">User interface</a></h2>
-<p>The entire user interface is managed by desktop environments,
-which are the services provided by the applications.</p>
+<p>The user interface in Violet is managed by desktop environments, which are services provided by applications. These desktop environments are responsible for rendering the graphical elements, handling input events, and providing a cohesive user experience.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="developer-mode"><a class="header" href="#developer-mode">Developer Mode</a></h1>
 <p>The developer mode enables several features that are not
 available by default. Only administrator user get access to
@@ -849,6 +855,8 @@ It's possible for the proxy to never answer the signal, to change its content be
 specific signals and logs them, without cancelling them and/or modifying them.
 This is useful to check all filesystem access requested by an application, in real time.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="integrity"><a class="header" href="#integrity">Integrity</a></h1>
+<p>Integrity is a crucial aspect of Violet, ensuring the stability, security
+and reliability of the system.</p>
 <ul>
 <li><a href="technical/integrity.html#integrity">Integrity</a>
 <ul>
@@ -859,27 +867,48 @@ This is useful to check all filesystem access requested by an application, in re
 </li>
 </ul>
 <h2 id="system-immutability"><a class="header" href="#system-immutability">System immutability</a></h2>
-<p>The <code>/sys</code> folder is immutable, which means that even the
-main administrator cannot change this folder. <strong>The only process</strong>
-this folder changes is the repair process or update run by the system itself.</p>
+<p>The <code>/sys</code> folder in Violet is designed as immutable, meaning that
+it cannot be modified by any user or process, including the main administrator.
+This strict immutability ensures the integrity and consistency of system-level
+components and configurations. The only exceptions to this immutability rule are the
+repair process and system updates initiated by the operating system itself.</p>
 <h2 id="hashes"><a class="header" href="#hashes">Hashes</a></h2>
-<p>When written to critical files in <code>/sys</code> or <code>/sys/etc</code>,
-their hashes are calculated using the <a href="https://github.com/BLAKE3-team/BLAKE3"><code>BLAKE3</code></a> algorithm and stored in
-the system's <em>hash registry</em> (the <code>/etc/sys/hashes</code> file).</p>
+<p>To ensure the integrity of critical files within the <code>/sys`` and </code>/sys/etc<code> directories, Violet employs the [</code>BLAKE3<code>](https://github.com/BLAKE3-team/BLAKE3) hashing algorithm. When these files are written or updated, their contents are hashed, and the resulting hash values are stored in the system's hash registry, located at </code>/etc/sys/hashes`.</p>
 <h2 id="checking-hashes"><a class="header" href="#checking-hashes">Checking hashes</a></h2>
-<p>When these files are initially read, their contents are calculated
-and compared with the hash registry. If the hashes don't match,
-the file is considered as <em>corrupted</em>. The consequences depend on the location
-of the file:</p>
+<p>During the boot process or when critical files are accessed, Violet performs integrity
+checks by recalculating the hashes of the files and comparing them with the values stored
+in the hash registry. If the calculated hashes do not match the stored values, it
+indicates that the file has been tampered with or corrupted.</p>
+<ol>
+<li>System (<code>/sys</code>) or System Backup (<code>/sys/backup</code>):
 <ul>
-<li><strong>System</strong> (<code>/sys</code>): the system will check its backup integrity and then restore itself from the backup</li>
-<li><strong>System backup</strong> (<code>/sys/backup</code>): the system will check its backup integrity and then restore itself from the backup</li>
-<li><strong>System + system backup</strong>: the system won't boot and indicate it must be reinstalled (documents won't be lost if they aren't corrupted) It's possible to force the boot process, but a large warning will indicate it may cause crashes or even introduce security issues</li>
-<li><strong>Hash registry</strong> (<code>/etc/sys/hashes</code>): same as <em>system + system backup</em></li>
-<li><strong>Registry</strong> (<code>/etc/sys/registry</code>): same as <em>system + system backup</em></li>
-<li><strong>Crash save:</strong> the crash saves won't be restored (can be forced)</li>
-<li><strong>Sandbox:</strong> system will refuse to start the sandbox (can be forced)</li>
+<li>If a hash mismatch is detected in a system file, Violet initiates a check of the system backup's integrity.</li>
+<li>If the backup is intact, the system will restore itself from the backup.</li>
+<li>If the backup is also corrupted, the system will refuse to boot and prompt for reinstallation.</li>
+<li>Users' personal documents and data will remain unaffected unless they have been specifically corrupted.</li>
 </ul>
+</li>
+<li>Hash Registry (<code>/etc/sys/hashes</code>) or Registry (<code>/etc/sys/registry</code>):
+<ul>
+<li>Similar to the system files, a hash mismatch in the hash registry or system registry triggers a check of the system backup's integrity.</li>
+<li>If the backup is valid, the system will restore itself from the backup, preserving the integrity of the hash registry and registry files.</li>
+</ul>
+</li>
+<li>Crash Save:
+<ul>
+<li>In the case of crash saves, if a hash mismatch is detected, the corresponding crash save file will not be restored.</li>
+<li>This precautionary measure ensures that potentially corrupted crash saves do not compromise the stability or security of the system.</li>
+<li>In exceptional cases, users may choose to force the restoration of crash saves, but they are warned about the potential risks and instability it may introduce.</li>
+</ul>
+</li>
+<li>Sandbox:
+<ul>
+<li>If a hash mismatch occurs in a sandbox file, the system will refuse to start the sandbox.</li>
+<li>This safeguard prevents potential security breaches that could arise from compromised or tampered sandbox environments.</li>
+<li>As with crash saves, there is an option to force the startup of the sandbox, but it is accompanied by a warning highlighting the associated risks.</li>
+</ul>
+</li>
+</ol>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="multi-platform-management"><a class="header" href="#multi-platform-management">Multi-platform management</a></h1>
 <p>Violet ecosystem programs can be run on Linux, Windows,
 or macOS systems using a wrapper called the <em>Violet Calls Wrapper</em>.
@@ -920,51 +949,61 @@ wrapper available on Violet's website.</p>
 ultra-beautiful features that are <em>not</em> natively supported on other platforms.
 To run such applications, you must install the <a href="technical/multi-platform.html">full wrapper</a> available on the website.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="io-nano-manager"><a class="header" href="#io-nano-manager">I/O Nano-manager</a></h1>
-<p>The <em>Input/Output Nano-manager</em>, known as <em>Iona</em>, is the
-part of the system that handles the input/output requests of processes.</p>
-<p>Concretely, it is represented by the <a href="technical/../specs/services/hw.html"><code>sys::hw</code></a> service.</p>
+<p>The Input/Output Nano-manager, also known as <em>Iona</em>, is an integral part of the
+Violet system responsible for handling input/output requests from processes. It serves
+as the intermediary between processes and the underlying hardware, managing and
+coordinating the flow of data between them.</p>
+<p>Iona is represented by the <a href="technical/../specs/services/hw.html"><code>sys::hw</code></a> service, which provides a
+unified interface for accessing and controlling various hardware devices within the system.</p>
 <ul>
 <li><a href="technical/iona.html#io-nano-manager">I/O Nano-manager</a>
 <ul>
-<li><a href="technical/iona.html#hardware-access">Hardware access</a>
+<li><a href="technical/iona.html#hardware-access">Hardware Access</a>
 <ul>
-<li><a href="technical/iona.html#requests-priority">Requests priority</a></li>
+<li><a href="technical/iona.html#requests-priority">Requests Priority</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="hardware-access-1"><a class="header" href="#hardware-access-1">Hardware access</a></h2>
-<p>When a process tries to access hardware, that request goes to Iona,
-which will either allow or deny it.</p>
-<p>System services such as <a href="technical/../specs/services/fs.html"><code>sys::fs</code></a>
-or <a href="technical/../specs/services/net.html"><code>sys::net</code></a> use Iona to
-deal with the related hardware devices.</p>
-<h3 id="requests-priority"><a class="header" href="#requests-priority">Requests priority</a></h3>
-<p>The requests of the processes are treated according to their
-priority determined by their arrival timestamp. But it can also be
-treated by priority of processes, I/O requests of the process with
-higher priority are run faster.</p>
+<h2 id="hardware-access-1"><a class="header" href="#hardware-access-1">Hardware Access</a></h2>
+<p>When a process needs to access hardware resources, such as storage devices or network
+interfaces, it sends its request to Iona. Iona acts as the gatekeeper, deciding whether
+to grant or deny the requested access based on predefined rules and permissions.</p>
+<p>System services, such as <a href="technical/../specs/services/fs.html"><code>sys::fs</code></a> for file system operations or <a href="technical/../specs/services/net.html"><code>sys::net</code></a> for network communication, rely on Iona to
+interact with the corresponding hardware devices.</p>
+<h3 id="requests-priority"><a class="header" href="#requests-priority">Requests Priority</a></h3>
+<p>To ensure efficient resource utilization, Iona handles the requests from processes based
+on their priority. The priority of a request is determined either by the arrival
+timestamp of the request or the priority assigned to the process making the request.</p>
+<p>In this way, Iona can optimize the allocation of hardware resources and give precedence
+to higher-priority processes or time-sensitive operations. This prioritization mechanism
+helps ensure smooth and responsive I/O operations throughout the system.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="devices"><a class="header" href="#devices">Devices</a></h1>
+<p>In the Violet system, devices play a crucial role in enabling various functionalities and
+interactions. Devices can include hardware components such as cameras, microphones,
+storage drives, network adapters, and more. The system manages these devices through the
+use of device handler files (DHF) and provides a unified interface for interacting with
+them.</p>
 <ul>
 <li><a href="technical/devices.html#devices">Devices</a>
 <ul>
-<li><a href="technical/devices.html#connecting-a-new-device">Connecting a new device</a></li>
-<li><a href="technical/devices.html#interacting-with-a-device">Interacting with a device</a></li>
-<li><a href="technical/devices.html#device-handler-files-persistance">Device handler files persistance</a></li>
-<li><a href="technical/devices.html#custom-dhf-name">Custom DHF name</a></li>
+<li><a href="technical/devices.html#connecting-a-new-device">Connecting a New Device</a></li>
+<li><a href="technical/devices.html#interacting-with-a-device">Interacting With a Device</a></li>
+<li><a href="technical/devices.html#device-handler-files-persistance">Device Handler Files Persistance</a></li>
+<li><a href="technical/devices.html#custom-device-handler-file-names">Custom Device Handler File Names</a></li>
 </ul>
 </li>
 </ul>
-<h2 id="connecting-a-new-device"><a class="header" href="#connecting-a-new-device">Connecting a new device</a></h2>
-<p>When a new device is connected to the computer, a new
-device handler file (DHF) is created in the <code>/dev</code> directory.</p>
-<p>Depending on the type, they can be put in different folders under the <code>/dev</code> folder.</p>
+<h2 id="connecting-a-new-device"><a class="header" href="#connecting-a-new-device">Connecting a New Device</a></h2>
+<p>When a new device is connected to the computer, a corresponding device handler file (DHF)
+is created in the <code>/dev</code> directory. The location and organization of DHFs may vary
+depending on the type of device. For example, a hard drive may have a DHF path like <code>/dev/sst/b0b4</code>.</p>
 <p>The filename is random and unique, in the format <code>[a-z][0-9][a-z][0-9]</code> (lowercase, digit, then lowercase again, and finally another digit).</p>
-<p>For example, when a hard drive is connected to the computer,
-DHF will be something like <code>/dev/sst/b0b4</code>.</p>
-<h2 id="interacting-with-a-device"><a class="header" href="#interacting-with-a-device">Interacting with a device</a></h2>
-<p>DHFs can only be used through the <a href="technical/../specs/services/hw.html"><code>sys::hw</code></a> service.</p>
+<h2 id="interacting-with-a-device"><a class="header" href="#interacting-with-a-device">Interacting With a Device</a></h2>
+<p>To interact with a device, applications and system services utilize the
+<a href="technical/../specs/services/hw.html"><code>sys::hw</code></a> service. The specific actions that can be
+performed depend on the type of device:</p>
 <p>Different actions may be happen depending on the device's type:</p>
 <ul>
 <li><strong>Camera devices:</strong> when an application asks to capture a photo/video, the device will be suggested to take the images from</li>
@@ -976,32 +1015,39 @@ DHF will be something like <code>/dev/sst/b0b4</code>.</p>
 </ul>
 <p>For uncategorized devices (in <code>/dev/etc</code>), a popup is shown to the user, to indicate
 the connected device is not recognized.</p>
-<h2 id="device-handler-files-persistance"><a class="header" href="#device-handler-files-persistance">Device handler files persistance</a></h2>
-<p>When a device is disconnected, its DHF is not removed. Instad, if a process tries to
-interact with the DHF, the <a href="technical/../specs/services/hw.html"><code>sys::hw</code></a> service will indicate the device is currently not connected.</p>
-<p>When the device is connected again, it is associated to the same DHF again. This allows
-applications to persist the device's location and use it later on.</p>
-<h2 id="custom-dhf-name"><a class="header" href="#custom-dhf-name">Custom DHF name</a></h2>
-<p>It is possible to give custom names to DHFs. In such a case, a new DHF file is created and
-linked to the original DHF file while keeping the original DHF file in the folder.
-In this way, compatibility with applications that rely on the old DHF is not broken.</p>
-<p>Both DHFs show exactly the same device, with no difference. Custom DHF can be
-deleted at any time, but this can be quite dangerous as some applications rely on it.</p>
-<p>Also, custom DHF names must always be longer than 4 characters, to avoid
-confusion with automatically-generated DHFs.</p>
+<h2 id="device-handler-files-persistance"><a class="header" href="#device-handler-files-persistance">Device Handler Files Persistance</a></h2>
+<p>When a device is disconnected, the associated device handler file (DHF) is not
+immediately removed. Instead, if a process attempts to interact with the DHF, the
+<a href="technical/../specs/services/hw.html"><code>sys::hw</code></a> service indicates that the device is currently not
+connected. This allows applications to maintain the device's location and association for
+future use.</p>
+<p>When the device is connected again, it is associated with the same DHF, ensuring consistency and preserving the device's reference in the system.</p>
+<h2 id="custom-device-handler-file-names"><a class="header" href="#custom-device-handler-file-names">Custom Device Handler File Names</a></h2>
+<p>Violet provides the flexibility to assign custom names to device handler files (DHF). When a custom name is given, a new DHF file is created and linked to the original DHF
+file. This preserves compatibility with applications that rely on the original DHF while
+allowing for customized naming conventions.</p>
+<p>Both the original DHF and the custom DHF point to the same underlying device, offering
+the same functionality and features. However, it's important to note that custom DHFs can
+be deleted, which may impact applications relying on them. Caution should be exercised
+when deleting custom DHFs.</p>
+<p>To distinguish custom DHFs from automatically generated DHFs, custom DHF names must
+always be longer than four characters. This helps prevent confusion and ensures proper
+identification of DHFs within the system.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="processes"><a class="header" href="#processes">Processes</a></h1>
-<p>Violet's processes are implemented quite similarly to
-Linux's processes, with a few new features. There are
-several types of processes:</p>
+<p>Violet's processes are designed with similarities to Linux processes while introducing
+some additional features. There are different types of processes in Violet:</p>
 <ul>
-<li><strong>System processes</strong>, which are created by the system</li>
-<li><strong>Application processes</strong>, which aplications run in</li>
-<li><strong>Worker processes</strong>, in which applications' workers run</li>
-</ul>
-<p>System processes are called <em>low-level processes</em>, while
-application and worker processes are called <em>userspace processes</em>.</p>
-<ul>
-<li><a href="technical/processes.html#processes">Processes</a>
+<li>
+<p><strong>System Processes:</strong> These processes are created by the system itself and are known as low-level processes.</p>
+</li>
+<li>
+<p><strong>Application Processes:</strong> These processes are created by applications and run within the Violet environment.</p>
+</li>
+<li>
+<p><strong>Worker Processes:</strong> Worker processes are created by applications to handle specific tasks or operations.</p>
+</li>
+<li>
+<p><a href="technical/processes.html#processes">Processes</a></p>
 <ul>
 <li><a href="technical/processes.html#child-processes">Child processes</a></li>
 <li><a href="technical/processes.html#threading">Threading</a></li>
@@ -1009,24 +1055,25 @@ application and worker processes are called <em>userspace processes</em>.</p>
 </li>
 </ul>
 <h2 id="child-processes"><a class="header" href="#child-processes">Child processes</a></h2>
-<p>A process can create <em>child processes</em>. The child process will
-roughly be a 1:1 copy of the parent process, but with its
-own unique PID.</p>
-<p>To avoid copying the whole memory, copy-on-write is used. This
-means that the pages are identical and don't require any allocation
-until they are modified.</p>
-<p>Child processes automatically inherit their parent's permissions.</p>
-<p>When a process exits, all its child processes are immediately killed.</p>
+<p>In Violet, a process has the ability to create child processes. When a child process is
+created, it is essentially a 1:1 copy of the parent process, but with its own unique
+process ID (PID). To optimize memory usage, copy-on-write (COW) is employed. This means
+that the child process initially shares the same memory pages as the parent process, and
+memory allocation only occurs when modifications are made.</p>
+<p>Child processes inherit the permissions of their parent process. If the parent process
+has certain privileges or permissions, they are passed down to the child process.</p>
+<p>When a process exits, all of its child processes are immediately terminated as well.</p>
 <h2 id="threading"><a class="header" href="#threading">Threading</a></h2>
-<p>A process can create <em>threads</em>, which are still part of the process.
-Threads allow to run multiple part of a process concurrently.</p>
-<p>All threads share the same address space and memory.</p>
-<p>To avoid copying the whole memory, copy-on-write is used. This
-means that the pages are identical and don't require any allocation
-until they are modified.</p>
-<p>The stack is local to each thread.</p>
-<p>Thread works as a hierarchy, when a thread exits, all its children
-are immediately killed.</p>
+<p>Violet supports multithreading, allowing processes to create multiple threads that can
+run concurrently within the same address space. Threads enable parallel execution of
+different parts of a process, enhancing performance and responsiveness.</p>
+<p>All threads within a process share the same address space and memory, which means they
+can access and modify the same data. Similar to processes, copy-on-write is employed to
+optimize memory usage. Memory pages are shared among threads until modifications are made.</p>
+<p>Each thread has its own stack, which provides a local execution context for
+thread-specific operations.</p>
+<p>Threads form a hierarchy within a process, where a parent thread can create child
+threads. When a thread exits, all of its child threads are immediately terminated.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="services-1"><a class="header" href="#services-1">Services</a></h1>
 <p>A <em>service</em> is a process that launches at startup and
 may receive IPC messages from any process.</p>

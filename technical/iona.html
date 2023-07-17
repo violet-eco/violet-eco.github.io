@@ -138,31 +138,36 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="io-nano-manager"><a class="header" href="#io-nano-manager">I/O Nano-manager</a></h1>
-<p>The <em>Input/Output Nano-manager</em>, known as <em>Iona</em>, is the
-part of the system that handles the input/output requests of processes.</p>
-<p>Concretely, it is represented by the <a href="../specs/services/hw.html"><code>sys::hw</code></a> service.</p>
+<p>The Input/Output Nano-manager, also known as <em>Iona</em>, is an integral part of the
+Violet system responsible for handling input/output requests from processes. It serves
+as the intermediary between processes and the underlying hardware, managing and
+coordinating the flow of data between them.</p>
+<p>Iona is represented by the <a href="../specs/services/hw.html"><code>sys::hw</code></a> service, which provides a
+unified interface for accessing and controlling various hardware devices within the system.</p>
 <ul>
 <li><a href="#io-nano-manager">I/O Nano-manager</a>
 <ul>
-<li><a href="#hardware-access">Hardware access</a>
+<li><a href="#hardware-access">Hardware Access</a>
 <ul>
-<li><a href="#requests-priority">Requests priority</a></li>
+<li><a href="#requests-priority">Requests Priority</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<h2 id="hardware-access"><a class="header" href="#hardware-access">Hardware access</a></h2>
-<p>When a process tries to access hardware, that request goes to Iona,
-which will either allow or deny it.</p>
-<p>System services such as <a href="../specs/services/fs.html"><code>sys::fs</code></a>
-or <a href="../specs/services/net.html"><code>sys::net</code></a> use Iona to
-deal with the related hardware devices.</p>
-<h3 id="requests-priority"><a class="header" href="#requests-priority">Requests priority</a></h3>
-<p>The requests of the processes are treated according to their
-priority determined by their arrival timestamp. But it can also be
-treated by priority of processes, I/O requests of the process with
-higher priority are run faster.</p>
+<h2 id="hardware-access"><a class="header" href="#hardware-access">Hardware Access</a></h2>
+<p>When a process needs to access hardware resources, such as storage devices or network
+interfaces, it sends its request to Iona. Iona acts as the gatekeeper, deciding whether
+to grant or deny the requested access based on predefined rules and permissions.</p>
+<p>System services, such as <a href="../specs/services/fs.html"><code>sys::fs</code></a> for file system operations or <a href="../specs/services/net.html"><code>sys::net</code></a> for network communication, rely on Iona to
+interact with the corresponding hardware devices.</p>
+<h3 id="requests-priority"><a class="header" href="#requests-priority">Requests Priority</a></h3>
+<p>To ensure efficient resource utilization, Iona handles the requests from processes based
+on their priority. The priority of a request is determined either by the arrival
+timestamp of the request or the priority assigned to the process making the request.</p>
+<p>In this way, Iona can optimize the allocation of hardware resources and give precedence
+to higher-priority processes or time-sensitive operations. This prioritization mechanism
+helps ensure smooth and responsive I/O operations throughout the system.</p>
 
                     </main>
 

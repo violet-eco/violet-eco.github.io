@@ -138,18 +138,20 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="processes"><a class="header" href="#processes">Processes</a></h1>
-<p>Violet's processes are implemented quite similarly to
-Linux's processes, with a few new features. There are
-several types of processes:</p>
+<p>Violet's processes are designed with similarities to Linux processes while introducing
+some additional features. There are different types of processes in Violet:</p>
 <ul>
-<li><strong>System processes</strong>, which are created by the system</li>
-<li><strong>Application processes</strong>, which aplications run in</li>
-<li><strong>Worker processes</strong>, in which applications' workers run</li>
-</ul>
-<p>System processes are called <em>low-level processes</em>, while
-application and worker processes are called <em>userspace processes</em>.</p>
-<ul>
-<li><a href="#processes">Processes</a>
+<li>
+<p><strong>System Processes:</strong> These processes are created by the system itself and are known as low-level processes.</p>
+</li>
+<li>
+<p><strong>Application Processes:</strong> These processes are created by applications and run within the Violet environment.</p>
+</li>
+<li>
+<p><strong>Worker Processes:</strong> Worker processes are created by applications to handle specific tasks or operations.</p>
+</li>
+<li>
+<p><a href="#processes">Processes</a></p>
 <ul>
 <li><a href="#child-processes">Child processes</a></li>
 <li><a href="#threading">Threading</a></li>
@@ -157,24 +159,25 @@ application and worker processes are called <em>userspace processes</em>.</p>
 </li>
 </ul>
 <h2 id="child-processes"><a class="header" href="#child-processes">Child processes</a></h2>
-<p>A process can create <em>child processes</em>. The child process will
-roughly be a 1:1 copy of the parent process, but with its
-own unique PID.</p>
-<p>To avoid copying the whole memory, copy-on-write is used. This
-means that the pages are identical and don't require any allocation
-until they are modified.</p>
-<p>Child processes automatically inherit their parent's permissions.</p>
-<p>When a process exits, all its child processes are immediately killed.</p>
+<p>In Violet, a process has the ability to create child processes. When a child process is
+created, it is essentially a 1:1 copy of the parent process, but with its own unique
+process ID (PID). To optimize memory usage, copy-on-write (COW) is employed. This means
+that the child process initially shares the same memory pages as the parent process, and
+memory allocation only occurs when modifications are made.</p>
+<p>Child processes inherit the permissions of their parent process. If the parent process
+has certain privileges or permissions, they are passed down to the child process.</p>
+<p>When a process exits, all of its child processes are immediately terminated as well.</p>
 <h2 id="threading"><a class="header" href="#threading">Threading</a></h2>
-<p>A process can create <em>threads</em>, which are still part of the process.
-Threads allow to run multiple part of a process concurrently.</p>
-<p>All threads share the same address space and memory.</p>
-<p>To avoid copying the whole memory, copy-on-write is used. This
-means that the pages are identical and don't require any allocation
-until they are modified.</p>
-<p>The stack is local to each thread.</p>
-<p>Thread works as a hierarchy, when a thread exits, all its children
-are immediately killed.</p>
+<p>Violet supports multithreading, allowing processes to create multiple threads that can
+run concurrently within the same address space. Threads enable parallel execution of
+different parts of a process, enhancing performance and responsiveness.</p>
+<p>All threads within a process share the same address space and memory, which means they
+can access and modify the same data. Similar to processes, copy-on-write is employed to
+optimize memory usage. Memory pages are shared among threads until modifications are made.</p>
+<p>Each thread has its own stack, which provides a local execution context for
+thread-specific operations.</p>
+<p>Threads form a hierarchy within a process, where a parent thread can create child
+threads. When a thread exits, all of its child threads are immediately terminated.</p>
 
                     </main>
 

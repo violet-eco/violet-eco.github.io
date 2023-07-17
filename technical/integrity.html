@@ -138,6 +138,8 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="integrity"><a class="header" href="#integrity">Integrity</a></h1>
+<p>Integrity is a crucial aspect of Violet, ensuring the stability, security
+and reliability of the system.</p>
 <ul>
 <li><a href="#integrity">Integrity</a>
 <ul>
@@ -148,27 +150,48 @@
 </li>
 </ul>
 <h2 id="system-immutability"><a class="header" href="#system-immutability">System immutability</a></h2>
-<p>The <code>/sys</code> folder is immutable, which means that even the
-main administrator cannot change this folder. <strong>The only process</strong>
-this folder changes is the repair process or update run by the system itself.</p>
+<p>The <code>/sys</code> folder in Violet is designed as immutable, meaning that
+it cannot be modified by any user or process, including the main administrator.
+This strict immutability ensures the integrity and consistency of system-level
+components and configurations. The only exceptions to this immutability rule are the
+repair process and system updates initiated by the operating system itself.</p>
 <h2 id="hashes"><a class="header" href="#hashes">Hashes</a></h2>
-<p>When written to critical files in <code>/sys</code> or <code>/sys/etc</code>,
-their hashes are calculated using the <a href="https://github.com/BLAKE3-team/BLAKE3"><code>BLAKE3</code></a> algorithm and stored in
-the system's <em>hash registry</em> (the <code>/etc/sys/hashes</code> file).</p>
+<p>To ensure the integrity of critical files within the <code>/sys`` and </code>/sys/etc<code> directories, Violet employs the [</code>BLAKE3<code>](https://github.com/BLAKE3-team/BLAKE3) hashing algorithm. When these files are written or updated, their contents are hashed, and the resulting hash values are stored in the system's hash registry, located at </code>/etc/sys/hashes`.</p>
 <h2 id="checking-hashes"><a class="header" href="#checking-hashes">Checking hashes</a></h2>
-<p>When these files are initially read, their contents are calculated
-and compared with the hash registry. If the hashes don't match,
-the file is considered as <em>corrupted</em>. The consequences depend on the location
-of the file:</p>
+<p>During the boot process or when critical files are accessed, Violet performs integrity
+checks by recalculating the hashes of the files and comparing them with the values stored
+in the hash registry. If the calculated hashes do not match the stored values, it
+indicates that the file has been tampered with or corrupted.</p>
+<ol>
+<li>System (<code>/sys</code>) or System Backup (<code>/sys/backup</code>):
 <ul>
-<li><strong>System</strong> (<code>/sys</code>): the system will check its backup integrity and then restore itself from the backup</li>
-<li><strong>System backup</strong> (<code>/sys/backup</code>): the system will check its backup integrity and then restore itself from the backup</li>
-<li><strong>System + system backup</strong>: the system won't boot and indicate it must be reinstalled (documents won't be lost if they aren't corrupted) It's possible to force the boot process, but a large warning will indicate it may cause crashes or even introduce security issues</li>
-<li><strong>Hash registry</strong> (<code>/etc/sys/hashes</code>): same as <em>system + system backup</em></li>
-<li><strong>Registry</strong> (<code>/etc/sys/registry</code>): same as <em>system + system backup</em></li>
-<li><strong>Crash save:</strong> the crash saves won't be restored (can be forced)</li>
-<li><strong>Sandbox:</strong> system will refuse to start the sandbox (can be forced)</li>
+<li>If a hash mismatch is detected in a system file, Violet initiates a check of the system backup's integrity.</li>
+<li>If the backup is intact, the system will restore itself from the backup.</li>
+<li>If the backup is also corrupted, the system will refuse to boot and prompt for reinstallation.</li>
+<li>Users' personal documents and data will remain unaffected unless they have been specifically corrupted.</li>
 </ul>
+</li>
+<li>Hash Registry (<code>/etc/sys/hashes</code>) or Registry (<code>/etc/sys/registry</code>):
+<ul>
+<li>Similar to the system files, a hash mismatch in the hash registry or system registry triggers a check of the system backup's integrity.</li>
+<li>If the backup is valid, the system will restore itself from the backup, preserving the integrity of the hash registry and registry files.</li>
+</ul>
+</li>
+<li>Crash Save:
+<ul>
+<li>In the case of crash saves, if a hash mismatch is detected, the corresponding crash save file will not be restored.</li>
+<li>This precautionary measure ensures that potentially corrupted crash saves do not compromise the stability or security of the system.</li>
+<li>In exceptional cases, users may choose to force the restoration of crash saves, but they are warned about the potential risks and instability it may introduce.</li>
+</ul>
+</li>
+<li>Sandbox:
+<ul>
+<li>If a hash mismatch occurs in a sandbox file, the system will refuse to start the sandbox.</li>
+<li>This safeguard prevents potential security breaches that could arise from compromised or tampered sandbox environments.</li>
+<li>As with crash saves, there is an option to force the startup of the sandbox, but it is accompanied by a warning highlighting the associated risks.</li>
+</ul>
+</li>
+</ol>
 
                     </main>
 
