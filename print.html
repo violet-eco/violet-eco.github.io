@@ -873,7 +873,10 @@ This strict immutability ensures the integrity and consistency of system-level
 components and configurations. The only exceptions to this immutability rule are the
 repair process and system updates initiated by the operating system itself.</p>
 <h2 id="hashes"><a class="header" href="#hashes">Hashes</a></h2>
-<p>To ensure the integrity of critical files within the <code>/sys`` and </code>/sys/etc<code> directories, Violet employs the [</code>BLAKE3<code>](https://github.com/BLAKE3-team/BLAKE3) hashing algorithm. When these files are written or updated, their contents are hashed, and the resulting hash values are stored in the system's hash registry, located at </code>/etc/sys/hashes`.</p>
+<p>To ensure the integrity of critical files within the <code>/sys</code> and <code>/sys/etc</code> directories,
+Violet employs the <a href="https://github.com/BLAKE3-team/BLAKE3"><code>BLAKE3</code></a> hashing algorithm.
+When these files are written or updated, their contents are hashed, and the resulting
+hash values are stored in the system's hash registry, located at <code>/etc/sys/hashes</code>.</p>
 <h2 id="checking-hashes"><a class="header" href="#checking-hashes">Checking hashes</a></h2>
 <p>During the boot process or when critical files are accessed, Violet performs integrity
 checks by recalculating the hashes of the files and comparing them with the values stored
