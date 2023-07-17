@@ -19,9 +19,8 @@ vio central --enable dev-mode
 ```
 1. Alternatively, while holding the `Ctrl` `Alt` and `Shift` keys, type `DEV`.
 
-Once Developer Mode is enabled, additional features and options become accessible, providing developers with greater control and flexibility over the system.
-
-
+Once Developer Mode is enabled, additional features and options become accessible,
+providing developers with greater control and flexibility over the system.
 
 ## Kernel Module Development
 Kernel module development is a powerful capability offered by Violet's Developer

@@ -10,6 +10,11 @@ human-computer interaction.
   - [Use Cases](#use-cases)
   - [Security and Privacy](#security-and-privacy)
   - [Performance Considerations](#performance-considerations)
+    - [Efficient Algorithms](#efficient-algorithms)
+    - [Data Sampling](#data-sampling)
+    - [Asynchronous Processing](#asynchronous-processing)
+    - [Resource Management](#resource-management)
+    - [Hardware Optimization](#hardware-optimization)
 
 ## Key Features
 1. **Real-Time Mood Analysis:** The Mood Detection feature analyzes users' facial expressions and vocal cues in real time.
@@ -58,3 +63,29 @@ Violet prioritizes the security and privacy of users' data in the Mood Detection
 5. **User Controls:** Users have the option to review and delete their mood data, giving them control over their information and promoting a user-centric approach to data management.
 
 ## Performance Considerations
+### Efficient Algorithms
+Violet employs efficient algorithms specifically designed for mood detection. These
+algorithms are carefully crafted to strike a balance between accuracy and computational
+efficiency.
+
+### Data Sampling
+The system carefully selects and samples data points for mood detection to minimize the
+computational load. Instead of processing every single data point, a subset of
+representative data is used.
+
+### Asynchronous Processing
+To minimize the impact on real-time user interactions and system responsiveness, Violet's
+Mood Detection feature utilizes asynchronous processing. This means that mood detection
+tasks are performed in the background, separate from the main user interface thread.
+
+### Resource Management
+Violet employs robust resource management mechanisms to ensure that mood detection does
+not monopolize system resources. The system monitors the resource usage of mood detection
+processes and employs measures such as priority settings and resource allocation limits.
+
+### Hardware Optimization
+Violet is designed to take advantage of the hardware capabilities of modern devices. The
+system leverages hardware acceleration, when available, to offload computationally
+intensive tasks related to mood detection.
+
+> For further details, refer to [power and heat management document](#).
