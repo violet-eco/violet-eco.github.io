@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Virtual Reality Integration - Violet documentation</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Documents for Violet">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../FOREWORD.html"><strong aria-hidden="true">1.</strong> Foreword</a></li><li class="chapter-item expanded "><a href="../FAQ.html"><strong aria-hidden="true">2.</strong> FAQ</a></li><li class="chapter-item expanded "><a href="../project/index.html"><strong aria-hidden="true">3.</strong> Project</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../project/roadmap.html"><strong aria-hidden="true">3.1.</strong> Roadmap</a></li><li class="chapter-item expanded "><a href="../project/development.html"><strong aria-hidden="true">3.2.</strong> Development</a></li><li class="chapter-item expanded "><a href="../project/hardware-requirements.html"><strong aria-hidden="true">3.3.</strong> Hardware requirements</a></li></ol></li><li class="chapter-item expanded "><a href="../concepts/index.html"><strong aria-hidden="true">4.</strong> Concepts</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../concepts/applications.html"><strong aria-hidden="true">4.1.</strong> What are applications?</a></li><li class="chapter-item expanded "><a href="../concepts/libraries.html"><strong aria-hidden="true">4.2.</strong> What are libraries?</a></li><li class="chapter-item expanded "><a href="../concepts/users.html"><strong aria-hidden="true">4.3.</strong> What are users?</a></li></ol></li><li class="chapter-item expanded "><a href="../features/index.html"><strong aria-hidden="true">5.</strong> Features</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../features/crashsave.html"><strong aria-hidden="true">5.1.</strong> Crash Saves</a></li><li class="chapter-item expanded "><a href="../features/privacy-and-security.html"><strong aria-hidden="true">5.2.</strong> Privacy and Security</a></li><li class="chapter-item expanded "><a href="../features/mood-detection.html"><strong aria-hidden="true">5.3.</strong> Mood Detection</a></li><li class="chapter-item expanded "><a href="../features/power-and-heat.html"><strong aria-hidden="true">5.4.</strong> Power and Heat Management</a></li><li class="chapter-item expanded "><a href="../features/smart-home.html"><strong aria-hidden="true">5.5.</strong> Smart Home Integration</a></li><li class="chapter-item expanded "><a href="../features/automated-file-organization.html"><strong aria-hidden="true">5.6.</strong> Automated File Organization</a></li><li class="chapter-item expanded "><a href="../features/predictive-text-input.html"><strong aria-hidden="true">5.7.</strong> Predictive Text Input</a></li><li class="chapter-item expanded "><a href="../features/user-behaviour-analytics.html"><strong aria-hidden="true">5.8.</strong> User Behaviour Analytics</a></li><li class="chapter-item expanded "><a href="../features/virtual-reality-integration.html" class="active"><strong aria-hidden="true">5.9.</strong> Virtual Reality Integration</a></li></ol></li><li class="chapter-item expanded "><a href="../technical/index.html"><strong aria-hidden="true">6.</strong> Technical</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../technical/overview.html"><strong aria-hidden="true">6.1.</strong> Overview</a></li><li class="chapter-item expanded "><a href="../technical/dev-mode.html"><strong aria-hidden="true">6.2.</strong> Developer Mode</a></li><li class="chapter-item expanded "><a href="../technical/integrity.html"><strong aria-hidden="true">6.3.</strong> Integrity</a></li><li class="chapter-item expanded "><a href="../technical/multi-platform.html"><strong aria-hidden="true">6.4.</strong> Multi-platform management</a></li><li class="chapter-item expanded "><a href="../technical/pre-compiling.html"><strong aria-hidden="true">6.5.</strong> Pre-compiling</a></li><li class="chapter-item expanded "><a href="../technical/iona.html"><strong aria-hidden="true">6.6.</strong> I/O manager</a></li><li class="chapter-item expanded "><a href="../technical/devices.html"><strong aria-hidden="true">6.7.</strong> Devices</a></li><li class="chapter-item expanded "><a href="../technical/processes.html"><strong aria-hidden="true">6.8.</strong> Processes</a></li><li class="chapter-item expanded "><a href="../technical/services.html"><strong aria-hidden="true">6.9.</strong> Services</a></li></ol></li><li class="chapter-item expanded "><a href="../specs/index.html"><strong aria-hidden="true">7.</strong> Specifications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specs/apps-and-libraries.html"><strong aria-hidden="true">7.1.</strong> Applications and libraries</a></li><li class="chapter-item expanded "><a href="../specs/applications.html"><strong aria-hidden="true">7.2.</strong> Applications</a></li><li class="chapter-item expanded "><a href="../specs/filesystem.html"><strong aria-hidden="true">7.3.</strong> Filesystem</a></li><li class="chapter-item expanded "><a href="../specs/permissions.html"><strong aria-hidden="true">7.4.</strong> Permissions</a></li><li class="chapter-item expanded "><a href="../specs/kernel/index.html"><strong aria-hidden="true">7.5.</strong> Kernel</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specs/kernel/hardware.html"><strong aria-hidden="true">7.5.1.</strong> Hardware</a></li><li class="chapter-item expanded "><a href="../specs/kernel/kpc.html"><strong aria-hidden="true">7.5.2.</strong> Kernel-process Communication</a></li><li class="chapter-item expanded "><a href="../specs/kernel/syscalls.html"><strong aria-hidden="true">7.5.3.</strong> System calls</a></li><li class="chapter-item expanded "><a href="../specs/kernel/signals.html"><strong aria-hidden="true">7.5.4.</strong> Signals</a></li></ol></li><li class="chapter-item expanded "><a href="../specs/services/index.html"><strong aria-hidden="true">7.6.</strong> System services</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../specs/services/fs.html"><strong aria-hidden="true">7.6.1.</strong> sys::fs</a></li><li class="chapter-item expanded "><a href="../specs/services/hw.html"><strong aria-hidden="true">7.6.2.</strong> sys::hw</a></li><li class="chapter-item expanded "><a href="../specs/services/perm.html"><strong aria-hidden="true">7.6.3.</strong> sys::perm</a></li><li class="chapter-item expanded "><a href="../specs/services/net.html"><strong aria-hidden="true">7.6.4.</strong> sys::net</a></li><li class="chapter-item expanded "><a href="../specs/services/crypto.html"><strong aria-hidden="true">7.6.5.</strong> sys::crypto</a></li><li class="chapter-item expanded "><a href="../specs/services/crashsave.html"><strong aria-hidden="true">7.6.6.</strong> sys::crashsave</a></li><li class="chapter-item expanded "><a href="../specs/services/flow.html"><strong aria-hidden="true">7.6.7.</strong> sys::flow</a></li><li class="chapter-item expanded "><a href="../specs/services/i18n.html"><strong aria-hidden="true">7.6.8.</strong> sys::i18n</a></li><li class="chapter-item expanded "><a href="../specs/services/ui.html"><strong aria-hidden="true">7.6.9.</strong> sys::ui</a></li><li class="chapter-item expanded "><a href="../specs/services/app.html"><strong aria-hidden="true">7.6.10.</strong> sys::app</a></li><li class="chapter-item expanded "><a href="../specs/services/process.html"><strong aria-hidden="true">7.6.11.</strong> sys::process</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../applications/index.html"><strong aria-hidden="true">8.</strong> Applications</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../applications/dahlia.html"><strong aria-hidden="true">8.1.</strong> Dahlia</a></li><li class="chapter-item expanded "><a href="../applications/fern.html"><strong aria-hidden="true">8.2.</strong> Fern</a></li><li class="chapter-item expanded "><a href="../applications/grass.html"><strong aria-hidden="true">8.3.</strong> Grass</a></li><li class="chapter-item expanded "><a href="../applications/lotus.html"><strong aria-hidden="true">8.4.</strong> Lotus</a></li><li class="chapter-item expanded "><a href="../applications/settings.html"><strong aria-hidden="true">8.5.</strong> Settings</a></li><li class="chapter-item expanded "><a href="../applications/store.html"><strong aria-hidden="true">8.6.</strong> Violet Store</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Violet documentation</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/violet-eco/docs" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="virtual-reality-integration"><a class="header" href="#virtual-reality-integration">Virtual Reality Integration</a></h1>
+<p>Users can experience computer-generated environments and interact with them in a
+simulated three-dimensional space using virtual reality (VR), an immersive technology.
+Violet is a cutting-edge operating system that can easily incorporate Virtual Reality to
+give users engaging experiences, increased productivity and fresh ways to engage with
+digital content.</p>
+<ul>
+<li><a href="#virtual-reality-integration">Virtual Reality Integration</a>
+<ul>
+<li><a href="#virtual-reality-and-violet">Virtual Reality and Violet</a></li>
+<li><a href="#potential-applications-of-vri-in-violet">Potential Applications of VRI in Violet</a>
+<ul>
+<li><a href="#immersive-computing">Immersive Computing</a></li>
+<li><a href="#vr-content-creation">VR Content Creation</a></li>
+</ul>
+</li>
+<li><a href="#implementation">Implementation</a>
+<ul>
+<li><a href="#1-vr-compatible-kernel">1. VR-Compatible Kernel</a></li>
+<li><a href="#2-vr-application-framework">2. VR Application Framework</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="virtual-reality-and-violet"><a class="header" href="#virtual-reality-and-violet">Virtual Reality and Violet</a></h2>
+<p>The main goal of Violet's VR integration is to improve the usability, accessibility, and
+integration of VR into the operating system's core features. Violet aims to improve user
+experience, increase productivity, and enable creative exploration in the digital sphere
+through VR integration.</p>
+<h2 id="potential-applications-of-vri-in-violet"><a class="header" href="#potential-applications-of-vri-in-violet">Potential Applications of VRI in Violet</a></h2>
+<h3 id="immersive-computing"><a class="header" href="#immersive-computing">Immersive Computing</a></h3>
+<p>Violet can provide an immersive computing experience where users may engage with apps,
+content, and data in a virtual environment thanks to the incorporation of virtual
+reality. Violet's VR features transform conventional computing chores into interesting
+and immersive experiences, whether it's browsing the file system in a VR environment,
+reading and editing documents in 3D, or working with people in virtual meetings.</p>
+<h3 id="vr-content-creation"><a class="header" href="#vr-content-creation">VR Content Creation</a></h3>
+<p>Violet transforms into a potent platform for VR content development with VR integration.
+Users can use VR tools and applications to design, model, and animate in a 3D
+environment. This promotes creativity and allows artists, designers, and content creators
+to push the boundaries of expression. Violet is the perfect environment for creating
+virtual art, architecture, and interactive experiences thanks to its user-friendly
+interface and strong rendering capabilities.</p>
+<h2 id="implementation"><a class="header" href="#implementation">Implementation</a></h2>
+<h3 id="1-vr-compatible-kernel"><a class="header" href="#1-vr-compatible-kernel">1. VR-Compatible Kernel</a></h3>
+<p>Sakura, a VR-compatible microkernel, is the foundation of Violet's implementation of
+virtual reality. Sakura offers the essential low-level support for VR gear and
+peripherals and is intended to tackle tasks that are unique to VR with efficiency. It
+controls the relationship between the VR headset and the operating system, enabling
+effective data flow and communication.</p>
+<h3 id="2-vr-application-framework"><a class="header" href="#2-vr-application-framework">2. VR Application Framework</a></h3>
+<p>Developers can construct VR-compatible programs and experiences using Violet's full VR application platform. The framework offers APIs and resources for handling user input, rendering 3D content, and communicating with VR accessories. This framework may be used by developers to create engaging VR content that smoothly connects with the Violet environment.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../features/user-behaviour-analytics.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../technical/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../features/user-behaviour-analytics.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../technical/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
