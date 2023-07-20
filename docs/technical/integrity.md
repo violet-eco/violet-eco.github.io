@@ -39,6 +39,6 @@ indicates that the file has been tampered with or corrupted.
    - This precautionary measure ensures that potentially corrupted crash saves do not compromise the stability or security of the system.
    - In exceptional cases, users may choose to force the restoration of crash saves, but they are warned about the potential risks and instability it may introduce.
 4. Sandbox:
-    - If a hash mismatch occurs in a sandbox file, the system will refuse to start the sandbox.
-    - This safeguard prevents potential security breaches that could arise from compromised or tampered sandbox environments.
-    - As with crash saves, there is an option to force the startup of the sandbox, but it is accompanied by a warning highlighting the associated risks.
+   - If a hash mismatch occurs in a sandbox file, the system will refuse to start the sandbox.
+   - This safeguard prevents potential security breaches that could arise from compromised or tampered sandbox environments.
+   - As with crash saves, there is an option to force the startup of the sandbox, but it is accompanied by a warning highlighting the associated risks.
