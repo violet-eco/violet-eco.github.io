@@ -140,32 +140,67 @@
                         <h1 id="crash-saves"><a class="header" href="#crash-saves">Crash saves</a></h1>
 <p>Crash saves are a crucial feature in Violet that helps prevent data loss caused by system
 crashes or unexpected terminations.</p>
+<ul>
+<li><a href="#crash-saves">Crash saves</a>
+<ul>
+<li><a href="#signal-and-response-mechanism">Signal and Response Mechanism</a></li>
+<li><a href="#integrity-and-security">Integrity and Security</a></li>
+<li><a href="#storage-and-accessibility">Storage and Accessibility</a></li>
+<li><a href="#crash-save-priority-management">Crash Save Priority Management</a></li>
+<li><a href="#recovery-options">Recovery Options</a></li>
+</ul>
+</li>
+</ul>
 <h2 id="signal-and-response-mechanism"><a class="header" href="#signal-and-response-mechanism">Signal and Response Mechanism</a></h2>
-<p>Violet sends a periodic signal to all running applications at a configurable time
-interval, with a default interval of 1 minute. This signal prompts the applications to
-respond with the necessary information to return to their current state.</p>
-<p>Applications have three response options to the crash save signal:</p>
+<p>Violet periodically notifies all running programs, with a default interval of one minute,
+at a configurable time interval. The applications are prompted by this signal to respond
+with the information required to maintain their current condition.</p>
+<p>The crash save signal has three possible responses from applications:</p>
 <ol>
 <li>
-<p><strong>Provide Crash Save Data:</strong> Applications can respond by providing all the relevant information needed to restore their state. This includes preserving user data, application settings, active session details and any other critical data required for a complete recovery.</p>
+<p><strong>Provide crash save information:</strong> Applications can reply by supplying all the necessary data to enable state restoration. This entails maintaining user information, application settings, information about currently active sessions, and any other crucial data needed for a thorough recovery.</p>
 </li>
 <li>
-<p><strong>Decline Current Collect:</strong> Applications may choose to decline providing crash save data during the current signal collection. The signal will be sent to the application again after a certain time.</p>
+<p><strong>Declining the current collect:</strong> Applications have the option to deny delivering crash save information while the signal is being collected. After a specific amount of time, the signal will be transmitted to the application once more.</p>
 </li>
 <li>
-<p><strong>Refuse Crash Saves:</strong> Applications can send a message indicating that they will not provide any crash saves during the current running instance. In this case, the signal will not be sent to the application's instance again, as the application explicitly opts out of participating in crash save data collection.</p>
+<p><strong>Refuse crash saves:</strong> Applications have the option of sending a message stating that they will not offer any crash saves while the current instance of the application is operating. Since the application explicitly chooses not to participate in the gathering of crash save data, the signal will not be transmitted to the application's instance once more in this scenario.</p>
 </li>
 </ol>
-<p>If an application does not respond to the crash save signal, the signal is aborted for
-that particular application. However, the subsequent signals will continue to be sent to
-other running applications.</p>
+<p>Crash save signals are terminated for certain applications if they are not responded to
+by the program in question. The succeeding signals, however, will keep getting
+transmitted to other open applications.</p>
 <h2 id="integrity-and-security"><a class="header" href="#integrity-and-security">Integrity and Security</a></h2>
-<p>To ensure the trustworthiness and authenticity of crash save data, Violet incorporates an
-integrity checker called <a href="../technical/integrity.html">Eden</a> (<a href="https://github.com(violet-eco/eden)">GitHub</a>). Eden validates the integrity of crash saves to
-prevent any potential tampering or unauthorized access to user data.</p>
+<p>Violet uses an integrity checker named <a href="../technical/integrity.html">Eden</a>
+(<a href="https://github.com(violet-eco/eden)">GitHub</a> to make sure that crash save data is
+reliable and legitimate. For the purpose of preventing any possible tampering with or
+unauthorized access to user data, Eden verifies the integrity of crash saves.</p>
 <h2 id="storage-and-accessibility"><a class="header" href="#storage-and-accessibility">Storage and Accessibility</a></h2>
-<p>When crash saves are collected, they are stored in a dedicated directory: <code>/home/[user]/appdata/[appname]/crashsaves/[timestamp]_[pid].csf</code>. 
-It's important to note that crash saves are supported by all native applications in Violet.</p>
+<p>The directory <code>/home/[user]/appdata/[appname]/crashsaves/[timestamp]_[pid].csf</code> is where
+crash saves are kept after they have been gathered. This directory's layout makes it
+simple to store and access crash save information for specific programs. If users need to
+recover work from a prior session, they can use this location to access the crash save
+files.</p>
+<h2 id="crash-save-priority-management"><a class="header" href="#crash-save-priority-management">Crash Save Priority Management</a></h2>
+<p>Violet uses intelligent crash save priority management to manage system resources and give
+precedence to important processes. The system prioritizes the gathering of crash save
+data when several apps are active at once depending on a number of variables, including
+application significance, memory utilization, and processing power.</p>
+<p>Priority status is granted to critical apps or those that have a greater impact on user
+productivity, ensuring that their crash save data is quickly and effectively gathered. To
+avoid interfering with the user's main duties, crash saves for lower priority programs
+could be delayed.</p>
+<h2 id="recovery-options"><a class="header" href="#recovery-options">Recovery Options</a></h2>
+<p>In addition to the automatic restoration of crash save data, Violet offers advanced
+recovery options for users to choose from in the event of a system crash. Users can
+choose from a variety of recovery points, each of which corresponds to a distinct crash
+save instance.</p>
+<p>The recovery possibilities could consist of:</p>
+<ul>
+<li>Going back to the most recent crash save</li>
+<li>Choosing a specific crash save from a list of recovery locations that are accessible</li>
+<li>Combining crash save information from various instances to restore a complex workflow</li>
+</ul>
 
                     </main>
 
