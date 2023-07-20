@@ -19,6 +19,8 @@ Lotus is the default desktop environment of Violet.
     - [AI-Powered Personal Assistance](#ai-powered-personal-assistance)
     - [Multimodal Feedback](#multimodal-feedback)
     - [Eye Tracking Integration](#eye-tracking-integration)
+  - [Emotional Interface](#emotional-interface)
+    - [Personalized User Experience](#personalized-user-experience)
 
 ## Introduction
 Lotus offers a highly customizable and modern user interface, combined with
@@ -151,3 +153,26 @@ individuals with limited mobility.
 
 1. **Eye Tracking Technology:** Lotus integrates state-of-the-art eye tracking technology to capture and interpret users' eye movements accurately. Specialized hardware (such as infrared cameras or sensor arrays) tracks the position and movements of the user's eyes.
 2. **Customization and Calibration:** To ensure optimal performance, Lotus provides extensive customization options and calibration tools for eye tracking integration. Users can fine-tune settings such as sensitivity, gaze dwell time, and control parameters according to their specific needs and preferences.
+
+## Emotional Interface
+
+> See also: [Mood Detection](../features/mood-detection.md).
+Lotus goes above and beyond traditional user interfaces by including a cutting-edge
+function called the Emotional Interface. By identifying and responding to users'
+emotions, this cutting-edge technology seeks to improve the user experience by fostering
+a more unique and sympathetic engagement with the digital world.
+
+### Personalized User Experience
+Lotus can adjust and customize the user interface based on the user's emotional state
+thanks to mood recognition. For instance, the system may change the UI elements to be
+more calming and minimalistic when it notices indicators of stress or annoyance, thereby
+minimizing clutter and distractions.
+
+In contrast, the interface may become more dynamic and engaging, giving playful
+animations and brilliant color schemes, when the user appears interested or intrigued.
+
+### Emotionally Responsive Applications
+In order to create software that is responsive to the emotions and needs of the user,
+developers might use the Emotional Interface to their advantage. When a user is
+distressed or depressed, for instance, a virtual assistant can employ emotion detection
+to change its responses to be more sympathetic.
