@@ -1,8 +1,7 @@
 # Kernel
-Violet's kernel is called *Sakura*. 
-This is a micro-kernel that tries to be as simple
-and understandable as possible by delegating all tasks
-such as file system, permission management to services.
+Violet's kernel is called *Sakura*. Sakura is the heart of Violet. As a microkernel,
+Sakura takes a minimalist approach, providing only the essential functions needed for
+safe and efficient operation.
 
 **NOTE: This document is in its very early stages. Major changes
 might be made to related documents.**

@@ -2,6 +2,15 @@
 Grass is a modern and intuitive application designed to help users
 efficiently manage their files and folders within the Violet.
 
+- [Grass](#grass)
+  - [Navigation and Browsing](#navigation-and-browsing)
+  - [File Operations and Manipulation](#file-operations-and-manipulation)
+  - [File Preview and Quick Actions](#file-preview-and-quick-actions)
+  - [Search and Filtering](#search-and-filtering)
+  - [File Organization and Sorting](#file-organization-and-sorting)
+  - [File Sharing and Collaboration](#file-sharing-and-collaboration)
+  - [Integration with Cloud Services](#integration-with-cloud-services)
+
 ## Navigation and Browsing
 - Hierarchical folder structure with easy navigation through directory trees.
 - Sidebar or navigation panel for quick access to frequently used locations or bookmarked folders.
