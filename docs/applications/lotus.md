@@ -21,6 +21,7 @@ Lotus is the default desktop environment of Violet.
     - [Eye Tracking Integration](#eye-tracking-integration)
   - [Emotional Interface](#emotional-interface)
     - [Personalized User Experience](#personalized-user-experience)
+    - [Emotionally Responsive Applications](#emotionally-responsive-applications)
 
 ## Introduction
 Lotus offers a highly customizable and modern user interface, combined with
@@ -155,8 +156,8 @@ individuals with limited mobility.
 2. **Customization and Calibration:** To ensure optimal performance, Lotus provides extensive customization options and calibration tools for eye tracking integration. Users can fine-tune settings such as sensitivity, gaze dwell time, and control parameters according to their specific needs and preferences.
 
 ## Emotional Interface
-
 > See also: [Mood Detection](../features/mood-detection.md).
+
 Lotus goes above and beyond traditional user interfaces by including a cutting-edge
 function called the Emotional Interface. By identifying and responding to users'
 emotions, this cutting-edge technology seeks to improve the user experience by fostering
@@ -169,9 +170,9 @@ more calming and minimalistic when it notices indicators of stress or annoyance,
 minimizing clutter and distractions.
 
 In contrast, the interface may become more dynamic and engaging, giving playful
-animations and brilliant color schemes, when the user appears interested or intrigued.
+animations and brilliant color schemes, when the user appears interested or intrigued
 
-### Emotionally Responsive Applications
+### Emotionally Responsive Applications
 In order to create software that is responsive to the emotions and needs of the user,
 developers might use the Emotional Interface to their advantage. When a user is
 distressed or depressed, for instance, a virtual assistant can employ emotion detection
