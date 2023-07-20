@@ -18,6 +18,7 @@
   - [Smart Home Integration](features/smart-home.md)
   - [Automated File Organization](features/automated-file-organization.md)
   - [Predictive Text Input](features/predictive-text-input.md)
+  - [User Behaviour Analytics](features/user-behaviour-analytics.md)
 - [Technical](technical/README.md)
   - [Overview](technical/overview.md)
   - [Developer Mode](technical/dev-mode.md)
