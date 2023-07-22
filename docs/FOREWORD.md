@@ -9,7 +9,7 @@
 
 # Welcome!
 
-![Banner](https://github.com/violet-eco/docs/blob/main/brand/banner.png)
+![Banner](https://github.com/violet-eco/docs/blob/main/brand/banner.png?raw=true)
 
 Welcome to the documentation of Violet! These documents serve as a comprehensive guide to
 understand the inner workings of Violet, its features and its potential. Whether you are
