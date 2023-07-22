@@ -1,7 +1,7 @@
 [book]
 title = "Violet documentation"
 author = "Gulce"
-description = "Documents for Violet"
+description = "Future — Powered by Violet, designed for You."
 src = "docs"
 language = "en"
 theme = "rust"
