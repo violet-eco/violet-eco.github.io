@@ -4,8 +4,8 @@
   
   <i>Future — Powered by Violet, designed for You.</i> <br/> <br/>
 
-  ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/violet-eco/docs/docs.yml?style=for-the-badge&labelColor=purple&color=pink)
-  ![Static Badge](https://img.shields.io/badge/rust-fff?style=for-the-badge&logo=rust&logoColor=white&labelColor=purple&color=pink)
+  ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/violet-eco/docs/docs.yml?style=for-the-badge&labelColor=53268b&color=a460ed)
+  ![Static Badge](https://img.shields.io/badge/rust-fff?style=for-the-badge&logo=rust&logoColor=white&labelColor=53268b&color=a460ed)
   
 </div>
 
