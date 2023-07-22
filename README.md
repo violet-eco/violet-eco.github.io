@@ -1,6 +1,6 @@
 <div align="center">
   
-  ![Banner](https://github.com/violet-eco/docs/assets/100216211/ef3f673a-7cf9-4b15-9ea9-cd7678c1de53)
+  ![Banner](./brand/banner.png)
   
   <i>Future — Powered by Violet, designed for You.</i> <br/> <br/>
 
