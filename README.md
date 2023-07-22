@@ -1,6 +1,11 @@
-# Violet
-Violet is a modern experimental operating system that
-aims to provide the highest security to its users.
+<div align="center">
+  <h1>Violet</h1>
+  <i>Future — Powered by Violet, designed for You.</i> <br/> <br/>
+
+  ![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/violet-eco/docs/docs.yml?style=for-the-badge&labelColor=purple&color=pink)
+  ![Static Badge](https://img.shields.io/badge/rust-fff?style=for-the-badge&logo=rust&logoColor=white&labelColor=purple&color=pink)
+  
+</div>
 
 ## Features
 
