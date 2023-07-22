@@ -15,3 +15,7 @@ build-dir = "book"
 [output.html]
 git-repository-url="https://github.com/violet-eco/docs"
 site-url="https://violet-eco.github.io/docs"
+edit-url-template = "https://github.com/violet-eco/docs/edit/main/{path}"
+
+[output.html.print]
+enable = false
