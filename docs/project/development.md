@@ -1,10 +1,7 @@
 # Development
 
-The Violet project is primarily developed in [Rust&trade;](https://www.rust-lang.org/).
-Rust provides a modern and safe development environment with a focus on memory safety,
-concurrency and performance. It offers a powerful type system, strict borrowing rules
-and built-in support for multithreading.
+[Rust&trade;](https://rust-lang.org) is the main programming language used for the entire Violet ecosystem. A contemporary and secure programming environment with an emphasis on memory safety, concurrency and speed is offered by Rust. It has a strong type system, strict borrowing rules and built-in multithreading support.
 
-The use of architecture-specific Assembly language in the Violet project is minimized and
-limited to specific cases where it is necessary to achieve targeted behavior or optimize
-performance in critical sections of the system.
+In Violet, the usage of architecture-specific Assembly language is reduced and restricted
+to few situations when it is required to accomplish desired behaviour or enhance
+performance in crucial system components.

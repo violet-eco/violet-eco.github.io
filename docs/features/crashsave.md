@@ -1,7 +1,8 @@
 # Crash saves
 
-Crash saves are a crucial feature in Violet that helps prevent data loss caused by system
-crashes or unexpected terminations.
+Violet has crash saves as a standard feature to prevent data loss due to system failures
+or unexpected terminations. When misfortunes occur, such as power outages, crashes or
+unexpected shutdowns, Violet's crash save system protects Violetians' work and progress.
 
 - [Crash saves](#crash-saves)
   - [Signal and Response Mechanism](#signal-and-response-mechanism)
@@ -19,9 +20,7 @@ with the information required to maintain their current condition.
 The crash save signal has three possible responses from applications:
 
 1. **Provide crash save information:** Applications can reply by supplying all the necessary data to enable state restoration. This entails maintaining user information, application settings, information about currently active sessions, and any other crucial data needed for a thorough recovery.
-
 2. **Declining the current collect:** Applications have the option to deny delivering crash save information while the signal is being collected. After a specific amount of time, the signal will be transmitted to the application once more.
-
 3. **Refuse crash saves:** Applications have the option of sending a message stating that they will not offer any crash saves while the current instance of the application is operating. Since the application explicitly chooses not to participate in the gathering of crash save data, the signal will not be transmitted to the application's instance once more in this scenario.
 
 Crash save signals are terminated for certain applications if they are not responded to
@@ -57,13 +56,12 @@ could be delayed.
 
 ## Recovery Options
 
-In addition to the automatic restoration of crash save data, Violet offers advanced
-recovery options for users to choose from in the event of a system crash. Users can
-choose from a variety of recovery points, each of which corresponds to a distinct crash
-save instance.
+Violet provides enhanced recovery options for Violetians in the case of a system crash, in
+addition to automated recovery. Users can select from many recovery locations, each of
+which corresponds to a different crash save instance:
 
-The recovery possibilities could consist of:
+Recovery options might include:
 
-- Going back to the most recent crash save
-- Choosing a specific crash save from a list of recovery locations that are accessible
-- Combining crash save information from various instances to restore a complex workflow
+- **Restore to the most recent crash save:** Users can choose to restore to the most recent crash save point, allowing them to resume work from the moment of the last crash.
+- **Select specific crash save instance**: Users can select a specific crash save from a list of potential recovery points. This enables for a more personalized rehabilitation approach depending on individual needs.
+- **Merge crash save data:** In complicated workflows involving numerous instances, users can blend crash save information from various points to restore a thorough and coherent process.

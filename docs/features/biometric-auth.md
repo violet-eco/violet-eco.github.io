@@ -17,9 +17,7 @@ duplicate or fake, biometric authentication addresses these problems. Modern
 authentication systems frequently employ the following biometric traits.
 
 1. **Fingerprint Recognition:** identifying users by scanning and comparing their distinctive fingerprint patterns.
-
 2. **Facial Recognition:** analyzing facial traits and comparing them to a pre-registered face template for authentication.
-
 3. **Iris or Retinal Scanning:** Capturing specific patterns in the iris or retina to identify the user.
 
 ## Enrollment Process

@@ -1,6 +1,6 @@
-# What are libraries?
+# Libraries in Violet
 
-- [What are libraries?](#what-are-libraries)
+- [Libraries in Violet](#libraries-in-violet)
   - [How libraries work?](#how-libraries-work)
 
 ## How libraries work?

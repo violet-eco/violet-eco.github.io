@@ -1,10 +1,9 @@
 # Devices
 
-In the Violet system, devices play a crucial role in enabling various functionalities and
-interactions. Devices can include hardware components such as cameras, microphones,
-storage drives, network adapters, and more. The system manages these devices through the
-use of device handler files (DHF) and provides a unified interface for interacting with
-them.
+Devices are critical in providing many operations and interactions in the Violet system.
+Cameras, microphones, storage drives, network adapters and other hardware components can
+be included in devices. The system controls various devices using device handling files
+(DHF) and offers a single interface for dealing with them.
 
 - [Devices](#devices)
   - [Connecting a New Device](#connecting-a-new-device)
@@ -14,11 +13,11 @@ them.
 
 ## Connecting a New Device
 
-When a new device is connected to the computer, a corresponding device handler file (DHF)
-is created in the `/dev` directory. The location and organization of DHFs may vary
-depending on the type of device. For example, a hard drive may have a DHF path like `/dev/sst/b0b4`.
+When a new device is attached to the computer, a device handler file (DHF) in the `/dev`
+directory is produced. Depending on the type of device, the placement and arrangement of
+DHFs may differ. A hard disk, for example, may have a DHF path like `/dev/sst/b0b4`.
 
-The filename is random and unique, in the format `[a-z][0-9][a-z][0-9]` (lowercase, digit, then lowercase again, and finally another digit).
+The filename is arbitrary and unique, with the format `[a-z][0-9][a-z][0-9][a-z][0-9]` (lowercase, digit, lowercase again, and then another digit).
 
 ## Interacting With a Device
 

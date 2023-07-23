@@ -10,7 +10,7 @@
   --icons: #bb8ffe;
   --icons-hover: #724ea8;
   --links: #bb8ffe;
-  --inline-code-color: #c6d0f5;
+  --inline-code-color: #d9c0ff;
   --theme-popup-bg: #211235;
   --theme-popup-border: #1a0929;
   --theme-hover: #372351;
@@ -27,4 +27,12 @@
   --searchresults-border-color: #232634;
   --searchresults-li-bg: #303446;
   --search-mark-bg: #ef9f76;
+}
+
+.content ul li, .content ol li {
+  margin-top: .75rem;
+}
+
+.content p {
+  line-height: 2.35rem !important;
 }

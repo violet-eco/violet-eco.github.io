@@ -41,27 +41,20 @@ development and implementation phases that follow.
 ### Phase 3.1: Core System
 
 - **Kernel development:** Create the operating system's microkernel with necessary features, such as process management, memory management, and foundational system functions.
-
 - **System initialization:** Implement the system initialization procedures, device detection techniques and boot process.
-
 - **Filesystem Implementation:** Create the Btrfs-based filesystem for storage management, file organization, and data integrity.
-
 - **System Services:** Create crucial system services, such as networking, filesystem access, hardware access and security services.
 
 ### Phase 3.2: User Interface
 
 - **Desktop Environment:** Design and implement a cutting-edge desktop environment that is simple to use, complete with a graphical user interface, window management, taskbar, and system tray.
-
 - **User Accounts and Permissions:** Create user account management features, such as login/logout, permissions management, and user creation.
-
 - **Application Framework:** Create a framework for managing user applications, including package management and application lifecycle management, during the development, installation and management phases.
 
 ### Phase 3.3: Application Ecosystem
 
 - **Violet Store:** Create a dedicated application store where users can browse, download and install Violet apps.
-
 - **Application Development:** Support and encourage the creation of apps for Violet by third parties by making documentation, SDKs and development tools available.
-
 - **Application Compatibility:** By creating compatibility layers, implementing tools, and supporting well-liked application frameworks, it is possible to improve compatibility with existing applications.
 
 ### Phase 3.4: Performance Optimization and Stability

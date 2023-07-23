@@ -1,10 +1,9 @@
 # Hardware requirements
 
-This document presents the minimal hardware requirements
-required by Violet in order to work. This is also means Violet
-will work on any computer with these attributes.
+The essential hardware that Violet needs to function is described in this document. This
+also implies that Violet will work on any machine that has these attributes.
 
-- **Processor:** `aarch64` (64-bit ARM, *recommended*) or `amd64` (x86-64) processor
+- **Processor:** `aarch64` (64-bit ARM, *recommended*) or `amd64` (x86_64) processor
 - **Memory:** *to be determined*
 - **Storage:** at least 16 GB
 - **Network:** Ethernet or Wi-Fi connectivity

@@ -13,12 +13,12 @@ edition = "2018"
 build-dir = "book"
 
 [output.html]
-theme = "violet"
+theme = "violet-theme"
 default-theme = "violet"
 git-repository-url="https://github.com/violet-eco/docs"
 site-url="https://violet-eco.github.io/docs"
 edit-url-template = "https://github.com/violet-eco/docs/edit/main/{path}"
-additional-css = ["./violet/violet.css", "./violet/violet-highlight.css"]
+additional-css = ["./violet-theme/violet.css", "./violet-theme/violet-highlight.css"]
 
 [output.html.print]
 enable = false

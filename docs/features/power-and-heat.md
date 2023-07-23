@@ -1,37 +1,21 @@
 # Power and Heat Management
 
-Violet places a strong emphasis on power efficiency, battery optimization, and heat
-management to ensure optimal performance and device longevity. The system incorporates
-various techniques and strategies to maximize power usage, extend battery life and
-prevent excessive heat buildup. This document provides an overview of how Violet
-addresses these aspects.
+Violet focuses power economy, battery optimization and heat control to ensure top
+performance and extend the life of Violetians' device. Our system employs a variety of
+approaches and strategies to optimise power utilization, increase battery life, and
+minimize excessive heat buildup. This document gives a summary of how Violet solves these
+critical issues.
 
 - [Power and Heat Management](#power-and-heat-management)
 - [Power Efficiency](#power-efficiency)
   - [Dynamic Frequency Scaling](#dynamic-frequency-scaling)
-    - [Workload Monitoring](#workload-monitoring)
-    - [Frequency Scaling Policies](#frequency-scaling-policies)
-    - [Scaling Decision](#scaling-decision)
-    - [Clock Speed Adjustment](#clock-speed-adjustment)
   - [Adaptive Brightness Control](#adaptive-brightness-control)
-    - [Light Sensor Detection](#light-sensor-detection)
-    - [Ambient Light Measurement](#ambient-light-measurement)
-    - [Brightness Adjustement](#brightness-adjustement)
   - [Device Sleep and Wake](#device-sleep-and-wake)
     - [Device Sleep](#device-sleep)
     - [Device Wake](#device-wake)
   - [Peripheral Power Management](#peripheral-power-management)
     - [Power State](#power-state)
-    - [Dynamic Power Allocation](#dynamic-power-allocation)
-    - [Power-On Demand](#power-on-demand)
-  - [Power-Saving Modes](#power-saving-modes)
-    - [Battery Saver Mode](#battery-saver-mode)
-      - [Reduced Performance](#reduced-performance)
-      - [Screen Brightness and Timeout](#screen-brightness-and-timeout)
-      - [Background App Management](#background-app-management)
-      - [System Animations](#system-animations)
-      - [Network Optimizations](#network-optimizations)
-      - [Impact on User Experience](#impact-on-user-experience)
+  - [Battery Saver Mode](#battery-saver-mode)
 - [Heat Management](#heat-management)
   - [Termal Throttling](#termal-throttling)
     - [Temperature Thresholds](#temperature-thresholds)
@@ -42,68 +26,29 @@ addresses these aspects.
     - [Fan Cooling](#fan-cooling)
     - [Performance-Driven Fan Control](#performance-driven-fan-control)
     - [Intelligent Fan Profiles](#intelligent-fan-profiles)
-  - [User Guidelines for Heat Management](#user-guidelines-for-heat-management)
 
 # Power Efficiency
 
-Power efficiency is a key aspect of Violet's design philosophy. The operating system
-incorporates various strategies and optimizations to maximize power efficiency, minimize
-power consumption and extend battery life.
+We are committed to making the operating system as energy-efficient as possible. This is accomplished using intelligent power management algorithms that optimize power use while retaining peak performance. Here are some highlights:
 
-Violet employs intelligent power management techniques to optimize power usage while
-maintaining optimal performance. Here are some of the key power management features:
+- **Dynamic Frequency Scaling:** Based on workload and resource needs, Violet dynamically adjusts the CPU clock speed. By scaling the CPU frequency, this assures efficient power use.
 
 ## Dynamic Frequency Scaling
 
 Dynamic Frequency Scaling (DFS) is a technique used in Violet to dynamically adjust the CPU clock speed based on the workload and resource requirements. The goal of DFS is to optimize power consumptiong by scaling the CPU frequency.
 
-### Workload Monitoring
-
-The system constantly monitors the CPU utilization, which represents the amount of processing power being utilized by running processes.
-
-### Frequency Scaling Policies
-
-Violet employs frequency scaling policies that define the relationship between CPU
-utilization and clock speed. These policies determine how the CPU frequency is adjusted
-based on the observed workload. Different policies can be implemented depending on the
-desired balance between power efficiency and performance.
-
-### Scaling Decision
-
-Based on the workload and the defined frequency scaling policies, the system makes
-decisions on whether to increase or decrease the CPU clock speed. If the CPU utilization
-is low and the workload is light, the system may decrease the clock speed to conserve
-power. Conversely, if the CPU utilization is high and demanding tasks are running, the system may increase the clock speed to ensure optimal performance.
-
-### Clock Speed Adjustment
-
-Once the scaling decision is made, Violet adjusts the CPU clock speed accordingly. This
-adjustment is achieved by modifying the voltage and frequency settings of the CPU.
-Lowering the clock speed reduces the number of clock cycles per second, resulting in
-lower power consumption. Increasing the clock speed provides more processing power for
-resource-intensive tasks but may consume more power.
+- **Workload Monitoring:** Violet constantly monitors the CPU utilization, which represents the amount of processing power being utilized by running processes.
+- **Frequency Scaling Policies:** Violet makes use of frequency scaling regulations, which specify the connection between CPU use and clock speed. These regulations govern how the CPU frequency is modified in response to the workload. Depending on the desired balance of power efficiency and performance, several policies can be adopted.
+- **Scaling Decision:** Violet decides whether to raise or decrease the CPU clock speed based on the workload and the preset frequency scaling parameters. If the CPU is underutilized and the workload is light, the system may reduce the clock speed to save power. In contrast, if the CPU usage is high and intensive activities are being performed, the system may boost the clock speed to ensure optimal performance.
+- **Clock Speed Adjustment:** Violet adjusts the CPU clock speed after the scaling choice has been determined. This is accomplished by adjusting the CPU's voltage and frequency settings. Lowering the clock frequency decreases the number of clock cycles per second, which results in decreased power usage. Increasing the clock speed gives more processing capacity for resource-intensive applications, but it may also use more power.
 
 ## Adaptive Brightness Control
 
-Adaptive Brightness Control is a feature in Violet that automatically adjusts the
-brightness level of the display based on ambient lighting conditions.
+Violet has an adaptive brightness control function that automatically changes the brightness level of the display according on the ambient lighting conditions.
 
-### Light Sensor Detection
-
-Violet detects the presence of light sensors in the device. These sensors are typically
-located on the front or back of the device and measure the intensity of ambient light.
-
-### Ambient Light Measurement
-
-The light sensors continuously monitor the ambient light levels around the device. They
-provide real-time data on the brightness of the surrounding environment.
-
-### Brightness Adjustement
-
-Based on the detected ambient light levels, Violet dynamically adjusts the display
-brightness to achieve an optimal viewing experience. In brighter environments, the screen
-brightness is increased to improve visibility. In darker environments, the brightness is
-decreased to reduce eye strain and save power.
+- **Light Sensor Detection:** The existence of light sensors in the gadget is detected by Violet. These sensors, which are normally situated on the device's front or back, monitor the intensity of ambient light.
+- **Ambient Light Measurement:** The ambient light levels surrounding the gadget are continually monitored by the light sensors. They provide real-time information about the brightness of the surroundings.
+- **Brightness Adjustement:** Violet dynamically changes the display brightness according on the observed ambient light levels to offer the best viewing experience. To better visibility in light conditions, the screen brightness is raised. The brightness is reduced in darker conditions to alleviate eye strain and preserve battery.
 
 ## Device Sleep and Wake
 
@@ -111,15 +56,11 @@ Device Sleep and Wake are power management features in Violet that control the d
 
 ### Device Sleep
 
-Device Sleep is a power-saving state where the device enters a low-power mode to conserve
-energy when it's not actively in use.
+Device Sleep is a power-saving mode in which the device enters a low-power mode to conserve energy while not actively in use.
 
-1. **Idle Detection:** Violet detects periods of user inactivity by monitoring user input, such as keyboard and mouse interactions, touchscreen interactions, or lack of any input for a specified period of time.
-
-2. **Sleep Trigger:** When the device is deemed idle based on the idle detection criteria, Violet triggers the device to enter the Sleep state.
-
-3. **Power Reduction:** In the Sleep state, Violet reduces power consumption by turning off or minimizing power to non-essential hardware components. This includes reducing CPU and GPU activity, lowering display brightness, and suspending background processes.
-
+1. **Idle Detection:** Violet identifies times of user idleness by monitoring user input, such as keyboard and mouse interactions, touchscreen interactions, or a lack of input for a specific period of time.
+2. **Sleep Trigger:** When the device is declared idle based on the idle detection criteria, Violet causes the device to enter the Sleep state.
+3. **Power Reduction:** When in the Sleep mode, Violet lowers power usage by shutting off or reducing power to non-essential hardware components. This includes minimizing CPU and GPU activity, lowering display brightness, and halting background operations.
 4. **Power State Monitoring:** While in Sleep mode, Violet continuously monitors various triggers, such as user input or scheduled wake events, to determine when the device should exit the Sleep state.
 
 ### Device Wake
@@ -128,96 +69,71 @@ Device Wake is the process of transitioning the device from the Sleep state back
 active state. When certain events occur, Violet wakes up the device to make it ready for
 immediate use.
 
-1. **Wake Triggers:** Violet monitors specific triggers that can cause the device to wake up from the Sleep state. These triggers can include user input, scheduled wake events, network activity, or external device connections.
-2. **Power Restoration:** When a wake trigger is detected, Violet restores power to the necessary hardware components, such as the CPU, GPU, display, and input devices, to bring the device back to an active state.
-3. **Resume Operations:** Violet resumes any suspended or paused processes, applications, or tasks that were previously in progress before the device entered the Sleep state. This allows users to seamlessly continue their work or interact with the device without interruptions.
+Device Wake refers to the process of returning a device from the Sleep state to an active state. Violet wakes up the gadget when certain situations occur, preparing it for instant usage.
+
+1. **Wake Triggers:** Violet watches for particular triggers that may force the gadget to wake up from its sleep state. User interaction, planned wake events, network activity, or external device connections are examples of triggers.
+2. **Power Restoration:** When a wake trigger is identified, Violet provides power to the required hardware components, such as the CPU, GPU, display, and input devices, to bring the device back to life.
+3. **Resume Operations:** Violet restarts all suspended or halted processes, programs, or tasks that were running before the device went to sleep.
 
 ## Peripheral Power Management
 
-Peripheral Power Management is a feature in Violet that allows for the efficient
-management of power consumption by peripheral devices connected to the system. By
-intelligently controlling the power states of peripherals, Violet optimizes power usage,
-extends battery life, and enhances overall system efficiency.
+Violet has a feature called *Peripheral Power Management*, which enables for the effective
+management of power consumption by peripheral devices attached to the system. Violet
+optimizes power utilization, increases battery life and improves overall system economy
+by intelligently managing the power states of peripherals.
 
 ### Power State
 
-Violet employs various power states for peripherals to control their power consumption based on their usage and system requirements. Here are the key power states used in Peripheral Power Management:
+Violet uses several power states to manage peripheral power consumption based on use and
+system needs. The following are the primary power states in Peripheral Power Management:
 
-1. **Active State:**  In the active state, peripherals are fully powered on and ready for use. They operate at their maximum capabilities to provide full functionality.
-2. **Idle State:** When a peripheral device is idle and not actively used, Violet can transition it to an idle state. In this state, the peripheral consumes less power while still remaining operational. For example, a display may lower its brightness or enter a power-saving mode when idle.
-3. **Standby State:** The standby state represents a deeper level of power savings for peripherals. In this state, the peripheral consumes minimal power and enters a low-power mode, while still maintaining essential functions to quickly resume operation when needed. For example, a printer may enter a standby state where it conserves power but remains ready to print when a job is received.
-4. **Power-Off State:** The power-off state completely shuts down power to the peripheral device. In this state, the peripheral is not operational, and it requires explicit activation or user interaction to power it back on.
+1. **Active State:** Peripherals are completely powered up and ready to use when they are in the active state. To give complete functioning, they work at their greatest capacity.
+2. **Idle State:** Violet may convert a peripheral device to an idle state when it is inactive and not actively utilized. The peripheral consumes less power while remaining functioning in this configuration. When idle, a display, for example, may reduce its brightness or enter a power-saving mode.
+3. **Standby State:** The standby state provides a higher level of power savings. The peripheral consumes minimum power and enters a low-power mode in this condition, while still retaining important functionalities to swiftly restart operation as needed. A printer, for example, may enter a standby mode to conserve electricity while remaining ready to print when a task is received.
+4. **Power-Off State:** The power-off condition turns off all power to the peripheral device. The peripheral is not functioning in this state and turning it back on needs specific activation or human engagement.
 
-### Dynamic Power Allocation
+Violet provides power to peripherals dynamically according on their consumption demands.
+It intelligently optimizes power distribution to prioritize power-hungry peripherals as
+necessary while reducing power to less vital or idle devices.
 
-Violet dynamically allocates power to peripherals based on their usage demands. It
-intelligently manages power distribution to prioritize power-hungry peripherals when
-needed, while minimizing power to less critical or idle peripherals.
+Peripheral devices are only powered when needed. USB devices, for example, are turned on when they are connected or when the system detects data transfer activity. This ensures that power is distributed to peripherals effectively, eliminating excessive power use.
 
-### Power-On Demand
+## Battery Saver Mode
 
-Peripheral devices are powered on only when required. For example, USB devices are
-powered on when they are connected or when the system detects data transfer activity.
-This ensures that power is allocated efficiently to peripherals, reducing unnecessary
-power consumption.
+Violet's Battery Saver Mode is intended to improve portable device battery life by
+optimizing system settings and reducing power consumption. When enabled, this function
+dynamically adjusts multiple system components to decrease energy usage while ensuring a
+seamless user experience.
 
-## Power-Saving Modes
+Battery Saver Mode optimizes system settings and lowers power usage to extend the life of
+portable devices' batteries. This is accomplished by modifying the CPU clock speed,
+minimizing background processes, and improving resource allocation. The system consumes
+less power when operating at a reduced performance level, resulting in longer battery
+life.
 
-Violet offers power-saving modes that allow users to customize power usage profiles according to their needs and preferences.
+Battery Saver Mode decreases screen brightness and shortens screen timeout duration to
+save even more power. When the gadget is not actively in use, this helps to minimize
+power usage.
 
-### Battery Saver Mode
+Background program operations are also restricted or halted to save CPU utilization and
+data transfer. Non-essential operations are halted or limited to critical functions to
+conserve energy.
 
-Battery Saver Mode is a feature in Violet that aims to maximize the battery life of
-portable devices by optimizing system settings and reducing power consumption. When
-enabled, Battery Saver Mode adjusts various aspects of the system to minimize energy
-usage without significantly impacting user experience.
+Violet may additionally optimize network connections to save data use and limit
+network-intensive functions.
 
-#### Reduced Performance
-
-Battery Saver Mode can lower the overall system performance by reducing the CPU clock
-speed, limiting background processes, and optimizing resource allocation. By operating at
-a lower performance level, the system consumes less power, allowing the battery to last
-longer.
-
-#### Screen Brightness and Timeout
-
-Battery Saver Mode adjusts the screen brightness to a lower level to reduce power
-consumption. It also reduces the screen timeout duration, automatically turning off the
-display more quickly when not in use.
-
-#### Background App Management
-
-Battery Saver Mode limits or suspends background app activities to minimize CPU usage and
-data transfer, conserving energy. Non-essential processes and background tasks are
-temporarily paused or restricted to essential functions only.
-
-#### System Animations
-
-To save power, Battery Saver Mode reduces or disables system animations and visual
-effects. This includes transitions, scrolling, and other graphical elements that can
-contribute to battery drain.
-
-#### Network Optimizations
-
-When Battery Saver Mode is active, Violet may optimize network connections to reduce data
-usage and limit network-intensive operations. This can involve lowering the frequency of
-data synchronization, background data usage, and network requests.
-
-#### Impact on User Experience
-
-While Battery Saver Mode aims to maximize battery life, it may have some impact on the
-overall user experience. By reducing performance, limiting background activities, and
-adjusting system settings, users may notice a slight decrease in system responsiveness
-and app performance. However, Violet strives to strike a balance between power savings
-and user experience, ensuring that essential functionality remains intact while
-conserving battery power.
+While Battery Saver Mode is designed to extend battery life, it may have a little impact
+on overall user experience. Due to lower performance and limited background operations,
+users may notice a drop in system responsiveness and app performance. Violet, on the
+other hand, aims to achieve a balance between power savings and user experience, ensuring
+that key functionality is preserved while battery life is conserved.
 
 # Heat Management
 
-Heat management is a critical aspect of device performance and longevity. Overheating can
-lead to reduced performance, accelerated wear and tear on component and even system
-instability. Violet incorporates various heat management techniques to ensure optimal
-device temperature and prevent overheating.
+Heat management is an important factor in device performance and lifetime. Overheating
+can result in decreased performance, faster component wear and tear and potentially
+system instability. Violet employs a variety of heat management mechanisms to maintain
+ideal device temperature and prevent overheating.
 
 ## Termal Throttling
 
@@ -285,10 +201,3 @@ levels, and power consumption. During low-intensity tasks or when the device is 
 standby state, the fans operate at lower speeds, resulting in quieter operation and
 reduced power consumption. Conversely, during demanding workloads or high-temperature
 scenarios, the fans ramp up their speed to deliver effective cooling.
-
-## User Guidelines for Heat Management
-
-While Violet employs robust heat management strategies, Violetians can also contribute to maintaining optimal thermal conditions. Here are some guidelines:
-
-1. **Ensure Proper Ventilation:** Avoid blocking ventilation channels, air intake/exhaust points, and fan outlets. Allow free airflow around the device.
-2. **Clean Dust and Debris:** Regularly clean dust and debris from ventilation openings, fans, and heat sinks to maintain optimal airflow and heat dissipation.

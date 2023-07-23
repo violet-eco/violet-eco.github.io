@@ -1,8 +1,9 @@
 # Concepts
 
-This folder contains the high-level documents of Violet.
-It is written in a way that readers can easily understand.
+This folder contains high-level documents that explain Violet's basic principles in a
+simple and understandable manner. The purpose of these publications is to help readers
+understand the major components of Violet's architecture and functionality.
 
-- [What are applications?](applications.md) - the way to run software on Violet
-- [What are libraries?](libraries.md) -  sharing identical behaviours between multiple applications
-- [What are users?](users.md) - sharing a computer between multiple persons 
+- [Applications in Violet](applications.md)
+- [Libraries in Violet](libraries.md)
+- [Users in Violet](users.md)

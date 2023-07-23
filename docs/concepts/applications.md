@@ -1,44 +1,46 @@
-# What are applications?
+# Applications in Violet
 
 *Applications* are the primary way to run software in Violet. They are responsible for
 executing code and providing functionality to the users.
 
-- [What are applications?](#what-are-applications)
-  - [How applications work?](#how-applications-work)
+- [Applications in Violet](#applications-in-violet)
+  - [Application Types](#application-types)
   - [Installation Methods](#installation-methods)
     - [From the store](#from-the-store)
     - [Sideloading](#sideloading)
     - [Volatile applications](#volatile-applications)
   - [Commands](#commands)
-  - [System Applications](#system-applications)
+  - [System applications](#system-applications)
+  - [Application Development](#application-development)
+    - [Application SDK](#application-sdk)
+    - [Open Source Community](#open-source-community)
   - [Services](#services)
 
-## How applications work?
+## Application Types
 
-An application consists of executable files and associated resources. In Violet, binary
-programs are not directly supported, so applications serve as the intermediary layer to
-run code. When an application is launched, it is loaded into memory and its code is
-executed by the system.
+Violet supports a variety of application types, each of which has a special function and offers unique features:
+
+1. **Native Applications:** These programs have been specially created and enhanced to work with Violet. They may utilize Violet's special features and have complete access to system resources, resulting in a smooth and effective user experience.
+2. **Web Applications:** In a web browser, Violet also supports web-based programs. These programs make use of web technologies and are accessible through widely used web browsers that are already installed on the computer.
+3. **Emulated Applications:** Violet offers the possibility to run emulation-based apps for backwards compatibility. Violetians are able to access older apps without jeopardizing system integrity because to the virtualized environment in which these applications operate.
 
 ## Installation Methods
 
-Applications in Violet are installed through application packages. There are several installation methods available:
+Violet applications are installed using application packages. Several installation techniques are available:
 
 ### From the store
 
-Applications can be downloaded and installed from the official Violet store. The store
-provides a centralized platform for users to discover and install applications. For
-closed-source applications, the store offers precompiled programs. For open-source
-applications, the store supports both precompiled programs and source code compilation.
+The [Violet Store](../applications/store.md) is where you may download and install
+applications. Users may explore and install programs using Store's unified platform.
+The shop sells precompiled programs for closed-source apps. Store enables both
+precompiled apps and source code compilation for open-source applications.
 
 ### Sideloading
 
 Sideloading refers to the installation of an application directly from its package without going through the official store. Violet offers different sideloading modes:
 
 - **Disable mode:** Sideloading is completely blocked, and applications can only be installed from the store. Volatile applications can still be run.
-
 - **Safe mode:** Sideloading is allowed, but the system performs security checks. It verifies if the application's AID (Application ID) matches an application available in the store. It also compares the signature of the application with the signature of the store application. If the AID or the signatures do not match, the application is considered malicious and will not be installed. Note that this mode requires an internet connection to check against the store.
-
 - **Insecure mode:** Sideloading is allowed without any security checks. This mode is considered less secure, as it allows for potential spoofing or installation of untrusted applications.
 
 Violetians can switch between sideloading modes in the Settings, depending on their
@@ -55,11 +57,8 @@ them to disk permanently. Violet provides different modes for running volatile
 applications:
 
 - **Full-volatile:** All data associated with the application is deleted once the application is closed.
-
 - **Session-scoped:** The application's data is kept on disk until the system is shut down.
-
 - **Local-persistent:** The application's data is stored in a data file with the extension `*.vad`` (Volatile Application Data) created in the same folder as the application package.
-
 - **Persistent:** The application's data is stored in a dedicated folder, allowing for persistent storage across multiple sessions.
 
 By default, volatile applications run in local-persistent mode. In this mode, the system
@@ -90,7 +89,7 @@ short form `get_time` can be used directly.
 
 Commands in Violet work by executing the application within a specific execution context.
 
-## System Applications
+## System applications
 
 Some applications are part of the system itself and are known as system applications.
 These applications have special privileges and access to system-reserved features. System
@@ -110,6 +109,24 @@ are called *system applications*. These applications have some special privilege
 System applications cannot be removed *by any means* as
 they are critical to the correct functioning of the system.
 Native applications which are not system applications can be removed, though.
+
+## Application Development
+
+By designing and releasing their apps, developers may contribute to Violet's application
+ecosystem:
+
+### Application SDK
+
+Violet provides a robust official Software Development Kit (SDK). It includes a
+comprehensive collection of tools, libraries, and documentation to assist developers in
+creating powerful and innovative applications that interface smoothly with the operating
+system.
+
+### Open Source Community
+
+Violet's application development depends on an open-source ecosystem that encourages
+collaboration, sharing and improvement. Developers may contribute to current
+applications or build whole new ones to enhance the Violet ecosystem.
 
 ## Services
 
