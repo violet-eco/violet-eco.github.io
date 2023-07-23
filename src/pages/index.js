@@ -30,7 +30,7 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`Your future starts now.`}
       description="Future — Powered by Violet, designed for You.">
       <HomepageHeader />
       <main>
