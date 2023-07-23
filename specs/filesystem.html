@@ -148,10 +148,10 @@
 <ol>
 <li><strong>FAT32 partition for bootloader:</strong> This partition is dedicated to storing the bootloader, which is responsible for booting the operating system.</li>
 <li><strong>FAT32 partition for the system (<code>/sys</code> and <code>/etc/sys</code>):</strong> The system partition contains essential system files and configurations that are necessary for the proper functioning of the operating system.</li>
-<li><strong>Btrfs partition for user data:</strong> The user data partition is where user-specific files and data are stored. </li>
+<li><strong>Btrfs partition for user data:</strong> The user data partition is where user-specific files and data are stored.</li>
 </ol>
 <h2 id="structure"><a class="header" href="#structure">Structure</a></h2>
-<pre><code>/
+<pre><code class="language-plaintext">/
 ├── app                            Interactables available to all users
 │   └── &lt;appname&gt;                  An application's folder (NOTE: one sub-folder per version for libraries)
 │       ├── content                Application's program (executables, static resources, ...)

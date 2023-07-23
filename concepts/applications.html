@@ -171,12 +171,18 @@ applications, the store supports both precompiled programs and source code compi
 <h3 id="sideloading"><a class="header" href="#sideloading">Sideloading</a></h3>
 <p>Sideloading refers to the installation of an application directly from its package without going through the official store. Violet offers different sideloading modes:</p>
 <ul>
-<li><strong>Disable mode:</strong> Sideloading is completely blocked, and applications can only be installed from the store. Volatile applications can still be run.</li>
-<li><strong>Safe mode:</strong> Sideloading is allowed, but the system performs security checks. It verifies if the application's AID (Application ID) matches an application available in the store. It also compares the signature of the application with the signature of the store application. If the AID or the signatures do not match, the application is considered malicious and will not be installed. Note that this mode requires an internet connection to check against the store.</li>
-<li><strong>Insecure mode:</strong> Sideloading is allowed without any security checks. This mode is considered less secure, as it allows for potential spoofing or installation of untrusted applications.</li>
+<li>
+<p><strong>Disable mode:</strong> Sideloading is completely blocked, and applications can only be installed from the store. Volatile applications can still be run.</p>
+</li>
+<li>
+<p><strong>Safe mode:</strong> Sideloading is allowed, but the system performs security checks. It verifies if the application's AID (Application ID) matches an application available in the store. It also compares the signature of the application with the signature of the store application. If the AID or the signatures do not match, the application is considered malicious and will not be installed. Note that this mode requires an internet connection to check against the store.</p>
+</li>
+<li>
+<p><strong>Insecure mode:</strong> Sideloading is allowed without any security checks. This mode is considered less secure, as it allows for potential spoofing or installation of untrusted applications.</p>
+</li>
 </ul>
-<p>Users can switch between sideloading modes in the Settings, depending on their desired
-level of security and control over application installation.</p>
+<p>Violetians can switch between sideloading modes in the Settings, depending on their
+desired level of security and control over application installation.</p>
 <p><strong>Note:</strong> By default, sideloading is disabled in Violet for security reasons. Users can
 enable sideloading in the system settings, but it is recommended to exercise caution and
 only install applications from trusted sources.</p>
@@ -185,10 +191,18 @@ only install applications from trusted sources.</p>
 them to disk permanently. Violet provides different modes for running volatile
 applications:</p>
 <ul>
-<li><strong>Full-volatile:</strong> All data associated with the application is deleted once the application is closed.</li>
-<li><strong>Session-scoped:</strong> The application's data is kept on disk until the system is shut down.</li>
-<li><strong>Local-persistent:</strong> The application's data is stored in a data file with the extension `*.vad`` (Volatile Application Data) created in the same folder as the application package.</li>
-<li><strong>Persistent:</strong> The application's data is stored in a dedicated folder, allowing for persistent storage across multiple sessions.</li>
+<li>
+<p><strong>Full-volatile:</strong> All data associated with the application is deleted once the application is closed.</p>
+</li>
+<li>
+<p><strong>Session-scoped:</strong> The application's data is kept on disk until the system is shut down.</p>
+</li>
+<li>
+<p><strong>Local-persistent:</strong> The application's data is stored in a data file with the extension `*.vad`` (Volatile Application Data) created in the same folder as the application package.</p>
+</li>
+<li>
+<p><strong>Persistent:</strong> The application's data is stored in a dedicated folder, allowing for persistent storage across multiple sessions.</p>
+</li>
 </ul>
 <p>By default, volatile applications run in local-persistent mode. In this mode, the system
 searches for a file with the same name as the application's package file but with the

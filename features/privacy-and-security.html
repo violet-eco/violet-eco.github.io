@@ -190,7 +190,7 @@
 <p>Data protection is a top priority in Violet. Violet implements advanced
 measures to protect user data.</p>
 <h3 id="end-to-end-encryption"><a class="header" href="#end-to-end-encryption">End-to-End Encryption</a></h3>
-<p>Violet employs end-to-end encryption techniques to secure user data. This
+<p>Violet employs end-to-end encryption techniques to secure Violetians' data. This
 encryption ensures that data is encrypted before leaving the device and can only
 be decrypted by the intended recipient.</p>
 <ol>
@@ -321,10 +321,18 @@ of malicious code.</p>
 <p>When Secure Boot Verification is enabled, Violet performs the following
 boot component verification process:</p>
 <ul>
-<li>During the boot process, the bootloader and subsequent boot components are checked against their respective digital signatures</li>
-<li>Violet verifies the digital signatures using a set of trusted certificates embedded in the system</li>
-<li>If the digital signatures match the trusted certificates, the boot components are considered valid and allowed to code</li>
-<li>If the digital signatures do not match or cannot be verified, Violet prevents the execution of the boot components and initiates a recovery process</li>
+<li>
+<p>During the boot process, the bootloader and subsequent boot components are checked against their respective digital signatures</p>
+</li>
+<li>
+<p>Violet verifies the digital signatures using a set of trusted certificates embedded in the system</p>
+</li>
+<li>
+<p>If the digital signatures match the trusted certificates, the boot components are considered valid and allowed to code</p>
+</li>
+<li>
+<p>If the digital signatures do not match or cannot be verified, Violet prevents the execution of the boot components and initiates a recovery process</p>
+</li>
 </ul>
 <p>After the boot, Violet will run system integrity checker, <a href="../technical/integrity.html">Eden</a>.</p>
 <h3 id="trusted-certificates"><a class="header" href="#trusted-certificates">Trusted Certificates</a></h3>

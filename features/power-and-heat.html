@@ -180,6 +180,7 @@ addresses these aspects.</p>
 <ul>
 <li><a href="#reduced-performance">Reduced Performance</a></li>
 <li><a href="#screen-brightness-and-timeout">Screen Brightness and Timeout</a></li>
+<li><a href="#background-app-management">Background App Management</a></li>
 <li><a href="#system-animations">System Animations</a></li>
 <li><a href="#network-optimizations">Network Optimizations</a></li>
 <li><a href="#impact-on-user-experience">Impact on User Experience</a></li>
@@ -213,7 +214,7 @@ addresses these aspects.</p>
 <h1 id="power-efficiency"><a class="header" href="#power-efficiency">Power Efficiency</a></h1>
 <p>Power efficiency is a key aspect of Violet's design philosophy. The operating system
 incorporates various strategies and optimizations to maximize power efficiency, minimize
-power consumption and extend battery life. </p>
+power consumption and extend battery life.</p>
 <p>Violet employs intelligent power management techniques to optimize power usage while
 maintaining optimal performance. Here are some of the key power management features:</p>
 <h2 id="dynamic-frequency-scaling"><a class="header" href="#dynamic-frequency-scaling">Dynamic Frequency Scaling</a></h2>
@@ -256,10 +257,18 @@ decreased to reduce eye strain and save power.</p>
 <p>Device Sleep is a power-saving state where the device enters a low-power mode to conserve
 energy when it's not actively in use.</p>
 <ol>
-<li><strong>Idle Detection:</strong> Violet detects periods of user inactivity by monitoring user input, such as keyboard and mouse interactions, touchscreen interactions, or lack of any input for a specified period of time.</li>
-<li><strong>Sleep Trigger:</strong> When the device is deemed idle based on the idle detection criteria, Violet triggers the device to enter the Sleep state.</li>
-<li><strong>Power Reduction:</strong> In the Sleep state, Violet reduces power consumption by turning off or minimizing power to non-essential hardware components. This includes reducing CPU and GPU activity, lowering display brightness, and suspending background processes.</li>
-<li><strong>Power State Monitoring:</strong> While in Sleep mode, Violet continuously monitors various triggers, such as user input or scheduled wake events, to determine when the device should exit the Sleep state.</li>
+<li>
+<p><strong>Idle Detection:</strong> Violet detects periods of user inactivity by monitoring user input, such as keyboard and mouse interactions, touchscreen interactions, or lack of any input for a specified period of time.</p>
+</li>
+<li>
+<p><strong>Sleep Trigger:</strong> When the device is deemed idle based on the idle detection criteria, Violet triggers the device to enter the Sleep state.</p>
+</li>
+<li>
+<p><strong>Power Reduction:</strong> In the Sleep state, Violet reduces power consumption by turning off or minimizing power to non-essential hardware components. This includes reducing CPU and GPU activity, lowering display brightness, and suspending background processes.</p>
+</li>
+<li>
+<p><strong>Power State Monitoring:</strong> While in Sleep mode, Violet continuously monitors various triggers, such as user input or scheduled wake events, to determine when the device should exit the Sleep state.</p>
+</li>
 </ol>
 <h3 id="device-wake"><a class="header" href="#device-wake">Device Wake</a></h3>
 <p>Device Wake is the process of transitioning the device from the Sleep state back to an
@@ -308,8 +317,8 @@ longer.</p>
 <p>Battery Saver Mode adjusts the screen brightness to a lower level to reduce power
 consumption. It also reduces the screen timeout duration, automatically turning off the
 display more quickly when not in use.</p>
-<p>#### Background App Management
-Battery Saver Mode limits or suspends background app activities to minimize CPU usage and
+<h4 id="background-app-management"><a class="header" href="#background-app-management">Background App Management</a></h4>
+<p>Battery Saver Mode limits or suspends background app activities to minimize CPU usage and
 data transfer, conserving energy. Non-essential processes and background tasks are
 temporarily paused or restricted to essential functions only.</p>
 <h4 id="system-animations"><a class="header" href="#system-animations">System Animations</a></h4>
@@ -382,7 +391,7 @@ standby state, the fans operate at lower speeds, resulting in quieter operation 
 reduced power consumption. Conversely, during demanding workloads or high-temperature
 scenarios, the fans ramp up their speed to deliver effective cooling.</p>
 <h2 id="user-guidelines-for-heat-management"><a class="header" href="#user-guidelines-for-heat-management">User Guidelines for Heat Management</a></h2>
-<p>While Violet employs robust heat management strategies, users can also contribute to maintaining optimal thermal conditions. Here are some guidelines:</p>
+<p>While Violet employs robust heat management strategies, Violetians can also contribute to maintaining optimal thermal conditions. Here are some guidelines:</p>
 <ol>
 <li><strong>Ensure Proper Ventilation:</strong> Avoid blocking ventilation channels, air intake/exhaust points, and fan outlets. Allow free airflow around the device.</li>
 <li><strong>Clean Dust and Debris:</strong> Regularly clean dust and debris from ventilation openings, fans, and heat sinks to maintain optimal airflow and heat dissipation.</li>
