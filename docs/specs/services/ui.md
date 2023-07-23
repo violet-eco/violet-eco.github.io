@@ -1,4 +1,5 @@
 # `sys::ui`
+
 The `sys::ui` service is responsible for user interface.
 
 - [`sys::ui`](#sysui)
@@ -6,7 +7,9 @@ The `sys::ui` service is responsible for user interface.
   - [Methods](#methods)
 
 ## Behaviour
+
 **TODO**
 
 ## Methods
+
 **TODO**

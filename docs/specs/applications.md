@@ -1,5 +1,6 @@
 # Applications
-This document describes application-specific structure and behaviour. 
+
+This document describes application-specific structure and behaviour.
 
 - [Applications](#applications)
   - [Application package](#application-package)
@@ -15,30 +16,36 @@ This document describes application-specific structure and behaviour.
     - [Context header](#context-header)
 
 ## Application package
+
 Application packages are files that have either the
 `*.vap` (Violet Application Package) or
 `*.vva` (Violet Volatile Application).
 
 ### Content
+
 VAP and VVA files are ZStandard archives that contain `manifest.toml`
 describing the archive and `hash.md5` file that confirm that the archive
 is not corrupted.
 
 ### Pre-compiled applications
+
 By default, the system tries to install
 [pre-compiled programs](../technical/pre-compiling.md) from
 the application's package if possible.
 
 ### Embedding libraries
+
 Although it's a better practice to split applications and libraries
 into different packages, sometimes it's more easy to embed both in
 the same package, especially in two cases:
+
 - When the application is just a thin layer ahead of the library (e.g. CLI tool)
 - When the library's API changes rapidly and the application relies on it
 
 For such scenarios, it's possible for an application package to embed one or more libraries, and publish them all at once.
 
 ### Values encoding
+
 The application's startup arguments and output value use the following encoding:
 
 |Type code|Type|Description|Representation|
@@ -55,6 +62,7 @@ The application's startup arguments and output value use the following encoding:
 |`0x09`|`stream`|Pipe RC|RC identifier (8 bytes)|
 
 ### Returning and failing
+
 The value must be returned using the `CMDOUT` pipe. The data sent through
 this pipe must follow the above [encoding](#values-encoding).
 
@@ -62,6 +70,7 @@ A command may also fail. To incidate so, the process must send the `0xFF`
 value through the pipi.
 
 ### Volatile applications
+
 [Volatile applications](../concepts/applications.md#volatile-applications)
 cannot expose commands globally as they are technically not installed.
 They can though be used in shell scripts through *volatile imports*.

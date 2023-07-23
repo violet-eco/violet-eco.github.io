@@ -1,9 +1,12 @@
 # Permissions
+
 Permissions are used to control what applications can
 do or not.
 
 ## Level of permissions
+
 Permissions are divided into the following categories:
+
 - Basic (`B`): basic permissions, like window creation, which are granted automatically by default
 - Implicit (`I`): ermissions implied by the usage of an application, like opening a file with an application grants it an access while the application is running
 - Global (`G`): accessing and modifying non-critical parts of the state of the system, like controlling the global volume or reading
@@ -12,24 +15,29 @@ Permissions are divided into the following categories:
 
 If applications request permission from the user to get
 sensitive and privacy permissions while using them, a popup will shown:
+
 - Only one time
 - For the active application
 - For the current session
 - Forever
 
 ## User privileges
+
 Some permissions require the user to have specific privileges,
 such as being administrator. These permissions are marked
 in this document with an `{A}`.
 
 ## List of permissions
+
 ### Devices
+
 - (P) `devices.enum`: enumerate devices
 - (P) `devices.subscribe`: subscribe to devices
 - (P) `devices.register_driver`: register a device driver
 - (P) `devices.ask_driver`: ask a device's driver to perform a method
 
 ### Filesystems
+
 - (S) `fs.filesystems.mounted`: check if a given filesystem is mounteds
 - (S) `fs.filesystems.metadata`: get metadata on a given filesystem
 - (S) `fs.filesystems.list`: enumerate mounted filesystems
@@ -39,6 +47,7 @@ in this document with an `{A}`.
 - (S) `fs.filesystems.format`: format an existing filesystem
 
 ### Filesystem elements
+
 - (S) `fs.items.exists`: check if an item exists at a given path
 - (S) `fs.items.metadata`: get metadata on a given item
 - (S) `fs.items.create`: create new filesystem elements
@@ -47,6 +56,7 @@ in this document with an `{A}`.
 - (S) `fs.items.remove`: delete items permanently
 
 ### Flows
+
 - (S) `flow.list`: list flows opened by all applications
 - (S) `flow.metadata`: get metadata on flows
 - (B) `flow.create`: create flows
@@ -54,10 +64,12 @@ in this document with an `{A}`.
 - (S) `flow.write`: write to flow
 
 ### Network
+
 - (S) `net.fetch`: fetch a resource
 - (S) `net.expose`: listen to a specific port
 
 ### System
+
 - (B) `system.clock.date.read`: get the current date
 - (B) `system.clock.time.read`: get the current time
 - (B) `system.clock.timezone.read`: get the current timezone
@@ -71,9 +83,11 @@ in this document with an `{A}`.
 - (G) `system.hw.mem.list`: list RAM slots
 
 ### Programs
+
 - (S) + {A} `programs.running.processes`: get the list of running processes
 - (S) `programs.running.apps`: get the list of running applications
 
 ### System-reserved permissions
+
 - `sys.process.kill`: suspend or kill external processes
 - `sys.process.signal`: send a signal to an external process

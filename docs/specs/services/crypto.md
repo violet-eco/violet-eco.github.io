@@ -1,4 +1,5 @@
 # `sys::crypto`
+
 The `sys::crypto` service is responsible for cryptography methods.
 
 - [`sys::crypto`](#syscrypto)
@@ -6,7 +7,9 @@ The `sys::crypto` service is responsible for cryptography methods.
   - [Methods](#methods)
 
 ## Behaviour
+
 **TODO**
 
 ## Methods
+
 **TODO**

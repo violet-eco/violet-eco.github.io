@@ -1,4 +1,5 @@
 # Technical
+
 This document provides an overview of Violet.
 
 - [Technical](#technical)
@@ -11,6 +12,7 @@ This document provides an overview of Violet.
   - [User interface](#user-interface)
 
 ## Program executions
+
 Violet does not allow standalone binaries to be executed directly. Instead, all code
 execution occurs within the context of the system or an application.
 
@@ -18,6 +20,7 @@ execution occurs within the context of the system or an application.
 - **Applications:** These are user-installed applications that run within the Violet environment.
 
 ## Permissions
+
 Violet follows a strict permission model to control the capabilities of applications. By
 default, applications have limited privileges and require explicit permissions to perform
 certain actions.
@@ -27,11 +30,14 @@ system. Applications must request and be granted the necessary permissions to ac
 resources or perform specific operations.
 
 ## Hardware access
+
 Hardware access in Violet occurs through a two-layered approach:
+
 - **Kernel Detection:** The kernel detects and enumerates the connected hardware devices.
 - **Hardware Service:** The hardware service acts as an intermediary layer between the system and hardware devices, providing access and management capabilities.
 
 ## Hardware drivers
+
 Unlike many other operating systems, hardware drivers in Violet are implemented as simple
 applications rather than tightly integrated components of the kernel. Applications can
 declare themselves as drivers by utilizing the hardware service.
@@ -41,6 +47,7 @@ based on certain criteria. The hardware service facilitates communication betwee
 system, hardware services, and drivers to perform the requested operations.
 
 ### Hardware access performances
+
 Hardware accesses are performed through syscalls and signals using CPU interrupts. The
 process typically follows these steps:
 
@@ -55,6 +62,7 @@ The access process usually works like this:
 5. The result of the operation is transmitted back through the hardware service, system service, and ultimately to the userspace process.
 
 ## Filesystem access
+
 Filesystem access in Violet is generally fast, thanks to direct storage access. The
 filesystem service handles most operations by directly communicating with the storage
 files.
@@ -65,4 +73,5 @@ additional latency, it remains within an acceptable performance range and is onl
 specific edge cases.
 
 ## User interface
+
 The user interface in Violet is managed by desktop environments, which are services provided by applications. These desktop environments are responsible for rendering the graphical elements, handling input events, and providing a cohesive user experience.

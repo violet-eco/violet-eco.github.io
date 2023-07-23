@@ -1,10 +1,12 @@
 # Smart Home Integration
-Smart Home Integration in Violet allows users to control and manage their connected
+
+Smart Home Integration in Violet allows Violetians to control and manage their connected
 devices seamlessly from the operating system. By integrating with smart home
 technologies, Violet creates a centralized hub for controlling various aspects of a
 user's smart home, providing convenience, automation, and enhanced functionality.
 
 ## List of Supported Smart Home Devices
+
 - **Smart Lighting:** Users can control and adjust smart light bulbs, switches and dimmers to set the desired ambiance or create lighting scenes.
   
 - **Thermostats:** Integration with smart thermostats allows users to monitor and control the temperature of their home for energy efficiency and comfort.

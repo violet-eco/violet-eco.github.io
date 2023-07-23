@@ -1,4 +1,5 @@
 # `sys::app`
+
 The `sys::app` service is responsible for application management.
 
 - [`sys::app`](#sysapp)
@@ -6,7 +7,9 @@ The `sys::app` service is responsible for application management.
   - [Methods](#methods)
 
 ## Behaviour
+
 **TODO**
 
 ## Methods
+
 **TODO**

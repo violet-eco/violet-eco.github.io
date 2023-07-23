@@ -1,6 +1,6 @@
 # Settings
 
-```
+```plaintext
 > Current user settings
     > User Account
         > Set profile picture

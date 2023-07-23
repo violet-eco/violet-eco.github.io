@@ -1,4 +1,5 @@
 # Processes
+
 Violet's processes are designed with similarities to Linux processes while introducing
 some additional features. There are different types of processes in Violet:
 
@@ -11,6 +12,7 @@ some additional features. There are different types of processes in Violet:
   - [Threading](#threading)
 
 ## Child processes
+
 In Violet, a process has the ability to create child processes. When a child process is
 created, it is essentially a 1:1 copy of the parent process, but with its own unique
 process ID (PID). To optimize memory usage, copy-on-write (COW) is employed. This means
@@ -23,6 +25,7 @@ has certain privileges or permissions, they are passed down to the child process
 When a process exits, all of its child processes are immediately terminated as well.
 
 ## Threading
+
 Violet supports multithreading, allowing processes to create multiple threads that can
 run concurrently within the same address space. Threads enable parallel execution of
 different parts of a process, enhancing performance and responsiveness.

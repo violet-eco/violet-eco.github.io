@@ -1,4 +1,5 @@
 # Multi-platform Management in Violet
+
 Violet offers a unique multi-platform management solution that allows the Violet
 ecosystem programs to run on Linux, Windows or macOS systems. This is made possible
 through a special wrapper called *Violet Calls Wrapper*, which can be easily downloaded
@@ -11,15 +12,19 @@ from Violet's website.
   - [Considerations and Limitations](#considerations-and-limitations)
 
 ## Integration on Different Platforms
+
 With Violet Calls Wrapper, you can run Violet apps natively on your preferred operating system. It doesn't matter whether it is Linux, Windows or macOS.
 
 ## Installation and Setup
+
 To get started with multi-platform management in Violet, follow these simple steps:
+
 1. Visit the official Violet website and go to Downloads.
 2. Look for the Violet Calls Wrapper download option and select the appropriate version for your operating system.
 3. After the package is downloaded, run the installer and follow the on-screen instructions to complete the installation process.
 
 ## Running Violet Applications
+
 To run Violet apps on your chosen platform using Violet Calls Wrapper, follow these steps:
 
 1. Find the Violet application package (usually in .vap format) that you want to run on your system.

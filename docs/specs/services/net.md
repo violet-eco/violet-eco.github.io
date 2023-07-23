@@ -1,4 +1,5 @@
 # `sys::net`
+
 The `sys::net` service is responsible for everything related to networking.
 
 - [`sys::net`](#sysnet)
@@ -6,7 +7,9 @@ The `sys::net` service is responsible for everything related to networking.
   - [Methods](#methods)
 
 ## Behaviour
+
 **TODO**
 
 ## Methods
+
 **TODO**

@@ -1,4 +1,5 @@
 # Signals
+
 *Signals* are a type of [KPC](./kpc.md).
 They are used by Sakura to send information.
 
@@ -7,7 +8,9 @@ They are used by Sakura to send information.
   - [List of signals](#list-of-signals)
 
 ## Overview
+
 When a process is created, Sakura associates it:
+
 - Signals handler table (SHT)
 - Signals queue
 - Readiness indicator
@@ -38,4 +41,5 @@ If it is, the kernel simply makes the process jump back to the address it
 was to before the signal was emitted, and switch to the original thread.
 
 ## List of signals
+
 **TODO**

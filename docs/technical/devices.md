@@ -1,4 +1,5 @@
 # Devices
+
 In the Violet system, devices play a crucial role in enabling various functionalities and
 interactions. Devices can include hardware components such as cameras, microphones,
 storage drives, network adapters, and more. The system manages these devices through the
@@ -12,6 +13,7 @@ them.
   - [Custom Device Handler File Names](#custom-device-handler-file-names)
 
 ## Connecting a New Device
+
 When a new device is connected to the computer, a corresponding device handler file (DHF)
 is created in the `/dev` directory. The location and organization of DHFs may vary
 depending on the type of device. For example, a hard drive may have a DHF path like `/dev/sst/b0b4`.
@@ -19,11 +21,13 @@ depending on the type of device. For example, a hard drive may have a DHF path l
 The filename is random and unique, in the format `[a-z][0-9][a-z][0-9]` (lowercase, digit, then lowercase again, and finally another digit).
 
 ## Interacting With a Device
+
 To interact with a device, applications and system services utilize the
 [`sys::hw`](../specs/services/hw.md) service. The specific actions that can be
 performed depend on the type of device:
 
 Different actions may be happen depending on the device's type:
+
 - **Camera devices:** when an application asks to capture a photo/video, the device will be suggested to take the images from
 - **Microphones:** when an application asks to capture sound, the device will be suggested to capture the sound from
 - **Sound output devices:** the device will be available for playback
@@ -35,6 +39,7 @@ For uncategorized devices (in `/dev/etc`), a popup is shown to the user, to indi
 the connected device is not recognized.
 
 ## Device Handler Files Persistance
+
 When a device is disconnected, the associated device handler file (DHF) is not
 immediately removed. Instead, if a process attempts to interact with the DHF, the
 [`sys::hw`](../specs/services/hw.md) service indicates that the device is currently not
@@ -44,6 +49,7 @@ future use.
 When the device is connected again, it is associated with the same DHF, ensuring consistency and preserving the device's reference in the system.
 
 ## Custom Device Handler File Names
+
 Violet provides the flexibility to assign custom names to device handler files (DHF). When a custom name is given, a new DHF file is created and linked to the original DHF
 file. This preserves compatibility with applications that rely on the original DHF while
 allowing for customized naming conventions.

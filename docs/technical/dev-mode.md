@@ -1,4 +1,5 @@
 # Developer Mode
+
 The developer mode enables several features that are not
 available by default. Only administrator user get access to
 them when they are enabled.
@@ -9,20 +10,25 @@ them when they are enabled.
   - [Application proxies](#application-proxies)
 
 ## How to enable?
+
 Developer mode can be enabled either by typing the following command
 in the terminal:
 
 Developer Mode can be enabled in two ways:
+
 1. Open the terminal and type following command:
+
 ```sh
 vio central --enable dev-mode
 ```
-1. Alternatively, while holding the `Ctrl` `Alt` and `Shift` keys, type `DEV`.
+
+Alternatively, while holding the `Ctrl` `Alt` and `Shift` keys, type `DEV`.
 
 Once Developer Mode is enabled, additional features and options become accessible,
 providing developers with greater control and flexibility over the system.
 
 ## Kernel Module Development
+
 Kernel module development is a powerful capability offered by Violet's Developer
 Mode that allows developers to extend the functionality of the operating system at
 the kernel level. Kernel modules are pieces of code that can be dynamically loaded
@@ -32,6 +38,7 @@ Kernel modules have direct access to various services and resources provided by 
 such as memory management, process scheduling, IPC.
 
 ## Application proxies
+
 Application proxies collect all calls made by the application to the system.
 It is useful for applications debugging.
 

@@ -1,4 +1,5 @@
 # Crash saves
+
 Crash saves are a crucial feature in Violet that helps prevent data loss caused by system
 crashes or unexpected terminations.
 
@@ -10,13 +11,15 @@ crashes or unexpected terminations.
   - [Recovery Options](#recovery-options)
 
 ## Signal and Response Mechanism
+
 Violet periodically notifies all running programs, with a default interval of one minute,
 at a configurable time interval. The applications are prompted by this signal to respond
 with the information required to maintain their current condition.
 
 The crash save signal has three possible responses from applications:
+
 1. **Provide crash save information:** Applications can reply by supplying all the necessary data to enable state restoration. This entails maintaining user information, application settings, information about currently active sessions, and any other crucial data needed for a thorough recovery.
-   
+
 2. **Declining the current collect:** Applications have the option to deny delivering crash save information while the signal is being collected. After a specific amount of time, the signal will be transmitted to the application once more.
 
 3. **Refuse crash saves:** Applications have the option of sending a message stating that they will not offer any crash saves while the current instance of the application is operating. Since the application explicitly chooses not to participate in the gathering of crash save data, the signal will not be transmitted to the application's instance once more in this scenario.
@@ -26,12 +29,14 @@ by the program in question. The succeeding signals, however, will keep getting
 transmitted to other open applications.
 
 ## Integrity and Security
+
 Violet uses an integrity checker named [Eden](../technical/integrity.md)
 ([GitHub](https://github.com(violet-eco/eden)) to make sure that crash save data is
 reliable and legitimate. For the purpose of preventing any possible tampering with or
 unauthorized access to user data, Eden verifies the integrity of crash saves.
 
 ## Storage and Accessibility
+
 The directory `/home/[user]/appdata/[appname]/crashsaves/[timestamp]_[pid].csf` is where
 crash saves are kept after they have been gathered. This directory's layout makes it
 simple to store and access crash save information for specific programs. If users need to
@@ -39,6 +44,7 @@ recover work from a prior session, they can use this location to access the cras
 files.
 
 ## Crash Save Priority Management
+
 Violet uses intelligent crash save priority management to manage system resources and give
 precedence to important processes. The system prioritizes the gathering of crash save
 data when several apps are active at once depending on a number of variables, including
@@ -50,6 +56,7 @@ avoid interfering with the user's main duties, crash saves for lower priority pr
 could be delayed.
 
 ## Recovery Options
+
 In addition to the automatic restoration of crash save data, Violet offers advanced
 recovery options for users to choose from in the event of a system crash. Users can
 choose from a variety of recovery points, each of which corresponds to a distinct crash

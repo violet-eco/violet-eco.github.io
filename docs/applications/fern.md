@@ -1,4 +1,5 @@
 # Fern
+
 Fern is a text-based desktop environment designed for serves and as a
 fallback option when no graphical output is available or when the primary desktop
 environment is inaccessible.

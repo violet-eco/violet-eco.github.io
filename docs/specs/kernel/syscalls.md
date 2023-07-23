@@ -9,12 +9,14 @@ a task.
   - [List of syscalls](#list-of-syscalls)
 
 ## Overview
+
 Syscalls are performed using CPU interruptions to notify Sakura.
 
 System calls always return two numbers: a 8-bit errcode and
 8 bytes return value. If the errcode is not null, then an
 error occured during the syscall. Certain error codes
 indicate certain errors:
+
 - `0x00`: cannot read syscall's code or arguments
 - `0x01`: syscall does not exists
 - `0x02`: at least one argument is invalid (e.g. providing a pointer to the `0` address)
@@ -28,6 +30,7 @@ indicate certain errors:
 - `0x60` - `0x6F`: other types of errors
 
 The codes of system calls are also categorized as follows:
+
 - `0x00` - `0x0F`: signal handling
 - `0x10` - `0x1F`: process management
 - `0x20` - `0x2F`: pipes
@@ -37,4 +40,5 @@ The codes of system calls are also categorized as follows:
 - **TODO...**
 
 ## List of syscalls
+
 **TODO**
