@@ -1,3 +1,9 @@
+---
+slug: power-and-heat-management
+sidebar_position: 4
+description: Violet focuses power economy, battery optimization and heat control to ensure top performance and extend the life of Violetians' device.
+---
+
 # Power and Heat Management
 
 Violet focuses power economy, battery optimization and heat control to ensure top
@@ -5,27 +11,6 @@ performance and extend the life of Violetians' device. Our system employs a vari
 approaches and strategies to optimise power utilization, increase battery life, and
 minimize excessive heat buildup. This document gives a summary of how Violet solves these
 critical issues.
-
-- [Power and Heat Management](#power-and-heat-management)
-- [Power Efficiency](#power-efficiency)
-  - [Dynamic Frequency Scaling](#dynamic-frequency-scaling)
-  - [Adaptive Brightness Control](#adaptive-brightness-control)
-  - [Device Sleep and Wake](#device-sleep-and-wake)
-    - [Device Sleep](#device-sleep)
-    - [Device Wake](#device-wake)
-  - [Peripheral Power Management](#peripheral-power-management)
-    - [Power State](#power-state)
-  - [Battery Saver Mode](#battery-saver-mode)
-- [Heat Management](#heat-management)
-  - [Termal Throttling](#termal-throttling)
-    - [Temperature Thresholds](#temperature-thresholds)
-    - [Clock Speed Reduction](#clock-speed-reduction)
-    - [Performance Impact](#performance-impact)
-    - [Dynamic Adjustment](#dynamic-adjustment)
-  - [Active Cooling Systems](#active-cooling-systems)
-    - [Fan Cooling](#fan-cooling)
-    - [Performance-Driven Fan Control](#performance-driven-fan-control)
-    - [Intelligent Fan Profiles](#intelligent-fan-profiles)
 
 # Power Efficiency
 

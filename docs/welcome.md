@@ -1,13 +1,10 @@
-- [Welcome](#welcome)
-  - [What is Violet?](#what-is-violet)
-    - [Key Features](#key-features)
-    - [My Big Dreams and Goals](#my-big-dreams-and-goals)
-    - [Components](#components)
-      - [Kernel (Sakura)](#kernel-sakura)
-      - [System](#system)
-      - [Desktop Environment](#desktop-environment)
+---
+slug: /
+sidebar_position: 1
+description: Future — Powered by Violet, designed for You.
+---
 
-# Welcome
+# Welcome!
 
 ![Banner](https://github.com/violet-eco/docs/blob/main/brand/banner.png?raw=true)
 

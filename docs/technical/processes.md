@@ -1,12 +1,13 @@
+---
+slug: processes
+sidebar_position: 8
+description: Violet's processes are designed with similarities to Linux processes while introducing some additional features.
+---
+
 # Processes
 
 Violet's processes are designed with similarities to Linux processes while introducing
 some additional features.
-
-- [Processes](#processes)
-  - [Process types](#process-types)
-  - [Child processes](#child-processes)
-  - [Threading](#threading)
 
 ## Process types
 

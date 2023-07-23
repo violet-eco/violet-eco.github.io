@@ -1,6 +1,12 @@
+---
+slug: fern
+sidebar_position: 2
+description: Fern is a text-based desktop environment designed for servers and as a fallback option when no graphical output is available or when the primary desktop environment is inaccessible.
+---
+
 # Fern
 
-Fern is a text-based desktop environment designed for serves and as a
+Fern is a text-based desktop environment designed for servers and as a
 fallback option when no graphical output is available or when the primary desktop
 environment is inaccessible.
 

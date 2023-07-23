@@ -1,13 +1,13 @@
+---
+slug: apps-and-libraries
+sidebar_position: 1
+description: This document describes the structure, features and behaviours to both applications and libraries.
+---
+
 # Applications and libraries
 This document describes the structure, features and behaviours
 to both [applications](../concepts/applications.md) and
 [libraries](../concepts/libraries.md).
-
-- [Applications and libraries](#applications-and-libraries)
-  - [Name and slug](#name-and-slug)
-  - [Application identifier](#application-identifier)
-  - [Features](#features)
-  - [Manifest](#manifest)
 
 ## Name and slug
 Each application has a name as well as a slug. The name can any valid UTF-8 string, while the slug must respect several rules:

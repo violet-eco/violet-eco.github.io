@@ -1,14 +1,17 @@
+---
+slug: user-behaviour-analytics
+sidebar_position: 8
+description: User Behaviour Analytics is a feature in Violet that makes use of cutting-edge data analysis methods to uncover Violetians' interactions and behaviour within the operating system.
+---
+
 # User Behaviour Analytics
 
-User Behavior Analytics (UBA) is a potent feature in Violet that makes use of
-cutting-edge data analysis methods to uncover Violetians' interactions and behaviour within the operating system. UBA helps to enhance system performance, user experience, and security by gathering and analyzing user activity. To improve the overall operating system, it seeks to comprehend how users interact with Violet, spot trends, and make data-driven decisions.
-
-- [User Behaviour Analytics](#user-behaviour-analytics)
-  - [Data Collection](#data-collection)
-  - [Behaviour Profiling](#behaviour-profiling)
-  - [Detection of Anomalies](#detection-of-anomalies)
-  - [Performance Optimization](#performance-optimization)
-  - [Adaptive User Interface](#adaptive-user-interface)
+User Behaviour Analytics (UBA) is a potent feature in Violet that makes use of
+cutting-edge data analysis methods to uncover Violetians' interactions and behaviour
+within the operating system. UBA helps to enhance system performance, user experience,
+and security by gathering and analyzing user activity. To improve the overall operating
+system, it seeks to comprehend how users interact with Violet, spot trends, and make
+data-driven decisions.
 
 ## Data Collection
 

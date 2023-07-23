@@ -1,15 +1,15 @@
+---
+slug: multi-platform
+sidebar_position: 4
+description: Violet offers a unique multi-platform management solution that allows the Violet ecosystem programs to run on Linux, Windows or macOS systems.
+---
+
 # Multi-platform Management in Violet
 
 Violet offers a unique multi-platform management solution that allows the Violet
 ecosystem programs to run on Linux, Windows or macOS systems. This is made possible
 through a special wrapper called *Violet Calls Wrapper*, which can be easily downloaded
 from Violet's website.
-
-- [Multi-platform Management in Violet](#multi-platform-management-in-violet)
-  - [Integration on Different Platforms](#integration-on-different-platforms)
-  - [Installation and Setup](#installation-and-setup)
-  - [Running Violet Applications](#running-violet-applications)
-  - [Considerations and Limitations](#considerations-and-limitations)
 
 ## Integration on Different Platforms
 

@@ -1,0 +1,19 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="512" height="512">
+	<title>violet-logo-svg</title>
+	<defs>
+		<linearGradient id="g1" x1="86.5" y1="200" x2="92.2" y2="36.2" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#5d32b3"/>
+			<stop offset="1" stop-color="#8252b3"/>
+		</linearGradient>
+		<linearGradient id="g2" x1="86.5" y1="200" x2="92.2" y2="36.2" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#ae6eef"/>
+			<stop offset="1" stop-color="#7942ea"/>
+		</linearGradient>
+	</defs>
+	<style>
+		.s0 { fill: url(#g1) } 
+		.s1 { fill: url(#g2) } 
+	</style>
+	<path id="Left" class="s0" d="m2 15c51.1 0 103.1 29.6 116 66.2l53.4 151c1.7 4.8-2.4 8.8-9.3 8.8h-67.9c-6.8 0-13.7-4-15.4-8.8z"/>
+	<path id="Right" class="s1" d="m253.3 15c-51.2 0-103.1 29.6-116.1 66.2l-53.3 151c-1.7 4.8 2.4 8.8 9.2 8.8h67.9c6.8 0 13.8-4 15.5-8.8z"/>
+</svg>

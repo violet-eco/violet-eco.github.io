@@ -1,12 +1,13 @@
+---
+slug: integrity
+sidebar_position: 3
+description: Integrity is a crucial aspect of Violet, ensuring the stability, security and reliability of the system.
+---
+
 # Integrity
 
 Integrity is a crucial aspect of Violet, ensuring the stability, security
 and reliability of the system.
-
-- [Integrity](#integrity)
-  - [System immutability](#system-immutability)
-  - [Hashes](#hashes)
-  - [Checking hashes](#checking-hashes)
 
 ## System immutability
 

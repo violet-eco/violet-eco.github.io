@@ -1,7 +1,10 @@
-# Libraries in Violet
+---
+slug: libraries
+sidebar_position: 2
+description: Libraries allow similar behaviours to be shared between applications.
+---
 
-- [Libraries in Violet](#libraries-in-violet)
-  - [How libraries work?](#how-libraries-work)
+# Libraries in Violet
 
 ## How libraries work?
 

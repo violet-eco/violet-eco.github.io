@@ -1,7 +1,10 @@
-# Filesystem
+---
+slug: filesystem
+sidebar_position: 3
+description: This document describes the structure, features and behaviours to both applications and libraries.
+---
 
-- [Filesystem](#filesystem)
-  - [Structure](#structure)
+# Filesystem
 
 Violet utilizes the **Btrfs** filesystem as the primary storage system. There are three partitions used for data:
 

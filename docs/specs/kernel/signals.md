@@ -1,11 +1,13 @@
+---
+slug: signals
+sidebar_position: 4
+description: Signals are a type of KPC. They are used by Sakura to send information.
+---
+
 # Signals
 
 *Signals* are a type of [KPC](./kpc.md).
 They are used by Sakura to send information.
-
-- [Signals](#signals)
-  - [Overview](#overview)
-  - [List of signals](#list-of-signals)
 
 ## Overview
 

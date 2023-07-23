@@ -1,3 +1,9 @@
+---
+slug: devices
+sidebar_position: 7
+description: Devices are critical in providing many operations and interactions in the Violet system.
+---
+
 # Devices
 
 Devices are critical in providing many operations and interactions in the Violet system.

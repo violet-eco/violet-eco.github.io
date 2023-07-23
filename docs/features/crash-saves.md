@@ -1,15 +1,14 @@
-# Crash saves
+---
+slug: crash-saves
+sidebar_position: 1
+description: Violet has crash saves as a standard feature to prevent data loss due to system failures or unexpected terminations.
+---
+
+# Crash Saves
 
 Violet has crash saves as a standard feature to prevent data loss due to system failures
 or unexpected terminations. When misfortunes occur, such as power outages, crashes or
 unexpected shutdowns, Violet's crash save system protects Violetians' work and progress.
-
-- [Crash saves](#crash-saves)
-  - [Signal and Response Mechanism](#signal-and-response-mechanism)
-  - [Integrity and Security](#integrity-and-security)
-  - [Storage and Accessibility](#storage-and-accessibility)
-  - [Crash Save Priority Management](#crash-save-priority-management)
-  - [Recovery Options](#recovery-options)
 
 ## Signal and Response Mechanism
 
@@ -30,7 +29,7 @@ transmitted to other open applications.
 ## Integrity and Security
 
 Violet uses an integrity checker named [Eden](../technical/integrity.md)
-([GitHub](https://github.com(violet-eco/eden)) to make sure that crash save data is
+([GitHub](https://github.com(violet-eco/eden))) to make sure that crash save data is
 reliable and legitimate. For the purpose of preventing any possible tampering with or
 unauthorized access to user data, Eden verifies the integrity of crash saves.
 

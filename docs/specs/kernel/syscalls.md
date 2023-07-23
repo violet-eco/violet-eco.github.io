@@ -1,12 +1,14 @@
-# System calls
+---
+slug: syscalls
+sidebar_position: 3
+description: System calls (syscalls) are a type of KPC. They allow a process to ask Sakura to perform a task.
+---
+
+# System Calls
 
 System calls (syscalls) are a type of [KPC](./kpc.md).
 They allow a process to ask Sakura to perform
 a task.
-
-- [System calls](#system-calls)
-  - [Overview](#overview)
-  - [List of syscalls](#list-of-syscalls)
 
 ## Overview
 

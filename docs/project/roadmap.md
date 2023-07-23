@@ -1,16 +1,13 @@
-# Development Roadmap
+---
+slug: roadmap
+sidebar_position: 1
+description: This document outlines the development roadmap for Violet.
+---
+
+# Roadmap
 
 This document outlines the development roadmap for Violet. Please note that the roadmap
 is subject to change as the project evolves and new priorities emerge.
-
-- [Development Roadmap](#development-roadmap)
-  - [Phase 1: Conception \<- current stage](#phase-1-conception---current-stage)
-  - [Phase 2: Validation](#phase-2-validation)
-  - [Phase 3: Implementation](#phase-3-implementation)
-    - [Phase 3.1: Core System](#phase-31-core-system)
-    - [Phase 3.2: User Interface](#phase-32-user-interface)
-    - [Phase 3.3: Application Ecosystem](#phase-33-application-ecosystem)
-    - [Phase 3.4: Performance Optimization and Stability](#phase-34-performance-optimization-and-stability)
 
 ## Phase 1: Conception <- current stage
 

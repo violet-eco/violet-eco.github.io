@@ -1,15 +1,12 @@
-# Technical
+---
+slug: overview
+sidebar_position: 1
+description: This document provides an overview of Violet.
+---
+
+# Overview
 
 This document provides an overview of Violet.
-
-- [Technical](#technical)
-  - [Program executions](#program-executions)
-  - [Hardware access](#hardware-access)
-  - [Hardware drivers](#hardware-drivers)
-    - [Hardware access performances](#hardware-access-performances)
-  - [Permissions](#permissions)
-  - [Filesystem access](#filesystem-access)
-  - [User interface](#user-interface)
 
 ## Program executions
 

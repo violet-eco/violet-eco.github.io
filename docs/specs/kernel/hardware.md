@@ -1,15 +1,14 @@
-# Hardware
+---
+slug: hardware
+sidebar_position: 1
+description: Devices are detected during the boot process and then periodically after startup.
+---
 
-- [Hardware](#hardware)
-  - [Hardware detection](#hardware-detection)
-  - [Connection interface identifier](#connection-interface-identifier)
-  - [Connection-specific device descriptor](#connection-specific-device-descriptor)
-  - [Kernel device identifier](#kernel-device-identifier)
-  - [Raw device descriptor](#raw-device-descriptor)
+# Hardware Interaction
 
 ## Hardware detection
 
-Devices are detected during the boot process and then periodically after startup
+Devices are detected during the boot process and then periodically after startup.
 This allows to hotplug some additional devices afterwards.
 
 Not every device uses the same connection protocol,

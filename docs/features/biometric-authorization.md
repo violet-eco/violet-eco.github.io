@@ -1,3 +1,9 @@
+---
+slug: biometric-authorization
+sidebar_position: 10
+description: A cutting-edge security feature called biometric authentication enables Violetians to access their devices and applications using distinctive physical or behavioural features.
+---
+
 # Biometric Authorization
 
 A cutting-edge security feature called biometric authentication enables Violetians to

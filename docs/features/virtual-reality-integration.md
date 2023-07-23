@@ -1,3 +1,9 @@
+---
+slug: virtual-reality-integration
+sidebar_position: 9
+description: Violetians can experience computer-generated environments and interact with them in a simulated three-dimensional space using virtual reality technology.
+---
+
 # Virtual Reality Integration
 
 Violetians can experience computer-generated environments and interact with them in a
@@ -5,15 +11,6 @@ simulated three-dimensional space using virtual reality (VR), an immersive techn
 Violet is a cutting-edge operating system that can easily incorporate Virtual Reality to
 give users engaging experiences, increased productivity and fresh ways to engage with
 digital content.
-
-- [Virtual Reality Integration](#virtual-reality-integration)
-  - [Virtual Reality and Violet](#virtual-reality-and-violet)
-  - [Potential Applications of VRI in Violet](#potential-applications-of-vri-in-violet)
-    - [Immersive Computing](#immersive-computing)
-    - [VR Content Creation](#vr-content-creation)
-  - [Implementation](#implementation)
-    - [1. VR-Compatible Kernel](#1-vr-compatible-kernel)
-    - [2. VR Application Framework](#2-vr-application-framework)
 
 ## Virtual Reality and Violet
 

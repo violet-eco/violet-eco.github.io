@@ -1,3 +1,9 @@
+---
+slug: settings
+sidebar_position: 5
+description: Settings application.
+---
+
 # Settings
 
 ```plaintext

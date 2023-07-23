@@ -1,13 +1,14 @@
+---
+slug: developer-mode
+sidebar_position: 2
+description: The developer mode enables several features that are not available by default.
+---
+
 # Developer Mode
 
 The developer mode enables several features that are not
 available by default. Only administrator user get access to
 them when they are enabled.
-
-- [Developer Mode](#developer-mode)
-  - [How to enable?](#how-to-enable)
-  - [Kernel Module Development](#kernel-module-development)
-  - [Application proxies](#application-proxies)
 
 ## How to enable?
 

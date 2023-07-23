@@ -1,3 +1,8 @@
+---
+sidebar_position: 4
+description: This folder contains high-level documents that explain Violet's basic principles in a simple and understandable manner.
+---
+
 # Concepts
 
 This folder contains high-level documents that explain Violet's basic principles in a

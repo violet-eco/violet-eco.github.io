@@ -1,19 +1,10 @@
-# Privacy and Security
+---
+slug: privacy-and-security
+sidebar_position: 2
+description: Violet prioritizes data security and the platform is constructed with robust mechanisms to secure user data while maintaining a high degree of privacy and security.
+---
 
-- [Privacy and Security](#privacy-and-security)
-  - [User Data Protection](#user-data-protection)
-    - [End-to-End Encryption](#end-to-end-encryption)
-    - [Secure Storage](#secure-storage)
-    - [Data Minimization](#data-minimization)
-    - [Privacy Dashboard](#privacy-dashboard)
-    - [Privacy Mode](#privacy-mode)
-    - [Password Management](#password-management)
-  - [Secure Boot Verification](#secure-boot-verification)
-    - [Trusted Certificates](#trusted-certificates)
-    - [System Recovery and Repair](#system-recovery-and-repair)
-  - [Remote Wipe](#remote-wipe)
-    - [How Remote Wipe Works?](#how-remote-wipe-works)
-    - [Considerations for Remote Wipe](#considerations-for-remote-wipe)
+# Privacy and Security
 
 ## User Data Protection
 

@@ -1,15 +1,13 @@
+---
+slug: store
+sidebar_position: 6
+description: Violet Store is the official app store for Violet.
+---
+
 # Violet Store
 
 Violet Store is the official app store for Violet. It provides a centralized platform for
 Violetians to discover, download, and install a wide range of applications.
-
-- [Violet Store](#violet-store)
-  - [Discovering Applications](#discovering-applications)
-  - [Application Listings](#application-listings)
-  - [Installation and Updates](#installation-and-updates)
-    - [Installation Methods](#installation-methods)
-      - [Standard Installation](#standard-installation)
-      - [Volatile Installation](#volatile-installation)
 
 ## Discovering Applications
 

@@ -1,22 +1,10 @@
-# Frequently Asked Questions
+---
+slug: faq
+sidebar_position: 2
+description: Frequently Asked Questions about Violet
+---
 
-- [Frequently Asked Questions](#frequently-asked-questions)
-  - [Project-related](#project-related)
-    - [Will this project replace Windows/macOS/Linux/... one day?](#will-this-project-replace-windowsmacoslinux-one-day)
-    - [What are the hardware requirements for Violet?](#what-are-the-hardware-requirements-for-violet)
-    - [Can I use Violet on older hardware?](#can-i-use-violet-on-older-hardware)
-    - [Does Violet have a built-in software update mechanism?](#does-violet-have-a-built-in-software-update-mechanism)
-  - [Privacy and security-related](#privacy-and-security-related)
-    - [How does Violet protect my privacy?](#how-does-violet-protect-my-privacy)
-    - [Can I control the data that applications collect in Violet?](#can-i-control-the-data-that-applications-collect-in-violet)
-    - [How does Violet handle secure storage of sensitive information?](#how-does-violet-handle-secure-storage-of-sensitive-information)
-    - [Can Violet detect and mitigate security threats?](#can-violet-detect-and-mitigate-security-threats)
-    - [Does Violet have a password management feature?](#does-violet-have-a-password-management-feature)
-    - [How does Violet handle software updates to ensure security?](#how-does-violet-handle-software-updates-to-ensure-security)
-    - [Does Violet provide a secure remote wipe feature?](#does-violet-provide-a-secure-remote-wipe-feature)
-    - [How does Violet handle data backups and recovery?](#how-does-violet-handle-data-backups-and-recovery)
-    - [What does an immutable system mean in Violet?](#what-does-an-immutable-system-mean-in-violet)
-  - [How can I help?](#how-can-i-help)
+# Frequently Asked Questions (FAQ)
 
 ## Project-related
 

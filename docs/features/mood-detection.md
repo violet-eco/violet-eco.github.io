@@ -1,15 +1,15 @@
+---
+slug: mood-detection
+sidebar_position: 3
+description: Violet's Mood Detection feature uses powerful machine learning algorithms to detect facial expressions and voice clues, giving Violetians a better knowledge of their moods.
+---
+
 # Mood Detection
 
-Violet's Mood Detection tool uses powerful machine learning algorithms to detect facial
+Violet's Mood Detection feature uses powerful machine learning algorithms to detect facial
 expressions and voice clues, giving Violetians a better knowledge of their moods. This
 capacity improves user experience, allows for more tailored interactions and opens up
 new avenues for human-computer connection.
-
-- [Mood Detection](#mood-detection)
-  - [Key Features](#key-features)
-  - [Getting Started](#getting-started)
-  - [Use Cases](#use-cases)
-  - [Security and Privacy](#security-and-privacy)
 
 ## Key Features
 

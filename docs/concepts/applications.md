@@ -1,20 +1,13 @@
+---
+slug: applications
+sidebar_position: 1
+description: Applications are the primary way to run software in Violet.
+---
+
 # Applications in Violet
 
 *Applications* are the primary way to run software in Violet. They are responsible for
 executing code and providing functionality to the users.
-
-- [Applications in Violet](#applications-in-violet)
-  - [Application Types](#application-types)
-  - [Installation Methods](#installation-methods)
-    - [From the store](#from-the-store)
-    - [Sideloading](#sideloading)
-    - [Volatile applications](#volatile-applications)
-  - [Commands](#commands)
-  - [System applications](#system-applications)
-  - [Application Development](#application-development)
-    - [Application SDK](#application-sdk)
-    - [Open Source Community](#open-source-community)
-  - [Services](#services)
 
 ## Application Types
 
@@ -46,9 +39,11 @@ Sideloading refers to the installation of an application directly from its packa
 Violetians can switch between sideloading modes in the Settings, depending on their
 desired level of security and control over application installation.
 
-**Note:** By default, sideloading is disabled in Violet for security reasons. Users can
+:::caution
+By default, sideloading is disabled in Violet for security reasons. Users can
 enable sideloading in the system settings, but it is recommended to exercise caution and
 only install applications from trusted sources.
+:::
 
 ### Volatile applications
 

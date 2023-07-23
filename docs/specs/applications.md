@@ -1,25 +1,18 @@
+---
+slug: applications
+sidebar_position: 2
+description: This document describes application-specific structure and behaviour.
+---
+
 # Applications
 
 This document describes application-specific structure and behaviour.
-
-- [Applications](#applications)
-  - [Application package](#application-package)
-    - [Content](#content)
-    - [Pre-compiled applications](#pre-compiled-applications)
-    - [Embedding libraries](#embedding-libraries)
-    - [Values encoding](#values-encoding)
-    - [Returning and failing](#returning-and-failing)
-    - [Volatile applications](#volatile-applications)
-  - [Commands](#commands)
-    - [Execution Context](#execution-context)
-    - [Startup Reason](#startup-reason)
-    - [Context header](#context-header)
 
 ## Application package
 
 Application packages are files that have either the
 `*.vap` (Violet Application Package) or
-`*.vva` (Violet Volatile Application).
+`*.vva` (Violet Volatile Application) extension.
 
 ### Content
 

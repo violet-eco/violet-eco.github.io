@@ -1,11 +1,10 @@
-# What are users?
+---
+slug: users
+sidebar_position: 3
+description: User accounts allow multiple Violetians to use a Violet system.
+---
 
-- [What are users?](#what-are-users)
-  - [The Concept](#the-concept)
-  - [User Types](#user-types)
-  - [Dangers of an Administrator Account](#dangers-of-an-administrator-account)
-  - [User Privileges Extension (UPEX)](#user-privileges-extension-upex)
-  - [Groups](#groups)
+# Users in Violet
 
 ## The Concept
 

@@ -1,3 +1,9 @@
+---
+slug: iona
+sidebar_position: 6
+description: The Input/Output Nano-manager, also known as Iona, is an integral part of the Violet system responsible for handling input/output requests from processes.
+---
+
 # I/O Nano-manager
 
 The Input/Output Nano-manager, also known as *Iona*, is an integral part of the
@@ -7,10 +13,6 @@ coordinating the flow of data between them.
 
 Iona is represented by the [`sys::hw`](../specs/services/hw.md) service, which provides a
 unified interface for accessing and controlling various hardware devices within the system.
-
-- [I/O Nano-manager](#io-nano-manager)
-  - [Hardware Access](#hardware-access)
-    - [Requests Priority](#requests-priority)
 
 ## Hardware Access
 

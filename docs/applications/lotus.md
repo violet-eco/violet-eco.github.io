@@ -1,28 +1,12 @@
+---
+slug: lotus
+sidebar_position: 4
+description: Lotus is the default desktop environment of Violet.
+---
+
 # Lotus
 
 Lotus is the default desktop environment of Violet.
-
-- [Lotus](#lotus)
-  - [Introduction](#introduction)
-  - [Customizability](#customizability)
-  - [Notifications](#notifications)
-  - [Integrated Cloud Services](#integrated-cloud-services)
-    - [Cloud Storage](#cloud-storage)
-    - [Real-Time File Synchronization](#real-time-file-synchronization)
-    - [Secure File Sharing and Collaboration](#secure-file-sharing-and-collaboration)
-    - [Advanced Data Security](#advanced-data-security)
-  - [Accessibility Features](#accessibility-features)
-    - [High Contrast Themes](#high-contrast-themes)
-    - [Keyboard Accessibility](#keyboard-accessibility)
-    - [Text-to-Speech (TTS)](#text-to-speech-tts)
-    - [Speech Recognition](#speech-recognition)
-    - [Gesture-Based Navigation](#gesture-based-navigation)
-    - [AI-Powered Personal Assistance](#ai-powered-personal-assistance)
-    - [Multimodal Feedback](#multimodal-feedback)
-    - [Eye Tracking Integration](#eye-tracking-integration)
-  - [Emotional Interface](#emotional-interface)
-    - [Personalized User Experience](#personalized-user-experience)
-    - [Emotionally Responsive Applications](#emotionally-responsive-applications)
 
 ## Introduction
 

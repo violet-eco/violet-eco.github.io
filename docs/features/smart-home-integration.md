@@ -1,9 +1,15 @@
+---
+slug: smart-home-integration
+sidebar_position: 5
+description: Violet's Smart Home Integration enables Violetians to control and manage their connected devices directly from the operating system.
+---
+
 # Smart Home Integration
 
-Violet's Smart Home Integration enables Violetians to control and manage their connected devices directly from the operating system. Violet delivers a centralized center for controlling many parts of a user's smart home by connecting with smart home devices, giving ease, automation, and better functionality.
-
-- [Smart Home Integration](#smart-home-integration)
-  - [List of Supported Smart Home Devices](#list-of-supported-smart-home-devices)
+Violet's Smart Home Integration enables Violetians to control and manage their connected
+devices directly from the operating system. Violet delivers a centralized center for
+controlling many parts of a user's smart home by connecting with smart home devices,
+giving ease, automation, and better functionality.
 
 ## List of Supported Smart Home Devices
 

@@ -1,14 +1,15 @@
+---
+slug: automated-file-organization
+sidebar_position: 6
+description: The automated file organizing function in Violet is made to make managing files on Violetians' computer simple and effective.
+---
+
 # Automated File Organization
 
-The automated file organizing function in Violet is made to make managing files on your
-computer simple and effective. Violet intelligently organizes your files into the proper
-folders or tags by analyzing their content and metadata using machine learning algorithms.
-
-- [Automated File Organization](#automated-file-organization)
-  - [Intelligent Folder Recommendations](#intelligent-folder-recommendations)
-  - [Intelligent File Versioning](#intelligent-file-versioning)
-  - [Integration with Productivity Apps](#integration-with-productivity-apps)
-  - [Customization and Learning](#customization-and-learning)
+The automated file organizing function in Violet is made to make managing files on
+Violetians' computer simple and effective. Violet intelligently organizes Violetians'
+files into the proper folders or tags by analyzing their content and metadata using
+machine learning algorithms.
 
 ## Intelligent Folder Recommendations
 

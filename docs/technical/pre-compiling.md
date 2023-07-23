@@ -1,3 +1,9 @@
+---
+slug: pre-compiling
+sidebar_position: 5
+description: With pre-compilation, Violet apps naturally become multiplatform and can run smoothly on different operating systems including Windows, Linux, macOS and more.
+---
+
 # Pre-compiling
 
 Traditionally, software programs are distributed as binaries specific to a particular
@@ -5,14 +11,7 @@ platform, such as Windows, Linux, macOS, and to a particular architecture, such 
 ARM. This can lead to limited availability and compatibility for users on different
 systems.
 
-To meet chis challenge and provide a more stable and secure environment for native programs, Violet offers a approach. In this approach, Violet applications are distributed as Violet Pre-compiled Programs (VPP) using a special low-level language called Rosa
-
-- [Pre-compiling](#pre-compiling)
-  - [How Does Pre-Compilation Work?](#how-does-pre-compilation-work)
-    - [Multi-Platform and Multi-Compatibility](#multi-platform-and-multi-compatibility)
-    - [Optimized Apps](#optimized-apps)
-    - [Efficient Build Process](#efficient-build-process)
-  - [Compatibility With non-Violet Operating Systems](#compatibility-with-non-violet-operating-systems)
+To meet chis challenge and provide a more stable and secure environment for native programs, Violet offers a approach. In this approach, Violet applications are distributed as Violet Pre-compiled Programs (VPP) using a special low-level language called Rosa.
 
 ## How Does Pre-Compilation Work?
 

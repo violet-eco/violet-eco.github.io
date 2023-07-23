@@ -1,3 +1,9 @@
+---
+slug: dahlia
+sidebar_position: 1
+description: Dahlia is the toolchain required to build Violet applications.
+---
+
 # Dahlia
 
 Dahlia is the toolchain required to build Violet applications.

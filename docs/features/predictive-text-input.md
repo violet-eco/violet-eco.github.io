@@ -1,3 +1,9 @@
+---
+slug: predictive-text-input
+sidebar_position: 7
+description: With Violet's powerful predictive text input feature, Violetians can improve their typing experience by having words and phrases suggested as they type.
+---
+
 # Predictive Text Input
 
 With Violet's powerful predictive text input feature, Violetians can improve their typing
@@ -6,12 +12,6 @@ predicted using machine learning algorithms based on the sentence's context, pas
 input, and linguistic patterns. With the help of this sophisticated feature, users will
 be able to type more quickly, accurately, and productively in a variety of languages and
 applications.
-
-- [Predictive Text Input](#predictive-text-input)
-  - [Personalized Vocabulary Learning](#personalized-vocabulary-learning)
-  - [Multilingual Support](#multilingual-support)
-  - [Real-Time Autocorrection](#real-time-autocorrection)
-  - [Natural Language Understanding (NLU)](#natural-language-understanding-nlu)
 
 ## Personalized Vocabulary Learning
 

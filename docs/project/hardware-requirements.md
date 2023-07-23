@@ -1,3 +1,9 @@
+---
+slug: hardware-requirements
+sidebar_position: 3
+description: The essential hardware that Violet needs to function is described in this document.
+---
+
 # Hardware requirements
 
 The essential hardware that Violet needs to function is described in this document. This

@@ -1,3 +1,9 @@
+---
+slug: permissions
+sidebar_position: 4
+description: Permissions are used to control what applications can do or not.
+---
+
 # Permissions
 
 Permissions are used to control what applications can
