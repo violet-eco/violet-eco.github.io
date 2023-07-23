@@ -1,0 +1,91 @@
+/**
+ * Shades of Purple Theme — for Highlightjs.
+ *
+ * @author (c) Ahmad Awais <https://twitter.com/mrahmadawais/>
+ * @link GitHub Repo → https://github.com/ahmadawais/Shades-of-Purple-HighlightJS
+ * @version 1.5.0
+ */
+
+.violet code {
+	background: #2d2b57;
+  color: #fff;
+}
+
+.violet code .hljs-title {
+	color: #fad000;
+	font-weight: normal;
+}
+
+.violet code .hljs-name {
+	color: #a1feff;
+}
+
+.violet code .hljs-tag {
+	color: #ffffff;
+}
+
+.violet code .hljs-attr {
+	color: #f8d000;
+	font-style: italic;
+}
+
+.violet code .hljs-built_in,
+.hljs-selector-tag,
+.hljs-section {
+	color: #fb9e00;
+}
+
+.violet code .hljs-keyword {
+	color: #fb9e00;
+}
+
+.violet code .hljs,
+.hljs-subst {
+	color: #e3dfff;
+}
+
+.violet code .hljs-string,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-code,
+.hljs-regexp,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-template-tag,
+.hljs-quote,
+.hljs-deletion {
+	color: #4cd213;
+}
+
+.violet code .hljs-meta,
+.hljs-meta-string {
+	color: #fb9e00;
+}
+
+.violet code .hljs-comment {
+	color: #ac65ff;
+}
+
+.violet code .hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-name,
+.hljs-strong {
+	font-weight: normal;
+}
+
+.violet code .hljs-literal,
+.hljs-number {
+	color: #fa658d;
+}
+
+.violet code .hljs-emphasis {
+	font-style: italic;
+}
+
+.violet code .hljs-strong {
+	font-weight: bold;
+}
