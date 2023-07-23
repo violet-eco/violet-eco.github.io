@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkviolet_eco_github_io=self.webpackChunkviolet_eco_github_io||[]).push([[7359],{4986:e=>{e.exports=JSON.parse('{"label":"violet","permalink":"/blog/tags/violet","allTagsPath":"/blog/tags","count":1}')}}]);
