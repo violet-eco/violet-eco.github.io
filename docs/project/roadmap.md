@@ -14,54 +14,58 @@ is subject to change as the project evolves and new priorities emerge.
 
 ## Phase 1: Conception <- current stage
 
-The conception phase of Violet project involves documenting and conceptualizing how the
-system will work at both high-level and low-level aspects. This phase focuses on defining
-the system's concepts, features, native applications, as well as the design and
-management of processes and the kernel.
+Documenting and conceiving how the system would function from both a high-level and low-level perspective are tasks involved in the conception phase of the Violet project. The principles, features, and native applications of the system are defined at this phase, along with the design and administration of the kernel and processes.
 
 ## Phase 2: Validation
 
-The validation phase of Violet involves reviewing and validating the conception documents
+Reviewing and validating the conception documents that were produced during the previous
+phase is part of Violet's validation process. The validation phase's goal is to confirm
+that the proposed system design is complete, coherent and in line with the project's
+objectives.
 
-that were created during the previous phase. The purpose of the validation phase is to
-ensure that the conceived system design is comprehensive, coherent, and aligned with the
-project's goals.
+Each conception document will be carefully examined, studied and assessed during the
+validation phase. The goal of the validation phase is to find any holes, contradictions
+or possible problems in the system design.
 
-During the validation phase, each conception document will be thoroughly reviewed,
-analyzed, and evaluated. The validation process aims to identify any gaps, inconsistencies, or potential issues in the system design.
+A conception document will be used as the basis for the development process and as a
+guide for the next phases of execution once it has been confirmed. Even while breaking
+changes can still be made after validation, it is best to avoid them in order to preserve
+the stability and coherence of the system architecture.
 
-Once a conception document has been validated, it will be considered as a foundation for
-the development process and will serve as a reference for subsequent implementation
-phases. While breaking changes after validation are still possible, they should be
-avoided as much as possible to maintain stability and consistency in the system design.
-
-The validation phase ensures that the conceived system design meets the project's
-requirements, aligns with the project's goals, and provides a solid basis for the
-subsequent development and implementation stages.
+The validation phase makes that the proposed system design satisfies the project's
+criteria, is in line with its objectives and serves as a firm foundation for the
+development and implementation phases that follow.
 
 ## Phase 3: Implementation
 
 ### Phase 3.1: Core System
 
-- **Kernel Development:** Build the microkernel of the operating system with essential functionalities, including process management, memory management, and basic system services.
-- **System Initialization:** Implement the boot process, system initialization routines, and device detection mechanisms.
-- **Filesystem Implementation:** Develop the Btrfs-based filesystem for storage management, file organization, and data integrity.
-- **System Services:** Create essential system services, such as hardware access, filesystem access, networking, and security services.
+- **Kernel development:** Create the operating system's microkernel with necessary features, such as process management, memory management, and foundational system functions.
+
+- **System initialization:** Implement the system initialization procedures, device detection techniques and boot process.
+
+- **Filesystem Implementation:** Create the Btrfs-based filesystem for storage management, file organization, and data integrity.
+
+- **System Services:** Create crucial system services, such as networking, filesystem access, hardware access and security services.
 
 ### Phase 3.2: User Interface
 
-- **Desktop Environment:** Design and implement a modern and intuitive desktop environment for user interaction, including a graphical user interface, window management, taskbar, and system tray.
-- **User Accounts and Permissions:** Develop user account management functionalities, including user creation, login/logout, and permissions management.
-- **Application Framework:** Build an application framework to support the development, installation, and management of user applications, including package management and application lifecycle management.
+- **Desktop Environment:** Design and implement a cutting-edge desktop environment that is simple to use, complete with a graphical user interface, window management, taskbar, and system tray.
+
+- **User Accounts and Permissions:** Create user account management features, such as login/logout, permissions management, and user creation.
+
+- **Application Framework:** Create a framework for managing user applications, including package management and application lifecycle management, during the development, installation and management phases.
 
 ### Phase 3.3: Application Ecosystem
 
-- **Violet Store:** Establish an official application store where users can discover, download, and install applications for Violet.
-- **Application Development:** Encourage and support third-party developers to create applications for Violet, providing documentation, SDKs, and development tools.
-- **Application Compatibility:** Improve compatibility with existing applications by creating compatibility layers, porting tools, and ensuring support for common application frameworks.
+- **Violet Store:** Create a dedicated application store where users can browse, download and install Violet apps.
+
+- **Application Development:** Support and encourage the creation of apps for Violet by third parties by making documentation, SDKs and development tools available.
+
+- **Application Compatibility:** By creating compatibility layers, implementing tools, and supporting well-liked application frameworks, it is possible to improve compatibility with existing applications.
 
 ### Phase 3.4: Performance Optimization and Stability
 
-- **Performance Optimization:** Continuously optimize system performance, reducing boot time, improving resource utilization, and enhancing overall system responsiveness.
-- **Stability and Bug Fixes:** Address any stability issues, software bugs, and performance bottlenecks through rigorous testing, bug fixing, and quality assurance processes.
-- **Security Enhancements:** Implement robust security measures, including vulnerability assessments, security patches, and system hardening techniques, to ensure the safety and integrity of the operating system.
+- **Performance Optimization:** Continuously improve system performance by cutting down on boot time, increasing resource efficiency and boosting responsiveness across the board.
+- **Stability and Bug Fixes:** Apply stringent testing, bug-fixing, and quality assurance procedures to any stability concerns, software flaws and performance bottlenecks.
+- **Security Enhancements:** To protect the integrity and safety of Violet, use strong security procedures, such as vulnerability assessments, security patches and system hardening approaches.
