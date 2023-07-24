@@ -11,7 +11,7 @@ For an overview of the system, you can view the [overview document](overview.md)
 
 - [Developer Mode](./developer-mode.md) — Learning the secrets of Violet
 - [Integrity](./integrity.md) — Ensuring the stability, security and reliability of Violet
-- [Multi-Platform Management](./multi-platform.md) — The place of Violet apps on different platforms
+- [Universal Compatibility Layer](./universal-compatibility-layer.md) — The place of Violet apps on different platforms
 - [Pre-compiling](./pre-compiling.md) — Faciliating application deployment
 - [I/O Nano-Manager](./iona.md) — The communication with hardware
 - [Devices](./devices.md) — How devices are handled
