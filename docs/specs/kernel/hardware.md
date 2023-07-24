@@ -6,7 +6,7 @@ description: Devices are detected during the boot process and then periodically 
 
 # Hardware Interaction
 
-## Hardware detection
+## Hardware Detection
 
 Devices are detected during the boot process and then periodically after startup.
 This allows to hotplug some additional devices afterwards.
@@ -18,9 +18,9 @@ detection varies by connection:
 - IDE/SATA devices are detected through the IDE/SATA controller
 - USB devices are enumerated through the USB protocol stack
 
-## Connection interface identifier
+## Connection Interface Identifier
 
-The connection interface identifier (CII) is a 4-byte number describing what a device is connected to:
+The Connection Interface Identifier (CII) is a 4-byte number describing what a device is connected to:
 
 - Connection type (1 byte)
   - `0x01`: PCI-Express
@@ -32,20 +32,20 @@ The connection interface identifier (CII) is a 4-byte number describing what a d
 - Bus number (1 byte)
 - Port number (2 bytes)
 
-## Connection-specific device descriptor
+## Connection-Specific Device Descriptor
 
 All hardware devices output an identifier whose format is
 normalized depending on the connection type (PCI-Express, IDE, SATA, ...).
 This identifier is called the connection-specific device descriptor (CSDD).
 
-## Kernel device identifier
+## Kernel Device Identifier
 
 The kernel device identifier (KDI) is an 8-byte identifier
 computed from the [CII](#connection-interface-identifier)
 and the [CSDD](#connection-specific-device-descriptor).
 It is unique accross all devices.
 
-## Raw device descriptor
+## Raw Device Descriptor
 
 RDD is a data structure made of the followings:
 

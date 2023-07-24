@@ -42,6 +42,6 @@ Sakura reads it from a specific register and does what needs to be done.
 If it is, the kernel simply makes the process jump back to the address it
 was to before the signal was emitted, and switch to the original thread.
 
-## List of signals
+## List of Signals
 
 **TODO**

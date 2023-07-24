@@ -21,7 +21,7 @@ Violet supports a variety of application types, each of which has a special func
 
 Violet applications are installed using application packages. Several installation techniques are available:
 
-### From the store
+### From Violet Store
 
 The [Violet Store](../applications/store.md) is where you may download and install
 applications. Users may explore and install programs using Store's unified platform.
@@ -45,7 +45,7 @@ enable sideloading in the system settings, but it is recommended to exercise cau
 only install applications from trusted sources.
 :::
 
-### Volatile applications
+### Volatile Applications
 
 *Volatile applications* offer an alternative way to run applications without installing
 them to disk permanently. Violet provides different modes for running volatile
@@ -84,7 +84,7 @@ short form `get_time` can be used directly.
 
 Commands in Violet work by executing the application within a specific execution context.
 
-## System applications
+## System Applications
 
 Some applications are part of the system itself and are known as system applications.
 These applications have special privileges and access to system-reserved features. System

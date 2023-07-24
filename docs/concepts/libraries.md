@@ -6,7 +6,7 @@ description: Libraries allow similar behaviours to be shared between application
 
 # Libraries in Violet
 
-## How libraries work?
+## How Libraries Work?
 
 Unlike applications, libraries can be installed in multiple
 versions. This means you can have three versions of the same

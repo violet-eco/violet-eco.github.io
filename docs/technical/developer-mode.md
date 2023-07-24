@@ -10,7 +10,7 @@ The developer mode enables several features that are not
 available by default. Only administrator user get access to
 them when they are enabled.
 
-## How to enable?
+## How to Enable?
 
 Developer mode can be enabled either by typing the following command
 in the terminal:
@@ -38,7 +38,7 @@ and unloaded into the running kernel.
 Kernel modules have direct access to various services and resources provided by Sakura,
 such as memory management, process scheduling, IPC.
 
-## Application proxies
+## Application Proxies
 
 Application proxies collect all calls made by the application to the system.
 It is useful for applications debugging.

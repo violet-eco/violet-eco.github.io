@@ -4,7 +4,7 @@ sidebar_position: 3
 description: The essential hardware that Violet needs to function is described in this document.
 ---
 
-# Hardware requirements
+# Hardware Requirements
 
 The essential hardware that Violet needs to function is described in this document. This
 also implies that Violet will work on any machine that has these attributes.

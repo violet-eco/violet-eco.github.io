@@ -9,7 +9,7 @@ description: Integrity is a crucial aspect of Violet, ensuring the stability, se
 Integrity is a crucial aspect of Violet, ensuring the stability, security
 and reliability of the system.
 
-## System immutability
+## System Immutability
 
 The `/sys` folder in Violet is designed as immutable, meaning that
 it cannot be modified by any user or process, including the main administrator.
@@ -24,7 +24,7 @@ Violet employs the [`BLAKE3`](https://github.com/BLAKE3-team/BLAKE3) hashing alg
 When these files are written or updated, their contents are hashed, and the resulting
 hash values are stored in the system's hash registry, located at `/etc/sys/hashes`.
 
-## Checking hashes
+## Checking Hashes
 
 During the boot process or when critical files are accessed, Violet performs integrity
 checks by recalculating the hashes of the files and comparing them with the values stored

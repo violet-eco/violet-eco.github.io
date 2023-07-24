@@ -41,6 +41,6 @@ The codes of system calls are also categorized as follows:
 - `0x50` - `0x5F`: hardware interaction
 - **TODO...**
 
-## List of syscalls
+## List of System Calls
 
 **TODO**

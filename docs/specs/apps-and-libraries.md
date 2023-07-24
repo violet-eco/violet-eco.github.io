@@ -4,12 +4,12 @@ sidebar_position: 1
 description: This document describes the structure, features and behaviours to both applications and libraries.
 ---
 
-# Applications and libraries
+# Applications and Libraries
 This document describes the structure, features and behaviours
 to both [applications](../concepts/applications.md) and
 [libraries](../concepts/libraries.md).
 
-## Name and slug
+## Name and Slug
 Each application has a name as well as a slug. The name can any valid UTF-8 string, while the slug must respect several rules:
 - Only lowercase letters, underscores and digits
 - Must not start by a digit
@@ -19,7 +19,7 @@ Each application has a name as well as a slug. The name can any valid UTF-8 stri
 
 By default, the slug is auto-generated from the name, but it can also be customized.
 
-## Application identifier
+## Application Identifier
 The *Application identifier* (AID) is created using the slug and the developer's identifier (DID).
 
 For example, an application with slug of `app` made by a developer

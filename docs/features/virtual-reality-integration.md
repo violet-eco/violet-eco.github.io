@@ -40,7 +40,7 @@ interface and strong rendering capabilities.
 
 ## Implementation
 
-### 1. VR-Compatible Kernel
+### VR-Compatible Kernel
 
 Sakura, a VR-compatible microkernel, is the foundation of Violet's implementation of
 virtual reality. Sakura offers the essential low-level support for VR gear and
@@ -48,6 +48,6 @@ peripherals and is intended to tackle tasks that are unique to VR with efficienc
 controls the relationship between the VR headset and the operating system, enabling
 effective data flow and communication.
 
-### 2. VR Application Framework
+### VR Application Framework
 
 Developers can construct VR-compatible programs and experiences using Violet's full VR application platform. The framework offers APIs and resources for handling user input, rendering 3D content, and communicating with VR accessories. This framework may be used by developers to create engaging VR content that smoothly connects with the Violet environment.

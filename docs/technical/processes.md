@@ -9,7 +9,7 @@ description: Violet's processes are designed with similarities to Linux processe
 Violet's processes are designed with similarities to Linux processes while introducing
 some additional features.
 
-## Process types
+## Process Types
 
 There are different types of processes in Violet:
 
@@ -17,7 +17,7 @@ There are different types of processes in Violet:
 - **Application Processes:** These processes are created by applications and run within the Violet environment.
 - **Worker Processes:** Worker processes are created by applications to handle specific tasks or operations.
 
-## Child processes
+## Child Processes
 
 In Violet, a process has the ability to create child processes. When a child process is
 created, it is essentially a 1:1 copy of the parent process, but with its own unique

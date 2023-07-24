@@ -4,7 +4,7 @@ sidebar_position: 5
 description: With pre-compilation, Violet apps naturally become multiplatform and can run smoothly on different operating systems including Windows, Linux, macOS and more.
 ---
 
-# Pre-compiling
+# Pre-Compiling
 
 Traditionally, software programs are distributed as binaries specific to a particular
 platform, such as Windows, Linux, macOS, and to a particular architecture, such as x86 or
@@ -36,7 +36,7 @@ Despite advanced optimizations applied during pre-compile, Violet maintains an e
 build process. VPP files can be compiled quickly, allowing users to install and run
 applications without significant delays or long wait times.
 
-## Compatibility With non-Violet Operating Systems
+## Compatibility with non-Violet Operating Systems
 
 Being a multiplatform technology, Rosa can also be run on non-Violet operating systems
 using a lightweight wrapper provided by Violet. Available for download from Violet's

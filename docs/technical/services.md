@@ -8,7 +8,7 @@ description: In Violet, a service is a process that launches at startup and perf
 
 In Violet, a *service* is a process that launches at startup and performs specific tasks or provides functionality to the system or applications. Services can be categorized into two types: *system services* and *application services*.
 
-## System services
+## System Services
 
 System services are native applications that are an integral part of the Violet operating
 system. These services have system privileges, allowing them to perform various tasks and
@@ -22,7 +22,7 @@ in the background, ensuring the smooth operation of the operating system.
 
 Check [this document](../specs/services/README.md) for further details.
 
-## Application services
+## Application Services
 
 Application services, also known as *userspace services*, are services provided by
 applications themselves. These services extend the functionality of applications and

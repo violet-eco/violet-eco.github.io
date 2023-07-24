@@ -9,7 +9,7 @@ description: Permissions are used to control what applications can do or not.
 Permissions are used to control what applications can
 do or not.
 
-## Level of permissions
+## Level of Permissions
 
 Permissions are divided into the following categories:
 
@@ -27,13 +27,13 @@ sensitive and privacy permissions while using them, a popup will shown:
 - For the current session
 - Forever
 
-## User privileges
+## User Privileges
 
 Some permissions require the user to have specific privileges,
 such as being administrator. These permissions are marked
 in this document with an `{A}`.
 
-## List of permissions
+## List of Permissions
 
 ### Devices
 
@@ -52,7 +52,7 @@ in this document with an `{A}`.
 - (S) `fs.filesystems.watch`: be notified when a filesystem is (un)mounted
 - (S) `fs.filesystems.format`: format an existing filesystem
 
-### Filesystem elements
+### Filesystem Elements
 
 - (S) `fs.items.exists`: check if an item exists at a given path
 - (S) `fs.items.metadata`: get metadata on a given item
@@ -93,7 +93,7 @@ in this document with an `{A}`.
 - (S) + {A} `programs.running.processes`: get the list of running processes
 - (S) `programs.running.apps`: get the list of running applications
 
-### System-reserved permissions
+### System-reserved Permissions
 
 - `sys.process.kill`: suspend or kill external processes
 - `sys.process.signal`: send a signal to an external process

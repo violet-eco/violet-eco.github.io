@@ -8,7 +8,7 @@ description: This document describes application-specific structure and behaviou
 
 This document describes application-specific structure and behaviour.
 
-## Application package
+## Application Package
 
 Application packages are files that have either the
 `*.vap` (Violet Application Package) or
@@ -20,13 +20,13 @@ VAP and VVA files are ZStandard archives that contain `manifest.toml`
 describing the archive and `hash.md5` file that confirm that the archive
 is not corrupted.
 
-### Pre-compiled applications
+### Pre-compiled Applications
 
 By default, the system tries to install
 [pre-compiled programs](../technical/pre-compiling.md) from
 the application's package if possible.
 
-### Embedding libraries
+### Embedding Libraries
 
 Although it's a better practice to split applications and libraries
 into different packages, sometimes it's more easy to embed both in
@@ -37,7 +37,7 @@ the same package, especially in two cases:
 
 For such scenarios, it's possible for an application package to embed one or more libraries, and publish them all at once.
 
-### Values encoding
+### Value Encoding
 
 The application's startup arguments and output value use the following encoding:
 
@@ -54,15 +54,15 @@ The application's startup arguments and output value use the following encoding:
 |`0x08`|`command`|Shell command|Represented as an UTF-8 string|
 |`0x09`|`stream`|Pipe RC|RC identifier (8 bytes)|
 
-### Returning and failing
+### Returning and Failing
 
 The value must be returned using the `CMDOUT` pipe. The data sent through
-this pipe must follow the above [encoding](#values-encoding).
+this pipe must follow the above [encoding](#value-encoding).
 
 A command may also fail. To incidate so, the process must send the `0xFF`
 value through the pipi.
 
-### Volatile applications
+### Volatile Applications
 
 [Volatile applications](../concepts/applications.md#volatile-applications)
 cannot expose commands globally as they are technically not installed.
@@ -94,7 +94,7 @@ It's one-byte long and made of following bits:
 - Bit 5: set if the application was started automatically after a crash
 - Bit 6: set if the application's raw output will be read (e.g. through the use of a shell operator)
 
-### Context header
+### Context Header
 
 - The startup reason (1 byte)
 - Informations (1 byte)
