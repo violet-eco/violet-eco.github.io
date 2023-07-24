@@ -4,7 +4,7 @@ sidebar_position: 4
 description: Violet offers a unique multi-platform management solution that allows the Violet ecosystem programs to run on Linux, Windows or macOS systems.
 ---
 
-# Multi-platform Management in Violet
+# Multi-Platform Management
 
 Violet offers a unique multi-platform management solution that allows the Violet
 ecosystem programs to run on Linux, Windows or macOS systems. This is made possible
