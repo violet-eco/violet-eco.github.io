@@ -1,106 +1,51 @@
 ---
 slug: faq
 sidebar_position: 2
-description: Frequently Asked Questions about Violet
+description: You've got questions? We've got answers!
 ---
 
 # Frequently Asked Questions (FAQ)
 
-## Project-related
+## What's the deal with Violet?
 
-### Will this project replace Windows/macOS/Linux/... one day?
+Violet is the *coolest* new operating system in town! It's all about giving you a
+one-of-a-kind computing experience with some futuristic features like mood detection, automatic file organization and an emotional interface.
 
-No, it's impossible. Because ignoring backward compatibility
-for legacy architectures and already existing software is
-simply not viable for an operating system. Users first
-look at applications in an operating system, **then** the system
-itself - for security, stability, performance, etc.
+## Will Violet work on my old device?
 
-Imagine that someone offers you a great operating system, but
-there are almost no applications in it. Would you still use
-this OS instead of Windows/macOS/Linux? Of course no!
+Violet comes with some pretty heavy-duty features that might be a bit too much for older
+computers to handle. Running Violet on older hardware may result in reduced performance or compatibility issues.
 
-That's why this project is **purely theoretical**.
+## Why Rust?
 
-### What are the hardware requirements for Violet?
+Rust was chosen as the primary programming language for Violet due to its emphasis on memory safety, concurrency and performance. Its strong type system and strict borrowing rules help prevent common bugs and vulnerabilities, making it an ideal choice for building a secure and reliable operating system.
 
-Please refer to [this document](project/hardware-requirements.md).
+## What's the current state of Violet?
 
-### Can I use Violet on older hardware?
+Violet is currently in its very early stages. You can follow its progress on our
+[blog posts](https://violet-eco.github.io/blog/),
+[GitHub organization](https://github.com/violet-eco/) and [Roadmap](./project/roadmap.md)
+document.
 
-Violet's system requirements may vary, but it is optimized for modern
-hardware configurations. Running Violet on older hardware may result in
-reduced performance or compatibility issues.
+## Will this project replace Windows, macOS, Linux, ... one day?
 
-### Does Violet have a built-in software update mechanism?
+While Violet is a next-generation operating system with cutting-edge features, it's essential to acknowledge that replacing established operating systems like Windows, macOS or Linux is a massive challenge. Maintaining compatibility with existing software and supporting legacy architectures is crucial for users.
 
-Yes, Violet includes an automatic software update mechanism that keeps the operating
-system and installed applications up to date with the latest bug fixes, security patches,
-and new features.
+Imagine having a fantastic operating system but missing out your favourite apps and tools
+that you rely on daily. It's a deal-breaker for must users and we totally get it! 😅
 
-## Privacy and security-related
-
-### How does Violet protect my privacy?
+## How does Violet protect my privacy?
 
 Violet prioritizes user privacy and implements various measures to safeguard personal
 data. It incorporates features like data encryption, user consent controls, and data
 minimization practices to ensure privacy protection.
-
-### Can I control the data that applications collect in Violet?
-
-Yes, Violet provides data collection controls that allow users to manage and control the
-data collected by applications. Through the Privacy Dashboard, users can specify the
-types of data that applications can access and grant or revoke permissions accordingly.
-
-### How does Violet handle secure storage of sensitive information?
-
-Violet employs secure storage mechanisms to protect sensitive user information. It utilizes encryption algorithms and secure key management practices to ensure that data stored on the system remains confidential and protected from unauthorized access.
-
-### Can Violet detect and mitigate security threats?
-
-Yes, Violet incorporates advanced security features and employs robust security protocols
-to detect and mitigate security threats. It includes features like secure boot
-verification, system-wide monitoring, and regular security updates to proactively address
-potential vulnerabilities.
-
-### Does Violet have a password management feature?
-
-Yes, Violet includes a built-in password management feature that allows users to securely
-store and manage their passwords. It offers features like password generation,
-encryption, and synchronization across devices for enhanced password security.
-
-### How does Violet handle software updates to ensure security?
-
-Violet employs a secure software update mechanism that regularly delivers updates to the
-operating system and installed applications. These updates include bug fixes, security
-patches, and performance enhancements to keep the system secure and up to date.
-
-### Does Violet provide a secure remote wipe feature?
-
-Yes, Violet includes a secure remote wipe feature that allows users to remotely erase
-their device's data in case of loss or theft. This ensures that personal information
-remains protected and inaccessible to unauthorized individuals.
-
-### How does Violet handle data backups and recovery?
-
-Violet offers data backup and recovery options to protect against data loss. Users can
-schedule regular backups and store them securely, allowing for easy data recovery in case
-of accidental deletion or system failure.
-
-### What does an immutable system mean in Violet?
-
-In Violet, an immutable system refers to the core principle of maintaining the integrity
-and security of the operating system by making it read-only or unchangeable. This means
-that the system files, configurations, and critical components are protected and cannot
-be modified, tampered with, or altered by users or malicious software. The immutability
-of the system helps to prevent unauthorized changes, enhance stability, and reduce the
-risk of security vulnerabilities.
 
 ## How can I help?
 
 Help is very welcome but there's not many things to help with currently,
 as the system is still being designed. You can still help by suggesting
 improvements or fixing an error (whatever it is, a design problem or a simple typo)
-by [submitting an issue](https://github.com/violet-eco/docs/issues/new/choose).
+by [submitting an issue](https://github.com/violet-eco/violet-eco.github.io/issues/new/choose).
+Your contributions are valuable and greatly appreciated!
 
 Thank you for joining the community of Violetians.
