@@ -8,48 +8,85 @@ description: Devices are detected during the boot process and then periodically 
 
 ## Hardware Detection
 
-Devices are detected during the boot process and then periodically after startup.
-This allows to hotplug some additional devices afterwards.
+Sakura detects devices throughout the boot process and periodically after starting.
+Hardware detection is essential for initializing hardware components, installing
+necessary drivers and allowing the system to communicate with associated drivers.
+After the system has begun, this detecting mechanism enables the hotplugging of
+new devices.
 
-Not every device uses the same connection protocol,
-detection varies by connection:
+### Supported Connection Protocols
 
-- PCI-Express devices are detected through their Configuration Space
-- IDE/SATA devices are detected through the IDE/SATA controller
-- USB devices are enumerated through the USB protocol stack
+The device detection techniques differ based on the device's connection protocol.
+Connection protocols that are supported include:
 
-## Connection Interface Identifier
+1. **PCIe:** PCIe (Peripheral Component Interconnect Express) is a serial interface used to connect various components like graphic cards, network cards and storage devices.
+2. **USB:** USB (Universal Serial Bus) is a standard for connecting various devices like keyboards, mice, printers and storage devices. It allows for plug-and-play functionality.
+3. **SATA:** SATA (Serial AT Attachment) provides a standard and widely supported connection for storage devices.
 
-The Connection Interface Identifier (CII) is a 4-byte number describing what a device is connected to:
+## Device Structure
 
-- Connection type (1 byte)
-  - `0x01`: PCI-Express
-  - `0x02`: IDE
-  - `0x03`: SATA
-  - `0x04`: M.2
-  - `0x05`: USB
-  - `0x06`: RGB
-- Bus number (1 byte)
-- Port number (2 bytes)
+```rust title="Device Structure"
+/// Represents information related to the power state and power management of a device.
+struct PowerInfo {
+    /// Representing the current power state of the device.
+    pub power_state: u8,
 
-## Connection-Specific Device Descriptor
+    /// Indicating whether the device is capable of waking up from a suspended state.
+    pub can_wakeup: bool,
 
-All hardware devices output an identifier whose format is
-normalized depending on the connection type (PCI-Express, IDE, SATA, ...).
-This identifier is called the connection-specific device descriptor (CSDD).
+    /// Indicating whether the current device is currently in a suspended state.
+    pub is_suspended: bool,
 
-## Kernel Device Identifier
+    /// A boolean indicating whether the device should trigger a wakeup event.
+    pub should_wakeup: bool,
+}
 
-The kernel device identifier (KDI) is an 8-byte identifier
-computed from the [CII](#connection-interface-identifier)
-and the [CSDD](#connection-specific-device-descriptor).
-It is unique accross all devices.
+/// Represents different types of buses to which a device can be connected.
+enum BusType {
+    Unknown,
+    PCI,
+    USB,
+    SATA,
+}
 
-## Raw Device Descriptor
+/// Represents different physical locations where a device's connection point (ports, connectors, etc.)
+/// can be found on the device.
+enum DevicePhysicalLocationPanel {
+    Unknown,
+    Top,
+    Bottom,
+    Left,
+    Right,
+    Front,
+    Back,
+}
 
-RDD is a data structure made of the followings:
+/// Represents device data related to the physical location of a device's
+/// connection point.
+struct DevicePhysicalLocation {
+    /// Physical location panel.
+    pub panel: DevicePhysicalLocationPanel,
 
-- [KDI](#kernel-device-identifier) (8 bytes)
-- [CII](#connection-interface-identifier) (4 bytes)
-- size of the CSDD (1 byte)
-- [CSDD](#connection-specific-device-descriptor) (up to 256 bytes)
+    /// Indicating whether the device is on the lid on a laptop system
+    pub lid: bool,
+}
+
+struct Device {
+    /// Name of the device.
+    pub name: String,
+
+    /// Represents the parent device to which this device is attached.
+    /// If `Some`, it indicates that this device is a child device of the parent;
+    /// if `None`, it means the device is a top-level device.
+    pub parent: Box<Option<Device>>,
+
+    /// Represents informtion related to the power state and management of the device.
+    pub power: PowerInfo,
+
+    /// Represents the type of bus to which the device is connected.
+    pub bus: BusType,
+
+    /// Represents data related to the physical location of a device's connection point.
+    pub physical_location: DevicePhysicalLocation,
+}
+```
