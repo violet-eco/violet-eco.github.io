@@ -23,8 +23,15 @@ Let's unlock the full potential of your digital world.
 
 ## What is Violet?
 
-Violet is not just another run-of-the-mill operating system. It's a revolutionary
-platform that's set to redefine the way we interact with technology.
+Violet is an advanced operating system that redefines the computing experience by merging
+cutting-edge technologies, privacy-focused features and smooth user interactions. Violet
+is a next-generation computing environment that allows Violetians to explore the digital
+world with confidence and comfort; developed with a strong emphasis on security,
+performance and user-centric design.
+
+It is based on the Rust at its heart, which provides a modern and secure basis for the
+whole ecosystem. Rust supports Violet's strong performance by focusing on memory safety,
+concurrency and speed.
 
 Imagine an operating system that combines the best features of macOS, Linux and
 Windows, while pushing the boundaries of performance, security and customization.
