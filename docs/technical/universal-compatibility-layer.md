@@ -30,13 +30,13 @@ To run Violet apps on your chosen platform using VUCL, follow these steps:
 
 1. Find the Violet application package (usually in .vap format) that you want to run on your system.
 2. Double click the application package or use the command line interface to execute the application using VUCL.
-3. Violet Calls Wrapper will do the necessary translations and compatibility adjustments to ensure that the Violet app runs smoothly on your platform.
+3. VUCL will do the necessary translations and compatibility adjustments to ensure that the Violet app runs smoothly on your platform.
 4. Enjoy the full functionality of the Violet app, including its features and capabilities, directly on your system.
 
 ## Considerations and Limitations
 
-It is important to note that although Violet Calls Wrapper allows running Violet
-applications on different platforms, certain limitations and considerations exist:
+It is important to note that although VUCL allows running Violet applications on
+different platforms, certain limitations and considerations exist:
 
 1. **Permission Management:** VUCL may not fully replicate Violet's permission management features across all platforms.
 2. **Native Violet Apps:** VUCL provides compatibility for Violet ecosystem programs, but may not provide access to native Violet apps. This means that certain features, such as Violet desktop, may not be accessible when running the apps through the wrapper.

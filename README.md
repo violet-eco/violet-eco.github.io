@@ -36,8 +36,8 @@ unexpected interruptions.
 ### Multi-Platform Support
 
 Violet aims for broad compatibility and can run on multiple platforms, including
-Linux, Windows and macOS systems. The Vioelt Calls Wrapper faciliates running
-Violet applications natively on these platforms, although some features may be
+Linux, Windows and macOS systems. The Violet Universal Compatibility Layer faciliates
+running Violet applications natively on these platforms, although some features may be
 limited compared to the native Violet environment.
 
 ## Documentation
