@@ -15,15 +15,15 @@
   --ifm-card-background-color: #f4eeff;
   --ifm-footer-background-color: #f4eeff;
   --docsearch-searchbox-background: #e8e1f4 !important;
-  --docsearch-searchbox-focus-background: #f1e9ff !important;
+  --docsearch-searchbox-focus-background: #fff !important;
 }
 
 .hero {
-  background: rgb(239, 228, 254)
+  background: rgb(239, 228, 254);
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #d9c0ff;
+  --ifm-color-primary: #d5c7eb;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -35,6 +35,7 @@
   --ifm-navbar-background-color: #301c4d;
   --ifm-card-background-color: #301c4d;
   --docsearch-searchbox-background: #090a11 !important;
+  --docsearch-searchbox-focus-background: #090a11 !important;
 }
 
 .footer--dark {
