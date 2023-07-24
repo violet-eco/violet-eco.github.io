@@ -1,10 +1,9 @@
 ---
-slug: hardware
 sidebar_position: 1
-description: Devices are detected during the boot process and then periodically after startup.
+description: Sakura detects devices throughout the boot process and periodically after starting.
 ---
 
-# Hardware Interaction
+# Hardware
 
 ## Hardware Detection
 
@@ -19,8 +18,8 @@ new devices.
 The device detection techniques differ based on the device's connection protocol.
 Connection protocols that are supported include:
 
-1. **PCIe:** PCIe (Peripheral Component Interconnect Express) is a serial interface used to connect various components like graphic cards, network cards and storage devices.
-2. **USB:** USB (Universal Serial Bus) is a standard for connecting various devices like keyboards, mice, printers and storage devices. It allows for plug-and-play functionality.
+1. [PCIe](./pci-e.md): PCIe (Peripheral Component Interconnect Express) is a serial interface used to connect various components like graphic cards, network cards and storage devices.
+2. [USB](./usb.md): USB (Universal Serial Bus) is a standard for connecting various devices like keyboards, mice, printers and storage devices. It allows for plug-and-play functionality.
 3. **SATA:** SATA (Serial AT Attachment) provides a standard and widely supported connection for storage devices.
 
 ## Device Structure
