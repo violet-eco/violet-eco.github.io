@@ -90,6 +90,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: 'GXMHKVQ8FW',
+        apiKey: 'e7897aa01251988a3e03c890092a5d49',
+        indexName: 'violet-ecoio',
+      }
     }),
 };
 
