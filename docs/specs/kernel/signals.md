@@ -9,38 +9,26 @@ description: Signals are a type of KPC. They are used by Sakura to send informat
 *Signals* are a type of [KPC](./kpc.md).
 They are used by Sakura to send information.
 
-## Overview
+## Signal Components
 
-When a process is created, Sakura associates it:
+When a process is created, Sakura associates several components with it to facilitate
+signal handling:
 
-- Signals handler table (SHT)
-- Signals queue
-- Readiness indicator
+- Signal Handler Table (SHT): The SHT is a data structure that stores the handlers for differnet signals.
+- Signals Queue: The signals queue serves as a buffer to hold signals sent to a process.
+- Readiness Indicator: The readiness indicator is a flag that indicates whether a process is ready to handle signals.
 
-Each signal has an 8-bit code to represent it.
-Also, a 32 bytes data field is added to give additional
-information about the signal.
+## Signal Handling Process
 
-When Sakura sends a signal to a process, it first checks
-if a handler is running. If so, it puts the signal in the queue.
+When Sakura provides a signal to a process, it follows a well-defined procedure to
+appropriately handle the signal:
 
-Otherwise, it reads the readiness indicator. If `false`, the signal is queued.
-
-If this is not the case, it checks whether the signal has a handler in the SHT.
-If the handler is not present, depending on the particular signals, it may be
-ignored or a default behavior may be used.
-
-If the handler is found, Sakura checks whether the memory area pointed as
-the address of the handler can be run by the current process.
-If not, the signal is converted to the HANDLER_FAULT signal.
-
-Sakura then switches the process to its main thread and makes it jump
-to the handler's address, then resumes it.
-
-When the handler returns, if the signal is waiting for a response,
-Sakura reads it from a specific register and does what needs to be done.
-If it is, the kernel simply makes the process jump back to the address it
-was to before the signal was emitted, and switch to the original thread.
+1. **Check for Active Handler:** Sakura first checks if the process has an active handler running. If a handler is running, the signal is placed in the signals queue.
+2. **Check Readiness Indicator:** Sakura checks the readiness indicator if the process's handler is not currently running. If the indicator is not set, the signal is queued until the process is ready.
+3. **Handler Lookup:** Sakura searches up the SHT to find the relevant signal handler. If the handler cannot be found, Sakura may opt to ignore the signal or perform a default action, depending on the kind of signal.
+4. **Memory Area Validation:** Sakura checks if the memory region indicated by the handler's address may be executed by the current process. If not, the signal is changed to the `HANDLER_FAULT` signal, which indicates a signal handling error.
+5. **Process Switch and Execution:** Sakura shifts the process to its main thread and intructs it to jump to the location of the signal's handler, so initiating the signal handling process. The handler's execution continues until it is finished.
+6. **Response Handling:** If the signal is waiting for a response when the handler returns, Sakura retrieves the response from a predefined register and takes necessary action according on the response. If no response is expected, Sakura just makes the process to return to the address it was at prior to the signal's delivery, thereby continuing the original execution thread.
 
 ## List of Signals
 
