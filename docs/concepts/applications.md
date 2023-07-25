@@ -117,12 +117,6 @@ comprehensive collection of tools, libraries, and documentation to assist develo
 creating powerful and innovative applications that interface smoothly with the operating
 system.
 
-### Open Source Community
-
-Violet's application development depends on an open-source ecosystem that encourages
-collaboration, sharing and improvement. Developers may contribute to current
-applications or build whole new ones to enhance the Violet ecosystem.
-
 ## Services
 
 Applications can create *services* by specifying them in their manifests.
