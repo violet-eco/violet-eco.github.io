@@ -49,6 +49,8 @@ result, running these applications on non-Violet operating systems requires inst
 the full package provided by Violet. This allows users to fully experience the rich
 capabilities and seamless integration that the Violet platform has to offer.
 
-Note: As Violet continues to evolve, updates and improvements may be made available
+:::note
+As Violet continues to evolve, updates and improvements may be made available
 during the pre-build process and in the Rosa language. Stay connected with the Violet
 community and visit the official website for the latest developments and updates.
+:::

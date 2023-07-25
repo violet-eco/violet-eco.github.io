@@ -51,8 +51,10 @@ applications in the Violet Store. Volatile applications provide a lightweight an
 transient experience by running directly from their package files, without being
 permanently installed on the device.
 
-**Note:** Not all applications in the Violet Store support volatile installation. The
+:::note
+Not all applications in the Violet Store support volatile installation. The
 availability of volatile installation depends on the application developer's choices and
 the nature of the application.
+:::
 
 Refer to [this document](../concepts/applications.md) for further details.

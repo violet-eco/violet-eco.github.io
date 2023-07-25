@@ -6,8 +6,12 @@ description: This document outlines the development roadmap for Violet.
 
 # Roadmap
 
-This document outlines the development roadmap for Violet. Please note that the roadmap
-is subject to change as the project evolves and new priorities emerge.
+This document outlines the development roadmap for Violet.
+
+:::caution
+Please note that the roadmap is subject to change as the project evolves and new
+priorities emerge.
+:::
 
 ## Phase 1: Conception <- current stage
 

@@ -11,8 +11,8 @@ description: User accounts allow multiple Violetians to use a Violet system.
 Violet is intended to be shared by numerous Violetians, and user accounts are critical to
 ensuring individual data separation and access limits. System and Administrator are the
 default virtual users, with custom users having their own data folders called home
-directories placed at `/home/[username]`. Custom users can access their home directories,
-mounted units under `/media`, and temporary folders under `/tmp/[username]`.
+directories placed at `/home/[user]`. Custom users can access their home directories,
+mounted units under `/mnt`, and temporary folders under `/tmp/[user]`.
 
 ## User Types
 
@@ -23,6 +23,8 @@ Each user is in one of these types:
 - **Administrator Users:** Administrator users have the power to launch applications with administrator rights directly. They have the power to change system settings and control the data of other users.
 - **Main Administrator:** A unique administrator account that has extra powers, such as handling storage encryption.
 
+:::danger
+
 ## Dangers of an Administrator Account
 
 Administrator credentials are comprehensive, allowing users to execute essential
@@ -30,6 +32,7 @@ system-level functions. These rights, however, come with hazards, since administ
 may mistakenly make modifications to the system or other users' data. Violet suggests
 limiting the amount of administrator accounts and ensuring that they are only utilized by
 trustworthy Violetian for increased security.
+:::
 
 ## User Privileges Extension (UPEX)
 
