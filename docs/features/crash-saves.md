@@ -35,7 +35,7 @@ unauthorized access to user data, Eden verifies the integrity of crash saves.
 
 ## Storage and Accessibility
 
-The directory `/home/[user]/appdata/[appname]/crashsaves/[timestamp]_[pid].csf` is where
+The directory `/home/[user]/apps/[appname]/crashsaves/[timestamp]_[pid].csf` is where
 crash saves are kept after they have been gathered. This directory's layout makes it
 simple to store and access crash save information for specific programs. If users need to
 recover work from a prior session, they can use this location to access the crash save

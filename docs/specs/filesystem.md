@@ -16,56 +16,73 @@ Violet utilizes the **Btrfs** filesystem as the primary storage system. There ar
 
 ```plaintext
 /
-├── app                            Interactables available to all users
-│   └── <appname>                  An application's folder (NOTE: one sub-folder per version for libraries)
-│       ├── content                Application's program (executables, static resources, ...)
-│       ├── crashsaves             Application's crash saves
-│       ├── data                   Application's data (e.g. database)
-│       ├── packages               Application's packages (original package + update packages)
-│       └── sandboxes              Application's sandboxes
-├── dev                            Connected devices
-│   ├── cam                        Cameras
-│   ├── bst                        Basic storage devices (SD cards, USB keys, ...)
-│   ├── etc                        Uncategorized devices
-│   ├── mic                        Microphones
-│   ├── net                        Network adapters (Ethernet adapter, WiFi card, ...)
-│   ├── snd                        Sound-related output devices (Sound card, DAC, ...)
-│   ├── sst                        Sensitive storage devices (Hard drives, SSDs, ...)
-│   └── wrl                        Other supported wireless devices (Bluetooth adapter, ...)
-├── etc                            Mutable data folder
-│   ├── env   <F>                  Environment variables
-│   ├── hosts <F>                  Hosts overriding (e.g. 'localhost')
-│   ├── lock                       Opened lock files
-│   ├── logs                       Log files
-│   |   └── upe <F>                History of UPE requests
-│   ├── public                     Public data, readable and writable by everyone
-│   └── sys                        System's mutable data - available to system only
-│       ├── registry <F>           System's registry
-│       ├── awake    <F>           System's shutdown indicator to detect if there was an error during last shutdown
-│       ├── hashes   <F>           Critical files' hashes for the integrity checker (2)
-│       ├── gbpwd    <F>           Global storage's encryption key
-│       └── users    <F>           User profiles and groups
-├── fl                             Flow files
-├── home                           Users' data
-│   └── <user>                     A specific user's data
-│       ├── apps                   User's applications (same structure as for `/apps`)
-│       ├── appdata                User's applications persistent data (not removed when the application is uninstalled)
-│       ├── desktop                User's files appearing on the desktop
-│       ├── documents              User's documents
-│       ├── downloads              User's downloads
-│       ├── music                  User's music files
-│       ├── pictures               User's pictures
-│       ├── videos                 User's videos
-│       └── trash                  User's trash
-├── mnt                            Mounted storages
-├── sys                            System - immutable outside of installation, repair processes and updates
-│   ├── apps                       System applications
-│   ├── boot                       System's boot program
-│   ├── langs                      Translation files
-│   ├── old                        Old versions of the system, used during the repair process (compressed archives)
-│   ├── backup                     Copy of the last system version (compressed archive)
-│   ├── kernel                     Sakura
-│   └── valid   <F>                A file that just contains "ValidMasterKey" to test if the provided master key is valid at startup
-├── tmp                            Temporary folder (cleaned during shutdown)
-    └── <user>                     Temporary folder for a specific user
+├── apps
+│  └── <appname>                        An application's folder
+│     ├── content                       Executables, static resources, etc
+│     ├── crashsaves
+│     │  └── [timestamp]_[pid].csf <F>
+│     ├── data                          Application's data, such as databases, etc
+│     ├── packages                      Packages (original package + update packages)
+│     └── sandboxes
+├── dev                                 Devices
+│  ├── bst                              Basic storage devices (SD cards, USB drives)
+│  ├── cam                              Cameras
+│  ├── etc                              Uncategorized devices
+│  ├── mic                              Microphones
+│  ├── net                              Network adapters
+│  ├── snd                              Sound-related output devices
+│  ├── sst                              Sensitive storage devices (SSDs, HDDs)
+│  └── wrl                              Other supported wireless devices (Bluetooth adapter, etc.)
+├── etc
+│  ├── env      <F>
+│  ├── hosts    <F>
+│  ├── logs
+│  │  ├── fsck_btrfs        <F>
+│  │  ├── fsck_btrfs_err    <F>
+│  │  ├── logins            <F>
+│  │  ├── sys                           Logs of system services
+│  │  │  ├── app            <F>
+│  │  │  ├── crashsave      <F>
+│  │  │  ├── crypto         <F>
+│  │  │  ├── flow           <F>
+│  │  │  ├── fs             <F>
+│  │  │  ├── hw             <F>
+│  │  │  ├── i18n           <F>
+│  │  │  ├── net            <F>
+│  │  │  ├── perm           <F>
+│  │  │  ├── process        <F>
+│  │  │  └── ui             <F>
+│  │  ├── upex              <F>
+│  │  └── wifi              <F>
+│  └── sys
+│     ├── awake             <F>
+│     ├── hashes            <F>
+│     ├── registry          <F>
+│     └── users             <F>
+├── fl
+├── home
+│  └── <user>
+│     ├── apps
+│     │  └── <appname>
+│     │     ├── content
+│     │     ├── crashsaves
+│     │     │  └── [timestamp]_[pid].csf <F>
+│     │     ├── data
+│     │     ├── packages
+│     │     └── sandboxes
+│     ├── desktop
+│     ├── documents
+│     ├── downloads
+│     ├── movies
+│     ├── music
+│     └── pictures
+├── mnt
+├── sys
+│  ├── apps
+│  ├── backup
+│  ├── boot
+│  ├── kernel
+│  └── old
+└── tmp
+   └── <user>
 ```
