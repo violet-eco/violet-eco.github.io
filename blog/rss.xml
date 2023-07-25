@@ -4,10 +4,32 @@
         <title>Violet Blog</title>
         <link>https://violet-eco.github.io/blog</link>
         <description>Violet Blog</description>
-        <lastBuildDate>Sun, 23 Jul 2023 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Jul 2023 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Understanding the Spectrum of Open Source and Closed Source in Violet]]></title>
+            <link>https://violet-eco.github.io/blog/open-and-closed-source-in-violet</link>
+            <guid>https://violet-eco.github.io/blog/open-and-closed-source-in-violet</guid>
+            <pubDate>Wed, 26 Jul 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Dear Violetians,]]></description>
+            <content:encoded><![CDATA[<p>Dear Violetians,</p><p>We're here today to explore the ideas behind Violet, our operating system that stands at the crossroads of open source and closed source software. We invite you to join us on this journey as we explore the choices that have shaped the direction of Violet's development.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-transition">The Transition<a href="#the-transition" class="hash-link" aria-label="Direct link to The Transition" title="Direct link to The Transition">​</a></h2><p>Our embrace of closed source is not a destination but rather a strategic channel that
+strengthens our base. This strategy enables us to establish a strong foundation before
+welcoming the outside world. We can promise you that this journey is not about closing
+off possibilities but preparing the path for future exploration. It's not a barrier; a
+loving shield to preserve the brilliance that defines Violet.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="illuminating-the-path">Illuminating the Path<a href="#illuminating-the-path" class="hash-link" aria-label="Direct link to Illuminating the Path" title="Direct link to Illuminating the Path">​</a></h2><p>Our beliefs remain centered on transparency and we value building sincere relationships
+with Violetians. We want to be sincere about the closed source nature of Violet, even
+though some components of Violet are open-sourced. However, let this not cast a shadow
+that makes it harder for us to see!</p><p>We see the transition to closed source at this critical time as a bridge that connects
+our past and our future. It acts as a transition point between now and past Violet - more
+developed, safe and feature-rich.</p><h2 class="anchor anchorWithStickyNavbar_LWe7" id="looking-ahead">Looking Ahead<a href="#looking-ahead" class="hash-link" aria-label="Direct link to Looking Ahead" title="Direct link to Looking Ahead">​</a></h2><p>We invite you to join us on this exciting path forward. Your insights and cooperation
+will continue to be invaluable as we continue to improve Violet and investigate new
+possibilities. Together, we shall keep pushing the limits of what an operating system is
+capable of.</p><p>We appreciate your participation in the Violet saga and are looking forward to an amazing future.</p><p>Happy Violeting! ✨💜</p><p>The Violet Team</p>]]></content:encoded>
+            <category>violet</category>
+            <category>project</category>
+        </item>
         <item>
             <title><![CDATA[Unveiling Violet: A Next-Generation Operating System]]></title>
             <link>https://violet-eco.github.io/blog/unveiling-violet</link>
