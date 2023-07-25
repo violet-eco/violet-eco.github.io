@@ -1,7 +1,7 @@
 ---
 slug: usb
 sidebar_position: 2
-description: asd
+description: USB is a widely-used interface that allows for the connection of various peripheral devices, including keyboards, mice, external storage devices, printers and more.
 ---
 
 # Universal Serial Bus

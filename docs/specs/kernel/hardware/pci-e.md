@@ -1,7 +1,7 @@
 ---
 slug: pci-e
 sidebar_position: 1
-description: asd
+description: Peripheral Component Interconnect Express (PCIe) is a high-speed interface widely used to connect various hardware components, such as graphic cards, network adapters, storage devices and more.
 ---
 
 # Peripheral Component Interconnect Express
