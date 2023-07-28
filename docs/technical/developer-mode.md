@@ -35,7 +35,7 @@ Mode that allows developers to extend the functionality of the operating system 
 the kernel level. Kernel modules are pieces of code that can be dynamically loaded
 and unloaded into the running kernel.
 
-Kernel modules have direct access to various services and resources provided by Sakura,
+Kernel modules have direct access to various services and resources provided by Nova,
 such as memory management, process scheduling, IPC.
 
 ## Application Proxies

@@ -42,8 +42,8 @@ interface and strong rendering capabilities.
 
 ### VR-Compatible Kernel
 
-Sakura, a VR-compatible microkernel, is the foundation of Violet's implementation of
-virtual reality. Sakura offers the essential low-level support for VR gear and
+Nova, a VR-compatible microkernel, is the foundation of Violet's implementation of
+virtual reality. Nova offers the essential low-level support for VR gear and
 peripherals and is intended to tackle tasks that are unique to VR with efficiency. It
 controls the relationship between the VR headset and the operating system, enabling
 effective data flow and communication.

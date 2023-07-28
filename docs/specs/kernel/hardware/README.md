@@ -1,13 +1,13 @@
 ---
 sidebar_position: 1
-description: Sakura detects devices throughout the boot process and periodically after starting.
+description: Nova detects devices throughout the boot process and periodically after starting.
 ---
 
 # Hardware
 
 ## Hardware Detection
 
-Sakura detects devices throughout the boot process and periodically after starting.
+Nova detects devices throughout the boot process and periodically after starting.
 Hardware detection is essential for initializing hardware components, installing
 necessary drivers and allowing the system to communicate with associated drivers.
 After the system has begun, this detecting mechanism enables the hotplugging of

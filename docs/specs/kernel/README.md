@@ -1,11 +1,11 @@
 ---
 sidebar_position: 8
-description: Violet's kernel is called Sakura. As a microkernel, Sakura takes a minimalist approach, providing only the essential functions needed for safe and efficient operation.
+description: Violet's kernel is called Nova. As a microkernel, Nova takes a minimalist approach, providing only the essential functions needed for safe and efficient operation.
 ---
 
 # Kernel
 
-Violet's kernel is called *Sakura*. As a microkernel, Sakura takes a minimalist approach,
+Violet's kernel is called *Nova*. As a microkernel, Nova takes a minimalist approach,
 providing only the essential functions needed for safe and efficient operation.
 
 :::caution

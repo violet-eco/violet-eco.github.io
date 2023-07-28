@@ -1,12 +1,12 @@
 ---
-slug: grass
+slug: sirius
 sidebar_position: 3
-description: Grass is a modern and intuitive application designed to help Violetians efficiently manage their files and folders within the Violet.
+description: Sirius is a modern and intuitive application designed to help Violetians efficiently manage their files and folders within the Violet.
 ---
 
-# Grass
+# Sirius
 
-Grass is a modern and intuitive application designed to help Violetians
+Sirius is a modern and intuitive application designed to help Violetians
 efficiently manage their files and folders within the Violet.
 
 ## Navigation and Browsing

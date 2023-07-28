@@ -14,5 +14,5 @@ documents refer to, you can check [technical documents](../technical/README.md) 
 - [Applications](./applications.md) — Specification of behaviour and structure of applications
 - [Filesystem](./filesystem.md) — How Violet uses and processes your storage
 - [Permissions](./permissions.md) — List of permissions of applications
-- [Kernel](./kernel/README.md) — How Sakura works and what is its structure
-- [System Services](./services/README.md) — How Sakura meets with the Violetians
+- [Kernel](./kernel/README.md) — How Nova works and what is its structure
+- [System Services](./services/README.md) — How Nova meets with the Violetians

@@ -46,17 +46,17 @@ That's exactly what Violet aims to achieve.
 
 ### My Big Dreams and Goals
 
-1. **Accessibility to ALL:** I strive to make Violet accessible to every Violetian, regardless of their abilities or limitations. I'm committed to implementing inclusive design practices and providing a range of accessibility features to ensure that Violet is usable by every Violetian. Refer to [this document](./applications/lotus.md#accessibility-features) for further details.
+1. **Accessibility to ALL:** I strive to make Violet accessible to every Violetian, regardless of their abilities or limitations. I'm committed to implementing inclusive design practices and providing a range of accessibility features to ensure that Violet is usable by every Violetian. Refer to [this document](./applications/aurora.md#accessibility-features) for further details.
 
 ### Components
 
 Violet's architecture is designed with modularity, performance and flexibility in mind. It consists of several key components that work together harmoniously to create an efficient operating system.
 
-#### Kernel (Sakura)
+#### Kernel (Nova)
 
 > Refer to [this document](./specs/kernel/README.md).
 
-At the heart of Violet lies the microkernel named *Sakura*. The kernel provides the
+At the heart of Violet lies the microkernel named *Nova*. The kernel provides the
 foundation for all system applications and facilitates communication between the hardware
 and software layers. It ensures the efficient utilization of system resources, enforces
 security measures, manages processes and memory.
@@ -71,11 +71,11 @@ ensuring proper coordination and execution of system-level tasks.
 
 #### Desktop Environment
 
-> Refer to [this document](./applications/lotus.md).
+> Refer to [this document](./applications/aurora.md).
 
-The desktop environment in Violet, known as *Lotus*, provides the user interface for
+The desktop environment in Violet, known as *Aurora*, provides the user interface for
 interacting with the operating system and its applications. It encompasses the graphical
 elements, window management, application launchers, taskbars and other visual components
-that make up the user experience. Lotus offers a modern, intuitive and customizable
+that make up the user experience. Aurora offers a modern, intuitive and customizable
 interface, allowing users to personalize their desktop, switch between applications, and
 access system features efficiently.

@@ -1,6 +1,6 @@
 # System services
 
-Since [Sakura](../kernel/) is microkernel, it only handles the most basic things.
+Since [Nova](../kernel/) is microkernel, it only handles the most basic things.
 
 System services are run by the system itself under the `sys` [DID](../apps-and-libraries.md#application-identifier).
 

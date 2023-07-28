@@ -6,7 +6,8 @@ description: This document describes the structure, features and behaviours to b
 
 # Filesystem
 
-Violet utilizes the **Btrfs** filesystem as the primary storage system. There are three partitions used for data:
+Violet uses the **Btrfs** filesystem as the primary storage system. There are three
+partitions used for data:
 
 1. **FAT32 partition for bootloader:** This partition is dedicated to storing the bootloader, which is responsible for booting the operating system.
 2. **FAT32 partition for the system (`/sys` and `/etc/sys`):** The system partition contains essential system files and configurations that are necessary for the proper functioning of the operating system.
