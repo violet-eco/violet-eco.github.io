@@ -14,7 +14,7 @@ They are used by Nova to send information.
 When a process is created, Nova associates several components with it to facilitate
 signal handling:
 
-- Signal Handler Table (SHT): The SHT is a data structure that stores the handlers for differnet signals.
+- Signal Handler Table (SHT): The SHT is a data structure that stores the handlers for different signals.
 - Signals Queue: The signals queue serves as a buffer to hold signals sent to a process.
 - Readiness Indicator: The readiness indicator is a flag that indicates whether a process is ready to handle signals.
 
