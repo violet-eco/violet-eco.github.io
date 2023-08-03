@@ -4,34 +4,27 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Data Protection',
+    title: 'Security',
     description: (
       <>
-        Violet employs extensive security features such as end-to-end encryption, secure
-        communication channels, source encryption, and a zero-knowledge architecture to keep
-        user data secret and unavailable to unauthorized parties.
+        To protect your data from threats, we use cutting-edge encryption, strict security measures and real-time monitoring.
       </>
     ),
   },
   {
-    title: 'Crash Saves',
+    title: 'Accessibility',
     description: (
       <>
-        Violet's Crash Saves feature stores your work progress and application states automatically
-        in real-time. Violet can restore your work to the most recent saved state in the case of a system
-        breakdown or unexpected shutdown, ensuring little data loss and letting you to pick up precisely where
-        you left off without interruptions.
+        Violet aims to be accessible to everyone. We focus creating user-friendly interfaces, supporting a wide range of hardware and assistive technology.
       </>
     ),
   },
   {
-    title: 'Efficient',
+    title: 'Quantum-Ready Architecture',
     description: (
       <>
-        Violet employs unique power management strategies to improve power efficiency and battery
-        life on mobile devices. It changes CPU clock speed dynamically, regulates screen brightness,
-        restricts background activities and uses adaptive power allocation to provide an ideal balance
-        of performance and energy saving, resulting in a longer-lasting and more efficient device usage experience.
+        Violet adopts a quantum-ready architecture in anticipation of the future of quantum computing.
+        We use quantum-safe cryptography to protect your data from possible dangers posed by quantum computers.
       </>
     ),
   },

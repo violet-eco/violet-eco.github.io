@@ -9,36 +9,23 @@
   
 </div>
 
-## Features
+Violet is an advanced operating system that redefines the computing experience by merging
+cutting-edge technologies, privacy-focused features and smooth user interactions. Violet
+is a next-generation computing environment that allows Violetians to explore the digital
+world with confidence and comfort; developed with a strong emphasis on security,
+performance and user-centric design.
 
-### Immutable System
+Imagine an operating system that combines the best features of macOS, Linux and
+Windows, while pushing the boundaries of performance, security and customization.
+That's exactly what Violet aims to achieve.
 
-Violet follows an immutable system model, where the core components
-of the operating system remain unchanged throughout its lifetime. This
-approach enhances stabilitiy and provides a consistent user experience.
-System integrity is maintained by monitoring critical files' hashes and
-performing automatic recovery if lampering is detected.
+## Our Commitments
 
-### Extreme Customization
-
-Violet offers extreme customization options. It allows users to personalize
-their computing experience to the fullest extent. Users can customize the
-desktop environment.
-
-### Crash Saves
-
-Violet incorporates a crash saves feature to safeguard user data in the event of system
-crashes or unexpected shutdowns. Crash saves automatically capture the state of running
-applications, allowing users to restore their work to the point just before the crash
-occurred. This feature provides peace of mind and helps users recover quickly from
-unexpected interruptions.
-
-### Multi-Platform Support
-
-Violet aims for broad compatibility and can run on multiple platforms, including
-Linux, Windows and macOS systems. The Violet Universal Compatibility Layer faciliates
-running Violet applications natively on these platforms, although some features may be
-limited compared to the native Violet environment.
+1. **Privacy and Data Ownership:** We believe that data privacy is a fundamental right. We are committed to protecting your personal information and giving you complete control over your data. We allow you to manage your identity safely and ethically with decentralized identity management and blockchain technology. Your data is yours, and we respect your privacy at every step of the way.
+2. **Security:** To protect your data from threats, we use cutting-edge encryption, strict security measures and real-time monitoring.
+3. **Accessibility:** Violet aims to be accessible to everyone. We focus creating user-friendly interfaces, supporting a wide range of hardware and assistive technology.
+4. **Quantum-Ready Architecture:** Violet adopts a quantum-ready architecture in anticipation of the future of quantum computing. We use quantum-safe cryptography to protect your data from possible dangers posed by quantum computers. We guarantee that your information stays private and secret even as new technologies emerge.
+5. **Innovation:** Violet's evolution is built on innovation. We are committed to pushing boundaries of computers. Violet's commitment to constant improvement keeps it at the forefront of technological advancement.
 
 ## Documentation
 

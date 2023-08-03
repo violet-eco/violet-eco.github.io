@@ -18,3 +18,4 @@ This folder contains documents about each major feature in Violet.
 - [User Behaviour Analytics](./user-behaviour-analytics.md) — Taking the user experience to heights with machine learning on Violet
 - [Virtual Reality Integration](./virtual-reality-integration.md) — Using Violet between realities
 - [Biometric Authorization](./biometric-authorization.md) — How does Violet know you
+- [Quantum Computing Integration](./quantum-computing-integration.md) — Violet cares about the future of computers
